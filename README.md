@@ -1,7 +1,7 @@
 ![alt text](https://i.imgur.com/XG83qib.png)
 
 # Features
-
+My Anime Archive can be used while offline! Keep your anime list backup safe, update it at any time!<br/>
 -View XML backup list<br/>
 -Sort list<br/>
 -Filter list<br/>
