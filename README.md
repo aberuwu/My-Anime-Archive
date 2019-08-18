@@ -7,6 +7,7 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 -Filter list<br/>
 -View anime record<br/>
 -Edit anime record<br/>
+-Offline list statistical analysis <br/>
 -Export .xml that can be re-uploaded to MyAnimeList.net<br/>
 -Export .csv for Excel<br/>
 -Export .sql for database<br/>
