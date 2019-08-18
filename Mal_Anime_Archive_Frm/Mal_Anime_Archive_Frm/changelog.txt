@@ -1,0 +1,30 @@
+﻿-----MY ANIME ARCHIVE - CHANGE LOG-----
+
+---Disclaimer---
+For personal and noncommercial use only!
+This app uses features that link to MyAnimeList.net
+MyAnimeList.net is a property of MyAnimeList, LLC. ©2015 All Rights Reserved.
+
+
+---My Anime Archive v1.0 - Change Log - Date: 05/28/2019---
+
+Notes: Just a cool way to use the XML export feature from MAL.
+
+1. Added search functionality
+2. Added welcome screen
+3. Added user profile image links
+4. Added user XML file path
+5. Added XML export feature
+6. Added SQL export feature
+7. Added CSV export feature
+8. Added detailed grid view
+9. Added chromium browser support
+10. Added Light and Dark Mode
+11. Improved UI
+12. Optimized Search
+13. Improved stability
+
+
+---End of change log---
+Programmed by Cesar Mendoza
+@aberuwu

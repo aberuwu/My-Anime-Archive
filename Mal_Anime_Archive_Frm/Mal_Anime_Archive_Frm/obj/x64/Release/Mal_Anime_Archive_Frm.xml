@@ -1,0 +1,276 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Mal_Anime_Archive_Frm
+</name>
+</assembly>
+<members>
+<member name="T:Mal_Anime_Archive_Frm.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.blue_back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Blue_Dark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Blue_Light">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.blue_theme">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.darkpp_back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.delete_button">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.delete_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.edit_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Excel_png">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Excel_purple_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.filter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.filter2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.full_Screen_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.hishiro_backgrounds">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Love">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.MAA_logo_White">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.MAL">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.MAL2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.MALLogoWhite">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.minimize_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.new_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Onodera">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.OpenFile_16x">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.orange_back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Orange_Dark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Orange_Light">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Purple">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Purple_Dark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Purple_Light">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Purple2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Purple3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.ReLife_Background">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.relife_background2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Save_16x">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.SaveAs_16x">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.sorry">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Sql_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Sql_purple_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Switch_Off">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Switch_Off2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Switch_OffP">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Switch_On">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Switch_OnP">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.testImage">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.user_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.user_icon_white">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.uwu_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.xml_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.xml_purple_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>

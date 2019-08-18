@@ -1,0 +1,254 @@
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.XML
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.XML
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_100_percent.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_200_percent.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_extensions.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\chrome_elf.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\d3dcompiler_47.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\devtools_resources.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\icudtl.dat
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libcef.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libEGL.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libGLESv2.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\am.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ar.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\bg.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\bn.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ca.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\cs.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\da.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\de.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\el.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\en-GB.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\en-US.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\es-419.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\es.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\et.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fa.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fil.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\gu.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\he.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hu.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\id.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\it.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ja.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\kn.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ko.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\lt.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\lv.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ml.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\mr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ms.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\nb.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\nl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pt-BR.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pt-PT.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ro.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ru.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sk.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sv.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sw.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ta.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\te.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\th.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\tr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\uk.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\vi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\zh-CN.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\zh-TW.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\natives_blob.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\README.txt
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\snapshot_blob.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\swiftshader\libEGL.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\swiftshader\libGLESv2.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\v8_context_snapshot.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.Core.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.Core.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe.config
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbprojAssemblyReference.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmChangeLog.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmMain.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSave.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmUserInfo.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmWelcome.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmWorking.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmXml.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.Resources.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.dje-NE.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.GenerateResource.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CoreCompileInputs.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CopyComplete
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSortWindow.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmEditAnime.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmError.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmAbout.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_100_percent.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_200_percent.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\cef_extensions.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\chrome_elf.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\d3dcompiler_47.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\devtools_resources.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\icudtl.dat
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libcef.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libEGL.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\libGLESv2.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\am.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ar.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\bg.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\bn.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ca.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\cs.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\da.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\de.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\el.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\en-GB.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\en-US.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\es-419.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\es.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\et.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fa.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fil.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\fr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\gu.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\he.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\hu.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\id.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\it.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ja.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\kn.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ko.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\lt.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\lv.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ml.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\mr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ms.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\nb.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\nl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pt-BR.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\pt-PT.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ro.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ru.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sk.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sl.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sv.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\sw.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\ta.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\te.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\th.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\tr.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\uk.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\vi.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\zh-CN.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\locales\zh-TW.pak
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\natives_blob.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\README.txt
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\snapshot_blob.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\swiftshader\libEGL.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\swiftshader\libGLESv2.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\v8_context_snapshot.bin
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.Core.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.Core.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.BrowserSubprocess.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.Core.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.XML
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\CefSharp.WinForms.XML
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe.config
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbprojAssemblyReference.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmAbout.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmChangeLog.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmEditAnime.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmError.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmMain.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSave.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSortWindow.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmUserInfo.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmWelcome.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmXml.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.Resources.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.dje-NE.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.GenerateResource.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CoreCompileInputs.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CopyComplete
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.Saving.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe.config
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbprojAssemblyReference.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmAbout.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmChangeLog.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmEditAnime.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmError.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmMain.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSave.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmSortWindow.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmUserInfo.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmWelcome.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.Saving.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmXml.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.Resources.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.dje-NE.resources
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.GenerateResource.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CoreCompileInputs.cache
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.vbproj.CopyComplete
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\NEW NEW Main\BACKUP - 8-11-2019\New Main Folder\BACKUP - 8-7-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\x64\Debug\Mal_Anime_Archive_Frm.frmListOptions.resources

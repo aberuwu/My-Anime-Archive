@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BCDF1BE-EC19-4D3B-AF06-4B9387B8407D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Mal_Anime_Archive_Frm.My.MyApplication</StartupObject>
+    <RootNamespace>Mal_Anime_Archive_Frm</RootNamespace>
+    <AssemblyName>Mal_Anime_Archive_Frm</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mal_Anime_Archive_Frm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Mal_Anime_Archive_Frm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MAA.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Mal_Anime_Archive_Frm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Mal_Anime_Archive_Frm.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp">
+      <HintPath>..\packages\CefSharp.Common.73.1.130\CefSharp\x64\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>..\packages\CefSharp.Common.73.1.130\CefSharp\x64\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms">
+      <HintPath>..\packages\CefSharp.WinForms.73.1.130\CefSharp\x64\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anime.vb" />
+    <Compile Include="CustomPgb.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeLog.Designer.vb">
+      <DependentUpon>frmChangeLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAnime.Designer.vb">
+      <DependentUpon>frmEditAnime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditAnime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmError.Designer.vb">
+      <DependentUpon>frmError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOptions.Designer.vb">
+      <DependentUpon>frmListOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSave.Designer.vb">
+      <DependentUpon>frmSave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSortWindow.Designer.vb">
+      <DependentUpon>frmSortWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSortWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInfo.Designer.vb">
+      <DependentUpon>frmUserInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWelcome.Designer.vb">
+      <DependentUpon>frmWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorking.Designer.vb">
+      <DependentUpon>frmWorking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXml.Designer.vb">
+      <DependentUpon>frmXml.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmXml.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServerStatus.vb" />
+    <Compile Include="User.vb" />
+    <Compile Include="WelcomeOpen.Designer.vb">
+      <DependentUpon>WelcomeOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeLog.resx">
+      <DependentUpon>frmChangeLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditAnime.resx">
+      <DependentUpon>frmEditAnime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmError.resx">
+      <DependentUpon>frmError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOptions.resx">
+      <DependentUpon>frmListOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSave.resx">
+      <DependentUpon>frmSave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSortWindow.resx">
+      <DependentUpon>frmSortWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcome.resx">
+      <DependentUpon>frmWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorking.resx">
+      <DependentUpon>frmWorking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXml.resx">
+      <DependentUpon>frmXml.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeOpen.dje-NE.resx">
+      <DependentUpon>WelcomeOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeOpen.resx">
+      <DependentUpon>WelcomeOpen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\OpenFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReLife_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uwu 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Onodera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relife_background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hishiro_backgrounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple2..jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MAA.ico" />
+    <None Include="Resources\maa_logo_white2.png" />
+    <None Include="Resources\maa_logo_purple.png" />
+    <None Include="Resources\maa_logo_orange.png" />
+    <None Include="Resources\maa_logo_blue.png" />
+    <None Include="Resources\MAA_logo_White.png" />
+    <None Include="Resources\Purple_Light.png" />
+    <None Include="Resources\Purple_Dark.png" />
+    <None Include="Resources\Orange_Light.png" />
+    <None Include="Resources\Orange_Dark.png" />
+    <None Include="Resources\Blue_Light.png" />
+    <None Include="Resources\Blue_Dark.png" />
+    <None Include="Resources\purple_back.png" />
+    <None Include="Resources\orange_back.png" />
+    <None Include="Resources\blue_back.png" />
+    <None Include="Resources\darkpp_back.png" />
+    <None Include="Resources\blue_theme.png" />
+    <None Include="Resources\sorry.png" />
+    <None Include="Resources\new_icon.png" />
+    <None Include="Resources\edit_icon.png" />
+    <None Include="Resources\delete_icon.png" />
+    <None Include="Resources\minimize_icon.png" />
+    <None Include="Resources\full_Screen_icon.png" />
+    <None Include="Resources\filter2.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\xml_purple_ico.png" />
+    <None Include="Resources\Sql_purple_ico.png" />
+    <None Include="Resources\Excel_purple_ico.png" />
+    <None Include="Resources\Sql_ico.png" />
+    <None Include="Resources\Excel_png.png" />
+    <None Include="Resources\xml_ico.png" />
+    <None Include="Resources\user_icon_white.png" />
+    <None Include="Resources\MALLogoWhite.png" />
+    <None Include="Resources\Switch_OnP.png" />
+    <None Include="Resources\Switch_OffP.png" />
+    <None Include="Resources\Switch_Off2.png" />
+    <None Include="Resources\Switch_On.png" />
+    <None Include="Resources\Switch_Off.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
