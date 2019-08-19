@@ -23,19 +23,19 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.lstAnimes = New System.Windows.Forms.ListBox()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -58,7 +58,6 @@ Partial Class frmMain
         Me.lblDarkMode = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnRefresh = New System.Windows.Forms.Button()
-        Me.rctSynopsis = New System.Windows.Forms.RichTextBox()
         Me.btnFullScreen = New System.Windows.Forms.Button()
         Me.dgvAnime = New System.Windows.Forms.DataGridView()
         Me.animeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -126,13 +125,11 @@ Partial Class frmMain
         Me.tsbtnEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnDelete = New System.Windows.Forms.ToolStripButton()
         Me.btnUserInfo = New System.Windows.Forms.ToolStripButton()
-        Me.chkGridView = New System.Windows.Forms.CheckBox()
         Me.pcbtnDarkMode = New System.Windows.Forms.PictureBox()
         Me.pcbUserPicture = New System.Windows.Forms.PictureBox()
         Me.pcbLogo = New System.Windows.Forms.PictureBox()
         Me.PanChromium = New System.Windows.Forms.Panel()
         Me.pcbLoading = New System.Windows.Forms.ProgressBar()
-        Me.pcbAnimeCover = New System.Windows.Forms.PictureBox()
         Me.timerMain = New System.Windows.Forms.Timer(Me.components)
         Me.lblCopyright = New System.Windows.Forms.Label()
         Me.backWork = New System.ComponentModel.BackgroundWorker()
@@ -147,7 +144,6 @@ Partial Class frmMain
         CType(Me.pcbtnDarkMode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcbUserPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pcbAnimeCover, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lstAnimes
@@ -174,7 +170,7 @@ Partial Class frmMain
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(13, 37)
+        Me.lblTitle.Location = New System.Drawing.Point(13, 35)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(110, 25)
         Me.lblTitle.TabIndex = 3
@@ -396,22 +392,6 @@ Partial Class frmMain
         Me.ttMain.SetToolTip(Me.btnRefresh, "Refresh List")
         Me.btnRefresh.UseVisualStyleBackColor = False
         '
-        'rctSynopsis
-        '
-        Me.rctSynopsis.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.rctSynopsis.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.rctSynopsis.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rctSynopsis.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rctSynopsis.Location = New System.Drawing.Point(163, 124)
-        Me.rctSynopsis.Name = "rctSynopsis"
-        Me.rctSynopsis.ReadOnly = True
-        Me.rctSynopsis.Size = New System.Drawing.Size(593, 74)
-        Me.rctSynopsis.TabIndex = 44
-        Me.rctSynopsis.Text = ""
-        Me.ttMain.SetToolTip(Me.rctSynopsis, "Anime Synopsis -Source: MyAnimeLIst.net")
-        Me.rctSynopsis.Visible = False
-        '
         'btnFullScreen
         '
         Me.btnFullScreen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -434,39 +414,39 @@ Partial Class frmMain
         '
         Me.dgvAnime.AllowUserToAddRows = False
         Me.dgvAnime.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.dgvAnime.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.dgvAnime.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle40
         Me.dgvAnime.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAnime.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.dgvAnime.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvAnime.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle41.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvAnime.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
         Me.dgvAnime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAnime.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.animeId, Me.animeTitle, Me.animeType, Me.animeEpisodes, Me.animeWatched, Me.animeScore, Me.animeStatus, Me.animeStart, Me.animeFinish, Me.myId, Me.animeComments})
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MediumPurple
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvAnime.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.MediumPurple
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvAnime.DefaultCellStyle = DataGridViewCellStyle51
         Me.dgvAnime.Location = New System.Drawing.Point(17, 204)
         Me.dgvAnime.MultiSelect = False
         Me.dgvAnime.Name = "dgvAnime"
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MediumPurple
-        Me.dgvAnime.RowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.MediumPurple
+        Me.dgvAnime.RowsDefaultCellStyle = DataGridViewCellStyle52
         Me.dgvAnime.RowTemplate.Height = 32
         Me.dgvAnime.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAnime.Size = New System.Drawing.Size(888, 73)
@@ -475,20 +455,20 @@ Partial Class frmMain
         '
         'animeId
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeId.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle42.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeId.DefaultCellStyle = DataGridViewCellStyle42
         Me.animeId.HeaderText = "Anime ID"
         Me.animeId.Name = "animeId"
         Me.animeId.Width = 85
         '
         'animeTitle
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeTitle.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeTitle.DefaultCellStyle = DataGridViewCellStyle43
         Me.animeTitle.HeaderText = "Title"
         Me.animeTitle.Name = "animeTitle"
         Me.animeTitle.ReadOnly = True
@@ -496,9 +476,9 @@ Partial Class frmMain
         '
         'animeType
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeType.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeType.DefaultCellStyle = DataGridViewCellStyle44
         Me.animeType.HeaderText = "Type"
         Me.animeType.Name = "animeType"
         Me.animeType.ReadOnly = True
@@ -506,9 +486,9 @@ Partial Class frmMain
         '
         'animeEpisodes
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeEpisodes.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeEpisodes.DefaultCellStyle = DataGridViewCellStyle45
         Me.animeEpisodes.HeaderText = "Episodes"
         Me.animeEpisodes.Name = "animeEpisodes"
         Me.animeEpisodes.ReadOnly = True
@@ -516,9 +496,9 @@ Partial Class frmMain
         '
         'animeWatched
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeWatched.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeWatched.DefaultCellStyle = DataGridViewCellStyle46
         Me.animeWatched.HeaderText = "Watched"
         Me.animeWatched.Name = "animeWatched"
         Me.animeWatched.Width = 78
@@ -536,34 +516,34 @@ Partial Class frmMain
         '
         'animeStart
         '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeStart.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeStart.DefaultCellStyle = DataGridViewCellStyle47
         Me.animeStart.HeaderText = "Start Date"
         Me.animeStart.Name = "animeStart"
         '
         'animeFinish
         '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeFinish.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle48.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeFinish.DefaultCellStyle = DataGridViewCellStyle48
         Me.animeFinish.HeaderText = "Finished Date"
         Me.animeFinish.Name = "animeFinish"
         '
         'myId
         '
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.myId.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle49.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.myId.DefaultCellStyle = DataGridViewCellStyle49
         Me.myId.HeaderText = "My ID"
         Me.myId.Name = "myId"
         Me.myId.ReadOnly = True
         '
         'animeComments
         '
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeComments.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.MediumOrchid
+        Me.animeComments.DefaultCellStyle = DataGridViewCellStyle50
         Me.animeComments.HeaderText = "Comments"
         Me.animeComments.Name = "animeComments"
         Me.animeComments.Width = 400
@@ -595,7 +575,6 @@ Partial Class frmMain
         Me.spltMain.Panel2.Controls.Add(Me.btnFullScreen)
         Me.spltMain.Panel2.Controls.Add(Me.dgvAnime)
         Me.spltMain.Panel2.Controls.Add(Me.tsMain)
-        Me.spltMain.Panel2.Controls.Add(Me.chkGridView)
         Me.spltMain.Panel2.Controls.Add(Me.lblDarkMode)
         Me.spltMain.Panel2.Controls.Add(Me.lblEpisodesHeading)
         Me.spltMain.Panel2.Controls.Add(Me.pcbtnDarkMode)
@@ -615,8 +594,6 @@ Partial Class frmMain
         Me.spltMain.Panel2.Controls.Add(Me.lblWatched)
         Me.spltMain.Panel2.Controls.Add(Me.PanChromium)
         Me.spltMain.Panel2.Controls.Add(Me.pcbLoading)
-        Me.spltMain.Panel2.Controls.Add(Me.pcbAnimeCover)
-        Me.spltMain.Panel2.Controls.Add(Me.rctSynopsis)
         Me.spltMain.Panel2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.spltMain.Size = New System.Drawing.Size(1240, 647)
         Me.spltMain.SplitterDistance = 311
@@ -658,7 +635,7 @@ Partial Class frmMain
         Me.lstwStatus.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstwStatus.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colStatus})
         Me.lstwStatus.ContextMenuStrip = Me.ctmAnimeList
-        Me.lstwStatus.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstwStatus.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstwStatus.FullRowSelect = True
         Me.lstwStatus.HideSelection = False
         Me.lstwStatus.LargeImageList = Me.imgLst
@@ -743,7 +720,7 @@ Partial Class frmMain
         Me.lstwAnimeSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstwAnimeSearch.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.srlstName, Me.srlstID})
         Me.lstwAnimeSearch.ContextMenuStrip = Me.ctmAnimeList
-        Me.lstwAnimeSearch.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstwAnimeSearch.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstwAnimeSearch.FullRowSelect = True
         Me.lstwAnimeSearch.HideSelection = False
         Me.lstwAnimeSearch.LargeImageList = Me.imgLst
@@ -789,7 +766,7 @@ Partial Class frmMain
         Me.lstwAnimeMain.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstwAnimeMain.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.animeId4, Me.animeTitle4, Me.animeType4, Me.animeStatus4, Me.animeEpisodes4, Me.animeWatched4, Me.animeScore4, Me.animeStart4, Me.animeFinish4, Me.animeTags4, Me.myId4, Me.animeComments4, Me.animeRewatch4})
         Me.lstwAnimeMain.ContextMenuStrip = Me.ctmAnimeList
-        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstwAnimeMain.FullRowSelect = True
         Me.lstwAnimeMain.HideSelection = False
         Me.lstwAnimeMain.Location = New System.Drawing.Point(18, 146)
@@ -1046,21 +1023,6 @@ Partial Class frmMain
         Me.btnUserInfo.Size = New System.Drawing.Size(98, 22)
         Me.btnUserInfo.Text = "&User/Settings"
         '
-        'chkGridView
-        '
-        Me.chkGridView.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.chkGridView.AutoSize = True
-        Me.chkGridView.BackColor = System.Drawing.Color.Transparent
-        Me.chkGridView.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkGridView.ForeColor = System.Drawing.Color.Black
-        Me.chkGridView.Location = New System.Drawing.Point(613, 72)
-        Me.chkGridView.Name = "chkGridView"
-        Me.chkGridView.Size = New System.Drawing.Size(68, 21)
-        Me.chkGridView.TabIndex = 33
-        Me.chkGridView.Text = "Full List"
-        Me.chkGridView.UseVisualStyleBackColor = False
-        Me.chkGridView.Visible = False
-        '
         'pcbtnDarkMode
         '
         Me.pcbtnDarkMode.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1125,17 +1087,6 @@ Partial Class frmMain
         Me.pcbLoading.TabIndex = 45
         Me.pcbLoading.Visible = False
         '
-        'pcbAnimeCover
-        '
-        Me.pcbAnimeCover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pcbAnimeCover.Location = New System.Drawing.Point(3, 37)
-        Me.pcbAnimeCover.Name = "pcbAnimeCover"
-        Me.pcbAnimeCover.Size = New System.Drawing.Size(150, 157)
-        Me.pcbAnimeCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pcbAnimeCover.TabIndex = 43
-        Me.pcbAnimeCover.TabStop = False
-        Me.pcbAnimeCover.Visible = False
-        '
         'timerMain
         '
         Me.timerMain.Interval = 1000
@@ -1192,7 +1143,6 @@ Partial Class frmMain
         CType(Me.pcbtnDarkMode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pcbUserPicture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pcbLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pcbAnimeCover, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1280,8 +1230,6 @@ Partial Class frmMain
     Friend WithEvents tsbtnNewAnime As ToolStripButton
     Friend WithEvents tsbtnEdit As ToolStripButton
     Friend WithEvents tsbtnDelete As ToolStripButton
-    Friend WithEvents pcbAnimeCover As PictureBox
-    Friend WithEvents rctSynopsis As RichTextBox
     Friend WithEvents ctmAnimeList As ContextMenuStrip
     Friend WithEvents tsmiEdit As ToolStripMenuItem
     Friend WithEvents tsmiDelete As ToolStripMenuItem
@@ -1296,5 +1244,4 @@ Partial Class frmMain
     Friend WithEvents vscrSearchList As VScrollBar
     Friend WithEvents srlstID As ColumnHeader
     Friend WithEvents tsmiListOptions As ToolStripMenuItem
-    Friend WithEvents chkGridView As CheckBox
 End Class

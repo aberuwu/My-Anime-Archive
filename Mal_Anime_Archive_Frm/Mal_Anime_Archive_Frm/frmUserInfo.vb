@@ -6,7 +6,7 @@ Public Class frmUserInfo
     Private drag As Boolean
     Private mousex As Integer
     Private mousey As Integer
-
+    Private themes As New Themes()
     Public Property webServices As Boolean
     Public Property USER_IMG_URL As String
 
@@ -191,10 +191,10 @@ Public Class frmUserInfo
             Me.BackgroundImage = My.Resources.purple_back
 
             If frmMain.darkModeOn = True Then
-                frmMain.purpleThemeDarkMode()
+                themes.purpleThemeDarkModeMain()
                 purpleGraphThemeDarkMode()
             Else
-                frmMain.purpleThemeLightMode()
+                themes.purpleThemeLightModeMain()
                 purpleGraphThemeLightMode()
             End If
 
@@ -206,10 +206,10 @@ Public Class frmUserInfo
             Me.BackgroundImage = My.Resources.blue_back
 
             If frmMain.darkModeOn = True Then
-                frmMain.blueThemeDarkMode()
+                themes.blueThemeDarkModeMain()
                 blueGraphThemeDarkMode()
             Else
-                frmMain.blueThemeLightMode()
+                themes.blueThemeLightModeMain()
                 blueGraphThemeLightMode()
             End If
 
@@ -221,10 +221,10 @@ Public Class frmUserInfo
             Me.BackgroundImage = My.Resources.orange_back
 
             If frmMain.darkModeOn = True Then
-                frmMain.orangeThemeDarkMode()
+                themes.orangeThemeDarkModeMain()
                 orangeGraphThemeDarkMode()
             Else
-                frmMain.orangeThemeLightMode()
+                themes.orangeThemeLightModeMain()
                 orangeGraphThemeLightMode()
             End If
 
@@ -232,9 +232,6 @@ Public Class frmUserInfo
             Return
         End If
     End Sub
-
-
-
 
 
     Private Sub purpleGraphThemeLightMode()

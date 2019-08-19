@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Net
 Imports Newtonsoft.Json
+Imports JikanDotNet
 
 Public Class frmEditAnime
 
@@ -50,11 +51,11 @@ Public Class frmEditAnime
         If frmMain.singleListClick = False Then
             'anId = frmMain.lstwAnimeMain.FocusedItem.SubItems(0).Text
         ElseIf frmMain.editClick = True Then
-            If frmMain.chkGridView.Checked = True Then
-                anId = frmMain.lstwAnimeMain.FocusedItem.SubItems(0).Text
-            Else
-                anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
-            End If
+            'If frmMain.chkGridView.Checked = True Then
+            '    anId = frmMain.lstwAnimeMain.FocusedItem.SubItems(0).Text
+            'Else
+            anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
+            'End If
         Else
 
             anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
@@ -194,8 +195,9 @@ Public Class frmEditAnime
         '* JIKAN API TEST!
         '*
         '********************************
+
         Dim apiConnect As HttpWebRequest
-        Dim apiUrl As String = "https://api.jikan.moe/anime/" & id
+        Dim apiUrl As String = "http://api.jikan.moe/v3/anime/" & id
         Dim response As HttpWebResponse = Nothing
         Dim reader As StreamReader
 

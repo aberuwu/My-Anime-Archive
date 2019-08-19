@@ -3,9 +3,17 @@
     Private drag As Boolean
     Private mousex As Integer
     Private mousey As Integer
-    'Private chromeBrowser As ChromiumWebBrowser
+    Private xmlParser As New XmlParser()
 
     Private Sub WelcomeOpen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If frmMain.themePurple = True Then
+            Me.BackgroundImage = My.Resources.purple_back
+        ElseIf frmMain.themeOrange = True Then
+            Me.BackgroundImage = My.Resources.orange_back
+        Else
+            Me.BackgroundImage = My.Resources.blue_back
+        End If
 
     End Sub
 
@@ -21,7 +29,7 @@
 
             frmMain.tsFileLable.Text = frmMain.ANIME_SOURCE_XML
 
-            frmMain.loadXmlFile()
+            xmlParser.loadXmlFile()
         ElseIf ofpXml.ShowDialog = DialogResult.Cancel Then
             Return
 

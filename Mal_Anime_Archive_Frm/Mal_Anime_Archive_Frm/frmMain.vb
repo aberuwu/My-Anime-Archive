@@ -39,8 +39,6 @@ Imports System
 Imports Newtonsoft.Json
 Imports System.Drawing.Drawing2D
 
-'Imports System.Threading
-
 Public Class frmMain
 
     Public Property animeList As List(Of Anime) = New List(Of Anime)
@@ -48,7 +46,10 @@ Public Class frmMain
     Public Property animeCount As Integer = 0
     Public Property userCount As Integer = 0
 
-    Private USER_IMG_URL As String
+    Private themes As New Themes()
+    Private XmlParser As New XmlParser()
+
+    Public USER_IMG_URL As String
     Public Property darkModeOn As Boolean
     Public Property loadedXml As Boolean
     Public Property completed As Boolean = False
@@ -74,15 +75,8 @@ Public Class frmMain
 
     'Public Property header As String = "User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
 
-
     Public Property ANIME_SOURCE_XML As String
     Private MAL_SOURCE_URL As String = "https://myanimelist.net/anime/"
-
-
-    Public Sub sortList()
-        'animeList
-    End Sub
-
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -90,8 +84,6 @@ Public Class frmMain
         txtSearch.Text = "🔎 Anime Search"
 
         welcomeOpen()
-
-        EnableDoubleBuffered(dgvAnime, True)
 
         tsFileLable.Text = ANIME_SOURCE_XML
 
@@ -103,7 +95,6 @@ Public Class frmMain
             btnXml.Enabled = True
         End If
 
-        chkGridView.Checked = True
         vscrSearchList.Minimum = 0
         vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
     End Sub
@@ -127,7 +118,9 @@ Public Class frmMain
                 txtSearch.Text = "🔎 Anime Search"
                 ANIME_SOURCE_XML = ofpXml.FileName
                 tsFileLable.Text = ANIME_SOURCE_XML
-                loadXmlFile()
+
+                XmlParser.loadXmlFile()
+
                 Me.ActiveControl = lstAnimes
                 vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
                 lstwAnimeSearch.Items(0).Selected = True
@@ -139,9 +132,7 @@ Public Class frmMain
                 errorPage = New frmError
                 errorPage.ShowDialog()
             End If
-
         End If
-
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
@@ -180,317 +171,14 @@ Public Class frmMain
                 itemResults = New ListViewItem(str)
                 lstwAnimeSearch.Items.Add(itemResults)
 
-                'If animeList(i).Status = "Watching" Then
-                '    lstAnimes.Items.Add("✦ " & i + 1 & ") " & animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                '    ttMain.SetToolTip(lstAnimes, "Watching")
-                'ElseIf animeList(i).Status = "Completed" Then
-                '    lstAnimes.Items.Add("◆ " & i + 1 & ") " & animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                '    ttMain.SetToolTip(lstAnimes, "Completed")
-                'ElseIf animeList(i).Status = "On-Hold" Then
-                '    lstAnimes.Items.Add("✧ " & i + 1 & ") " & animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                '    ttMain.SetToolTip(lstAnimes, "On-Hold")
-                'ElseIf animeList(i).Status = "Dropped" Then
-                '    lstAnimes.Items.Add("✲ " & i + 1 & ") " & animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                '    ttMain.SetToolTip(lstAnimes, "Dropped")
-                'ElseIf animeList(i).Status = "Plan to Watch" Then
-                '    lstAnimes.Items.Add("◇ " & i + 1 & ") " & animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                '    ttMain.SetToolTip(lstAnimes, "Plan to Watch")
-                'End If
             Next
             vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
         Catch ex As Exception
             MsgBox("No XML File Loaded", MsgBoxStyle.Information, "No File Found")
         End Try
-
     End Sub
 
-    Public Sub loadXmlFile()
-
-        animeList.Clear()
-        lstwAnimeSearch.Items.Clear()
-        lstwStatus.Items.Clear()
-        lstAnimes.Items.Clear()
-        animeCount = 0
-        userCount = 0
-        dgvAnime.Rows.Clear()
-        lstwAnimeMain.Items.Clear()
-        lblNoResultFound.Visible = False
-
-        'Counts for Anime Fields
-        Dim serIdCount As Integer = 0
-        Dim episodesCount As Integer = 0
-        Dim typeCount As Integer = 0
-        Dim watchedCount As Integer = 0
-        Dim startCount As Integer = 0
-        Dim finishCount As Integer = 0
-        Dim scoreCount As Integer = 0
-        Dim statusCount As Integer = 0
-        Dim myIdCount As Integer = 0
-        Dim myRatedCount As Integer = 0
-        Dim myDvdCount As Integer = 0
-        Dim myStorageCount As Integer = 0
-        Dim myCommentsCount As Integer = 0
-        Dim myTimesCount As Integer = 0
-        Dim myRewatchCount As Integer = 0
-        Dim myTagsCount As Integer = 0
-        Dim myRewatchingCount As Integer = 0
-        Dim myRewatchingEpCount As Integer = 0
-        Dim updateCount As Integer = 0
-
-
-        'Counts for User Fields
-        Dim userNameCount As Integer = 0
-        Dim totAnimeCount As Integer = 0
-        Dim totWatchCount As Integer = 0
-        Dim totCompletedCount As Integer = 0
-        Dim totOnHold As Integer = 0
-        Dim totDropped As Integer = 0
-        Dim planCount As Integer = 0
-        Dim exportCount As Integer = 0
-
-        Try
-            Dim settings As XmlReaderSettings = New XmlReaderSettings
-            settings.IgnoreWhitespace = True
-            settings.IgnoreComments = True
-
-            Dim reader As XmlReader = XmlReader.Create(ANIME_SOURCE_XML, settings)
-
-            While reader.ReadState <> ReadState.EndOfFile
-
-                If reader.Name = "user_id" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList.Add(New User)
-                    userList(userCount).UserId = reader.ReadElementContentAsString
-
-                End If
-
-                If reader.Name = "user_export_type" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(exportCount).UserExportType = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_name" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(userNameCount).Username = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_anime" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(totAnimeCount).TotalAnime = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_watching" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(totWatchCount).TotalWatching = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_completed" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(totCompletedCount).TotalCompleted = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_onhold" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(totOnHold).TotalOnHold = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_dropped" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(totDropped).TotalDropped = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "user_total_plantowatch" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    userList(planCount).PlaToWatch = reader.ReadElementContentAsString
-                End If
-
-                If reader.Name = "anime" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    ' dgvAnime.Rows.Add()
-                End If
-
-                If reader.Name = "series_animedb_id" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList.Add(New Anime)
-                    animeList(serIdCount).AnimeId = reader.ReadElementContentAsString
-
-
-                    serIdCount += 1
-                End If
-
-                If reader.Name = "series_title" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(animeCount).Title = reader.ReadElementContentAsString
-                    animeCount += 1
-                End If
-
-                If reader.Name = "series_type" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(typeCount).Type = reader.ReadElementContentAsString
-                    typeCount += 1
-                End If
-
-                If reader.Name = "series_episodes" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(episodesCount).Episodes = reader.ReadElementContentAsString
-                    episodesCount += 1
-                End If
-
-                If reader.Name = "my_id" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myIdCount).MyId = reader.ReadElementContentAsString
-                    myIdCount += 1
-                End If
-
-                If reader.Name = "my_watched_episodes" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(watchedCount).WatchedEps = reader.ReadElementContentAsString
-                    watchedCount += 1
-                End If
-
-                If reader.Name = "my_start_date" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(startCount).StartDate = reader.ReadElementContentAsString
-                    startCount += 1
-                End If
-
-                If reader.Name = "my_finish_date" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(finishCount).FinishDate = reader.ReadElementContentAsString
-                    finishCount += 1
-                End If
-
-                If reader.Name = "my_rated" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myRatedCount).Myrated = reader.ReadElementContentAsString
-                    myRatedCount += 1
-                End If
-
-                If reader.Name = "my_score" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(scoreCount).Score = reader.ReadElementContentAsString
-                    scoreCount += 1
-                End If
-
-                If reader.Name = "my_dvd" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myDvdCount).Mydvd = reader.ReadElementContentAsString
-                    myDvdCount += 1
-                End If
-
-                If reader.Name = "my_storage" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myStorageCount).Mystorage = reader.ReadElementContentAsString
-                    myStorageCount += 1
-                End If
-
-                If reader.Name = "my_status" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(statusCount).Status = reader.ReadElementContentAsString
-                    statusCount += 1
-                End If
-
-                If reader.Name = "my_comments" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myCommentsCount).Mycomments = reader.ReadElementContentAsString
-                    myCommentsCount += 1
-                End If
-
-                If reader.Name = "my_times_watched" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myTimesCount).Mytimeswatched = reader.ReadElementContentAsString
-                    myTimesCount += 1
-                End If
-
-                If reader.Name = "my_rewatch_value" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myRewatchCount).Myrewatch = reader.ReadElementContentAsString
-                    myRewatchCount += 1
-                End If
-
-                If reader.Name = "my_tags" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myTagsCount).Mytags = reader.ReadElementContentAsString
-                    myTagsCount += 1
-                End If
-
-                If reader.Name = "my_rewatching" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myRewatchingCount).Myrewatching = reader.ReadElementContentAsString
-                    myRewatchingCount += 1
-                End If
-
-                If reader.Name = "my_rewatching_ep" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(myRewatchingEpCount).Myrewatchingep = reader.ReadElementContentAsString
-                    myRewatchingEpCount += 1
-                End If
-
-                If reader.Name = "update_on_import" AndAlso reader.NodeType = XmlNodeType.Element Then
-                    animeList(updateCount).Updateonimport = reader.ReadElementContentAsString
-                    updateCount += 1
-                End If
-
-                reader.Read()
-
-            End While
-
-            reader.Close()
-        Catch ex As Exception
-            MsgBox("There was a problem with your XML File. Please try again with another file!", MsgBoxStyle.Critical, "Error")
-            Return
-        Finally
-
-        End Try
-
-        'txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-        txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
-        Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
-
-        For i As Integer = 0 To animeCount - 1
-
-            sug.Add(animeList(i).Title)
-
-            Dim itemStatus As ListViewItem = lstwStatus.Items.Add("")
-            Dim str(2) As String
-            Dim itemResults As ListViewItem
-
-            If animeList(i).Status = "Watching" Then
-                itemStatus.ImageIndex = 0
-            ElseIf animeList(i).Status = "Completed" Then
-                itemStatus.ImageIndex = 1
-            ElseIf animeList(i).Status = "Dropped" Then
-                itemStatus.ImageIndex = 2
-            ElseIf animeList(i).Status = "On-Hold" Then
-                itemStatus.ImageIndex = 3
-            Else
-                itemStatus.ImageIndex = 4
-            End If
-
-            str(0) = animeList(i).Title
-            str(1) = animeList(i).AnimeId
-            itemResults = New ListViewItem(str)
-            lstwAnimeSearch.Items.Add(itemResults)
-
-
-            If animeList(i).Status = "Watching" Then
-                lstAnimes.Items.Add(animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                ttMain.SetToolTip(lstAnimes, "Watching")
-            ElseIf animeList(i).Status = "Completed" Then
-                lstAnimes.Items.Add(animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                ttMain.SetToolTip(lstAnimes, "Completed")
-            ElseIf animeList(i).Status = "On-Hold" Then
-                lstAnimes.Items.Add(animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                ttMain.SetToolTip(lstAnimes, "On-Hold")
-            ElseIf animeList(i).Status = "Dropped" Then
-                lstAnimes.Items.Add(animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                ttMain.SetToolTip(lstAnimes, "Dropped")
-            ElseIf animeList(i).Status = "Plan to Watch" Then
-                lstAnimes.Items.Add(animeList(i).Title & animeList(i).AnimeId.PadLeft(1000))
-                ttMain.SetToolTip(lstAnimes, "Plan to Watch")
-            End If
-        Next
-
-        txtSearch.AutoCompleteCustomSource = sug
-
-        PopulateList()
-
-        USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & userList(userCount).UserId & ".jpg"
-
-        If CheckConnection(USER_IMG_URL) = True Then
-            pcbUserPicture.Load(USER_IMG_URL)
-        End If
-
-        loadedXml = True
-        lstAnimes.SelectedIndex = 0
-        btnSave.Enabled = True
-        btnXml.Enabled = True
-        lblNoListLoaded.Visible = False
-
-        welcomePage()
-    End Sub
-
-
-    Private Sub populateSearchList()
-        lstwAnimeSearch.Items.Clear()
-
-        For i As Integer = 0 To animeCount - 1
-
-        Next
-    End Sub
-
-    Private Sub welcomePage()
+    Public Sub welcomePage()
         Dim welcomePage As frmWelcome
 
         welcomePage = New frmWelcome
@@ -637,341 +325,17 @@ Public Class frmMain
         sortBy.ShowDialog()
     End Sub
 
-
-    '**********************************************
-    '*
-    '* Dark and Light Theme Functions
-    '*
-    '**********************************************
-    Public Sub orangeThemeLightMode()
-        lblTitle.ForeColor = Color.OrangeRed
-        lblId.ForeColor = Color.OrangeRed
-        lblType.ForeColor = Color.OrangeRed
-        lblEpisodes.ForeColor = Color.OrangeRed
-        lblWatched.ForeColor = Color.OrangeRed
-        lblScore.ForeColor = Color.OrangeRed
-        lblStatus.ForeColor = Color.OrangeRed
-        lstwAnimeMain.ForeColor = Color.Black
-        lstwOne.ForeColor = Color.Black
-        chkGridView.ForeColor = Color.Black
-
-        lblAnimeIdHeading.ForeColor = Color.Black
-        lblTypeHeading.ForeColor = Color.Black
-        lblEpisodesHeading.ForeColor = Color.Black
-        lblWatchedHeading.ForeColor = Color.Black
-        lblScoreHeading.ForeColor = Color.Black
-        lblStatusHeading.ForeColor = Color.Black
-        lblCopyright.ForeColor = Color.Black
-
-        dgvAnime.BackgroundColor = Color.Gray
-
-        txtSearch.BackColor = Color.WhiteSmoke
-        lstwOne.BackColor = Color.WhiteSmoke
-        lstwAnimeMain.BackColor = Color.WhiteSmoke
-        lblCopyright.BackColor = Color.WhiteSmoke
-        lstAnimes.BackColor = Color.WhiteSmoke
-        lstAnimes.ForeColor = Color.Black
-        'pcbLogoWhite.Visible = False
-        pcbLogo.Image = My.Resources.maa_logo_orange
-
-        lblDarkMode.ForeColor = Color.Black
-
-        tsFileLable.ForeColor = Color.Black
-
-        ssMain.BackColor = Color.WhiteSmoke
-
-
-        'BUTTONS
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
-        End With
-
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
-        End With
-
-    End Sub
-
-    Public Sub purpleThemeLightMode()
-        lblTitle.ForeColor = Color.FromArgb(192, 0, 192)
-        lblId.ForeColor = Color.FromArgb(192, 0, 192)
-        lblType.ForeColor = Color.FromArgb(192, 0, 192)
-        lblEpisodes.ForeColor = Color.FromArgb(192, 0, 192)
-        lblWatched.ForeColor = Color.FromArgb(192, 0, 192)
-        lblScore.ForeColor = Color.FromArgb(192, 0, 192)
-        lblStatus.ForeColor = Color.FromArgb(192, 0, 192)
-        lstwAnimeMain.ForeColor = Color.Black
-        lstwOne.ForeColor = Color.Black
-        chkGridView.ForeColor = Color.Black
-
-        lblAnimeIdHeading.ForeColor = Color.Black
-        lblTypeHeading.ForeColor = Color.Black
-        lblEpisodesHeading.ForeColor = Color.Black
-        lblWatchedHeading.ForeColor = Color.Black
-        lblScoreHeading.ForeColor = Color.Black
-        lblStatusHeading.ForeColor = Color.Black
-        lblCopyright.ForeColor = Color.Black
-
-        dgvAnime.BackgroundColor = Color.Gray
-
-        txtSearch.BackColor = Color.WhiteSmoke
-        lstwOne.BackColor = Color.WhiteSmoke
-        lstwAnimeMain.BackColor = Color.WhiteSmoke
-        lblCopyright.BackColor = Color.WhiteSmoke
-        lstAnimes.BackColor = Color.WhiteSmoke
-        lstwStatus.BackColor = Color.WhiteSmoke
-        lstwAnimeSearch.BackColor = Color.WhiteSmoke
-        lstwAnimeSearch.ForeColor = Color.Black
-        lstAnimes.ForeColor = Color.Black
-        'pcbLogoWhite.Visible = False
-        pcbLogo.Image = My.Resources.maa_logo_purple
-
-        lblDarkMode.ForeColor = Color.Black
-
-        tsFileLable.ForeColor = Color.Black
-
-        ssMain.BackColor = Color.WhiteSmoke
-
-        'BUTTONS
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.MediumPurple
-            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
-            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
-        End With
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.MediumPurple
-            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
-            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
-        End With
-
-    End Sub
-
-    Public Sub blueThemeLightMode()
-
-        lblTitle.ForeColor = Color.Blue
-        lblId.ForeColor = Color.Blue
-        lblType.ForeColor = Color.Blue
-        lblEpisodes.ForeColor = Color.Blue
-        lblWatched.ForeColor = Color.Blue
-        lblScore.ForeColor = Color.Blue
-        lblStatus.ForeColor = Color.Blue
-        lstwAnimeMain.ForeColor = Color.Black
-        lstwOne.ForeColor = Color.Black
-        chkGridView.ForeColor = Color.Black
-
-        lblAnimeIdHeading.ForeColor = Color.Black
-        lblTypeHeading.ForeColor = Color.Black
-        lblEpisodesHeading.ForeColor = Color.Black
-        lblWatchedHeading.ForeColor = Color.Black
-        lblScoreHeading.ForeColor = Color.Black
-        lblStatusHeading.ForeColor = Color.Black
-        lblCopyright.ForeColor = Color.Black
-
-        dgvAnime.BackgroundColor = Color.Gray
-
-        txtSearch.BackColor = Color.WhiteSmoke
-        lstwOne.BackColor = Color.WhiteSmoke
-        lstwAnimeMain.BackColor = Color.WhiteSmoke
-        lblCopyright.BackColor = Color.WhiteSmoke
-        lstAnimes.BackColor = Color.WhiteSmoke
-        lstAnimes.ForeColor = Color.Black
-        'pcbLogoWhite.Visible = False
-        pcbLogo.Image = My.Resources.maa_logo_blue
-
-        lblDarkMode.ForeColor = Color.Black
-
-        tsFileLable.ForeColor = Color.Black
-
-        ssMain.BackColor = Color.WhiteSmoke
-
-        'BUTTONS
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.LightBlue
-            .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
-        End With
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.LightBlue
-            .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
-        End With
-    End Sub
-
-    Public Sub orangeThemeDarkMode()
-        Me.BackColor = Color.FromArgb(44, 44, 44)
-        lblTitle.ForeColor = Color.White
-        lblId.ForeColor = Color.White
-        lblType.ForeColor = Color.White
-        lblEpisodes.ForeColor = Color.White
-        lblWatched.ForeColor = Color.White
-        lblScore.ForeColor = Color.White
-        lblStatus.ForeColor = Color.White
-        lstwAnimeMain.ForeColor = Color.White
-        lstwOne.ForeColor = Color.White
-        chkGridView.ForeColor = Color.White
-
-        lblAnimeIdHeading.ForeColor = Color.OrangeRed
-        lblTypeHeading.ForeColor = Color.OrangeRed
-        lblEpisodesHeading.ForeColor = Color.OrangeRed
-        lblWatchedHeading.ForeColor = Color.OrangeRed
-        lblScoreHeading.ForeColor = Color.OrangeRed
-        lblStatusHeading.ForeColor = Color.OrangeRed
-        lblCopyright.ForeColor = Color.White
-        dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
-        lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        lstwOne.BackColor = Color.FromArgb(44, 44, 44)
-
-        lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
-        lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
-        lstAnimes.ForeColor = Color.WhiteSmoke
-        ' pcbLogoWhite.Visible = True
-        pcbLogo.Image = My.Resources.maa_logo_white2
-
-        lblDarkMode.ForeColor = Color.White
-        tsFileLable.ForeColor = Color.White
-
-        ssMain.BackColor = Color.FromArgb(38, 35, 35)
-
-        'BUTTONS
-
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
-        End With
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
-        End With
-    End Sub
-
-    Public Sub purpleThemeDarkMode()
-        Me.BackColor = Color.FromArgb(44, 44, 44)
-        lblTitle.ForeColor = Color.White
-        lblId.ForeColor = Color.White
-        lblType.ForeColor = Color.White
-        lblEpisodes.ForeColor = Color.White
-        lblWatched.ForeColor = Color.White
-        lblScore.ForeColor = Color.White
-        lblStatus.ForeColor = Color.White
-        lstwAnimeMain.ForeColor = Color.White
-        lstwOne.ForeColor = Color.White
-        chkGridView.ForeColor = Color.White
-        lstwAnimeSearch.ForeColor = Color.White
-
-        lblAnimeIdHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblTypeHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblEpisodesHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblWatchedHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblScoreHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
-        lblCopyright.ForeColor = Color.White
-        dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
-        lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        lstwOne.BackColor = Color.FromArgb(44, 44, 44)
-        lstwAnimeSearch.BackColor = Color.FromArgb(44, 44, 44)
-        lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
-
-        lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
-        lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
-        lstAnimes.ForeColor = Color.WhiteSmoke
-        'pcbLogoWhite.Visible = True
-        pcbLogo.Image = My.Resources.maa_logo_white2
-
-        lblDarkMode.ForeColor = Color.White
-        tsFileLable.ForeColor = Color.White
-
-        ssMain.BackColor = Color.FromArgb(38, 35, 35)
-
-        'BUTTONS
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.MediumPurple
-            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
-            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
-        End With
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.MediumPurple
-            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
-            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
-        End With
-    End Sub
-
-    Public Sub blueThemeDarkMode()
-        Me.BackColor = Color.FromArgb(44, 44, 44)
-        lblTitle.ForeColor = Color.White
-        lblId.ForeColor = Color.White
-        lblType.ForeColor = Color.White
-        lblEpisodes.ForeColor = Color.White
-        lblWatched.ForeColor = Color.White
-        lblScore.ForeColor = Color.White
-        lblStatus.ForeColor = Color.White
-        lstwAnimeMain.ForeColor = Color.White
-        lstwOne.ForeColor = Color.White
-        chkGridView.ForeColor = Color.White
-
-        lblAnimeIdHeading.ForeColor = Color.LightBlue
-        lblTypeHeading.ForeColor = Color.LightBlue
-        lblEpisodesHeading.ForeColor = Color.LightBlue
-        lblWatchedHeading.ForeColor = Color.LightBlue
-        lblScoreHeading.ForeColor = Color.LightBlue
-        lblStatusHeading.ForeColor = Color.LightBlue
-        lblCopyright.ForeColor = Color.White
-        dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
-        lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        lstwOne.BackColor = Color.FromArgb(44, 44, 44)
-
-        lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
-        lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
-        lstAnimes.ForeColor = Color.WhiteSmoke
-        'pcbLogoWhite.Visible = True
-        pcbLogo.Image = My.Resources.maa_logo_white2
-
-        lblDarkMode.ForeColor = Color.White
-        tsFileLable.ForeColor = Color.White
-
-        ssMain.BackColor = Color.FromArgb(38, 35, 35)
-
-        'BUTTONS
-        With btnRefresh
-            .FlatAppearance.BorderColor = Color.LightBlue
-            .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
-        End With
-
-        With btnSearch
-            .FlatAppearance.BorderColor = Color.LightBlue
-            .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
-        End With
-    End Sub
-
     Private Sub pcbtnDarkMode_Click(sender As Object, e As EventArgs) Handles pcbtnDarkMode.Click
         If darkModeOn = False Then
             darkModeOn = True
             pcbtnDarkMode.Image = My.Resources.Switch_OnP
 
             If themePurple = True Then
-
-                purpleThemeDarkMode()
-
+                themes.purpleThemeDarkModeMain()
             ElseIf themeBlue = True Then
-
-                blueThemeDarkMode()
-
+                themes.blueThemeDarkModeMain()
             ElseIf themeOrange = True Then
-
-                orangeThemeDarkMode()
-
+                themes.orangeThemeDarkModeMain()
             End If
 
             If loadedXml = False Then
@@ -983,19 +347,12 @@ Public Class frmMain
             pcbtnDarkMode.Image = My.Resources.Switch_OffP
             Me.BackColor = Color.WhiteSmoke
 
-
             If themePurple = True Then
-
-                purpleThemeLightMode()
-
+                themes.purpleThemeLightModeMain()
             ElseIf themeBlue = True Then
-
-                blueThemeLightMode()
-
+                themes.blueThemeLightModeMain()
             ElseIf themeOrange = True Then
-
-                orangeThemeLightMode()
-
+                themes.orangeThemeLightModeMain()
             End If
 
             If loadedXml = False Then
@@ -1012,11 +369,8 @@ Public Class frmMain
     End Sub
 
     Private Sub pcbUserPicture_Click(sender As Object, e As EventArgs) Handles pcbUserPicture.Click
-
         If loadedXml = True Then
-            'chromeBrowser.Load("https://myanimelist.net/profile/" & userList(userCount).Username)
-            'System.Diagnostics.Process.Start("https://myanimelist.net/profile/" & userList(userCount).Username)
-            'wbsAnimeImage.Navigate("https://myanimelist.net/profile/" & userList(userCount).Username)
+            System.Diagnostics.Process.Start("https://myanimelist.net/profile/" & userList(userCount).Username)
         Else
             Return
         End If
@@ -1061,13 +415,10 @@ Public Class frmMain
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
         lstwAnimeMain.Items.Clear()
-        reloadLists()
+        XmlParser.populateList()
     End Sub
 
 
-    Private Sub reloadLists()
-        PopulateList()
-    End Sub
 
     'EDIT BUTTON - STILL BUGGY
     Private Sub tsbtnEdit_Click(sender As Object, e As EventArgs) Handles tsbtnEdit.Click
@@ -1078,73 +429,13 @@ Public Class frmMain
         editAnime.ShowDialog()
     End Sub
 
-    Private Sub chkGridView_CheckedChanged(sender As Object, e As EventArgs) Handles chkGridView.CheckedChanged
-        PopulateList()
-    End Sub
-
-    Private Sub PopulateList()
-        If chkGridView.Checked = True Then
-            dgvAnime.Enabled = False
-            dgvAnime.Visible = False
-            lstwOne.Visible = False
-            lstwAnimeMain.Visible = True
-            lstwAnimeMain.Items.Clear()
-            fullListChecked = True
-
-
-
-            Dim currentAnime As String
-
-            For i As Integer = 0 To animeCount - 1
-                pcbLoading.Maximum = animeCount - 1
-                pcbLoading.Visible = True
-                lstwAnimeMain.Items.Insert(i, animeList(i).AnimeId)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Title)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Type)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Status)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Episodes)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).WatchedEps)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Score)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).StartDate)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).FinishDate)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Mytags)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).MyId)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Mycomments)
-                lstwAnimeMain.Items(i).SubItems.Add(animeList(i).Myrewatch)
-
-                'backWork.RunWorkerAsync()
-                backWork.ReportProgress(i)
-                'backWork.ReportProgress((100 * i) / animeCount)
-            Next
-
-            currentAnime = lblId.Text
-
-            For i As Integer = 0 To animeCount - 1
-                If lstwAnimeMain.Items(i).SubItems(0).Text = currentAnime Then
-                    lstwAnimeMain.Items(i).Selected = True
-                    lstwAnimeMain.Items(i).EnsureVisible()
-                End If
-            Next
-        End If
-    End Sub
-
-    Private Sub backWork_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles backWork.DoWork
-        'lblLoading.Visible = True
-    End Sub
 
     Private Sub backWork_ProgressChanged(sender As Object, e As ComponentModel.ProgressChangedEventArgs) Handles backWork.ProgressChanged
-
-
-
         pcbLoading.Value = Math.Min(e.ProgressPercentage, pcbLoading.Maximum)
-
-
         If e.ProgressPercentage = pcbLoading.Maximum Then
             pcbLoading.Visible = False
             'lblLoading.Visible = False
         End If
-
-
     End Sub
 
 
@@ -1313,9 +604,15 @@ Public Class frmMain
 
     Private Sub lstwTest_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwAnimeMain.DrawColumnHeader
         Dim sf As New StringFormat()
-        If darkModeOn = False Then
-            e.DrawText()
+        'e.DrawText()
+        If themePurple = True Then
+            e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
+            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeMain.Font, Brushes.White, e.Bounds, sf)
+        ElseIf themeBlue = True Then
+            e.Graphics.FillRectangle(Brushes.RoyalBlue, e.Bounds)
+            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeMain.Font, Brushes.White, e.Bounds, sf)
         Else
+            e.Graphics.FillRectangle(Brushes.Tomato, e.Bounds)
             e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeMain.Font, Brushes.White, e.Bounds, sf)
         End If
     End Sub
@@ -1395,7 +692,7 @@ Public Class frmMain
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
         lstwAnimeMain.Items.Clear()
-        reloadLists()
+        XmlParser.populateList()
     End Sub
 
     Private Sub tsmiDelete_Click(sender As Object, e As EventArgs) Handles tsmiDelete.Click
@@ -1404,10 +701,6 @@ Public Class frmMain
 
     Private Sub tsmiVisitPage_Click(sender As Object, e As EventArgs) Handles tsmiVisitPage.Click
 
-    End Sub
-
-    Private Sub pcbUserPicture_DoubleClick(sender As Object, e As EventArgs) Handles pcbUserPicture.DoubleClick
-        welcomeOpen()
     End Sub
 
     Private Sub vscrSearchList_Scroll(sender As Object, e As ScrollEventArgs) Handles vscrSearchList.Scroll
@@ -1459,15 +752,18 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub frmMain_ResizeBegin(sender As Object, e As EventArgs) Handles MyBase.ResizeBegin
-        Me.SuspendLayout()
+    Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
+        welcomeOpen()
     End Sub
 
-    Private Sub frmMain_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
-        Me.ResumeLayout()
-    End Sub
+    'Private Sub frmMain_ResizeBegin(sender As Object, e As EventArgs) Handles MyBase.ResizeBegin
+    '    Me.SuspendLayout()
+    'End Sub
+
+    'Private Sub frmMain_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
+    '    Me.ResumeLayout()
+    'End Sub
 End Class
-
 
 
 Public Class ListViewDoubleBuffered
