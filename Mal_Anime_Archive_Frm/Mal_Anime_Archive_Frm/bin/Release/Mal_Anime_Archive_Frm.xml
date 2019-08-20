@@ -87,6 +87,11 @@ Mal_Anime_Archive_Frm
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.haruhi_loading">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.hishiro_backgrounds">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

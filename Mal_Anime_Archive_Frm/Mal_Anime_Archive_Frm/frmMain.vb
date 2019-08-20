@@ -695,6 +695,13 @@ Public Class frmMain
         XmlParser.populateList()
     End Sub
 
+    Private Sub tsbtnNewAnime_Click(sender As Object, e As EventArgs) Handles tsbtnNewAnime.Click
+        Dim newAnime As frmNewAnime
+
+        newAnime = New frmNewAnime
+        newAnime.ShowDialog()
+    End Sub
+
     Private Sub tsmiDelete_Click(sender As Object, e As EventArgs) Handles tsmiDelete.Click
 
     End Sub
@@ -755,6 +762,8 @@ Public Class frmMain
     Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
         welcomeOpen()
     End Sub
+
+
 
     'Private Sub frmMain_ResizeBegin(sender As Object, e As EventArgs) Handles MyBase.ResizeBegin
     '    Me.SuspendLayout()

@@ -359,3 +359,4 @@ C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Alph
 C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Alpha - My Anime Archive!\Latest with Jikan API Wrapper\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.exe
 C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Alpha - My Anime Archive!\Latest with Jikan API Wrapper\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.xml
 C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Alpha - My Anime Archive!\Latest with Jikan API Wrapper\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Alpha - My Anime Archive!\Latest with Jikan API Wrapper\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmNewAnime.resources
