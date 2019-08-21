@@ -88,6 +88,15 @@
     <Reference Include="JikanDotNet, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\JikanDotNet.1.3.0\lib\netstandard2.0\JikanDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -255,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewAnime.resx">
       <DependentUpon>frmNewAnime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewList.resx">
+      <DependentUpon>frmNewList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSave.resx">
       <DependentUpon>frmSave.vb</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿'---------------------------------------------
 ' File: Themes.vb
-' Purpose: Stores all cholor scheme methods
+' Purpose: Stores all color scheme methods
 ' for the forms
 '---------------------------------------------
 
@@ -20,7 +20,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.OrangeRed
         frmMain.lblStatus.ForeColor = Color.OrangeRed
         frmMain.lstwAnimeMain.ForeColor = Color.Black
-        frmMain.lstwOne.ForeColor = Color.Black
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.Black
         frmMain.lblTypeHeading.ForeColor = Color.Black
@@ -30,10 +29,8 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
-        frmMain.dgvAnime.BackgroundColor = Color.Gray
 
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
-        frmMain.lstwOne.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
         frmMain.lstAnimes.BackColor = Color.WhiteSmoke
@@ -71,7 +68,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.FromArgb(192, 0, 192)
         frmMain.lblStatus.ForeColor = Color.FromArgb(192, 0, 192)
         frmMain.lstwAnimeMain.ForeColor = Color.Black
-        frmMain.lstwOne.ForeColor = Color.Black
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.Black
         frmMain.lblTypeHeading.ForeColor = Color.Black
@@ -81,10 +77,8 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
-        frmMain.dgvAnime.BackgroundColor = Color.Gray
 
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
-        frmMain.lstwOne.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
         frmMain.lstAnimes.BackColor = Color.WhiteSmoke
@@ -125,7 +119,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.Blue
         frmMain.lblStatus.ForeColor = Color.Blue
         frmMain.lstwAnimeMain.ForeColor = Color.Black
-        frmMain.lstwOne.ForeColor = Color.Black
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.Black
         frmMain.lblTypeHeading.ForeColor = Color.Black
@@ -135,10 +128,7 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
-        frmMain.dgvAnime.BackgroundColor = Color.Gray
-
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
-        frmMain.lstwOne.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
         frmMain.lstAnimes.BackColor = Color.WhiteSmoke
@@ -175,7 +165,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.White
         frmMain.lblStatus.ForeColor = Color.White
         frmMain.lstwAnimeMain.ForeColor = Color.White
-        frmMain.lstwOne.ForeColor = Color.White
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.OrangeRed
         frmMain.lblTypeHeading.ForeColor = Color.OrangeRed
@@ -184,9 +173,7 @@ Public Class Themes
         frmMain.lblScoreHeading.ForeColor = Color.OrangeRed
         frmMain.lblStatusHeading.ForeColor = Color.OrangeRed
         frmMain.lblCopyright.ForeColor = Color.White
-        frmMain.dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        frmMain.lstwOne.BackColor = Color.FromArgb(44, 44, 44)
 
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
@@ -222,7 +209,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.White
         frmMain.lblStatus.ForeColor = Color.White
         frmMain.lstwAnimeMain.ForeColor = Color.White
-        frmMain.lstwOne.ForeColor = Color.White
         frmMain.lstwAnimeSearch.ForeColor = Color.White
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.FromArgb(209, 122, 200)
@@ -232,9 +218,7 @@ Public Class Themes
         frmMain.lblScoreHeading.ForeColor = Color.FromArgb(209, 122, 200)
         frmMain.lblStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
         frmMain.lblCopyright.ForeColor = Color.White
-        frmMain.dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        frmMain.lstwOne.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwAnimeSearch.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
 
@@ -272,7 +256,6 @@ Public Class Themes
         frmMain.lblScore.ForeColor = Color.White
         frmMain.lblStatus.ForeColor = Color.White
         frmMain.lstwAnimeMain.ForeColor = Color.White
-        frmMain.lstwOne.ForeColor = Color.White
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.LightBlue
         frmMain.lblTypeHeading.ForeColor = Color.LightBlue
@@ -281,9 +264,7 @@ Public Class Themes
         frmMain.lblScoreHeading.ForeColor = Color.LightBlue
         frmMain.lblStatusHeading.ForeColor = Color.LightBlue
         frmMain.lblCopyright.ForeColor = Color.White
-        frmMain.dgvAnime.BackgroundColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
-        frmMain.lstwOne.BackColor = Color.FromArgb(44, 44, 44)
 
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)

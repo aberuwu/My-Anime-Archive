@@ -24,6 +24,7 @@ Partial Class frmNewAnime
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmNewAnime))
         Me.gbxEdit = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExpandCollapse = New System.Windows.Forms.Button()
         Me.txtTags = New System.Windows.Forms.TextBox()
         Me.lblComments = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class frmNewAnime
         Me.lblScoreHeading = New System.Windows.Forms.Label()
         Me.lblEpisodesHeading = New System.Windows.Forms.Label()
         Me.lblStatusHeading = New System.Windows.Forms.Label()
-        Me.lblSearching = New System.Windows.Forms.Label()
         Me.gbxResults = New System.Windows.Forms.GroupBox()
         Me.btnResult8 = New System.Windows.Forms.Button()
         Me.btnResult7 = New System.Windows.Forms.Button()
@@ -79,11 +79,11 @@ Partial Class frmNewAnime
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtTitleSearch = New System.Windows.Forms.TextBox()
         Me.lblAnimeTitle = New System.Windows.Forms.Label()
+        Me.pgbLoadingSearch = New System.Windows.Forms.ProgressBar()
+        Me.mtpgbLoading = New MetroFramework.Controls.MetroProgressBar()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.bckwNewAnime = New System.ComponentModel.BackgroundWorker()
-        Me.pgbLoadingSearch = New System.Windows.Forms.ProgressBar()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.gbxEdit.SuspendLayout()
         CType(Me.numUpDownRewatch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numUpDownWatched, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,16 +133,29 @@ Partial Class frmNewAnime
         Me.gbxEdit.Controls.Add(Me.lblScoreHeading)
         Me.gbxEdit.Controls.Add(Me.lblEpisodesHeading)
         Me.gbxEdit.Controls.Add(Me.lblStatusHeading)
-        Me.gbxEdit.Controls.Add(Me.lblSearching)
         Me.gbxEdit.Controls.Add(Me.gbxResults)
         Me.gbxEdit.Controls.Add(Me.btnSearch)
         Me.gbxEdit.Controls.Add(Me.txtTitleSearch)
         Me.gbxEdit.Controls.Add(Me.lblAnimeTitle)
+        Me.gbxEdit.Controls.Add(Me.pgbLoadingSearch)
+        Me.gbxEdit.Controls.Add(Me.mtpgbLoading)
         Me.gbxEdit.Location = New System.Drawing.Point(-2, 58)
         Me.gbxEdit.Name = "gbxEdit"
         Me.gbxEdit.Size = New System.Drawing.Size(653, 540)
         Me.gbxEdit.TabIndex = 1
         Me.gbxEdit.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(799, 27)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(156, 32)
+        Me.Label1.TabIndex = 102
+        Me.Label1.Text = "Anime Details"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnExpandCollapse
         '
@@ -412,19 +425,6 @@ Partial Class frmNewAnime
         Me.lblStatusHeading.Size = New System.Drawing.Size(61, 25)
         Me.lblStatusHeading.TabIndex = 70
         Me.lblStatusHeading.Text = "Status"
-        '
-        'lblSearching
-        '
-        Me.lblSearching.AutoSize = True
-        Me.lblSearching.Font = New System.Drawing.Font("Segoe UI Semilight", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearching.ForeColor = System.Drawing.Color.Gray
-        Me.lblSearching.Location = New System.Drawing.Point(103, 65)
-        Me.lblSearching.Name = "lblSearching"
-        Me.lblSearching.Size = New System.Drawing.Size(369, 32)
-        Me.lblSearching.TabIndex = 66
-        Me.lblSearching.Text = "Searching MyAnimeList database..."
-        Me.lblSearching.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblSearching.Visible = False
         '
         'gbxResults
         '
@@ -799,6 +799,29 @@ Partial Class frmNewAnime
         Me.lblAnimeTitle.TabIndex = 31
         Me.lblAnimeTitle.Text = "Search Anime"
         '
+        'pgbLoadingSearch
+        '
+        Me.pgbLoadingSearch.ForeColor = System.Drawing.Color.MediumPurple
+        Me.pgbLoadingSearch.Location = New System.Drawing.Point(132, 50)
+        Me.pgbLoadingSearch.Maximum = 7
+        Me.pgbLoadingSearch.Name = "pgbLoadingSearch"
+        Me.pgbLoadingSearch.Size = New System.Drawing.Size(377, 10)
+        Me.pgbLoadingSearch.Step = 1
+        Me.pgbLoadingSearch.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pgbLoadingSearch.TabIndex = 102
+        Me.pgbLoadingSearch.Visible = False
+        '
+        'mtpgbLoading
+        '
+        Me.mtpgbLoading.Location = New System.Drawing.Point(6, 71)
+        Me.mtpgbLoading.Maximum = 7
+        Me.mtpgbLoading.Name = "mtpgbLoading"
+        Me.mtpgbLoading.Size = New System.Drawing.Size(577, 8)
+        Me.mtpgbLoading.Step = 1
+        Me.mtpgbLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtpgbLoading.TabIndex = 103
+        Me.mtpgbLoading.Value = 7
+        '
         'lblHeader
         '
         Me.lblHeader.AutoSize = True
@@ -830,31 +853,6 @@ Partial Class frmNewAnime
         '
         Me.bckwNewAnime.WorkerReportsProgress = True
         '
-        'pgbLoadingSearch
-        '
-        Me.pgbLoadingSearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pgbLoadingSearch.ForeColor = System.Drawing.Color.MediumPurple
-        Me.pgbLoadingSearch.Location = New System.Drawing.Point(161, 14)
-        Me.pgbLoadingSearch.Name = "pgbLoadingSearch"
-        Me.pgbLoadingSearch.Size = New System.Drawing.Size(299, 10)
-        Me.pgbLoadingSearch.Step = 1
-        Me.pgbLoadingSearch.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pgbLoadingSearch.TabIndex = 102
-        Me.pgbLoadingSearch.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(799, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 32)
-        Me.Label1.TabIndex = 102
-        Me.Label1.Text = "Anime Details"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'frmNewAnime
         '
         Me.AcceptButton = Me.btnSearch
@@ -863,7 +861,6 @@ Partial Class frmNewAnime
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(588, 587)
-        Me.Controls.Add(Me.pgbLoadingSearch)
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.gbxEdit)
         Me.Controls.Add(Me.Button1)
@@ -911,7 +908,6 @@ Partial Class frmNewAnime
     Friend WithEvents txtTitle3 As TextBox
     Friend WithEvents txtTitle2 As TextBox
     Friend WithEvents txtTitle1 As TextBox
-    Friend WithEvents lblSearching As Label
     Friend WithEvents btnResult1 As Button
     Friend WithEvents pcbResult3 As PictureBox
     Friend WithEvents pcbResult8 As PictureBox
@@ -958,4 +954,5 @@ Partial Class frmNewAnime
     Friend WithEvents pgbLoadingSearch As ProgressBar
     Friend WithEvents btnExpandCollapse As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents mtpgbLoading As MetroFramework.Controls.MetroProgressBar
 End Class

@@ -10,6 +10,47 @@ Public Class frmUserInfo
     Public Property webServices As Boolean
     Public Property USER_IMG_URL As String
 
+
+    Private Sub loadUserInfo()
+        lblId.Text = frmMain.userList(frmMain.userCount).UserId
+        lblUserName.Text = frmMain.userList(frmMain.userCount).Username
+        lblTotalAnime.Text = frmMain.userList(frmMain.userCount).TotalAnime
+        lblWatching.Text = frmMain.userList(frmMain.userCount).TotalWatching
+        lblCompleted.Text = frmMain.userList(frmMain.userCount).TotalCompleted
+        lblOnHold.Text = frmMain.userList(frmMain.userCount).TotalOnHold
+        lblDropped.Text = frmMain.userList(frmMain.userCount).TotalDropped
+        lblPlanToWatch.Text = frmMain.userList(frmMain.userCount).PlaToWatch
+
+        Dim episodeCount As Integer = 0
+        Dim meanScoreCount As Decimal = 0
+        Dim meanScore As Decimal = 0
+        Dim animeWScore As Decimal = 0
+
+        For i As Integer = 0 To frmMain.animeCount - 1
+            episodeCount += Convert.ToInt32(frmMain.animeList(i).WatchedEps)
+            If Convert.ToInt32(frmMain.animeList(i).Score) = 0 Then
+            Else
+                meanScoreCount += Convert.ToDecimal(frmMain.animeList(i).Score)
+                animeWScore += 1
+            End If
+        Next
+
+        If animeWScore = 0 Then
+            meanScore = 0
+        Else
+            meanScore = meanScoreCount / animeWScore
+        End If
+
+        lblEpisodes.Text = episodeCount
+        lblMeanScore.Text = meanScore.ToString("N2")
+
+        USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & frmMain.userList(frmMain.userCount).UserId & ".jpg"
+
+        If frmMain.CheckConnection(USER_IMG_URL) = True Then
+            pcbUserImage.Load(USER_IMG_URL)
+        End If
+    End Sub
+
     Private Sub frmUserInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ddlGraphSelection.SelectedIndex = 0
@@ -57,43 +98,7 @@ Public Class frmUserInfo
 
 
         If frmMain.loadedXml = True Then
-            lblId.Text = frmMain.userList(frmMain.userCount).UserId
-            lblUserName.Text = frmMain.userList(frmMain.userCount).Username
-            lblTotalAnime.Text = frmMain.userList(frmMain.userCount).TotalAnime
-            lblWatching.Text = frmMain.userList(frmMain.userCount).TotalWatching
-            lblCompleted.Text = frmMain.userList(frmMain.userCount).TotalCompleted
-            lblOnHold.Text = frmMain.userList(frmMain.userCount).TotalOnHold
-            lblDropped.Text = frmMain.userList(frmMain.userCount).TotalDropped
-            lblPlanToWatch.Text = frmMain.userList(frmMain.userCount).PlaToWatch
-
-            Dim episodeCount As Integer = 0
-            Dim meanScoreCount As Decimal = 0
-            Dim meanScore As Decimal = 0
-            Dim animeWScore As Decimal = 0
-
-            For i As Integer = 0 To frmMain.animeCount - 1
-                episodeCount += Convert.ToInt32(frmMain.animeList(i).WatchedEps)
-                If Convert.ToInt32(frmMain.animeList(i).Score) = 0 Then
-                Else
-                    meanScoreCount += Convert.ToDecimal(frmMain.animeList(i).Score)
-                    animeWScore += 1
-                End If
-            Next
-
-            If animeWScore = 0 Then
-                meanScore = 0
-            Else
-                meanScore = meanScoreCount / animeWScore
-            End If
-
-            lblEpisodes.Text = episodeCount
-            lblMeanScore.Text = meanScore.ToString("N2")
-
-            USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & frmMain.userList(frmMain.userCount).UserId & ".jpg"
-
-            If frmMain.CheckConnection(USER_IMG_URL) = True Then
-                pcbUserImage.Load(USER_IMG_URL)
-            End If
+            loadUserInfo()
         Else
             lblUserName.Text = "No User Loaded"
         End If

@@ -162,7 +162,7 @@ this tutorial:</value>
     <value>Segoe UI Semilight, 9.75pt</value>
   </data>
   <data name="btnChooseFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>570, 56</value>
+    <value>579, 58</value>
   </data>
   <data name="btnChooseFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -246,7 +246,7 @@ this tutorial:</value>
     <value>Segoe UI Semilight, 9.75pt</value>
   </data>
   <data name="btnContinue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>570, 212</value>
+    <value>579, 214</value>
   </data>
   <data name="btnContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -373,7 +373,7 @@ Programmed by Cesar Mendoza</value>
     <value>NoControl</value>
   </data>
   <data name="btnNewList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>570, 134</value>
+    <value>579, 136</value>
   </data>
   <data name="btnNewList.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -406,7 +406,7 @@ Programmed by Cesar Mendoza</value>
     <value>NoControl</value>
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>570, 290</value>
+    <value>579, 292</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -439,7 +439,7 @@ Programmed by Cesar Mendoza</value>
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>748, 389</value>
+    <value>764, 392</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

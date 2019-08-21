@@ -54,11 +54,11 @@ Public Class frmEditAnime
             'If frmMain.chkGridView.Checked = True Then
             '    anId = frmMain.lstwAnimeMain.FocusedItem.SubItems(0).Text
             'Else
-            anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
+            'anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
             'End If
         Else
 
-            anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
+            ' anId = frmMain.lstwOne.FocusedItem.SubItems(0).Text
         End If
 
 

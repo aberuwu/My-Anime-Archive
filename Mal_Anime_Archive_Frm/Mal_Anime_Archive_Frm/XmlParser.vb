@@ -46,7 +46,6 @@ Public Class XmlParser
             frmMain.lstAnimes.Items.Clear()
             frmMain.animeCount = 0
             frmMain.userCount = 0
-            frmMain.dgvAnime.Rows.Clear()
             frmMain.lstwAnimeMain.Items.Clear()
             frmMain.lblNoResultFound.Visible = False
 
@@ -266,9 +265,6 @@ Public Class XmlParser
 
 
     Public Sub populateList()
-        frmMain.dgvAnime.Enabled = False
-        frmMain.dgvAnime.Visible = False
-        frmMain.lstwOne.Visible = False
         frmMain.lstwAnimeMain.Visible = True
         frmMain.lstwAnimeMain.Items.Clear()
         frmMain.fullListChecked = True

@@ -397,13 +397,13 @@ Public Class frmMain
         lstOptions.ShowDialog()
     End Sub
 
-    Private Sub lstwOne_DoubleClick(sender As Object, e As EventArgs) Handles lstwOne.DoubleClick
+    Private Sub lstwOne_DoubleClick(sender As Object, e As EventArgs)
         singleListClick = True
         Dim editAnime As frmEditAnime
 
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
-        lstwOne.Items.Clear()
+        'lstwOne.Items.Clear()
 
         lstAnimes_SelectedIndexChanged(Nothing, New EventArgs())
     End Sub
@@ -617,38 +617,23 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub lstwOne_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles lstwOne.DrawSubItem
-        Dim sf As New StringFormat()
-        If e.Item.Selected = True Then
-
-            If themePurple = True Then
-                'e.Graphics.FillRectangle(Brushes.MediumPurple, e.Bounds)
-                e.Graphics.FillRectangle(brushPurple, e.Bounds)
-            ElseIf themeBlue = True Then
-                e.Graphics.FillRectangle(brushBlue, e.Bounds)
-            ElseIf themeOrange = True Then
-                e.Graphics.FillRectangle(brushOrange, e.Bounds)
-            End If
-
-            'e.Graphics.FillRectangle(Brushes.MediumPurple, e.Bounds)
-            sf.Alignment = StringAlignment.Center
-            e.Graphics.DrawString(e.SubItem.Text, Me.lstwOne.Font, Brushes.White, e.Bounds, sf)
-        Else
-            If darkModeOn = False Then
-                e.Graphics.FillRectangle(Brushes.WhiteSmoke, e.Bounds)
-            End If
-            e.DrawText()
-        End If
-    End Sub
-
-
     Private Sub lstwAnimeSearch_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwAnimeSearch.DrawColumnHeader
         Dim sf As New StringFormat()
-        If darkModeOn = False Then
-            e.DrawText()
+        If themePurple = True Then
+            e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
+            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
+        ElseIf themeBlue = True Then
+            e.Graphics.FillRectangle(Brushes.RoyalBlue, e.Bounds)
+            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
         Else
+            e.Graphics.FillRectangle(Brushes.Tomato, e.Bounds)
             e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
         End If
+        'If darkModeOn = False Then
+        '    e.DrawText()
+        'Else
+        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
+        'End If
     End Sub
 
     Private Sub lstwAnimeSearch_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles lstwAnimeSearch.DrawSubItem
@@ -675,15 +660,6 @@ Public Class frmMain
         End If
     End Sub
 
-
-    Private Sub lstwOne_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwOne.DrawColumnHeader
-        Dim sf As New StringFormat()
-        If darkModeOn = False Then
-            e.DrawText()
-        Else
-            e.Graphics.DrawString(e.Header.Text, Me.lstwOne.Font, Brushes.White, e.Bounds, sf)
-        End If
-    End Sub
 
     Private Sub tsmiEdit_Click(sender As Object, e As EventArgs) Handles tsmiEdit.Click
         singleListClick = False
@@ -773,8 +749,6 @@ Public Class frmMain
     '    Me.ResumeLayout()
     'End Sub
 End Class
-
-
 Public Class ListViewDoubleBuffered
     Inherits ListView
 

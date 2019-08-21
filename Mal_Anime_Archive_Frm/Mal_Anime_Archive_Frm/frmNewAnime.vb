@@ -18,12 +18,14 @@ Public Class frmNewAnime
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        lblSearching.Visible = True
-        'pcbLoading.Visible = True
+        'pgbLoadingSearch.Visible = True
+        mtpgbLoading.Value = 1
         gbxResults.Visible = False
         lblSearchResults.Visible = False
         loadApiInfo(txtTitleSearch.Text)
         gbxResults.Visible = True
+        displayApiInfo()
+
     End Sub
 
 
@@ -38,17 +40,16 @@ Public Class frmNewAnime
         Dim apiUrl As String = "https://api.jikan.moe/v3/search/anime?q=" & title & "&limit=8"
         Dim response As HttpWebResponse = Nothing
         Dim reader As StreamReader
+        Dim progress As Integer = 0
 
         If frmMain.CheckConnection(apiUrl) = True Then
             apiConnect = DirectCast(WebRequest.Create(apiUrl), HttpWebRequest)
             response = DirectCast(apiConnect.GetResponse(), HttpWebResponse)
 
             reader = New StreamReader(response.GetResponseStream)
-
             Dim rawresp As String
 
             rawresp = reader.ReadToEnd()
-
             Dim o As JObject = JObject.Parse(rawresp)
             Dim results As List(Of JToken) = o.Children().ToList
             For Each item As JProperty In results
@@ -60,102 +61,107 @@ Public Class frmNewAnime
                         resultType.Add(subitem("type"))
                         resultId.Add(subitem("mal_id"))
                         resultEpisodes.Add(subitem("episodes"))
+                        progress += 1
+                        bckwNewAnime.ReportProgress(progress)
                     Next
                 End If
             Next
 
-            Dim truncResult As String
-
-
-            Dim image As Image
-            For i As Integer = 0 To resultImgUrl.Count - 1
-
-                If i = 0 Then
-                    pcbResult1.Load(resultImgUrl(i))
-                    image = pcbResult1.Image
-                    btnResult1.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle1.Text = truncResult & "..."
-                    Else
-                        txtTitle1.Text = resultTitle(i)
-                    End If
-                ElseIf i = 1 Then
-                    pcbResult2.Load(resultImgUrl(i))
-                    image = pcbResult2.Image
-                    btnResult2.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle2.Text = truncResult & "..."
-                    Else
-                        txtTitle2.Text = resultTitle(i)
-                    End If
-                ElseIf i = 2 Then
-                    pcbResult3.Load(resultImgUrl(i))
-                    image = pcbResult3.Image
-                    btnResult3.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle3.Text = truncResult & "..."
-                    Else
-                        txtTitle3.Text = resultTitle(i)
-                    End If
-                ElseIf i = 3 Then
-                    pcbResult4.Load(resultImgUrl(i))
-                    image = pcbResult4.Image
-                    btnResult4.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle4.Text = truncResult & "..."
-                    Else
-                        txtTitle4.Text = resultTitle(i)
-                    End If
-                ElseIf i = 4 Then
-                    pcbResult5.Load(resultImgUrl(i))
-                    image = pcbResult5.Image
-                    btnResult5.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle5.Text = truncResult & "..."
-                    Else
-                        txtTitle5.Text = resultTitle(i)
-                    End If
-                ElseIf i = 5 Then
-                    pcbResult6.Load(resultImgUrl(i))
-                    image = pcbResult6.Image
-                    btnResult6.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle6.Text = truncResult & "..."
-                    Else
-                        txtTitle6.Text = resultTitle(i)
-                    End If
-                ElseIf i = 6 Then
-                    pcbResult7.Load(resultImgUrl(i))
-                    image = pcbResult7.Image
-                    btnResult7.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle7.Text = truncResult & "..."
-                    Else
-                        txtTitle7.Text = resultTitle(i)
-                    End If
-                Else
-                    pcbResult8.Load(resultImgUrl(i))
-                    image = pcbResult8.Image
-                    btnResult8.BackgroundImage = image
-                    If resultTitle(i).Length > 20 Then
-                        truncResult = Truncate(resultTitle(i), 20)
-                        txtTitle8.Text = truncResult & "..."
-                    Else
-                        txtTitle8.Text = resultTitle(i)
-                    End If
-                End If
-                bckwNewAnime.ReportProgress(i)
-            Next
         End If
 
-        lblSearching.Visible = False
+    End Sub
+
+
+    Private Sub displayApiInfo()
+        Dim truncResult As String
+
+
+        Dim image As Image
+        For i As Integer = 0 To resultImgUrl.Count - 1
+
+            If i = 0 Then
+                pcbResult1.Load(resultImgUrl(i))
+                image = pcbResult1.Image
+                btnResult1.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle1.Text = truncResult & "..."
+                Else
+                    txtTitle1.Text = resultTitle(i)
+                End If
+            ElseIf i = 1 Then
+                pcbResult2.Load(resultImgUrl(i))
+                image = pcbResult2.Image
+                btnResult2.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle2.Text = truncResult & "..."
+                Else
+                    txtTitle2.Text = resultTitle(i)
+                End If
+            ElseIf i = 2 Then
+                pcbResult3.Load(resultImgUrl(i))
+                image = pcbResult3.Image
+                btnResult3.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle3.Text = truncResult & "..."
+                Else
+                    txtTitle3.Text = resultTitle(i)
+                End If
+            ElseIf i = 3 Then
+                pcbResult4.Load(resultImgUrl(i))
+                image = pcbResult4.Image
+                btnResult4.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle4.Text = truncResult & "..."
+                Else
+                    txtTitle4.Text = resultTitle(i)
+                End If
+            ElseIf i = 4 Then
+                pcbResult5.Load(resultImgUrl(i))
+                image = pcbResult5.Image
+                btnResult5.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle5.Text = truncResult & "..."
+                Else
+                    txtTitle5.Text = resultTitle(i)
+                End If
+            ElseIf i = 5 Then
+                pcbResult6.Load(resultImgUrl(i))
+                image = pcbResult6.Image
+                btnResult6.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle6.Text = truncResult & "..."
+                Else
+                    txtTitle6.Text = resultTitle(i)
+                End If
+            ElseIf i = 6 Then
+                pcbResult7.Load(resultImgUrl(i))
+                image = pcbResult7.Image
+                btnResult7.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle7.Text = truncResult & "..."
+                Else
+                    txtTitle7.Text = resultTitle(i)
+                End If
+            Else
+                pcbResult8.Load(resultImgUrl(i))
+                image = pcbResult8.Image
+                btnResult8.BackgroundImage = image
+                If resultTitle(i).Length > 20 Then
+                    truncResult = Truncate(resultTitle(i), 20)
+                    txtTitle8.Text = truncResult & "..."
+                Else
+                    txtTitle8.Text = resultTitle(i)
+                End If
+            End If
+            'bckwNewAnime.ReportProgress(i)
+        Next
     End Sub
 
 
@@ -328,7 +334,8 @@ Public Class frmNewAnime
     End Sub
 
     Private Sub bckwNewAnime_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles bckwNewAnime.ProgressChanged
-        'pgbLoadingSearch.Value = Math.Min(e.ProgressPercentage, pgbLoadingSearch.Maximum)
+        pgbLoadingSearch.Value = Math.Min(e.ProgressPercentage, pgbLoadingSearch.Maximum)
+        mtpgbLoading.Value = Math.Min(e.ProgressPercentage, mtpgbLoading.Maximum)
         'If e.ProgressPercentage = pgbLoadingSearch.Maximum Then
         '    pcbLoading.Visible = False
         '    'pcbLoading.Visible = False
@@ -359,5 +366,9 @@ Public Class frmNewAnime
         Me.Size = New System.Drawing.Size(604, 626)
         Me.CenterToParent()
         btnExpandCollapse.Text = ">"
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class

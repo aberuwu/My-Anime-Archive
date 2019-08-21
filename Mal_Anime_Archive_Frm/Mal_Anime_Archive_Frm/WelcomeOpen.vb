@@ -73,4 +73,15 @@
             frmMain.Close()
         End If
     End Sub
+
+    Private Sub btnNewList_Click(sender As Object, e As EventArgs) Handles btnNewList.Click
+        Dim newList As frmNewList
+
+        newList = New frmNewList
+        newList.ShowDialog()
+    End Sub
+
+    Private Sub mttTest_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

@@ -23,19 +23,6 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.lstAnimes = New System.Windows.Forms.ListBox()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -59,18 +46,6 @@ Partial Class frmMain
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.btnFullScreen = New System.Windows.Forms.Button()
-        Me.dgvAnime = New System.Windows.Forms.DataGridView()
-        Me.animeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeTitle = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeEpisodes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeWatched = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeScore = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.animeStatus = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.animeStart = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeFinish = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.myId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.animeComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.spltMain = New System.Windows.Forms.SplitContainer()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.vscrSearchList = New System.Windows.Forms.VScrollBar()
@@ -87,6 +62,19 @@ Partial Class frmMain
         Me.srlstName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.srlstID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblNoListLoaded = New System.Windows.Forms.Label()
+        Me.tsMain = New System.Windows.Forms.ToolStrip()
+        Me.btnOpen = New System.Windows.Forms.ToolStripButton()
+        Me.btnSave = New System.Windows.Forms.ToolStripButton()
+        Me.btnXml = New System.Windows.Forms.ToolStripButton()
+        Me.btnAbout = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnSort = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnNewAnime = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnEdit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnDelete = New System.Windows.Forms.ToolStripButton()
+        Me.btnUserInfo = New System.Windows.Forms.ToolStripButton()
+        Me.pcbtnDarkMode = New System.Windows.Forms.PictureBox()
+        Me.pcbUserPicture = New System.Windows.Forms.PictureBox()
+        Me.pcbLogo = New System.Windows.Forms.PictureBox()
         Me.lstwAnimeMain = New System.Windows.Forms.ListView()
         Me.animeId4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeTitle4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -101,40 +89,11 @@ Partial Class frmMain
         Me.myId4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeComments4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeRewatch4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.lstwOne = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.tsMain = New System.Windows.Forms.ToolStrip()
-        Me.btnOpen = New System.Windows.Forms.ToolStripButton()
-        Me.btnSave = New System.Windows.Forms.ToolStripButton()
-        Me.btnXml = New System.Windows.Forms.ToolStripButton()
-        Me.btnAbout = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnSort = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnNewAnime = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnEdit = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnDelete = New System.Windows.Forms.ToolStripButton()
-        Me.btnUserInfo = New System.Windows.Forms.ToolStripButton()
-        Me.pcbtnDarkMode = New System.Windows.Forms.PictureBox()
-        Me.pcbUserPicture = New System.Windows.Forms.PictureBox()
-        Me.pcbLogo = New System.Windows.Forms.PictureBox()
-        Me.PanChromium = New System.Windows.Forms.Panel()
         Me.pcbLoading = New System.Windows.Forms.ProgressBar()
         Me.timerMain = New System.Windows.Forms.Timer(Me.components)
         Me.lblCopyright = New System.Windows.Forms.Label()
         Me.backWork = New System.ComponentModel.BackgroundWorker()
         Me.ssMain.SuspendLayout()
-        CType(Me.dgvAnime, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.spltMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spltMain.Panel1.SuspendLayout()
         Me.spltMain.Panel2.SuspendLayout()
@@ -410,144 +369,6 @@ Partial Class frmMain
         Me.ttMain.SetToolTip(Me.btnFullScreen, "Full Screen")
         Me.btnFullScreen.UseVisualStyleBackColor = False
         '
-        'dgvAnime
-        '
-        Me.dgvAnime.AllowUserToAddRows = False
-        Me.dgvAnime.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.dgvAnime.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvAnime.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvAnime.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvAnime.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvAnime.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvAnime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAnime.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.animeId, Me.animeTitle, Me.animeType, Me.animeEpisodes, Me.animeWatched, Me.animeScore, Me.animeStatus, Me.animeStart, Me.animeFinish, Me.myId, Me.animeComments})
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MediumPurple
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvAnime.DefaultCellStyle = DataGridViewCellStyle12
-        Me.dgvAnime.Location = New System.Drawing.Point(17, 204)
-        Me.dgvAnime.MultiSelect = False
-        Me.dgvAnime.Name = "dgvAnime"
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MediumPurple
-        Me.dgvAnime.RowsDefaultCellStyle = DataGridViewCellStyle13
-        Me.dgvAnime.RowTemplate.Height = 32
-        Me.dgvAnime.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAnime.Size = New System.Drawing.Size(888, 73)
-        Me.dgvAnime.TabIndex = 32
-        Me.dgvAnime.Visible = False
-        '
-        'animeId
-        '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeId.DefaultCellStyle = DataGridViewCellStyle3
-        Me.animeId.HeaderText = "Anime ID"
-        Me.animeId.Name = "animeId"
-        Me.animeId.Width = 85
-        '
-        'animeTitle
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeTitle.DefaultCellStyle = DataGridViewCellStyle4
-        Me.animeTitle.HeaderText = "Title"
-        Me.animeTitle.Name = "animeTitle"
-        Me.animeTitle.ReadOnly = True
-        Me.animeTitle.Width = 200
-        '
-        'animeType
-        '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeType.DefaultCellStyle = DataGridViewCellStyle5
-        Me.animeType.HeaderText = "Type"
-        Me.animeType.Name = "animeType"
-        Me.animeType.ReadOnly = True
-        Me.animeType.Width = 55
-        '
-        'animeEpisodes
-        '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeEpisodes.DefaultCellStyle = DataGridViewCellStyle6
-        Me.animeEpisodes.HeaderText = "Episodes"
-        Me.animeEpisodes.Name = "animeEpisodes"
-        Me.animeEpisodes.ReadOnly = True
-        Me.animeEpisodes.Width = 78
-        '
-        'animeWatched
-        '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeWatched.DefaultCellStyle = DataGridViewCellStyle7
-        Me.animeWatched.HeaderText = "Watched"
-        Me.animeWatched.Name = "animeWatched"
-        Me.animeWatched.Width = 78
-        '
-        'animeScore
-        '
-        Me.animeScore.HeaderText = "Score"
-        Me.animeScore.Name = "animeScore"
-        '
-        'animeStatus
-        '
-        Me.animeStatus.HeaderText = "Status"
-        Me.animeStatus.Name = "animeStatus"
-        Me.animeStatus.Width = 130
-        '
-        'animeStart
-        '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeStart.DefaultCellStyle = DataGridViewCellStyle8
-        Me.animeStart.HeaderText = "Start Date"
-        Me.animeStart.Name = "animeStart"
-        '
-        'animeFinish
-        '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeFinish.DefaultCellStyle = DataGridViewCellStyle9
-        Me.animeFinish.HeaderText = "Finished Date"
-        Me.animeFinish.Name = "animeFinish"
-        '
-        'myId
-        '
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.myId.DefaultCellStyle = DataGridViewCellStyle10
-        Me.myId.HeaderText = "My ID"
-        Me.myId.Name = "myId"
-        Me.myId.ReadOnly = True
-        '
-        'animeComments
-        '
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Symbol", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.MediumOrchid
-        Me.animeComments.DefaultCellStyle = DataGridViewCellStyle11
-        Me.animeComments.HeaderText = "Comments"
-        Me.animeComments.Name = "animeComments"
-        Me.animeComments.Width = 400
-        '
         'spltMain
         '
         Me.spltMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -564,16 +385,13 @@ Partial Class frmMain
         Me.spltMain.Panel1.Controls.Add(Me.lstwStatus)
         Me.spltMain.Panel1.Controls.Add(Me.btnRefresh)
         Me.spltMain.Panel1.Controls.Add(Me.lblNoResultFound)
-        Me.spltMain.Panel1.Controls.Add(Me.lstAnimes)
         Me.spltMain.Panel1.Controls.Add(Me.lstwAnimeSearch)
+        Me.spltMain.Panel1.Controls.Add(Me.lstAnimes)
         '
         'spltMain.Panel2
         '
         Me.spltMain.Panel2.Controls.Add(Me.lblNoListLoaded)
-        Me.spltMain.Panel2.Controls.Add(Me.lstwAnimeMain)
-        Me.spltMain.Panel2.Controls.Add(Me.lstwOne)
         Me.spltMain.Panel2.Controls.Add(Me.btnFullScreen)
-        Me.spltMain.Panel2.Controls.Add(Me.dgvAnime)
         Me.spltMain.Panel2.Controls.Add(Me.tsMain)
         Me.spltMain.Panel2.Controls.Add(Me.lblDarkMode)
         Me.spltMain.Panel2.Controls.Add(Me.lblEpisodesHeading)
@@ -592,7 +410,7 @@ Partial Class frmMain
         Me.spltMain.Panel2.Controls.Add(Me.lblWatchedHeading)
         Me.spltMain.Panel2.Controls.Add(Me.lblScoreHeading)
         Me.spltMain.Panel2.Controls.Add(Me.lblWatched)
-        Me.spltMain.Panel2.Controls.Add(Me.PanChromium)
+        Me.spltMain.Panel2.Controls.Add(Me.lstwAnimeMain)
         Me.spltMain.Panel2.Controls.Add(Me.pcbLoading)
         Me.spltMain.Panel2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.spltMain.Size = New System.Drawing.Size(1240, 647)
@@ -639,10 +457,10 @@ Partial Class frmMain
         Me.lstwStatus.FullRowSelect = True
         Me.lstwStatus.HideSelection = False
         Me.lstwStatus.LargeImageList = Me.imgLst
-        Me.lstwStatus.Location = New System.Drawing.Point(-2, 0)
+        Me.lstwStatus.Location = New System.Drawing.Point(-2, 3)
         Me.lstwStatus.MultiSelect = False
         Me.lstwStatus.Name = "lstwStatus"
-        Me.lstwStatus.Size = New System.Drawing.Size(14, 667)
+        Me.lstwStatus.Size = New System.Drawing.Size(14, 638)
         Me.lstwStatus.SmallImageList = Me.imgLst
         Me.lstwStatus.TabIndex = 48
         Me.lstwStatus.UseCompatibleStateImageBehavior = False
@@ -724,11 +542,11 @@ Partial Class frmMain
         Me.lstwAnimeSearch.FullRowSelect = True
         Me.lstwAnimeSearch.HideSelection = False
         Me.lstwAnimeSearch.LargeImageList = Me.imgLst
-        Me.lstwAnimeSearch.Location = New System.Drawing.Point(11, -1)
+        Me.lstwAnimeSearch.Location = New System.Drawing.Point(11, 2)
         Me.lstwAnimeSearch.MultiSelect = False
         Me.lstwAnimeSearch.Name = "lstwAnimeSearch"
         Me.lstwAnimeSearch.OwnerDraw = True
-        Me.lstwAnimeSearch.Size = New System.Drawing.Size(324, 668)
+        Me.lstwAnimeSearch.Size = New System.Drawing.Size(324, 639)
         Me.lstwAnimeSearch.SmallImageList = Me.imgLst
         Me.lstwAnimeSearch.TabIndex = 47
         Me.lstwAnimeSearch.UseCompatibleStateImageBehavior = False
@@ -756,177 +574,6 @@ Partial Class frmMain
         Me.lblNoListLoaded.Text = "No List Loaded"
         Me.lblNoListLoaded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblNoListLoaded.Visible = False
-        '
-        'lstwAnimeMain
-        '
-        Me.lstwAnimeMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstwAnimeMain.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lstwAnimeMain.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lstwAnimeMain.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.animeId4, Me.animeTitle4, Me.animeType4, Me.animeStatus4, Me.animeEpisodes4, Me.animeWatched4, Me.animeScore4, Me.animeStart4, Me.animeFinish4, Me.animeTags4, Me.myId4, Me.animeComments4, Me.animeRewatch4})
-        Me.lstwAnimeMain.ContextMenuStrip = Me.ctmAnimeList
-        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstwAnimeMain.FullRowSelect = True
-        Me.lstwAnimeMain.HideSelection = False
-        Me.lstwAnimeMain.Location = New System.Drawing.Point(18, 146)
-        Me.lstwAnimeMain.Name = "lstwAnimeMain"
-        Me.lstwAnimeMain.OwnerDraw = True
-        Me.lstwAnimeMain.Size = New System.Drawing.Size(887, 497)
-        Me.lstwAnimeMain.TabIndex = 36
-        Me.lstwAnimeMain.UseCompatibleStateImageBehavior = False
-        Me.lstwAnimeMain.View = System.Windows.Forms.View.Details
-        Me.lstwAnimeMain.Visible = False
-        '
-        'animeId4
-        '
-        Me.animeId4.Text = ""
-        Me.animeId4.Width = 0
-        '
-        'animeTitle4
-        '
-        Me.animeTitle4.Text = "Title"
-        Me.animeTitle4.Width = 290
-        '
-        'animeType4
-        '
-        Me.animeType4.Text = "Type"
-        Me.animeType4.Width = 140
-        '
-        'animeStatus4
-        '
-        Me.animeStatus4.Text = "Status"
-        Me.animeStatus4.Width = 140
-        '
-        'animeEpisodes4
-        '
-        Me.animeEpisodes4.Text = "Episodes"
-        Me.animeEpisodes4.Width = 130
-        '
-        'animeWatched4
-        '
-        Me.animeWatched4.Text = "Watched"
-        Me.animeWatched4.Width = 130
-        '
-        'animeScore4
-        '
-        Me.animeScore4.Text = "Score"
-        Me.animeScore4.Width = 115
-        '
-        'animeStart4
-        '
-        Me.animeStart4.Text = "Start Date"
-        Me.animeStart4.Width = 150
-        '
-        'animeFinish4
-        '
-        Me.animeFinish4.Text = "Finish Date"
-        Me.animeFinish4.Width = 150
-        '
-        'animeTags4
-        '
-        Me.animeTags4.Text = "Tags"
-        Me.animeTags4.Width = 180
-        '
-        'myId4
-        '
-        Me.myId4.Text = "My ID"
-        Me.myId4.Width = 100
-        '
-        'animeComments4
-        '
-        Me.animeComments4.Text = "Comments"
-        Me.animeComments4.Width = 300
-        '
-        'animeRewatch4
-        '
-        Me.animeRewatch4.Text = "Rewatch"
-        Me.animeRewatch4.Width = 80
-        '
-        'lstwOne
-        '
-        Me.lstwOne.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstwOne.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lstwOne.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lstwOne.CheckBoxes = True
-        Me.lstwOne.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13})
-        Me.lstwOne.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstwOne.FullRowSelect = True
-        Me.lstwOne.GridLines = True
-        Me.lstwOne.HideSelection = False
-        Me.lstwOne.Location = New System.Drawing.Point(17, 200)
-        Me.lstwOne.Name = "lstwOne"
-        Me.lstwOne.OwnerDraw = True
-        Me.lstwOne.Size = New System.Drawing.Size(888, 85)
-        Me.lstwOne.TabIndex = 37
-        Me.lstwOne.UseCompatibleStateImageBehavior = False
-        Me.lstwOne.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Anime ID"
-        Me.ColumnHeader1.Width = 135
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Title"
-        Me.ColumnHeader2.Width = 290
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Type"
-        Me.ColumnHeader3.Width = 140
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Status"
-        Me.ColumnHeader4.Width = 140
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Episodes"
-        Me.ColumnHeader5.Width = 130
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Watched"
-        Me.ColumnHeader6.Width = 130
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "Score"
-        Me.ColumnHeader7.Width = 115
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Start Date"
-        Me.ColumnHeader8.Width = 150
-        '
-        'ColumnHeader9
-        '
-        Me.ColumnHeader9.Text = "Finish Date"
-        Me.ColumnHeader9.Width = 150
-        '
-        'ColumnHeader10
-        '
-        Me.ColumnHeader10.Text = "Tags"
-        Me.ColumnHeader10.Width = 180
-        '
-        'ColumnHeader11
-        '
-        Me.ColumnHeader11.Text = "My ID"
-        Me.ColumnHeader11.Width = 100
-        '
-        'ColumnHeader12
-        '
-        Me.ColumnHeader12.Text = "Comments"
-        Me.ColumnHeader12.Width = 300
-        '
-        'ColumnHeader13
-        '
-        Me.ColumnHeader13.Text = "Rewatch"
-        Me.ColumnHeader13.Width = 80
         '
         'tsMain
         '
@@ -1064,15 +711,90 @@ Partial Class frmMain
         Me.pcbLogo.TabIndex = 21
         Me.pcbLogo.TabStop = False
         '
-        'PanChromium
+        'lstwAnimeMain
         '
-        Me.PanChromium.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lstwAnimeMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanChromium.Location = New System.Drawing.Point(18, 239)
-        Me.PanChromium.Name = "PanChromium"
-        Me.PanChromium.Size = New System.Drawing.Size(887, 405)
-        Me.PanChromium.TabIndex = 23
+        Me.lstwAnimeMain.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lstwAnimeMain.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lstwAnimeMain.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.animeId4, Me.animeTitle4, Me.animeType4, Me.animeStatus4, Me.animeEpisodes4, Me.animeWatched4, Me.animeScore4, Me.animeStart4, Me.animeFinish4, Me.animeTags4, Me.myId4, Me.animeComments4, Me.animeRewatch4})
+        Me.lstwAnimeMain.ContextMenuStrip = Me.ctmAnimeList
+        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstwAnimeMain.FullRowSelect = True
+        Me.lstwAnimeMain.HideSelection = False
+        Me.lstwAnimeMain.Location = New System.Drawing.Point(18, 146)
+        Me.lstwAnimeMain.Name = "lstwAnimeMain"
+        Me.lstwAnimeMain.OwnerDraw = True
+        Me.lstwAnimeMain.Size = New System.Drawing.Size(887, 497)
+        Me.lstwAnimeMain.TabIndex = 36
+        Me.lstwAnimeMain.UseCompatibleStateImageBehavior = False
+        Me.lstwAnimeMain.View = System.Windows.Forms.View.Details
+        '
+        'animeId4
+        '
+        Me.animeId4.Text = ""
+        Me.animeId4.Width = 0
+        '
+        'animeTitle4
+        '
+        Me.animeTitle4.Text = "Title"
+        Me.animeTitle4.Width = 290
+        '
+        'animeType4
+        '
+        Me.animeType4.Text = "Type"
+        Me.animeType4.Width = 140
+        '
+        'animeStatus4
+        '
+        Me.animeStatus4.Text = "Status"
+        Me.animeStatus4.Width = 140
+        '
+        'animeEpisodes4
+        '
+        Me.animeEpisodes4.Text = "Episodes"
+        Me.animeEpisodes4.Width = 130
+        '
+        'animeWatched4
+        '
+        Me.animeWatched4.Text = "Watched"
+        Me.animeWatched4.Width = 130
+        '
+        'animeScore4
+        '
+        Me.animeScore4.Text = "Score"
+        Me.animeScore4.Width = 115
+        '
+        'animeStart4
+        '
+        Me.animeStart4.Text = "Start Date"
+        Me.animeStart4.Width = 150
+        '
+        'animeFinish4
+        '
+        Me.animeFinish4.Text = "Finish Date"
+        Me.animeFinish4.Width = 150
+        '
+        'animeTags4
+        '
+        Me.animeTags4.Text = "Tags"
+        Me.animeTags4.Width = 180
+        '
+        'myId4
+        '
+        Me.myId4.Text = "My ID"
+        Me.myId4.Width = 100
+        '
+        'animeComments4
+        '
+        Me.animeComments4.Text = "Comments"
+        Me.animeComments4.Width = 300
+        '
+        'animeRewatch4
+        '
+        Me.animeRewatch4.Text = "Rewatch"
+        Me.animeRewatch4.Width = 80
         '
         'pcbLoading
         '
@@ -1130,7 +852,6 @@ Partial Class frmMain
         Me.Text = "My Anime Archive - Personal Anime Archive v1.0"
         Me.ssMain.ResumeLayout(False)
         Me.ssMain.PerformLayout()
-        CType(Me.dgvAnime, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spltMain.Panel1.ResumeLayout(False)
         Me.spltMain.Panel1.PerformLayout()
         Me.spltMain.Panel2.ResumeLayout(False)
@@ -1177,23 +898,10 @@ Partial Class frmMain
     Friend WithEvents pcbtnDarkMode As PictureBox
     Friend WithEvents btnXml As ToolStripButton
     Friend WithEvents ttMain As ToolTip
-    Friend WithEvents dgvAnime As DataGridView
     Friend WithEvents spltMain As SplitContainer
-    Friend WithEvents PanChromium As Panel
     Friend WithEvents timerMain As Timer
     Friend WithEvents lblCopyright As Label
     Friend WithEvents tsbtnSort As ToolStripButton
-    Friend WithEvents animeId As DataGridViewTextBoxColumn
-    Friend WithEvents animeTitle As DataGridViewTextBoxColumn
-    Friend WithEvents animeType As DataGridViewTextBoxColumn
-    Friend WithEvents animeEpisodes As DataGridViewTextBoxColumn
-    Friend WithEvents animeWatched As DataGridViewTextBoxColumn
-    Friend WithEvents animeScore As DataGridViewComboBoxColumn
-    Friend WithEvents animeStatus As DataGridViewComboBoxColumn
-    Friend WithEvents animeStart As DataGridViewTextBoxColumn
-    Friend WithEvents animeFinish As DataGridViewTextBoxColumn
-    Friend WithEvents myId As DataGridViewTextBoxColumn
-    Friend WithEvents animeComments As DataGridViewTextBoxColumn
     Friend WithEvents btnFullScreen As Button
     Friend WithEvents lstwAnimeMain As ListView
     Friend WithEvents animeId4 As ColumnHeader
@@ -1209,20 +917,6 @@ Partial Class frmMain
     Friend WithEvents animeTags4 As ColumnHeader
     Friend WithEvents animeRewatch4 As ColumnHeader
     Friend WithEvents animeScore4 As ColumnHeader
-    Friend WithEvents lstwOne As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
-    Friend WithEvents ColumnHeader7 As ColumnHeader
-    Friend WithEvents ColumnHeader8 As ColumnHeader
-    Friend WithEvents ColumnHeader9 As ColumnHeader
-    Friend WithEvents ColumnHeader10 As ColumnHeader
-    Friend WithEvents ColumnHeader11 As ColumnHeader
-    Friend WithEvents ColumnHeader12 As ColumnHeader
-    Friend WithEvents ColumnHeader13 As ColumnHeader
     Friend WithEvents btnSearch As Button
     Friend WithEvents lblNoResultFound As Label
     Friend WithEvents btnRefresh As Button
