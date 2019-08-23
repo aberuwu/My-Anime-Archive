@@ -26,7 +26,7 @@ Public Class frmUserInfo
         Dim meanScore As Decimal = 0
         Dim animeWScore As Decimal = 0
 
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             episodeCount += Convert.ToInt32(frmMain.animeList(i).WatchedEps)
             If Convert.ToInt32(frmMain.animeList(i).Score) = 0 Then
             Else

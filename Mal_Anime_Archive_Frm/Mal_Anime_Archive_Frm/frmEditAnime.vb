@@ -12,7 +12,7 @@ Public Class frmEditAnime
 
         Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
 
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             'sug.Add(frmMain.animeList(i).Title)
             ddlSelectAnime.Items.Add(frmMain.animeList(i).Title)
         Next
@@ -69,7 +69,7 @@ Public Class frmEditAnime
 
 
     Private Sub loadAnimeInfo(animeId As String)
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             If frmMain.animeList(i).AnimeId = animeId Then
                 animeIndex = i
                 lblTitle.Text = frmMain.animeList(i).Title
@@ -162,7 +162,7 @@ Public Class frmEditAnime
 
     Private Sub btnForward_Click(sender As Object, e As EventArgs) Handles btnForward.Click
         Dim newIndex As Integer
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             If frmMain.animeList(i).AnimeId = anId Then
                 newIndex = i + 1
             End If
@@ -177,7 +177,7 @@ Public Class frmEditAnime
 
     Private Sub btnBackward_Click(sender As Object, e As EventArgs) Handles btnBackward.Click
         Dim newIndex As Integer
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             If frmMain.animeList(i).AnimeId = anId Then
                 newIndex = i - 1
             End If

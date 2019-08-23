@@ -836,13 +836,12 @@ Partial Class frmNewAnime
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkViolet
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(484, 11)
+        Me.Button1.Location = New System.Drawing.Point(1071, 14)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 35)
         Me.Button1.TabIndex = 86

@@ -369,6 +369,67 @@ Public Class frmNewAnime
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        saveAnime()
         Me.Close()
+        MsgBox(frmMain.animeList(frmMain.animeList.Count() - 1).Title)
+    End Sub
+
+
+    Private Sub saveAnime()
+
+        Dim currentIndex As Integer = frmMain.animeList.Count()
+
+        frmMain.animeList.Add(New Anime)
+        frmMain.animeList(currentIndex).AnimeId = txtID.Text
+        frmMain.animeList(currentIndex).Title = txtTitle.Text
+
+        If ddlType.SelectedIndex = 0 Then
+            frmMain.animeList(currentIndex).Type = "TV"
+        ElseIf ddlType.SelectedIndex = 1 Then
+            frmMain.animeList(currentIndex).Type = "Movie"
+        ElseIf ddlType.SelectedIndex = 2 Then
+            frmMain.animeList(currentIndex).Type = "OVA"
+        ElseIf ddlType.SelectedIndex = 3 Then
+            frmMain.animeList(currentIndex).Type = "Special"
+        ElseIf ddlType.SelectedIndex = 4 Then
+            frmMain.animeList(currentIndex).Type = "Unknown"
+        End If
+
+        frmMain.animeList(currentIndex).Episodes = numUpDownEpisodes.Value
+        frmMain.animeList(currentIndex).WatchedEps = numUpDownWatched.Value
+        frmMain.animeList(currentIndex).Score = numUpDownScore.Value
+
+        If ddlStatus.SelectedIndex = 0 Then
+            frmMain.animeList(currentIndex).Status = "Watching"
+        ElseIf ddlStatus.SelectedIndex = 1 Then
+            frmMain.animeList(currentIndex).Status = "Completed"
+        ElseIf ddlStatus.SelectedIndex = 2 Then
+            frmMain.animeList(currentIndex).Status = "On-Hold"
+        ElseIf ddlStatus.SelectedIndex = 3 Then
+            frmMain.animeList(currentIndex).Status = "Dropped"
+        ElseIf ddlStatus.SelectedIndex = 4 Then
+            frmMain.animeList(currentIndex).Status = "Plan to Watch"
+        End If
+
+        If ddlRewatchValue.SelectedIndex = 0 Then
+            frmMain.animeList(currentIndex).Myrewatch = "Very Low"
+        ElseIf ddlRewatchValue.SelectedIndex = 1 Then
+            frmMain.animeList(currentIndex).Myrewatch = "Low"
+        ElseIf ddlRewatchValue.SelectedIndex = 2 Then
+            frmMain.animeList(currentIndex).Myrewatch = "Medium"
+        ElseIf ddlRewatchValue.SelectedIndex = 3 Then
+            frmMain.animeList(currentIndex).Myrewatch = "High"
+        ElseIf ddlRewatchValue.SelectedIndex = 4 Then
+            frmMain.animeList(currentIndex).Myrewatch = "Very High"
+        End If
+
+
+
+        frmMain.animeList(currentIndex).Myrewatchingep = numUpDownRewatch.Value
+        frmMain.animeList(currentIndex).StartDate = "0000-00-00"
+        frmMain.animeList(currentIndex).FinishDate = "0000-00-00"
+        frmMain.animeList(currentIndex).Mycomments = txtTags.Text
+
+
     End Sub
 End Class

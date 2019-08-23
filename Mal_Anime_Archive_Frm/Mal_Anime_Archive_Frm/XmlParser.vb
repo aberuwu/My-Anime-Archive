@@ -270,9 +270,10 @@ Public Class XmlParser
         frmMain.fullListChecked = True
 
         Dim currentAnime As String
+        Dim animeCount As Integer = frmMain.animeList.Count()
 
-        For i As Integer = 0 To frmMain.animeCount - 1
-            frmMain.pcbLoading.Maximum = frmMain.animeCount - 1
+        For i As Integer = 0 To animeCount - 1
+            frmMain.pcbLoading.Maximum = animeCount - 1
             frmMain.pcbLoading.Visible = True
             frmMain.lstwAnimeMain.Items.Insert(i, frmMain.animeList(i).AnimeId)
             frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Title)
@@ -298,5 +299,9 @@ Public Class XmlParser
                 frmMain.lstwAnimeMain.Items(i).EnsureVisible()
             End If
         Next
+
+        If animeCount > -1 Then
+            frmMain.lblNoListLoaded.Visible = False
+        End If
     End Sub
 End Class

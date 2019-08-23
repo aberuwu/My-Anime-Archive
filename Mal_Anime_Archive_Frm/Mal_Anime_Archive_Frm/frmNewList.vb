@@ -29,18 +29,15 @@ Public Class frmNewList
                 apiConnect = DirectCast(WebRequest.Create(apiUrl), HttpWebRequest)
                 response = DirectCast(apiConnect.GetResponse(), HttpWebResponse)
 
-
                 reader = New StreamReader(response.GetResponseStream)
 
                 Dim rawresp As String
-
                 rawresp = reader.ReadToEnd()
 
                 Dim jsonResulttodict = JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(rawresp)
 
                 Dim animeImage = jsonResulttodict.Item("image_url")
                 pcbUserImage.Load(animeImage)
-
                 Dim malUserName = jsonResulttodict.Item("username")
                 lblDisplayUserName.Text = malUserName
 
@@ -58,7 +55,6 @@ Public Class frmNewList
             MsgBox("No user found, please try again!")
             Return
         End Try
-
     End Sub
 
     Private Sub btnApply_Click(sender As Object, e As EventArgs) Handles btnApply.Click

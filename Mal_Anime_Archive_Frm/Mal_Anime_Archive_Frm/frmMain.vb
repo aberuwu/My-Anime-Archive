@@ -149,7 +149,7 @@ Public Class frmMain
             vscrSearchList.Maximum = 0
 
 
-            For i As Integer = 0 To animeCount - 1
+            For i As Integer = 0 To animeList.Count() - 1
                 Dim itemStatus As ListViewItem = lstwStatus.Items.Add("")
                 Dim str(2) As String
                 Dim itemResults As ListViewItem
@@ -268,7 +268,7 @@ Public Class frmMain
             Next
 
             Dim animeTitle As String = lstwAnimeSearch.SelectedItems(0).SubItems(0).Text
-            For i As Integer = 0 To animeCount - 1
+            For i As Integer = 0 To animeList.Count() - 1
                 If lstwAnimeMain.Items(i).SubItems(0).Text = anId OrElse lstwAnimeMain.Items(i).SubItems(1).Text = animeTitle Then
                     lstwAnimeMain.SelectedItems.Clear()
                     lstwAnimeMain.Items(i).Selected = True
@@ -294,7 +294,7 @@ Public Class frmMain
         Dim anId As String
         Try
             anId = lstwAnimeMain.FocusedItem.SubItems(0).Text
-            For i As Integer = 0 To animeCount - 1
+            For i As Integer = 0 To animeList.Count() - 1
                 If animeList(i).AnimeId = anId Then
                     lblTitle.Text = animeList(i).Title
                     lblId.Text = animeList(i).AnimeId
@@ -676,6 +676,9 @@ Public Class frmMain
 
         newAnime = New frmNewAnime
         newAnime.ShowDialog()
+
+        XmlParser.populateList()
+
     End Sub
 
     Private Sub tsmiDelete_Click(sender As Object, e As EventArgs) Handles tsmiDelete.Click
@@ -738,16 +741,6 @@ Public Class frmMain
     Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
         welcomeOpen()
     End Sub
-
-
-
-    'Private Sub frmMain_ResizeBegin(sender As Object, e As EventArgs) Handles MyBase.ResizeBegin
-    '    Me.SuspendLayout()
-    'End Sub
-
-    'Private Sub frmMain_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
-    '    Me.ResumeLayout()
-    'End Sub
 End Class
 Public Class ListViewDoubleBuffered
     Inherits ListView
