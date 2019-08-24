@@ -12,28 +12,46 @@ Public Class frmUserInfo
 
 
     Private Sub loadUserInfo()
-        lblId.Text = frmMain.userList(frmMain.userCount).UserId
-        lblUserName.Text = frmMain.userList(frmMain.userCount).Username
-        lblTotalAnime.Text = frmMain.userList(frmMain.userCount).TotalAnime
-        lblWatching.Text = frmMain.userList(frmMain.userCount).TotalWatching
-        lblCompleted.Text = frmMain.userList(frmMain.userCount).TotalCompleted
-        lblOnHold.Text = frmMain.userList(frmMain.userCount).TotalOnHold
-        lblDropped.Text = frmMain.userList(frmMain.userCount).TotalDropped
-        lblPlanToWatch.Text = frmMain.userList(frmMain.userCount).PlaToWatch
-
         Dim episodeCount As Integer = 0
+        Dim watchingCount As Integer = 0
+        Dim completedCount As Integer = 0
+        Dim droppedCount As Integer = 0
+        Dim onholdCount As Integer = 0
+        Dim plantowatchCount As Integer = 0
         Dim meanScoreCount As Decimal = 0
         Dim meanScore As Decimal = 0
         Dim animeWScore As Decimal = 0
 
         For i As Integer = 0 To frmMain.animeList.Count() - 1
             episodeCount += Convert.ToInt32(frmMain.animeList(i).WatchedEps)
+
+            If frmMain.animeList(i).Status = "Watching" Then
+                watchingCount += 1
+            ElseIf frmMain.animeList(i).Status = "Completed" Then
+                completedCount += 1
+            ElseIf frmMain.animeList(i).Status = "Dropped" Then
+                droppedCount += 1
+            ElseIf frmMain.animeList(i).Status = "On-Hold" Then
+                onholdCount += 1
+            Else
+                plantowatchCount += 1
+            End If
+
             If Convert.ToInt32(frmMain.animeList(i).Score) = 0 Then
             Else
                 meanScoreCount += Convert.ToDecimal(frmMain.animeList(i).Score)
                 animeWScore += 1
             End If
         Next
+
+        lblId.Text = frmMain.userList(frmMain.userCount).UserId
+        lblUserName.Text = frmMain.userList(frmMain.userCount).Username
+        lblTotalAnime.Text = frmMain.animeList.Count()
+        lblWatching.Text = watchingCount
+        lblCompleted.Text = completedCount
+        lblOnHold.Text = onholdCount
+        lblDropped.Text = droppedCount
+        lblPlanToWatch.Text = plantowatchCount
 
         If animeWScore = 0 Then
             meanScore = 0
@@ -58,6 +76,26 @@ Public Class frmUserInfo
         If frmMain.animeCount <= 0 Then
 
         Else
+            Dim watchingCount As Integer = 0
+            Dim completedCount As Integer = 0
+            Dim droppedCount As Integer = 0
+            Dim onholdCount As Integer = 0
+            Dim plantowatchCount As Integer = 0
+
+            For i As Integer = 0 To frmMain.animeList.Count() - 1
+                If frmMain.animeList(i).Status = "Watching" Then
+                    watchingCount += 1
+                ElseIf frmMain.animeList(i).Status = "Completed" Then
+                    completedCount += 1
+                ElseIf frmMain.animeList(i).Status = "Dropped" Then
+                    droppedCount += 1
+                ElseIf frmMain.animeList(i).Status = "On-Hold" Then
+                    onholdCount += 1
+                Else
+                    plantowatchCount += 1
+                End If
+            Next
+
             Dim cArea As ChartArea = chrtAnimeStatus.ChartAreas(0)
 
             With cArea
@@ -69,27 +107,27 @@ Public Class frmUserInfo
             chrtAnimeStatus.ChartAreas(0).AxisX.IsLabelAutoFit = False
 
             Dim dpnt As DataPoint = New DataPoint()
-            dpnt.SetValueY(frmMain.userList(0).TotalWatching)
+            dpnt.SetValueY(watchingCount)
             chrtAnimeStatus.Series("Watching").Points.Add(dpnt)
             dpnt.ToolTip = "Watching"
 
             Dim dpnt2 As DataPoint = New DataPoint()
-            dpnt2.SetValueY(frmMain.userList(0).TotalCompleted)
+            dpnt2.SetValueY(completedCount)
             chrtAnimeStatus.Series("Completed").Points.Add(dpnt2)
             dpnt2.ToolTip = "Completed"
 
             Dim dpnt3 As DataPoint = New DataPoint()
-            dpnt3.SetValueY(frmMain.userList(0).TotalOnHold)
+            dpnt3.SetValueY(onholdCount)
             chrtAnimeStatus.Series("On-Hold").Points.Add(dpnt3)
             dpnt3.ToolTip = "On-Hold"
 
             Dim dpnt4 As DataPoint = New DataPoint()
-            dpnt4.SetValueY(frmMain.userList(0).TotalDropped)
+            dpnt4.SetValueY(droppedCount)
             chrtAnimeStatus.Series("Dropped").Points.Add(dpnt4)
             dpnt4.ToolTip = "Dropped"
 
             Dim dpnt5 As DataPoint = New DataPoint()
-            dpnt5.SetValueY(frmMain.userList(0).PlaToWatch)
+            dpnt5.SetValueY(plantowatchCount)
             chrtAnimeStatus.Series("Plan to Watch").Points.Add(dpnt5)
             dpnt5.ToolTip = "Plan to Watch"
             dpnt5.Color = Color.FromArgb(209, 122, 200)
@@ -516,13 +554,10 @@ Public Class frmUserInfo
     End Sub
 
     Private Sub chkPreviewDark_CheckedChanged(sender As Object, e As EventArgs) Handles chkPreviewDark.CheckedChanged
-
         If chkPreviewDark.Checked = True Then
             pcbPreviewLight.Visible = False
         Else
             pcbPreviewLight.Visible = True
         End If
-
-
     End Sub
 End Class

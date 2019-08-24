@@ -21,6 +21,16 @@ Public Class frmSave
     Private mousex As Integer
     Private mousey As Integer
 
+    Private episodeCount As Integer = 0
+    Private watchingCount As Integer = 0
+    Private completedCount As Integer = 0
+    Private droppedCount As Integer = 0
+    Private onholdCount As Integer = 0
+    Private plantowatchCount As Integer = 0
+    Private meanScoreCount As Decimal = 0
+    Private meanScore As Decimal = 0
+    Private animeWScore As Decimal = 0
+
 
     Private Sub frmSave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -44,6 +54,7 @@ Public Class frmSave
             Return
         End If
         ANIME_LIST_SAVE_XML = saveWindow.FileName
+
         GenerateXML()
 
         Dim workingPage As Saving
@@ -51,10 +62,42 @@ Public Class frmSave
         workingPage.ShowDialog()
     End Sub
 
+    Private Sub calculateMetrics()
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
+            episodeCount += Convert.ToInt32(frmMain.animeList(i).WatchedEps)
+
+            If frmMain.animeList(i).Status = "Watching" Then
+                watchingCount += 1
+            ElseIf frmMain.animeList(i).Status = "Completed" Then
+                completedCount += 1
+            ElseIf frmMain.animeList(i).Status = "Dropped" Then
+                droppedCount += 1
+            ElseIf frmMain.animeList(i).Status = "On-Hold" Then
+                onholdCount += 1
+            Else
+                plantowatchCount += 1
+            End If
+
+            If Convert.ToInt32(frmMain.animeList(i).Score) = 0 Then
+            Else
+                meanScoreCount += Convert.ToDecimal(frmMain.animeList(i).Score)
+                animeWScore += 1
+            End If
+        Next
+
+        If animeWScore = 0 Then
+            meanScore = 0
+        Else
+            meanScore = meanScoreCount / animeWScore
+        End If
+    End Sub
+
 
     Private Sub GenerateXML()
         Dim settings As XmlWriterSettings = New XmlWriterSettings
         Dim doc As XmlDocument = New XmlDocument
+
+        calculateMetrics()
 
         settings.Indent = True
         settings.IndentChars = "    "
@@ -71,16 +114,16 @@ Public Class frmSave
             xmlOut.WriteElementString("user_id", frmMain.userList(i).UserId)
             xmlOut.WriteElementString("user_name", frmMain.userList(i).Username)
             xmlOut.WriteElementString("user_export_type", "1")
-            xmlOut.WriteElementString("user_total_anime", frmMain.userList(i).TotalAnime)
-            xmlOut.WriteElementString("user_total_watching", frmMain.userList(i).TotalWatching)
-            xmlOut.WriteElementString("user_total_completed", frmMain.userList(i).TotalCompleted)
-            xmlOut.WriteElementString("user_total_onhold", frmMain.userList(i).TotalOnHold)
-            xmlOut.WriteElementString("user_total_dropped", frmMain.userList(i).TotalDropped)
-            xmlOut.WriteElementString("user_total_plantowatch", frmMain.userList(i).PlaToWatch)
+            xmlOut.WriteElementString("user_total_anime", episodeCount)
+            xmlOut.WriteElementString("user_total_watching", watchingCount)
+            xmlOut.WriteElementString("user_total_completed", completedCount)
+            xmlOut.WriteElementString("user_total_onhold", onholdCount)
+            xmlOut.WriteElementString("user_total_dropped", droppedCount)
+            xmlOut.WriteElementString("user_total_plantowatch", plantowatchCount)
             xmlOut.WriteEndElement()
         Next
 
-        For i As Integer = 0 To frmMain.animeCount - 1
+        For i As Integer = 0 To frmMain.animeList.Count() - 1
             'Dim cdata As XCData = <![CDATA[frmMain.animeList(i).Title]]>
             'XmlNode XNode = XDocument.SelectSingNode("anime/series_title")
             xmlOut.WriteStartElement("anime")

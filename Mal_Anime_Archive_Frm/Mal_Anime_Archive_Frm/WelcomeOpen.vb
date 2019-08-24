@@ -79,6 +79,17 @@
 
         newList = New frmNewList
         newList.ShowDialog()
+
+
+        Me.Close()
+
+        Dim newAnime As frmNewAnime
+
+        newAnime = New frmNewAnime
+        newAnime.ShowDialog()
+
+        xmlParser.populateList()
+        frmMain.refreshSearchList()
     End Sub
 
     Private Sub mttTest_Click(sender As Object, e As EventArgs)

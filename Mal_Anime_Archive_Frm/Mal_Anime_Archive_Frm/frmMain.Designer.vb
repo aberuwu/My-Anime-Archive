@@ -89,10 +89,10 @@ Partial Class frmMain
         Me.myId4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeComments4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeRewatch4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.pcbLoading = New System.Windows.Forms.ProgressBar()
         Me.timerMain = New System.Windows.Forms.Timer(Me.components)
         Me.lblCopyright = New System.Windows.Forms.Label()
         Me.backWork = New System.ComponentModel.BackgroundWorker()
+        Me.pcbLoading = New MetroFramework.Controls.MetroProgressBar()
         Me.ssMain.SuspendLayout()
         CType(Me.spltMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spltMain.Panel1.SuspendLayout()
@@ -796,19 +796,6 @@ Partial Class frmMain
         Me.animeRewatch4.Text = "Rewatch"
         Me.animeRewatch4.Width = 80
         '
-        'pcbLoading
-        '
-        Me.pcbLoading.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pcbLoading.ForeColor = System.Drawing.Color.MediumPurple
-        Me.pcbLoading.Location = New System.Drawing.Point(19, 142)
-        Me.pcbLoading.Name = "pcbLoading"
-        Me.pcbLoading.Size = New System.Drawing.Size(886, 10)
-        Me.pcbLoading.Step = 1
-        Me.pcbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pcbLoading.TabIndex = 45
-        Me.pcbLoading.Visible = False
-        '
         'timerMain
         '
         Me.timerMain.Interval = 1000
@@ -832,6 +819,18 @@ Partial Class frmMain
         '
         Me.backWork.WorkerReportsProgress = True
         Me.backWork.WorkerSupportsCancellation = True
+        '
+        'pcbLoading
+        '
+        Me.pcbLoading.Location = New System.Drawing.Point(18, 142)
+        Me.pcbLoading.Maximum = 7
+        Me.pcbLoading.Name = "pcbLoading"
+        Me.pcbLoading.Size = New System.Drawing.Size(887, 8)
+        Me.pcbLoading.Step = 1
+        Me.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pcbLoading.TabIndex = 104
+        Me.pcbLoading.Value = 7
+        Me.pcbLoading.Visible = False
         '
         'frmMain
         '
@@ -928,7 +927,6 @@ Partial Class frmMain
     Friend WithEvents tsmiEdit As ToolStripMenuItem
     Friend WithEvents tsmiDelete As ToolStripMenuItem
     Friend WithEvents tsmiVisitPage As ToolStripMenuItem
-    Friend WithEvents pcbLoading As ProgressBar
     Friend WithEvents backWork As System.ComponentModel.BackgroundWorker
     Friend WithEvents lstwAnimeSearch As ListView
     Friend WithEvents srlstName As ColumnHeader
@@ -938,4 +936,5 @@ Partial Class frmMain
     Friend WithEvents vscrSearchList As VScrollBar
     Friend WithEvents srlstID As ColumnHeader
     Friend WithEvents tsmiListOptions As ToolStripMenuItem
+    Friend WithEvents pcbLoading As MetroFramework.Controls.MetroProgressBar
 End Class

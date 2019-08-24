@@ -80,8 +80,6 @@ Public Class frmNewList
         frmMain.userList(0).PlaToWatch = "0"
         frmMain.userList(0).UserExportType = "1"
 
-        'Dim newAnime As frmNewAnime
-        'newAnime = New frmNewAnime
-        'newAnime.ShowDialog()
+        frmMain.newList = True
     End Sub
 End Class

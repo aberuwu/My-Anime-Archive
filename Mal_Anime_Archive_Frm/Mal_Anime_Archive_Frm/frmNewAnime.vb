@@ -17,17 +17,23 @@ Public Class frmNewAnime
 
     End Sub
 
+    Private Sub clearLists()
+        resultImgUrl.Clear()
+        resultTitle.Clear()
+        resultId.Clear()
+        resultType.Clear()
+        resultEpisodes.Clear()
+        animeQueryInfo.Clear()
+    End Sub
+
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        'pgbLoadingSearch.Visible = True
         mtpgbLoading.Value = 1
         gbxResults.Visible = False
         lblSearchResults.Visible = False
         loadApiInfo(txtTitleSearch.Text)
         gbxResults.Visible = True
         displayApiInfo()
-
     End Sub
-
 
     Private Sub loadApiInfo(title As String)
         resultTitle.Clear()
@@ -336,13 +342,6 @@ Public Class frmNewAnime
     Private Sub bckwNewAnime_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles bckwNewAnime.ProgressChanged
         pgbLoadingSearch.Value = Math.Min(e.ProgressPercentage, pgbLoadingSearch.Maximum)
         mtpgbLoading.Value = Math.Min(e.ProgressPercentage, mtpgbLoading.Maximum)
-        'If e.ProgressPercentage = pgbLoadingSearch.Maximum Then
-        '    pcbLoading.Visible = False
-        '    'pcbLoading.Visible = False
-        '    'lblLoading.Visible = False
-        'Else
-        '    pcbLoading.Visible = True
-        'End If
     End Sub
 
     Private collapsed As Boolean = True
@@ -370,10 +369,10 @@ Public Class frmNewAnime
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         saveAnime()
+        frmMain.sortedList = frmSortWindow.sortList(frmMain.animeList, "title")
         Me.Close()
-        MsgBox(frmMain.animeList(frmMain.animeList.Count() - 1).Title)
+        clearLists()
     End Sub
-
 
     Private Sub saveAnime()
 
@@ -424,12 +423,9 @@ Public Class frmNewAnime
         End If
 
 
-
         frmMain.animeList(currentIndex).Myrewatchingep = numUpDownRewatch.Value
         frmMain.animeList(currentIndex).StartDate = "0000-00-00"
         frmMain.animeList(currentIndex).FinishDate = "0000-00-00"
         frmMain.animeList(currentIndex).Mycomments = txtTags.Text
-
-
     End Sub
 End Class

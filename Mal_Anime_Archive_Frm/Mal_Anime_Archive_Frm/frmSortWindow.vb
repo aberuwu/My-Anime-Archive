@@ -51,7 +51,7 @@ Public Class frmSortWindow
     '--------------------------------------------------------------------
     'Function sorts/orders generic anime list based on specific criteria
     '--------------------------------------------------------------------
-    Private Function sortList(myList As List(Of Anime), sortOrder As String) As List(Of Anime)
+    Public Function sortList(myList As List(Of Anime), sortOrder As String) As List(Of Anime)
         Try
             Dim sortedList As New List(Of Anime)
             If sortOrder = "title" Then
@@ -72,7 +72,7 @@ Public Class frmSortWindow
     '------------------------------------
     'Populates sorted/filtered list
     '------------------------------------
-    Private Sub populateList(myList As List(Of Anime))
+    Public Sub populateList(myList As List(Of Anime))
         For i As Integer = 0 To frmMain.animeCount - 1
             Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
             Dim str(2) As String

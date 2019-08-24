@@ -5,12 +5,9 @@
 '---------------------------------------------
 
 Public Class Themes
-
-    '*******************************
-    '*
-    '* Dark and Light Theme Methods
-    '*
-    '*******************************
+    '------------------------
+    'Themes for Main Form
+    '------------------------
     Public Sub orangeThemeLightModeMain()
         frmMain.lblTitle.ForeColor = Color.OrangeRed
         frmMain.lblId.ForeColor = Color.OrangeRed
@@ -50,13 +47,11 @@ Public Class Themes
             .FlatAppearance.MouseDownBackColor = Color.Orange
         End With
 
-
         With frmMain.btnSearch
             .FlatAppearance.BorderColor = Color.OrangeRed
             .FlatAppearance.MouseOverBackColor = Color.OrangeRed
             .FlatAppearance.MouseDownBackColor = Color.Orange
         End With
-
     End Sub
 
     Public Sub purpleThemeLightModeMain()
@@ -106,7 +101,6 @@ Public Class Themes
             .FlatAppearance.MouseOverBackColor = Color.MediumPurple
             .FlatAppearance.MouseDownBackColor = Color.DarkViolet
         End With
-
     End Sub
 
     Public Sub blueThemeLightModeMain()
@@ -289,5 +283,282 @@ Public Class Themes
             .FlatAppearance.MouseDownBackColor = Color.Blue
         End With
     End Sub
+
+    '------------------------
+    'Themes for Edit Form
+    '------------------------
+
+
+    Public Sub blueThemeLightModeEdit()
+        frmEditAnime.BackgroundImage = My.Resources.blue_back
+
+        frmEditAnime.lblTitle.ForeColor = Color.Blue
+        frmEditAnime.lblAnimeID.ForeColor = Color.Blue
+        frmEditAnime.lblAnimeType.ForeColor = Color.Blue
+        frmEditAnime.lblScoreHeading.ForeColor = Color.Black
+        frmEditAnime.lblStatusHeading.ForeColor = Color.Black
+        frmEditAnime.lblEpisodesHeading.ForeColor = Color.Black
+        frmEditAnime.lblWatchedHeading.ForeColor = Color.Black
+        frmEditAnime.chkViewComments.ForeColor = Color.Black
+        frmEditAnime.lblTypeHeading.ForeColor = Color.Black
+        frmEditAnime.lblStartDateHeading.ForeColor = Color.Black
+        frmEditAnime.lblFinishDateHeading.ForeColor = Color.Black
+        frmEditAnime.lblRewatchHeading.ForeColor = Color.Black
+        frmEditAnime.lblRewatchTimes.ForeColor = Color.Black
+        frmEditAnime.lblTagsHeading.ForeColor = Color.Black
+        frmEditAnime.lblAnimeIDHeading.ForeColor = Color.Black
+        frmEditAnime.lblTypeHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALRatingHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALScoreHeading.ForeColor = Color.Black
+        frmEditAnime.lblPremieredHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALScore.ForeColor = Color.Blue
+        frmEditAnime.lblMALRating.ForeColor = Color.Blue
+        frmEditAnime.lblPremiered.ForeColor = Color.Blue
+
+        With frmEditAnime.btnSave
+            .FlatAppearance.BorderColor = Color.Blue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+        End With
+
+        With frmEditAnime.btnCancel
+            .FlatAppearance.BorderColor = Color.Blue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+        End With
+    End Sub
+
+    Public Sub orangeThemeLightModeEdit()
+        frmEditAnime.BackgroundImage = My.Resources.orange_back
+
+        frmEditAnime.lblTitle.ForeColor = Color.OrangeRed
+        frmEditAnime.lblAnimeID.ForeColor = Color.OrangeRed
+        frmEditAnime.lblAnimeType.ForeColor = Color.OrangeRed
+        frmEditAnime.lblScoreHeading.ForeColor = Color.Black
+        frmEditAnime.lblStatusHeading.ForeColor = Color.Black
+        frmEditAnime.lblEpisodesHeading.ForeColor = Color.Black
+        frmEditAnime.lblWatchedHeading.ForeColor = Color.Black
+        frmEditAnime.chkViewComments.ForeColor = Color.Black
+        frmEditAnime.lblTypeHeading.ForeColor = Color.Black
+        frmEditAnime.lblStartDateHeading.ForeColor = Color.Black
+        frmEditAnime.lblFinishDateHeading.ForeColor = Color.Black
+        frmEditAnime.lblRewatchHeading.ForeColor = Color.Black
+        frmEditAnime.lblRewatchTimes.ForeColor = Color.Black
+        frmEditAnime.lblTagsHeading.ForeColor = Color.Black
+        frmEditAnime.lblAnimeIDHeading.ForeColor = Color.Black
+        frmEditAnime.lblTypeHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALRatingHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALScoreHeading.ForeColor = Color.Black
+        frmEditAnime.lblPremieredHeading.ForeColor = Color.Black
+        frmEditAnime.lblMALScore.ForeColor = Color.OrangeRed
+        frmEditAnime.lblMALRating.ForeColor = Color.OrangeRed
+        frmEditAnime.lblPremiered.ForeColor = Color.OrangeRed
+
+        With frmEditAnime.btnSave
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.DarkRed
+        End With
+
+        With frmEditAnime.btnCancel
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.DarkRed
+        End With
+    End Sub
+
+
+
+    Public Sub purpleThemeDarkModeEdit()
+        frmEditAnime.BackgroundImage = My.Resources.purple_back
+
+        frmEditAnime.gbxEdit.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.txtTags.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.txtComments.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownScore.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+
+        frmEditAnime.lblTitle.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblAnimeID.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblAnimeType.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblMALScore.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblPremiered.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblMALRating.ForeColor = Color.FromArgb(209, 122, 200)
+        frmEditAnime.lblScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblStatusHeading.ForeColor = Color.White
+        frmEditAnime.lblEpisodesHeading.ForeColor = Color.White
+        frmEditAnime.lblWatchedHeading.ForeColor = Color.White
+        frmEditAnime.chkViewComments.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.lblStartDateHeading.ForeColor = Color.White
+        frmEditAnime.lblFinishDateHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchTimes.ForeColor = Color.White
+        frmEditAnime.lblTagsHeading.ForeColor = Color.White
+        frmEditAnime.lblAnimeIDHeading.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.rctSynopsis.ForeColor = Color.White
+        frmEditAnime.txtTags.ForeColor = Color.WhiteSmoke
+        frmEditAnime.txtComments.ForeColor = Color.WhiteSmoke
+        frmEditAnime.numUpDownScore.ForeColor = Color.White
+        frmEditAnime.numUpDownEpisodes.ForeColor = Color.White
+        frmEditAnime.numUpDownWatched.ForeColor = Color.White
+        frmEditAnime.numUpDownRewatch.ForeColor = Color.White
+        frmEditAnime.ddlRewatchValue.ForeColor = Color.White
+        frmEditAnime.ddlStatus.ForeColor = Color.White
+        frmEditAnime.lblMALScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblMALRatingHeading.ForeColor = Color.White
+        frmEditAnime.lblPremieredHeading.ForeColor = Color.White
+
+        With frmEditAnime.dtStartDate
+            .CalendarTitleBackColor = Color.Black
+            .CalendarForeColor = Color.White
+            .CalendarTitleForeColor = Color.White
+            .CalendarTrailingForeColor = Color.White
+        End With
+
+        With frmEditAnime.btnSave
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+            .ForeColor = Color.White
+        End With
+
+        With frmEditAnime.btnCancel
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+            .ForeColor = Color.White
+        End With
+    End Sub
+
+    Public Sub blueThemeDarkModeEdit()
+        frmEditAnime.BackgroundImage = My.Resources.blue_back
+
+        frmEditAnime.gbxEdit.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.txtTags.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.txtComments.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownScore.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+
+        frmEditAnime.lblTitle.ForeColor = Color.LightBlue
+        frmEditAnime.lblAnimeID.ForeColor = Color.LightBlue
+        frmEditAnime.lblAnimeType.ForeColor = Color.LightBlue
+        frmEditAnime.lblMALScore.ForeColor = Color.LightBlue
+        frmEditAnime.lblPremiered.ForeColor = Color.LightBlue
+        frmEditAnime.lblMALRating.ForeColor = Color.LightBlue
+        frmEditAnime.lblScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblStatusHeading.ForeColor = Color.White
+        frmEditAnime.lblEpisodesHeading.ForeColor = Color.White
+        frmEditAnime.lblWatchedHeading.ForeColor = Color.White
+        frmEditAnime.chkViewComments.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.lblStartDateHeading.ForeColor = Color.White
+        frmEditAnime.lblFinishDateHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchTimes.ForeColor = Color.White
+        frmEditAnime.lblTagsHeading.ForeColor = Color.White
+        frmEditAnime.lblAnimeIDHeading.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.rctSynopsis.ForeColor = Color.White
+        frmEditAnime.txtTags.ForeColor = Color.WhiteSmoke
+        frmEditAnime.txtComments.ForeColor = Color.WhiteSmoke
+        frmEditAnime.numUpDownScore.ForeColor = Color.White
+        frmEditAnime.numUpDownEpisodes.ForeColor = Color.White
+        frmEditAnime.numUpDownWatched.ForeColor = Color.White
+        frmEditAnime.numUpDownRewatch.ForeColor = Color.White
+        frmEditAnime.ddlRewatchValue.ForeColor = Color.White
+        frmEditAnime.ddlStatus.ForeColor = Color.White
+        frmEditAnime.lblMALScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblMALRatingHeading.ForeColor = Color.White
+        frmEditAnime.lblPremieredHeading.ForeColor = Color.White
+
+        With frmEditAnime.btnSave
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+            .ForeColor = Color.White
+        End With
+
+        With frmEditAnime.btnCancel
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+            .ForeColor = Color.White
+        End With
+    End Sub
+
+    Public Sub orangeThemeDarkModeEdit()
+        frmEditAnime.BackgroundImage = My.Resources.orange_back
+
+        frmEditAnime.gbxEdit.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmEditAnime.txtTags.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.txtComments.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownScore.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        frmEditAnime.ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+
+        frmEditAnime.lblTitle.ForeColor = Color.OrangeRed
+        frmEditAnime.lblAnimeID.ForeColor = Color.OrangeRed
+        frmEditAnime.lblAnimeType.ForeColor = Color.OrangeRed
+        frmEditAnime.lblMALScore.ForeColor = Color.OrangeRed
+        frmEditAnime.lblPremiered.ForeColor = Color.OrangeRed
+        frmEditAnime.lblMALRating.ForeColor = Color.OrangeRed
+        frmEditAnime.lblScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblStatusHeading.ForeColor = Color.White
+        frmEditAnime.lblEpisodesHeading.ForeColor = Color.White
+        frmEditAnime.lblWatchedHeading.ForeColor = Color.White
+        frmEditAnime.chkViewComments.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.lblStartDateHeading.ForeColor = Color.White
+        frmEditAnime.lblFinishDateHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchHeading.ForeColor = Color.White
+        frmEditAnime.lblRewatchTimes.ForeColor = Color.White
+        frmEditAnime.lblTagsHeading.ForeColor = Color.White
+        frmEditAnime.lblAnimeIDHeading.ForeColor = Color.White
+        frmEditAnime.lblTypeHeading.ForeColor = Color.White
+        frmEditAnime.rctSynopsis.ForeColor = Color.White
+        frmEditAnime.txtTags.ForeColor = Color.WhiteSmoke
+        frmEditAnime.txtComments.ForeColor = Color.WhiteSmoke
+        frmEditAnime.numUpDownScore.ForeColor = Color.White
+        frmEditAnime.numUpDownEpisodes.ForeColor = Color.White
+        frmEditAnime.numUpDownWatched.ForeColor = Color.White
+        frmEditAnime.numUpDownRewatch.ForeColor = Color.White
+        frmEditAnime.ddlRewatchValue.ForeColor = Color.White
+        frmEditAnime.ddlStatus.ForeColor = Color.White
+        frmEditAnime.lblMALScoreHeading.ForeColor = Color.White
+        frmEditAnime.lblMALRatingHeading.ForeColor = Color.White
+        frmEditAnime.lblPremieredHeading.ForeColor = Color.White
+
+        With frmEditAnime.btnSave
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
+            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .ForeColor = Color.White
+        End With
+
+        With frmEditAnime.btnCancel
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
+            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .ForeColor = Color.White
+        End With
+    End Sub
+
+
 
 End Class

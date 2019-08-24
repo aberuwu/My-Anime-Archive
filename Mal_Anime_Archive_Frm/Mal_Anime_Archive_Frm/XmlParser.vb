@@ -205,6 +205,8 @@ Public Class XmlParser
 
             reader.Close()
 
+            frmMain.sortedList = frmSortWindow.sortList(frmMain.animeList, "title")
+
         Catch ex As Exception
             'MsgBox("There was a problem with your XML File. Please try again with another file!", MsgBoxStyle.Critical, "Error")
             Dim errorPage As frmError
@@ -248,6 +250,7 @@ Public Class XmlParser
         frmMain.txtSearch.AutoCompleteCustomSource = sug
 
         populateList()
+        frmMain.refreshSearchList()
 
         frmMain.USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & frmMain.userList(frmMain.userCount).UserId & ".jpg"
 
@@ -259,6 +262,7 @@ Public Class XmlParser
         frmMain.btnSave.Enabled = True
         frmMain.btnXml.Enabled = True
         frmMain.lblNoListLoaded.Visible = False
+        frmMain.newList = False
 
         frmMain.welcomePage()
     End Sub
@@ -271,23 +275,26 @@ Public Class XmlParser
 
         Dim currentAnime As String
         Dim animeCount As Integer = frmMain.animeList.Count()
+        'frmMain.animeList.OrderBy(Function(mts) mts.Title).ToList
+        'Dim sortedList As List(Of Anime) = frmSortWindow.sortList(frmMain.animeList, "title")
+
 
         For i As Integer = 0 To animeCount - 1
             frmMain.pcbLoading.Maximum = animeCount - 1
             frmMain.pcbLoading.Visible = True
-            frmMain.lstwAnimeMain.Items.Insert(i, frmMain.animeList(i).AnimeId)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Title)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Type)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Status)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Episodes)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).WatchedEps)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Score)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).StartDate)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).FinishDate)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Mytags)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).MyId)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Mycomments)
-            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.animeList(i).Myrewatch)
+            frmMain.lstwAnimeMain.Items.Insert(i, frmMain.sortedList(i).AnimeId)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Title)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Type)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Status)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Episodes)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).WatchedEps)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Score)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).StartDate)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).FinishDate)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Mytags)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).MyId)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Mycomments)
+            frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Myrewatch)
             frmMain.backWork.ReportProgress(i)
         Next
 
@@ -303,5 +310,10 @@ Public Class XmlParser
         If animeCount > -1 Then
             frmMain.lblNoListLoaded.Visible = False
         End If
+
+        frmMain.lstwAnimeSearch.Items.Clear()
+        frmMain.lstwStatus.Items.Clear()
+
+
     End Sub
 End Class

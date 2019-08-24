@@ -42,6 +42,7 @@ Imports System.Drawing.Drawing2D
 Public Class frmMain
 
     Public Property animeList As List(Of Anime) = New List(Of Anime)
+    Public Property sortedList As List(Of Anime) = New List(Of Anime)
     Public Property userList As List(Of User) = New List(Of User)
     Public Property animeCount As Integer = 0
     Public Property userCount As Integer = 0
@@ -50,6 +51,7 @@ Public Class frmMain
     Private XmlParser As New XmlParser()
 
     Public USER_IMG_URL As String
+    Public Property newList As Boolean = False
     Public Property darkModeOn As Boolean
     Public Property loadedXml As Boolean
     Public Property completed As Boolean = False
@@ -79,7 +81,6 @@ Public Class frmMain
     Private MAL_SOURCE_URL As String = "https://myanimelist.net/anime/"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         txtSearch.ForeColor = SystemColors.GrayText
         txtSearch.Text = "🔎 Anime Search"
 
@@ -93,7 +94,18 @@ Public Class frmMain
         Else
             btnSave.Enabled = True
             btnXml.Enabled = True
+            lstwAnimeSearch.Items(0).Selected = True
+            lstwAnimeSearch.Items(0).Focused = True
+            lstwAnimeSearch.Items(0).EnsureVisible()
+            Me.ActiveControl = lstwAnimeSearch
         End If
+
+        'If newList = True Then
+        '    Dim newAnime As frmNewAnime
+
+        '    newAnime = New frmNewAnime
+        '    newAnime.ShowDialog()
+        'End If
 
         vscrSearchList.Minimum = 0
         vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
@@ -136,6 +148,10 @@ Public Class frmMain
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        refreshSearchList()
+    End Sub
+
+    Public Sub refreshSearchList()
         Try
             lstAnimes.Items.Clear()
             lstwStatus.Items.Clear()
@@ -154,20 +170,20 @@ Public Class frmMain
                 Dim str(2) As String
                 Dim itemResults As ListViewItem
 
-                If animeList(i).Status = "Watching" Then
+                If sortedList(i).Status = "Watching" Then
                     itemStatus.ImageIndex = 0
-                ElseIf animeList(i).Status = "Completed" Then
+                ElseIf sortedList(i).Status = "Completed" Then
                     itemStatus.ImageIndex = 1
-                ElseIf animeList(i).Status = "Dropped" Then
+                ElseIf sortedList(i).Status = "Dropped" Then
                     itemStatus.ImageIndex = 2
-                ElseIf animeList(i).Status = "On-Hold" Then
+                ElseIf sortedList(i).Status = "On-Hold" Then
                     itemStatus.ImageIndex = 3
                 Else
                     itemStatus.ImageIndex = 4
                 End If
 
-                str(0) = animeList(i).Title
-                str(1) = animeList(i).AnimeId
+                str(0) = sortedList(i).Title
+                str(1) = sortedList(i).AnimeId
                 itemResults = New ListViewItem(str)
                 lstwAnimeSearch.Items.Add(itemResults)
 
@@ -177,6 +193,7 @@ Public Class frmMain
             MsgBox("No XML File Loaded", MsgBoxStyle.Information, "No File Found")
         End Try
     End Sub
+
 
     Public Sub welcomePage()
         Dim welcomePage As frmWelcome
@@ -225,7 +242,7 @@ Public Class frmMain
                 If fullListChecked = True Then
                     lstwAnimeMain.SelectedItems.Clear()
                     For c As Integer = 0 To animeCount - 1
-                        If lstwAnimeMain.Items(c).SubItems(0).Text = animeList(i).AnimeId Then
+                        If lstwAnimeMain.Items(c).SubItems(0).Text = sortedList(i).AnimeId Then
                             lstwAnimeMain.Items(c).Selected = True
                             lstwAnimeMain.Items(c).EnsureVisible()
                         End If
@@ -275,13 +292,13 @@ Public Class frmMain
                     'lstwAnimeMain.Items(i).Focused = True
                     lstwAnimeMain.Items(i).EnsureVisible()
 
-                    lblTitle.Text = animeList(i).Title
-                    lblId.Text = animeList(i).AnimeId
-                    lblType.Text = animeList(i).Type
-                    lblEpisodes.Text = animeList(i).Episodes
-                    lblWatched.Text = animeList(i).WatchedEps
-                    lblScore.Text = animeList(i).Score
-                    lblStatus.Text = animeList(i).Status
+                    lblTitle.Text = sortedList(i).Title
+                    lblId.Text = sortedList(i).AnimeId
+                    lblType.Text = sortedList(i).Type
+                    lblEpisodes.Text = sortedList(i).Episodes
+                    lblWatched.Text = sortedList(i).WatchedEps
+                    lblScore.Text = sortedList(i).Score
+                    lblStatus.Text = sortedList(i).Status
                 End If
             Next
         Catch ex As Exception
@@ -295,14 +312,14 @@ Public Class frmMain
         Try
             anId = lstwAnimeMain.FocusedItem.SubItems(0).Text
             For i As Integer = 0 To animeList.Count() - 1
-                If animeList(i).AnimeId = anId Then
-                    lblTitle.Text = animeList(i).Title
-                    lblId.Text = animeList(i).AnimeId
-                    lblType.Text = animeList(i).Type
-                    lblEpisodes.Text = animeList(i).Episodes
-                    lblWatched.Text = animeList(i).WatchedEps
-                    lblScore.Text = animeList(i).Score
-                    lblStatus.Text = animeList(i).Status
+                If sortedList(i).AnimeId = anId Then
+                    lblTitle.Text = sortedList(i).Title
+                    lblId.Text = sortedList(i).AnimeId
+                    lblType.Text = sortedList(i).Type
+                    lblEpisodes.Text = sortedList(i).Episodes
+                    lblWatched.Text = sortedList(i).WatchedEps
+                    lblScore.Text = sortedList(i).Score
+                    lblStatus.Text = sortedList(i).Status
                 End If
             Next
         Catch ex As Exception
@@ -419,14 +436,13 @@ Public Class frmMain
     End Sub
 
 
-
-    'EDIT BUTTON - STILL BUGGY
     Private Sub tsbtnEdit_Click(sender As Object, e As EventArgs) Handles tsbtnEdit.Click
         Dim editAnime As frmEditAnime
-        editClick = True
-
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
+        lstwAnimeMain.Items.Clear()
+        XmlParser.populateList()
+        refreshSearchList()
     End Sub
 
 
@@ -470,7 +486,7 @@ Public Class frmMain
         lblNoResultFound.Visible = False
 
         Try
-            For i = 0 To animeCount - 1
+            For i = 0 To animeList.Count() - 1
                 nameResults = animeList(i).Title.Trim().ToUpper()
                 If nameResults.Contains(search) Then
                     Dim itemStatus As ListViewItem = lstwStatus.Items.Add("")
@@ -662,23 +678,22 @@ Public Class frmMain
 
 
     Private Sub tsmiEdit_Click(sender As Object, e As EventArgs) Handles tsmiEdit.Click
-        singleListClick = False
+        'singleListClick = False
         Dim editAnime As frmEditAnime
-
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
         lstwAnimeMain.Items.Clear()
         XmlParser.populateList()
+        refreshSearchList()
     End Sub
 
     Private Sub tsbtnNewAnime_Click(sender As Object, e As EventArgs) Handles tsbtnNewAnime.Click
         Dim newAnime As frmNewAnime
-
         newAnime = New frmNewAnime
         newAnime.ShowDialog()
 
         XmlParser.populateList()
-
+        refreshSearchList()
     End Sub
 
     Private Sub tsmiDelete_Click(sender As Object, e As EventArgs) Handles tsmiDelete.Click
