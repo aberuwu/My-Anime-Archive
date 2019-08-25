@@ -9,7 +9,7 @@ Public Class frmEditAnime
     Private animeIndex As Integer = 0
     Private anId As String
 
-    Private Sub frmEditAnime_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Async Sub frmEditAnime_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
 
@@ -173,44 +173,18 @@ Public Class frmEditAnime
         ddlSelectAnime.SelectedIndex = newIndex
     End Sub
 
-    Private Sub loadApiInfo(id As String)
-        '*******************************
-        '* JIKAN API TEST!
-        '*
-        '********************************
+    '------------------------
+    ' JIKAN REST API Call
+    '-------------------------
+    Async Sub loadApiInfo(id As String)
+        Dim jikan As IJikan = New Jikan(True)
+        Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
 
-        Dim apiConnect As HttpWebRequest
-        Dim apiUrl As String = "http://api.jikan.moe/v3/anime/" & id
-        Dim response As HttpWebResponse = Nothing
-        Dim reader As StreamReader
-
-        If frmMain.CheckConnection(apiUrl) = True Then
-            apiConnect = DirectCast(WebRequest.Create(apiUrl), HttpWebRequest)
-            response = DirectCast(apiConnect.GetResponse(), HttpWebResponse)
-
-            reader = New StreamReader(response.GetResponseStream)
-
-            Dim rawresp As String
-
-            rawresp = reader.ReadToEnd()
-
-            Dim jsonResulttodict = JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(rawresp)
-
-            Dim animeImage = jsonResulttodict.Item("image_url")
-            pcbAnimeCover.Load(animeImage)
-
-            Dim animeSynopsis = jsonResulttodict.Item("synopsis")
-            rctSynopsis.Text = animeSynopsis
-
-            Dim malScore = jsonResulttodict.Item("score")
-            lblMALScore.Text = malScore
-
-            Dim malRating = jsonResulttodict.Item("rating")
-            lblMALRating.Text = malRating
-
-            Dim premiereDate = jsonResulttodict.Item("premiered")
-            lblPremiered.Text = premiereDate
-        End If
+        rctSynopsis.Text = anime.Synopsis
+        lblMALRating.Text = anime.Rating
+        lblPremiered.Text = anime.Premiered
+        lblMALScore.Text = anime.Score
+        pcbAnimeCover.Load(anime.ImageURL)
     End Sub
 
     Private Sub chkViewComments_CheckedChanged(sender As Object, e As EventArgs) Handles chkViewComments.CheckedChanged

@@ -42,6 +42,15 @@ Public Class frmNewAnime
         resultTitle.Clear()
         resultType.Clear()
 
+        'Dim jikan As IJikan = New Jikan(True)
+
+        'Dim animeSearch As AnimeSearchResult = Await jikan.SearchAnime(title)
+
+        'txtTest.Text = animeSearch.Results.First().Title
+
+        'Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
+
+
         Dim apiConnect As HttpWebRequest
         Dim apiUrl As String = "https://api.jikan.moe/v3/search/anime?q=" & title & "&limit=8"
         Dim response As HttpWebResponse = Nothing

@@ -7,6 +7,7 @@ Public Class frmUserInfo
     Private mousex As Integer
     Private mousey As Integer
     Private themes As New Themes()
+    Private xmlParser As New XmlParser()
     Public Property webServices As Boolean
     Public Property USER_IMG_URL As String
 
@@ -274,6 +275,9 @@ Public Class frmUserInfo
         Else
             Return
         End If
+
+        frmMain.lstwAnimeMain.Refresh()
+        frmMain.lstwAnimeSearch.Refresh()
     End Sub
 
 

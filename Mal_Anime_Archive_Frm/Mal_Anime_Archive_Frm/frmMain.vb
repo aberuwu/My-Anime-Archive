@@ -3,7 +3,7 @@
 '* My Anime Archive! - .NET Framework
 '* Build: Alpha 1.0
 '* Programmed by: Cesar Mendoza @aberuwu
-'* Last Updated: 17/7/2019 - 00:53
+'* Last Updated: 24/8/2019 - 00:53
 '* Features:
 '*          -MAL XML File Visualization
 '*          -Export as XML, SQL, CSV   
@@ -38,6 +38,7 @@ Imports System.IO
 Imports System
 Imports Newtonsoft.Json
 Imports System.Drawing.Drawing2D
+Imports JikanDotNet
 
 Public Class frmMain
 
@@ -75,12 +76,10 @@ Public Class frmMain
     Public Property themeBlue As Boolean = False
     Public Property themeOrange As Boolean = False
 
-    'Public Property header As String = "User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
-
     Public Property ANIME_SOURCE_XML As String
     Private MAL_SOURCE_URL As String = "https://myanimelist.net/anime/"
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Async Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtSearch.ForeColor = SystemColors.GrayText
         txtSearch.Text = "🔎 Anime Search"
 
@@ -100,15 +99,14 @@ Public Class frmMain
             Me.ActiveControl = lstwAnimeSearch
         End If
 
-        'If newList = True Then
-        '    Dim newAnime As frmNewAnime
-
-        '    newAnime = New frmNewAnime
-        '    newAnime.ShowDialog()
-        'End If
-
         vscrSearchList.Minimum = 0
         vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
+    End Sub
+
+    Async Sub loadApiInfo(id As String)
+        Dim jikan As IJikan = New Jikan(True)
+        Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(id)
+        'pcbAnimeCover.Load(anime.ImageURL)
     End Sub
 
     Private Sub welcomeOpen()
@@ -214,62 +212,9 @@ Public Class frmMain
         End Try
     End Function
 
-    Private Sub wbsAnimeImage_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
-        'wbsAnimeImage.Document.Body.Style = "zoom:100%"
-        completed = True
-    End Sub
-
-    Public Property lstAnimeIndexSelect As Boolean = False
-
-    Private Sub lstAnimes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstAnimes.SelectedIndexChanged
-
-        lstAnimeIndexSelect = True
-
-        If lstAnimes.SelectedIndex = -1 Then
-            Return
-        End If
-
-        Dim animeIndex As Integer = lstAnimes.SelectedItem.ToString.Substring(1000)
-
-        For i As Integer = 0 To animeCount - 1
-
-            Dim tempId As Integer = Convert.ToInt32(animeList(i).AnimeId)
-            'animeList(i).AnimeId.Contains(animeIndex)
-
-            If tempId = animeIndex Then
-
-                'MsgBox(animeList(i).AnimeId)
-                If fullListChecked = True Then
-                    lstwAnimeMain.SelectedItems.Clear()
-                    For c As Integer = 0 To animeCount - 1
-                        If lstwAnimeMain.Items(c).SubItems(0).Text = sortedList(i).AnimeId Then
-                            lstwAnimeMain.Items(c).Selected = True
-                            lstwAnimeMain.Items(c).EnsureVisible()
-                        End If
-                    Next
-                End If
-
-                lblTitle.Text = animeList(i).Title
-                lblId.Text = animeList(i).AnimeId
-                lblType.Text = animeList(i).Type
-                lblEpisodes.Text = animeList(i).Episodes
-                lblWatched.Text = animeList(i).WatchedEps
-                lblScore.Text = animeList(i).Score
-                lblStatus.Text = animeList(i).Status
-
-                Dim API_JIKAN_MAL_PICTURE As String = "https://api.jikan.moe/anime/" & animeList(i).AnimeId & "/pictures"
-
-                MAL_SOURCE_URL = animeList(i).AnimeId
-
-            End If
-        Next
-
-    End Sub
-
-
     Private Sub lstwAnimeSearch_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeSearch.ItemSelectionChanged
 
-        Dim anId As String
+        Dim anId As String = ""
         If lstwAnimeSearch.SelectedItems.Count = -1 Then
             Return
         ElseIf lstwAnimeSearch.SelectedItems.Count = 0 Then
@@ -287,10 +232,12 @@ Public Class frmMain
             Dim animeTitle As String = lstwAnimeSearch.SelectedItems(0).SubItems(0).Text
             For i As Integer = 0 To animeList.Count() - 1
                 If lstwAnimeMain.Items(i).SubItems(0).Text = anId OrElse lstwAnimeMain.Items(i).SubItems(1).Text = animeTitle Then
+                    'loadApiInfo(anId)
                     lstwAnimeMain.SelectedItems.Clear()
                     lstwAnimeMain.Items(i).Selected = True
                     'lstwAnimeMain.Items(i).Focused = True
                     lstwAnimeMain.Items(i).EnsureVisible()
+                    'Me.ActiveControl = lstwAnimeSearch
 
                     lblTitle.Text = sortedList(i).Title
                     lblId.Text = sortedList(i).AnimeId
@@ -308,11 +255,14 @@ Public Class frmMain
 
     Private Sub lstwAnimeMain_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeMain.ItemSelectionChanged
 
-        Dim anId As String
+        Dim anId As String = ""
         Try
             anId = lstwAnimeMain.FocusedItem.SubItems(0).Text
+
+            'loadApiInfo(anId)
             For i As Integer = 0 To animeList.Count() - 1
                 If sortedList(i).AnimeId = anId Then
+                    'loadApiInfo(anId)
                     lblTitle.Text = sortedList(i).Title
                     lblId.Text = sortedList(i).AnimeId
                     lblType.Text = sortedList(i).Type
@@ -332,6 +282,7 @@ Public Class frmMain
 
         userInfo = New frmUserInfo
         userInfo.ShowDialog()
+
         'userInfo.Show()
     End Sub
 
@@ -414,16 +365,6 @@ Public Class frmMain
         lstOptions.ShowDialog()
     End Sub
 
-    Private Sub lstwOne_DoubleClick(sender As Object, e As EventArgs)
-        singleListClick = True
-        Dim editAnime As frmEditAnime
-
-        editAnime = New frmEditAnime
-        editAnime.ShowDialog()
-        'lstwOne.Items.Clear()
-
-        lstAnimes_SelectedIndexChanged(Nothing, New EventArgs())
-    End Sub
 
     Private Sub lstwAnimeMain_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lstwAnimeMain.MouseDoubleClick
         singleListClick = False
@@ -445,7 +386,6 @@ Public Class frmMain
         refreshSearchList()
     End Sub
 
-
     Private Sub backWork_ProgressChanged(sender As Object, e As ComponentModel.ProgressChangedEventArgs) Handles backWork.ProgressChanged
         pcbLoading.Value = Math.Min(e.ProgressPercentage, pcbLoading.Maximum)
         If e.ProgressPercentage = pcbLoading.Maximum Then
@@ -453,7 +393,6 @@ Public Class frmMain
             'lblLoading.Visible = False
         End If
     End Sub
-
 
     Private Sub txtSearch_Enter(sender As Object, e As EventArgs) Handles txtSearch.Enter
         If txtSearch.Text = "🔎 Anime Search" Then
@@ -523,9 +462,8 @@ Public Class frmMain
                 lstAnimes.SelectedIndex = 0
             End If
         Catch ex As Exception
-
+            Return
         End Try
-
     End Sub
 
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
@@ -705,7 +643,6 @@ Public Class frmMain
     End Sub
 
     Private Sub vscrSearchList_Scroll(sender As Object, e As ScrollEventArgs) Handles vscrSearchList.Scroll
-
         Try
             lstwAnimeSearch.TopItem = lstwAnimeSearch.Items(vscrSearchList.Value)
             lstwStatus.TopItem = lstwStatus.Items(vscrSearchList.Value)
@@ -759,7 +696,6 @@ Public Class frmMain
 End Class
 Public Class ListViewDoubleBuffered
     Inherits ListView
-
     Public Sub New()
         Me.DoubleBuffered = True
     End Sub

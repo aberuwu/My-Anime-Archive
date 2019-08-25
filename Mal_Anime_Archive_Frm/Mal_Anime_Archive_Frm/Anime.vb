@@ -5,8 +5,10 @@
 '* loaded from XML file.  Properties are used for each.
 '* Last Updated: 06/08/2019
 '*******************************************************
-Public Class Anime
+Imports JikanDotNet
+Imports Mal_Anime_Archive_Frm
 
+Public Class Anime
     Private _animeId As String = ""
     Private _title As String = ""
     Private _type As String = ""
@@ -27,7 +29,6 @@ Public Class Anime
     Private _myrewatching As String = ""
     Private _myrewatchingep As String = ""
     Private _updateonimport As String = ""
-
 
     Public Property AnimeId As String
         Get
@@ -208,4 +209,6 @@ Public Class Anime
             _updateonimport = value
         End Set
     End Property
+
+
 End Class

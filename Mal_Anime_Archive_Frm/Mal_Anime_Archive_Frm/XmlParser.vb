@@ -205,6 +205,7 @@ Public Class XmlParser
 
             reader.Close()
 
+            'frmMain.loadImages()
             frmMain.sortedList = frmSortWindow.sortList(frmMain.animeList, "title")
 
         Catch ex As Exception
