@@ -12,7 +12,7 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 -Online features such as anime search and user search powered by Jikan API<br/>
 -Offline list statistical analysis <br/>
 -Export .xml that can be re-uploaded to MyAnimeList.net<br/>
--Export .json
+-Export .json<br/>
 -Export .csv for Excel<br/>
 -Customizable UI<br/>
 -Simple Inteface<br/>
