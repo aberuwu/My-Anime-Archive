@@ -15,4 +15,5 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 -Export .json<br/>
 -Export .csv for Excel<br/>
 -Customizable UI<br/>
+-Custom themes<br/>
 -Simple Inteface<br/>
