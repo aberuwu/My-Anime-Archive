@@ -17,3 +17,8 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 -Customizable UI<br/>
 -Custom themes<br/>
 -Simple Inteface<br/>
+
+
+# Future
+
+-Support for Anilist.co exported anime lists
