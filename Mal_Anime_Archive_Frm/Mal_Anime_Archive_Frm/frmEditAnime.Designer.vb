@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmEditAnime
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class frmEditAnime
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEditAnime))
         Me.gbxEdit = New System.Windows.Forms.GroupBox()
+        Me.pcbLoading = New MetroFramework.Controls.MetroProgressBar()
         Me.lblMALRating = New System.Windows.Forms.Label()
         Me.lblPremiered = New System.Windows.Forms.Label()
         Me.lblMALScore = New System.Windows.Forms.Label()
@@ -66,6 +67,12 @@ Partial Class frmEditAnime
         Me.btnForward = New System.Windows.Forms.Button()
         Me.btnBackward = New System.Windows.Forms.Button()
         Me.ddlSelectAnime = New System.Windows.Forms.ComboBox()
+        Me.backWorkEdit = New System.ComponentModel.BackgroundWorker()
+        Me.mtddlSelectAnime = New MetroFramework.Controls.MetroComboBox()
+        Me.mtddlStatus = New MetroFramework.Controls.MetroComboBox()
+        Me.mtddlRewatchValue = New MetroFramework.Controls.MetroComboBox()
+        Me.mdtStartDate = New MetroFramework.Controls.MetroDateTime()
+        Me.mdtFinishDate = New MetroFramework.Controls.MetroDateTime()
         Me.gbxEdit.SuspendLayout()
         CType(Me.pcbAnimeCover, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numUpDownRewatch, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +87,9 @@ Partial Class frmEditAnime
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbxEdit.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.gbxEdit.Controls.Add(Me.mdtFinishDate)
+        Me.gbxEdit.Controls.Add(Me.mdtStartDate)
+        Me.gbxEdit.Controls.Add(Me.pcbLoading)
         Me.gbxEdit.Controls.Add(Me.lblMALRating)
         Me.gbxEdit.Controls.Add(Me.lblPremiered)
         Me.gbxEdit.Controls.Add(Me.lblMALScore)
@@ -96,10 +106,8 @@ Partial Class frmEditAnime
         Me.gbxEdit.Controls.Add(Me.lblRewatchTimes)
         Me.gbxEdit.Controls.Add(Me.btnCancel)
         Me.gbxEdit.Controls.Add(Me.btnSave)
-        Me.gbxEdit.Controls.Add(Me.ddlRewatchValue)
         Me.gbxEdit.Controls.Add(Me.dtFinishDate)
         Me.gbxEdit.Controls.Add(Me.dtStartDate)
-        Me.gbxEdit.Controls.Add(Me.ddlStatus)
         Me.gbxEdit.Controls.Add(Me.numUpDownWatched)
         Me.gbxEdit.Controls.Add(Me.numUpDownEpisodes)
         Me.gbxEdit.Controls.Add(Me.numUpDownScore)
@@ -116,11 +124,27 @@ Partial Class frmEditAnime
         Me.gbxEdit.Controls.Add(Me.lblAnimeIDHeading)
         Me.gbxEdit.Controls.Add(Me.txtTags)
         Me.gbxEdit.Controls.Add(Me.txtComments)
+        Me.gbxEdit.Controls.Add(Me.mtddlStatus)
+        Me.gbxEdit.Controls.Add(Me.ddlStatus)
+        Me.gbxEdit.Controls.Add(Me.mtddlRewatchValue)
+        Me.gbxEdit.Controls.Add(Me.ddlRewatchValue)
         Me.gbxEdit.Location = New System.Drawing.Point(-2, 58)
         Me.gbxEdit.Name = "gbxEdit"
         Me.gbxEdit.Size = New System.Drawing.Size(928, 506)
         Me.gbxEdit.TabIndex = 0
         Me.gbxEdit.TabStop = False
+        '
+        'pcbLoading
+        '
+        Me.pcbLoading.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pcbLoading.Location = New System.Drawing.Point(0, 2)
+        Me.pcbLoading.Name = "pcbLoading"
+        Me.pcbLoading.Size = New System.Drawing.Size(870, 8)
+        Me.pcbLoading.Step = 1
+        Me.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pcbLoading.TabIndex = 105
+        Me.pcbLoading.Value = 100
         '
         'lblMALRating
         '
@@ -209,7 +233,6 @@ Partial Class frmEditAnime
         '
         Me.pcbAnimeCover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.pcbAnimeCover.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pcbAnimeCover.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_button
         Me.pcbAnimeCover.Location = New System.Drawing.Point(20, 19)
         Me.pcbAnimeCover.Name = "pcbAnimeCover"
         Me.pcbAnimeCover.Size = New System.Drawing.Size(234, 223)
@@ -600,6 +623,86 @@ Partial Class frmEditAnime
         Me.ddlSelectAnime.Size = New System.Drawing.Size(320, 29)
         Me.ddlSelectAnime.TabIndex = 49
         '
+        'backWorkEdit
+        '
+        Me.backWorkEdit.WorkerReportsProgress = True
+        '
+        'mtddlSelectAnime
+        '
+        Me.mtddlSelectAnime.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtddlSelectAnime.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.mtddlSelectAnime.FormattingEnabled = True
+        Me.mtddlSelectAnime.ItemHeight = 23
+        Me.mtddlSelectAnime.Location = New System.Drawing.Point(480, 17)
+        Me.mtddlSelectAnime.Name = "mtddlSelectAnime"
+        Me.mtddlSelectAnime.Size = New System.Drawing.Size(320, 29)
+        Me.mtddlSelectAnime.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtddlSelectAnime.TabIndex = 50
+        Me.mtddlSelectAnime.UseCustomBackColor = True
+        Me.mtddlSelectAnime.UseSelectable = True
+        '
+        'mtddlStatus
+        '
+        Me.mtddlStatus.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtddlStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.mtddlStatus.FormattingEnabled = True
+        Me.mtddlStatus.ItemHeight = 23
+        Me.mtddlStatus.Items.AddRange(New Object() {"Watching", "Completed", "On-Hold", "Dropped", "Plan to Watch"})
+        Me.mtddlStatus.Location = New System.Drawing.Point(374, 131)
+        Me.mtddlStatus.Name = "mtddlStatus"
+        Me.mtddlStatus.Size = New System.Drawing.Size(116, 29)
+        Me.mtddlStatus.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtddlStatus.TabIndex = 106
+        Me.mtddlStatus.UseCustomBackColor = True
+        Me.mtddlStatus.UseSelectable = True
+        '
+        'mtddlRewatchValue
+        '
+        Me.mtddlRewatchValue.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtddlRewatchValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.mtddlRewatchValue.FormattingEnabled = True
+        Me.mtddlRewatchValue.ItemHeight = 23
+        Me.mtddlRewatchValue.Items.AddRange(New Object() {"Very Low", "Low", "Medium", "High", "Very High"})
+        Me.mtddlRewatchValue.Location = New System.Drawing.Point(711, 168)
+        Me.mtddlRewatchValue.Name = "mtddlRewatchValue"
+        Me.mtddlRewatchValue.Size = New System.Drawing.Size(116, 29)
+        Me.mtddlRewatchValue.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtddlRewatchValue.TabIndex = 107
+        Me.mtddlRewatchValue.UseCustomBackColor = True
+        Me.mtddlRewatchValue.UseSelectable = True
+        '
+        'mdtStartDate
+        '
+        Me.mdtStartDate.CalendarFont = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mdtStartDate.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
+        Me.mdtStartDate.CalendarTitleBackColor = System.Drawing.Color.BlueViolet
+        Me.mdtStartDate.CustomFormat = "yyyy-dd-M"
+        Me.mdtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.mdtStartDate.Location = New System.Drawing.Point(711, 93)
+        Me.mdtStartDate.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.mdtStartDate.Name = "mdtStartDate"
+        Me.mdtStartDate.Size = New System.Drawing.Size(116, 29)
+        Me.mdtStartDate.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mdtStartDate.TabIndex = 108
+        Me.mdtStartDate.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.mdtStartDate.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
+        '
+        'mdtFinishDate
+        '
+        Me.mdtFinishDate.CalendarFont = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mdtFinishDate.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
+        Me.mdtFinishDate.CalendarTitleBackColor = System.Drawing.Color.BlueViolet
+        Me.mdtFinishDate.CustomFormat = "yyyy-dd-M"
+        Me.mdtFinishDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.mdtFinishDate.Location = New System.Drawing.Point(711, 131)
+        Me.mdtFinishDate.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.mdtFinishDate.Name = "mdtFinishDate"
+        Me.mdtFinishDate.Size = New System.Drawing.Size(116, 29)
+        Me.mdtFinishDate.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mdtFinishDate.TabIndex = 109
+        Me.mdtFinishDate.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.mdtFinishDate.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
+        '
         'frmEditAnime
         '
         Me.AcceptButton = Me.btnSave
@@ -612,6 +715,7 @@ Partial Class frmEditAnime
         Me.Controls.Add(Me.btnForward)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.gbxEdit)
+        Me.Controls.Add(Me.mtddlSelectAnime)
         Me.Controls.Add(Me.ddlSelectAnime)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -675,4 +779,11 @@ Partial Class frmEditAnime
     Friend WithEvents lblMALRatingHeading As Label
     Friend WithEvents lblMALScoreHeading As Label
     Friend WithEvents ddlSelectAnime As ComboBox
+    Friend WithEvents pcbLoading As MetroFramework.Controls.MetroProgressBar
+    Friend WithEvents backWorkEdit As System.ComponentModel.BackgroundWorker
+    Friend WithEvents mtddlSelectAnime As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents mtddlStatus As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents mtddlRewatchValue As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents mdtStartDate As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents mdtFinishDate As MetroFramework.Controls.MetroDateTime
 End Class

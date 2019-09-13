@@ -205,67 +205,62 @@ Public Class XmlParser
 
             reader.Close()
 
-            'frmMain.loadImages()
             frmMain.sortedList = frmSortWindow.sortList(frmMain.animeList, "title")
-
         Catch ex As Exception
-            'MsgBox("There was a problem with your XML File. Please try again with another file!", MsgBoxStyle.Critical, "Error")
             Dim errorPage As frmError
             errorPage = New frmError
             errorPage.ShowDialog()
             Return
         Finally
+            frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
+            Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
 
-        End Try
+            For i As Integer = 0 To frmMain.animeCount - 1
 
-        frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
-        Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
+                sug.Add(frmMain.animeList(i).Title)
 
-        For i As Integer = 0 To frmMain.animeCount - 1
+                Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
+                Dim str(2) As String
+                Dim itemResults As ListViewItem
 
-            sug.Add(frmMain.animeList(i).Title)
+                If frmMain.animeList(i).Status = "Watching" Then
+                    itemStatus.ImageIndex = 0
+                ElseIf frmMain.animeList(i).Status = "Completed" Then
+                    itemStatus.ImageIndex = 1
+                ElseIf frmMain.animeList(i).Status = "Dropped" Then
+                    itemStatus.ImageIndex = 2
+                ElseIf frmMain.animeList(i).Status = "On-Hold" Then
+                    itemStatus.ImageIndex = 3
+                Else
+                    itemStatus.ImageIndex = 4
+                End If
 
-            Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
-            Dim str(2) As String
-            Dim itemResults As ListViewItem
+                str(0) = frmMain.animeList(i).Title
+                str(1) = frmMain.animeList(i).AnimeId
+                itemResults = New ListViewItem(str)
+                frmMain.lstwAnimeSearch.Items.Add(itemResults)
 
-            If frmMain.animeList(i).Status = "Watching" Then
-                itemStatus.ImageIndex = 0
-            ElseIf frmMain.animeList(i).Status = "Completed" Then
-                itemStatus.ImageIndex = 1
-            ElseIf frmMain.animeList(i).Status = "Dropped" Then
-                itemStatus.ImageIndex = 2
-            ElseIf frmMain.animeList(i).Status = "On-Hold" Then
-                itemStatus.ImageIndex = 3
-            Else
-                itemStatus.ImageIndex = 4
+            Next
+
+            frmMain.txtSearch.AutoCompleteCustomSource = sug
+
+            populateList()
+            frmMain.refreshSearchList()
+
+            frmMain.USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & frmMain.userList(frmMain.userCount).UserId & ".jpg"
+
+            If frmMain.CheckConnection(frmMain.USER_IMG_URL) = True Then
+                frmMain.pcbUserPicture.Load(frmMain.USER_IMG_URL)
             End If
 
-            str(0) = frmMain.animeList(i).Title
-            str(1) = frmMain.animeList(i).AnimeId
-            itemResults = New ListViewItem(str)
-            frmMain.lstwAnimeSearch.Items.Add(itemResults)
+            frmMain.loadedXml = True
+            frmMain.btnSave.Enabled = True
+            frmMain.btnXml.Enabled = True
+            frmMain.lblNoListLoaded.Visible = False
+            frmMain.newList = False
 
-        Next
-
-        frmMain.txtSearch.AutoCompleteCustomSource = sug
-
-        populateList()
-        frmMain.refreshSearchList()
-
-        frmMain.USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & frmMain.userList(frmMain.userCount).UserId & ".jpg"
-
-        If frmMain.CheckConnection(frmMain.USER_IMG_URL) = True Then
-            frmMain.pcbUserPicture.Load(frmMain.USER_IMG_URL)
-        End If
-
-        frmMain.loadedXml = True
-        frmMain.btnSave.Enabled = True
-        frmMain.btnXml.Enabled = True
-        frmMain.lblNoListLoaded.Visible = False
-        frmMain.newList = False
-
-        frmMain.welcomePage()
+            frmMain.welcomePage()
+        End Try
     End Sub
 
 
@@ -276,9 +271,6 @@ Public Class XmlParser
 
         Dim currentAnime As String
         Dim animeCount As Integer = frmMain.animeList.Count()
-        'frmMain.animeList.OrderBy(Function(mts) mts.Title).ToList
-        'Dim sortedList As List(Of Anime) = frmSortWindow.sortList(frmMain.animeList, "title")
-
 
         For i As Integer = 0 To animeCount - 1
             frmMain.pcbLoading.Maximum = animeCount - 1
@@ -314,7 +306,5 @@ Public Class XmlParser
 
         frmMain.lstwAnimeSearch.Items.Clear()
         frmMain.lstwStatus.Items.Clear()
-
-
     End Sub
 End Class

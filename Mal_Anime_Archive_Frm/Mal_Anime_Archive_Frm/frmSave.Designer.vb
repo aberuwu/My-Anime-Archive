@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSave
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class frmSave
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSave))
         Me.gbxSave = New System.Windows.Forms.GroupBox()
         Me.txtPreview = New System.Windows.Forms.RichTextBox()
         Me.lblSqlDescription = New System.Windows.Forms.Label()
-        Me.btnSaveSql = New System.Windows.Forms.Button()
+        Me.btnSaveJson = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblCSVDescription = New System.Windows.Forms.Label()
         Me.lblXMLDescription = New System.Windows.Forms.Label()
@@ -42,7 +42,7 @@ Partial Class frmSave
         Me.gbxSave.BackColor = System.Drawing.Color.WhiteSmoke
         Me.gbxSave.Controls.Add(Me.txtPreview)
         Me.gbxSave.Controls.Add(Me.lblSqlDescription)
-        Me.gbxSave.Controls.Add(Me.btnSaveSql)
+        Me.gbxSave.Controls.Add(Me.btnSaveJson)
         Me.gbxSave.Controls.Add(Me.btnCancel)
         Me.gbxSave.Controls.Add(Me.lblCSVDescription)
         Me.gbxSave.Controls.Add(Me.lblXMLDescription)
@@ -73,24 +73,23 @@ Partial Class frmSave
         Me.lblSqlDescription.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSqlDescription.Location = New System.Drawing.Point(168, 191)
         Me.lblSqlDescription.Name = "lblSqlDescription"
-        Me.lblSqlDescription.Size = New System.Drawing.Size(294, 30)
+        Me.lblSqlDescription.Size = New System.Drawing.Size(250, 15)
         Me.lblSqlDescription.TabIndex = 6
-        Me.lblSqlDescription.Text = "Export as Structured Query Language (.sql) file." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Can be used to create a databas" &
-    "e table in an SQL server"
+        Me.lblSqlDescription.Text = "Export as JavaScript Object Notation (.json) file"
         '
-        'btnSaveSql
+        'btnSaveJson
         '
-        Me.btnSaveSql.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Sql_purple_ico
-        Me.btnSaveSql.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnSaveSql.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
-        Me.btnSaveSql.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
-        Me.btnSaveSql.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
-        Me.btnSaveSql.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSaveSql.Location = New System.Drawing.Point(45, 163)
-        Me.btnSaveSql.Name = "btnSaveSql"
-        Me.btnSaveSql.Size = New System.Drawing.Size(117, 101)
-        Me.btnSaveSql.TabIndex = 5
-        Me.btnSaveSql.UseVisualStyleBackColor = True
+        Me.btnSaveJson.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.json_icon
+        Me.btnSaveJson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSaveJson.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
+        Me.btnSaveJson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnSaveJson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnSaveJson.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSaveJson.Location = New System.Drawing.Point(45, 163)
+        Me.btnSaveJson.Name = "btnSaveJson"
+        Me.btnSaveJson.Size = New System.Drawing.Size(117, 101)
+        Me.btnSaveJson.TabIndex = 5
+        Me.btnSaveJson.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
@@ -215,7 +214,7 @@ Partial Class frmSave
     Friend WithEvents lblXMLDescription As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnCancel As Button
-    Friend WithEvents btnSaveSql As Button
+    Friend WithEvents btnSaveJson As Button
     Friend WithEvents lblSqlDescription As Label
     Friend WithEvents txtPreview As RichTextBox
     Friend WithEvents lblPreview As Label

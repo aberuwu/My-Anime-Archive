@@ -62,6 +62,7 @@ Public Class Themes
         frmMain.lblWatched.ForeColor = Color.FromArgb(192, 0, 192)
         frmMain.lblScore.ForeColor = Color.FromArgb(192, 0, 192)
         frmMain.lblStatus.ForeColor = Color.FromArgb(192, 0, 192)
+
         frmMain.lstwAnimeMain.ForeColor = Color.Black
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.Black
@@ -72,7 +73,7 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
-
+        frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
@@ -195,6 +196,7 @@ Public Class Themes
 
     Public Sub purpleThemeDarkModeMain()
         frmMain.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.spltMain.Panel2.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lblTitle.ForeColor = Color.White
         frmMain.lblId.ForeColor = Color.White
         frmMain.lblType.ForeColor = Color.White
@@ -238,6 +240,7 @@ Public Class Themes
             .FlatAppearance.MouseOverBackColor = Color.MediumPurple
             .FlatAppearance.MouseDownBackColor = Color.DarkViolet
         End With
+
     End Sub
 
     Public Sub blueThemeDarkModeMain()

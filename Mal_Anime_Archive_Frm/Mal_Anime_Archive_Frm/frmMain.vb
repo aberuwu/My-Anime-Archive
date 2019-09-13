@@ -31,6 +31,7 @@
 '*
 '*************************************************************************************************************
 
+Imports System.Windows.Forms.DataVisualization.Charting
 Imports System.Xml
 Imports System.Net
 Imports System.Reflection
@@ -42,6 +43,7 @@ Imports JikanDotNet
 
 Public Class frmMain
 
+    'Inherits MetroFramework.Forms.MetroForm
     Public Property animeList As List(Of Anime) = New List(Of Anime)
     Public Property sortedList As List(Of Anime) = New List(Of Anime)
     Public Property userList As List(Of User) = New List(Of User)
@@ -102,6 +104,141 @@ Public Class frmMain
         vscrSearchList.Minimum = 0
         vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
     End Sub
+
+
+
+    Private Sub generateGraph()
+
+        ddlGraphSelection.SelectedIndex = 0
+
+        If animeCount <= 0 Then
+
+        Else
+            Dim watchingCount As Integer = 0
+            Dim completedCount As Integer = 0
+            Dim droppedCount As Integer = 0
+            Dim onholdCount As Integer = 0
+            Dim plantowatchCount As Integer = 0
+
+            For i As Integer = 0 To animeList.Count() - 1
+                If animeList(i).Status = "Watching" Then
+                    watchingCount += 1
+                ElseIf animeList(i).Status = "Completed" Then
+                    completedCount += 1
+                ElseIf animeList(i).Status = "Dropped" Then
+                    droppedCount += 1
+                ElseIf animeList(i).Status = "On-Hold" Then
+                    onholdCount += 1
+                Else
+                    plantowatchCount += 1
+                End If
+            Next
+
+            Dim cArea As ChartArea = chrtAnimeStatus.ChartAreas(0)
+
+            With cArea
+                '.AxisY.Maximum = 50
+                .BackColor = Color.WhiteSmoke
+            End With
+
+            chrtAnimeStatus.Series(0)("PieLabelStyle") = "Disabled"
+            chrtAnimeStatus.ChartAreas(0).AxisX.IsLabelAutoFit = False
+
+            Dim dpnt As DataPoint = New DataPoint()
+            dpnt.SetValueY(watchingCount)
+            chrtAnimeStatus.Series("Watching").Points.Add(dpnt)
+            dpnt.ToolTip = "Watching"
+
+            Dim dpnt2 As DataPoint = New DataPoint()
+            dpnt2.SetValueY(completedCount)
+            chrtAnimeStatus.Series("Completed").Points.Add(dpnt2)
+            dpnt2.ToolTip = "Completed"
+
+            Dim dpnt3 As DataPoint = New DataPoint()
+            dpnt3.SetValueY(onholdCount)
+            chrtAnimeStatus.Series("On-Hold").Points.Add(dpnt3)
+            dpnt3.ToolTip = "On-Hold"
+
+            Dim dpnt4 As DataPoint = New DataPoint()
+            dpnt4.SetValueY(droppedCount)
+            chrtAnimeStatus.Series("Dropped").Points.Add(dpnt4)
+            dpnt4.ToolTip = "Dropped"
+
+            Dim dpnt5 As DataPoint = New DataPoint()
+            dpnt5.SetValueY(plantowatchCount)
+            chrtAnimeStatus.Series("Plan to Watch").Points.Add(dpnt5)
+            dpnt5.ToolTip = "Plan to Watch"
+            dpnt5.Color = Color.FromArgb(209, 122, 200)
+            chrtAnimeStatus.Series("Plan to Watch").Color = Color.FromArgb(209, 122, 200)
+        End If
+
+
+        If loadedXml = True Then
+            loadUserInfo()
+        Else
+            lblUserName.Text = "No User Loaded"
+        End If
+
+    End Sub
+
+    Private Sub loadUserInfo()
+        Dim episodeCount As Integer = 0
+        Dim watchingCount As Integer = 0
+        Dim completedCount As Integer = 0
+        Dim droppedCount As Integer = 0
+        Dim onholdCount As Integer = 0
+        Dim plantowatchCount As Integer = 0
+        Dim meanScoreCount As Decimal = 0
+        Dim meanScore As Decimal = 0
+        Dim animeWScore As Decimal = 0
+
+        For i As Integer = 0 To animeList.Count() - 1
+            episodeCount += Convert.ToInt32(animeList(i).WatchedEps)
+
+            If animeList(i).Status = "Watching" Then
+                watchingCount += 1
+            ElseIf animeList(i).Status = "Completed" Then
+                completedCount += 1
+            ElseIf animeList(i).Status = "Dropped" Then
+                droppedCount += 1
+            ElseIf animeList(i).Status = "On-Hold" Then
+                onholdCount += 1
+            Else
+                plantowatchCount += 1
+            End If
+
+            If Convert.ToInt32(animeList(i).Score) = 0 Then
+            Else
+                meanScoreCount += Convert.ToDecimal(animeList(i).Score)
+                animeWScore += 1
+            End If
+        Next
+
+        lblUserId.Text = userList(userCount).UserId
+        lblUserName.Text = userList(userCount).Username
+        lblTotalAnime.Text = animeList.Count()
+        lblWatching.Text = watchingCount
+        lblCompleted.Text = completedCount
+        lblOnHold.Text = onholdCount
+        lblDropped.Text = droppedCount
+        lblPlanToWatch.Text = plantowatchCount
+
+        If animeWScore = 0 Then
+            meanScore = 0
+        Else
+            meanScore = meanScoreCount / animeWScore
+        End If
+
+        lblWatchedEps.Text = episodeCount
+        lblMeanScore.Text = meanScore.ToString("N2")
+
+        USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & userList(userCount).UserId & ".jpg"
+
+        If frmMain.CheckConnection(USER_IMG_URL) = True Then
+            pcbUserImage.Load(USER_IMG_URL)
+        End If
+    End Sub
+
 
     Async Sub loadApiInfo(id As String)
         Dim jikan As IJikan = New Jikan(True)
@@ -692,6 +829,11 @@ Public Class frmMain
 
     Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
         welcomeOpen()
+    End Sub
+
+    Private Sub tsbtnUserInfo_Click(sender As Object, e As EventArgs) Handles tsbtnUserInfo.Click
+        generateGraph()
+        mtpnMain.Visible = True
     End Sub
 End Class
 Public Class ListViewDoubleBuffered

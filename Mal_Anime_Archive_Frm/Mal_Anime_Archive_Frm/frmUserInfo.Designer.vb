@@ -48,8 +48,7 @@ Partial Class frmUserInfo
         Me.lblPlanToWatchHeading = New System.Windows.Forms.Label()
         Me.pcbUserImage = New System.Windows.Forms.PictureBox()
         Me.tbSettings = New System.Windows.Forms.TabPage()
-        Me.pcbPreviewDark = New System.Windows.Forms.PictureBox()
-        Me.pcbPreviewLight = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSaveSettings = New System.Windows.Forms.Button()
         Me.lblProgramSettings = New System.Windows.Forms.Label()
         Me.radDisabled = New System.Windows.Forms.RadioButton()
@@ -73,17 +72,12 @@ Partial Class frmUserInfo
         Me.tbUserInfo = New System.Windows.Forms.TabControl()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.toolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.gbxPreview = New System.Windows.Forms.GroupBox()
-        Me.chkPreviewDark = New System.Windows.Forms.CheckBox()
+        Me.lblThemePreview = New System.Windows.Forms.Label()
         CType(Me.pcbUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbSettings.SuspendLayout()
-        CType(Me.pcbPreviewDark, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pcbPreviewLight, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbUser.SuspendLayout()
         CType(Me.chrtAnimeStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbUserInfo.SuspendLayout()
-        Me.gbxPreview.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblCompleted
@@ -288,8 +282,7 @@ Partial Class frmUserInfo
         'tbSettings
         '
         Me.tbSettings.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.tbSettings.Controls.Add(Me.chkPreviewDark)
-        Me.tbSettings.Controls.Add(Me.gbxPreview)
+        Me.tbSettings.Controls.Add(Me.lblThemePreview)
         Me.tbSettings.Controls.Add(Me.Button1)
         Me.tbSettings.Controls.Add(Me.btnSaveSettings)
         Me.tbSettings.Controls.Add(Me.lblProgramSettings)
@@ -310,33 +303,20 @@ Partial Class frmUserInfo
         Me.tbSettings.TabIndex = 1
         Me.tbSettings.Text = "Settings"
         '
-        'pcbPreviewDark
+        'Button1
         '
-        Me.pcbPreviewDark.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pcbPreviewDark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pcbPreviewDark.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Purple_Dark
-        Me.pcbPreviewDark.Location = New System.Drawing.Point(8, 21)
-        Me.pcbPreviewDark.Name = "pcbPreviewDark"
-        Me.pcbPreviewDark.Size = New System.Drawing.Size(469, 233)
-        Me.pcbPreviewDark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pcbPreviewDark.TabIndex = 36
-        Me.pcbPreviewDark.TabStop = False
-        '
-        'pcbPreviewLight
-        '
-        Me.pcbPreviewLight.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pcbPreviewLight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pcbPreviewLight.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Purple_Light
-        Me.pcbPreviewLight.Location = New System.Drawing.Point(8, 22)
-        Me.pcbPreviewLight.Name = "pcbPreviewLight"
-        Me.pcbPreviewLight.Size = New System.Drawing.Size(469, 233)
-        Me.pcbPreviewLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pcbPreviewLight.TabIndex = 35
-        Me.pcbPreviewLight.TabStop = False
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(625, 387)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(85, 35)
+        Me.Button1.TabIndex = 37
+        Me.Button1.Text = "&Default"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'btnSaveSettings
         '
@@ -430,7 +410,7 @@ Partial Class frmUserInfo
         Me.ddlFonts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ddlFonts.FormattingEnabled = True
         Me.ddlFonts.Items.AddRange(New Object() {"Segoe UI Family", "San Serif Family", "Tahoma Faimly", "Times New Roman Family"})
-        Me.ddlFonts.Location = New System.Drawing.Point(429, 151)
+        Me.ddlFonts.Location = New System.Drawing.Point(90, 196)
         Me.ddlFonts.Name = "ddlFonts"
         Me.ddlFonts.Size = New System.Drawing.Size(121, 23)
         Me.ddlFonts.TabIndex = 25
@@ -440,7 +420,7 @@ Partial Class frmUserInfo
         Me.lblFont.AutoSize = True
         Me.lblFont.BackColor = System.Drawing.Color.Transparent
         Me.lblFont.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFont.Location = New System.Drawing.Point(371, 148)
+        Me.lblFont.Location = New System.Drawing.Point(14, 196)
         Me.lblFont.Name = "lblFont"
         Me.lblFont.Size = New System.Drawing.Size(52, 25)
         Me.lblFont.TabIndex = 24
@@ -668,45 +648,16 @@ Partial Class frmUserInfo
         Me.btnClose.UseVisualStyleBackColor = True
         Me.btnClose.Visible = False
         '
-        'Button1
+        'lblThemePreview
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(625, 387)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 35)
-        Me.Button1.TabIndex = 37
-        Me.Button1.Text = "&Default"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'gbxPreview
-        '
-        Me.gbxPreview.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gbxPreview.Controls.Add(Me.pcbPreviewLight)
-        Me.gbxPreview.Controls.Add(Me.pcbPreviewDark)
-        Me.gbxPreview.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxPreview.Location = New System.Drawing.Point(12, 178)
-        Me.gbxPreview.Name = "gbxPreview"
-        Me.gbxPreview.Size = New System.Drawing.Size(483, 261)
-        Me.gbxPreview.TabIndex = 38
-        Me.gbxPreview.TabStop = False
-        Me.gbxPreview.Text = "Theme Preview"
-        '
-        'chkPreviewDark
-        '
-        Me.chkPreviewDark.AutoSize = True
-        Me.chkPreviewDark.Location = New System.Drawing.Point(226, 151)
-        Me.chkPreviewDark.Name = "chkPreviewDark"
-        Me.chkPreviewDark.Size = New System.Drawing.Size(126, 19)
-        Me.chkPreviewDark.TabIndex = 39
-        Me.chkPreviewDark.Text = "Preview Dark Mode"
-        Me.chkPreviewDark.UseVisualStyleBackColor = True
+        Me.lblThemePreview.AutoSize = True
+        Me.lblThemePreview.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThemePreview.ForeColor = System.Drawing.Color.BlueViolet
+        Me.lblThemePreview.Location = New System.Drawing.Point(213, 148)
+        Me.lblThemePreview.Name = "lblThemePreview"
+        Me.lblThemePreview.Size = New System.Drawing.Size(20, 17)
+        Me.lblThemePreview.TabIndex = 38
+        Me.lblThemePreview.Text = "█"
         '
         'frmUserInfo
         '
@@ -728,13 +679,10 @@ Partial Class frmUserInfo
         CType(Me.pcbUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbSettings.ResumeLayout(False)
         Me.tbSettings.PerformLayout()
-        CType(Me.pcbPreviewDark, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pcbPreviewLight, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbUser.ResumeLayout(False)
         Me.tbUser.PerformLayout()
         CType(Me.chrtAnimeStatus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbUserInfo.ResumeLayout(False)
-        Me.gbxPreview.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -778,10 +726,7 @@ Partial Class frmUserInfo
     Friend WithEvents toolTip As ToolTip
     Friend WithEvents chrtAnimeStatus As DataVisualization.Charting.Chart
     Friend WithEvents ddlGraphSelection As ComboBox
-    Friend WithEvents pcbPreviewLight As PictureBox
     Friend WithEvents btnSaveSettings As Button
-    Friend WithEvents pcbPreviewDark As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents gbxPreview As GroupBox
-    Friend WithEvents chkPreviewDark As CheckBox
+    Friend WithEvents lblThemePreview As Label
 End Class

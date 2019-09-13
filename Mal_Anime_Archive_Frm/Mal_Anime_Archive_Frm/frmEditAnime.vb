@@ -14,10 +14,11 @@ Public Class frmEditAnime
         Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
 
         For i As Integer = 0 To frmMain.animeList.Count() - 1
-            ddlSelectAnime.Items.Add(frmMain.sortedList(i).Title)
+            'ddlSelectAnime.Items.Add(frmMain.sortedList(i).Title)
+            mtddlSelectAnime.Items.Add(frmMain.sortedList(i).Title)
         Next
 
-        ddlSelectAnime.SelectedIndex = frmMain.lstwAnimeMain.SelectedIndices(0)
+        mtddlSelectAnime.SelectedIndex = frmMain.lstwAnimeMain.SelectedIndices(0)
 
         loadAnimeInfo(anId)
         loadApiInfo(anId)
@@ -60,15 +61,15 @@ Public Class frmEditAnime
                 lblAnimeType.Text = frmMain.sortedList(i).Type
                 numUpDownScore.Value = frmMain.sortedList(i).Score
                 If frmMain.sortedList(i).Status = "Watching" Then
-                    ddlStatus.SelectedIndex = 0
+                    mtddlStatus.SelectedIndex = 0
                 ElseIf frmMain.sortedList(i).Status = "Completed" Then
-                    ddlStatus.SelectedIndex = 1
+                    mtddlStatus.SelectedIndex = 1
                 ElseIf frmMain.sortedList(i).Status = "On-Hold" Then
-                    ddlStatus.SelectedIndex = 2
+                    mtddlStatus.SelectedIndex = 2
                 ElseIf frmMain.sortedList(i).Status = "Dropped" Then
-                    ddlStatus.SelectedIndex = 3
+                    mtddlStatus.SelectedIndex = 3
                 ElseIf frmMain.sortedList(i).Status = "Plan to Watch" Then
-                    ddlStatus.SelectedIndex = 4
+                    mtddlStatus.SelectedIndex = 4
                 End If
 
                 If frmMain.sortedList(i).Episodes = "0" Then
@@ -81,7 +82,15 @@ Public Class frmEditAnime
 
                 numUpDownWatched.Value = frmMain.sortedList(i).WatchedEps
 
+                'Dim startDate As String = frmMain.sortedList(i).StartDate
+                'Dim dt As DateTime = Convert.ToDateTime(startDate.ToString)
+                'Dim format As String = "M-dd-yyyy"
+                'Dim str As String = dt.ToString(format)
 
+                'MsgBox(str)
+
+                'mdtStartDate.Value = Convert.ToDateTime(str)
+                'mdtFinishDate.Value = formatFinishDate
 
                 'If frmMain.animeList(i).StartDate = "0000-00-00" Then
 
@@ -124,15 +133,15 @@ Public Class frmEditAnime
                 'End If
 
                 If frmMain.sortedList(i).Myrewatch = "Very Low" Then
-                    ddlRewatchValue.SelectedIndex = 0
+                    mtddlRewatchValue.SelectedIndex = 0
                 ElseIf frmMain.sortedList(i).Myrewatch = "Low" Then
-                    ddlRewatchValue.SelectedIndex = 1
+                    mtddlRewatchValue.SelectedIndex = 1
                 ElseIf frmMain.sortedList(i).Myrewatch = "Medium" Then
-                    ddlRewatchValue.SelectedIndex = 2
+                    mtddlRewatchValue.SelectedIndex = 2
                 ElseIf frmMain.sortedList(i).Myrewatch = "High" Then
-                    ddlRewatchValue.SelectedIndex = 3
+                    mtddlRewatchValue.SelectedIndex = 3
                 ElseIf frmMain.sortedList(i).Myrewatch = "Very High" Then
-                    ddlRewatchValue.SelectedIndex = 4
+                    mtddlRewatchValue.SelectedIndex = 4
                 End If
 
                 numUpDownRewatch.Value = frmMain.sortedList(i).Myrewatchingep
@@ -155,7 +164,7 @@ Public Class frmEditAnime
 
         loadAnimeInfo(anId)
         loadApiInfo(anId)
-        ddlSelectAnime.SelectedIndex = newIndex
+        mtddlSelectAnime.SelectedIndex = newIndex
     End Sub
 
     Private Sub btnBackward_Click(sender As Object, e As EventArgs) Handles btnBackward.Click
@@ -170,7 +179,7 @@ Public Class frmEditAnime
 
         loadAnimeInfo(anId)
         loadApiInfo(anId)
-        ddlSelectAnime.SelectedIndex = newIndex
+        mtddlSelectAnime.SelectedIndex = newIndex
     End Sub
 
     '------------------------
@@ -180,11 +189,35 @@ Public Class frmEditAnime
         Dim jikan As IJikan = New Jikan(True)
         Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
 
-        rctSynopsis.Text = anime.Synopsis
-        lblMALRating.Text = anime.Rating
-        lblPremiered.Text = anime.Premiered
-        lblMALScore.Text = anime.Score
-        pcbAnimeCover.Load(anime.ImageURL)
+        If IsNothing(anime.Synopsis) Then
+            rctSynopsis.Text = "No Synopsis Available"
+        Else
+            rctSynopsis.Text = anime.Synopsis
+        End If
+
+        If IsNothing(anime.Rating) Then
+            lblMALRating.Text = "--"
+        Else
+            lblMALRating.Text = anime.Rating
+        End If
+
+        If IsNothing(anime.Premiered) Then
+            lblPremiered.Text = "--"
+        Else
+            lblPremiered.Text = anime.Premiered
+        End If
+
+        If IsNothing(anime.Score) Then
+            lblMALScore.Text = "--"
+        Else
+            lblMALScore.Text = anime.Score
+        End If
+
+        If IsNothing(anime.ImageURL) Then
+
+        Else
+            pcbAnimeCover.Load(anime.ImageURL)
+        End If
     End Sub
 
     Private Sub chkViewComments_CheckedChanged(sender As Object, e As EventArgs) Handles chkViewComments.CheckedChanged
@@ -207,15 +240,15 @@ Public Class frmEditAnime
 
         frmMain.sortedList(animeIndex).Score = numUpDownScore.Value
 
-        If ddlStatus.SelectedIndex = 0 Then
+        If mtddlStatus.SelectedIndex = 0 Then
             frmMain.sortedList(animeIndex).Status = "Watching"
-        ElseIf ddlStatus.SelectedIndex = 1 Then
+        ElseIf mtddlStatus.SelectedIndex = 1 Then
             frmMain.sortedList(animeIndex).Status = "Completed"
-        ElseIf ddlStatus.SelectedIndex = 2 Then
+        ElseIf mtddlStatus.SelectedIndex = 2 Then
             frmMain.sortedList(animeIndex).Status = "On-Hold"
-        ElseIf ddlStatus.SelectedIndex = 3 Then
+        ElseIf mtddlStatus.SelectedIndex = 3 Then
             frmMain.sortedList(animeIndex).Status = "Dropped"
-        ElseIf ddlStatus.SelectedIndex = 4 Then
+        ElseIf mtddlStatus.SelectedIndex = 4 Then
             frmMain.sortedList(animeIndex).Status = "Plan to Watch"
         End If
 
@@ -223,15 +256,15 @@ Public Class frmEditAnime
         'frmMain.animeList(animeIndex).StartDate = dtStartDate.Value
         'frmMain.animeList(animeIndex).FinishDate = dtFinishDate.Value
 
-        If ddlRewatchValue.SelectedIndex = 0 Then
+        If mtddlRewatchValue.SelectedIndex = 0 Then
             frmMain.sortedList(animeIndex).Myrewatch = "Very Low"
-        ElseIf ddlRewatchValue.SelectedIndex = 1 Then
+        ElseIf mtddlRewatchValue.SelectedIndex = 1 Then
             frmMain.sortedList(animeIndex).Myrewatch = "Low"
-        ElseIf ddlRewatchValue.SelectedIndex = 2 Then
+        ElseIf mtddlRewatchValue.SelectedIndex = 2 Then
             frmMain.sortedList(animeIndex).Myrewatch = "Medium"
-        ElseIf ddlRewatchValue.SelectedIndex = 3 Then
+        ElseIf mtddlRewatchValue.SelectedIndex = 3 Then
             frmMain.sortedList(animeIndex).Myrewatch = "High"
-        ElseIf ddlRewatchValue.SelectedIndex = 4 Then
+        ElseIf mtddlRewatchValue.SelectedIndex = 4 Then
             frmMain.sortedList(animeIndex).Myrewatch = "Very High"
         End If
         frmMain.sortedList(animeIndex).Myrewatch = numUpDownScore.Value
@@ -270,6 +303,18 @@ Public Class frmEditAnime
         Dim nameResults As String = ""
 
         animeIndex = ddlSelectAnime.SelectedIndex
+
+        anId = frmMain.sortedList(animeIndex).AnimeId
+
+        loadAnimeInfo(anId)
+        loadApiInfo(anId)
+    End Sub
+
+    Private Sub mtddlSelectAnime_SelectedIndexChanged(sender As Object, e As EventArgs) Handles mtddlSelectAnime.SelectedIndexChanged
+        Dim search As String = mtddlSelectAnime.Text.Trim().ToUpper()
+        Dim nameResults As String = ""
+
+        animeIndex = mtddlSelectAnime.SelectedIndex
 
         anId = frmMain.sortedList(animeIndex).AnimeId
 
@@ -375,8 +420,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
-        ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
-        ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
 
         lblTitle.ForeColor = Color.FromArgb(209, 122, 200)
         lblAnimeID.ForeColor = Color.FromArgb(209, 122, 200)
@@ -404,8 +449,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.ForeColor = Color.White
         numUpDownWatched.ForeColor = Color.White
         numUpDownRewatch.ForeColor = Color.White
-        ddlRewatchValue.ForeColor = Color.White
-        ddlStatus.ForeColor = Color.White
+        'ddlRewatchValue.ForeColor = Color.White
+        'ddlStatus.ForeColor = Color.White
         lblMALScoreHeading.ForeColor = Color.White
         lblMALRatingHeading.ForeColor = Color.White
         lblPremieredHeading.ForeColor = Color.White
@@ -443,8 +488,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
-        ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
-        ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
 
         lblTitle.ForeColor = Color.LightBlue
         lblAnimeID.ForeColor = Color.LightBlue
@@ -472,8 +517,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.ForeColor = Color.White
         numUpDownWatched.ForeColor = Color.White
         numUpDownRewatch.ForeColor = Color.White
-        ddlRewatchValue.ForeColor = Color.White
-        ddlStatus.ForeColor = Color.White
+        ' ddlRewatchValue.ForeColor = Color.White
+        ' ddlStatus.ForeColor = Color.White
         lblMALScoreHeading.ForeColor = Color.White
         lblMALRatingHeading.ForeColor = Color.White
         lblPremieredHeading.ForeColor = Color.White
@@ -504,8 +549,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownWatched.BackColor = Color.FromArgb(63, 63, 63)
         numUpDownRewatch.BackColor = Color.FromArgb(63, 63, 63)
-        ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
-        ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlStatus.BackColor = Color.FromArgb(63, 63, 63)
+        'ddlRewatchValue.BackColor = Color.FromArgb(63, 63, 63)
 
         lblTitle.ForeColor = Color.OrangeRed
         lblAnimeID.ForeColor = Color.OrangeRed
@@ -533,8 +578,8 @@ Public Class frmEditAnime
         numUpDownEpisodes.ForeColor = Color.White
         numUpDownWatched.ForeColor = Color.White
         numUpDownRewatch.ForeColor = Color.White
-        ddlRewatchValue.ForeColor = Color.White
-        ddlStatus.ForeColor = Color.White
+        'ddlRewatchValue.ForeColor = Color.White
+        'ddlStatus.ForeColor = Color.White
         lblMALScoreHeading.ForeColor = Color.White
         lblMALRatingHeading.ForeColor = Color.White
         lblPremieredHeading.ForeColor = Color.White
@@ -553,6 +598,16 @@ Public Class frmEditAnime
             .ForeColor = Color.White
         End With
     End Sub
+
+    Private Sub backWorkEdit_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles backWorkEdit.ProgressChanged
+        pcbLoading.Value = Math.Min(e.ProgressPercentage, pcbLoading.Maximum)
+        'If e.ProgressPercentage = pcbLoading.Maximum Then
+        '    pcbLoading.Visible = False
+        '    'lblLoading.Visible = False
+        'End If
+    End Sub
+
+
 End Class
 
 Public Class MyDateTimePicker : Inherits DateTimePicker

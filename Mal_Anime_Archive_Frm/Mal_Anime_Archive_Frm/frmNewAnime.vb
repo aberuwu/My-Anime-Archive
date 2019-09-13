@@ -211,7 +211,7 @@ Public Class frmNewAnime
     Private Sub btnResult2_Click(sender As Object, e As EventArgs) Handles btnResult2.Click
         txtTitle.Text = resultTitle(1)
         txtID.Text = resultId(1)
-        numUpDownEpisodes.Value = resultEpisodes(0)
+        numUpDownEpisodes.Value = resultEpisodes(1)
 
         If resultType(1) = "TV" Then
             ddlType.SelectedIndex = 0

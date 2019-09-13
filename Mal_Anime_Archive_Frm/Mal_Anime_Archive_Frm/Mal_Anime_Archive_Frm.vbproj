@@ -365,6 +365,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MAA.ico" />
+    <None Include="Resources\json icon.png" />
     <None Include="Resources\haruhi_loading.gif" />
     <None Include="Resources\maa_logo_white2.png" />
     <None Include="Resources\maa_logo_purple.png" />

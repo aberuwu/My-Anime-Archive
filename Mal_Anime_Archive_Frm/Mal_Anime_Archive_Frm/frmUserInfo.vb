@@ -1,5 +1,4 @@
-﻿
-Imports System.Windows.Forms.DataVisualization.Charting
+﻿Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class frmUserInfo
 
@@ -210,14 +209,11 @@ Public Class frmUserInfo
         If ddlThemes.SelectedIndex = -1 Then
             Return
         ElseIf ddlThemes.SelectedIndex = 0 Then
-            pcbPreviewLight.Image = My.Resources.Purple_Light
-            pcbPreviewDark.Image = My.Resources.Purple_Dark
+            lblThemePreview.ForeColor = Color.BlueViolet
         ElseIf ddlThemes.SelectedIndex = 1 Then
-            pcbPreviewLight.Image = My.Resources.Blue_Light
-            pcbPreviewDark.Image = My.Resources.Blue_Dark
+            lblThemePreview.ForeColor = Color.Blue
         ElseIf ddlThemes.SelectedIndex = 2 Then
-            pcbPreviewLight.Image = My.Resources.Orange_Light
-            pcbPreviewDark.Image = My.Resources.Orange_Dark
+            lblThemePreview.ForeColor = Color.OrangeRed
         Else
             Return
         End If
@@ -557,11 +553,4 @@ Public Class frmUserInfo
         radDisabled.ForeColor = Color.White
     End Sub
 
-    Private Sub chkPreviewDark_CheckedChanged(sender As Object, e As EventArgs) Handles chkPreviewDark.CheckedChanged
-        If chkPreviewDark.Checked = True Then
-            pcbPreviewLight.Visible = False
-        Else
-            pcbPreviewLight.Visible = True
-        End If
-    End Sub
 End Class
