@@ -21,4 +21,4 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 
 # Future
 
--Support for Anilist.co exported anime lists
+-Future Support Notes
