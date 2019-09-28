@@ -355,6 +355,29 @@ Public Class frmEditAnime
         lblMALRating.ForeColor = Color.Blue
         lblPremiered.ForeColor = Color.Blue
 
+
+
+
+        pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlSelectAnime.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlStatus.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlRewatchValue.Style = MetroFramework.MetroColorStyle.Blue
+        mdtStartDate.Style = MetroFramework.MetroColorStyle.Blue
+        mdtFinishDate.Style = MetroFramework.MetroColorStyle.Blue
+
+
+        With btnBackward
+            .FlatAppearance.BorderColor = Color.Blue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+        End With
+
+        With btnForward
+            .FlatAppearance.BorderColor = Color.Blue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+        End With
+
         With btnSave
             .FlatAppearance.BorderColor = Color.Blue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
@@ -393,6 +416,25 @@ Public Class frmEditAnime
         lblMALScore.ForeColor = Color.OrangeRed
         lblMALRating.ForeColor = Color.OrangeRed
         lblPremiered.ForeColor = Color.OrangeRed
+
+        pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlSelectAnime.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlStatus.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlRewatchValue.Style = MetroFramework.MetroColorStyle.Orange
+        mdtStartDate.Style = MetroFramework.MetroColorStyle.Orange
+        mdtFinishDate.Style = MetroFramework.MetroColorStyle.Orange
+
+        With btnBackward
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.DarkRed
+        End With
+
+        With btnForward
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.DarkRed
+        End With
 
         With btnSave
             .FlatAppearance.BorderColor = Color.OrangeRed
@@ -523,6 +565,27 @@ Public Class frmEditAnime
         lblMALRatingHeading.ForeColor = Color.White
         lblPremieredHeading.ForeColor = Color.White
 
+        pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlSelectAnime.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlStatus.Style = MetroFramework.MetroColorStyle.Blue
+        mtddlRewatchValue.Style = MetroFramework.MetroColorStyle.Blue
+        mdtStartDate.Style = MetroFramework.MetroColorStyle.Blue
+        mdtFinishDate.Style = MetroFramework.MetroColorStyle.Blue
+
+        With btnBackward
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+            .ForeColor = Color.White
+        End With
+
+        With btnForward
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue
+            .ForeColor = Color.White
+        End With
+
         With btnSave
             .FlatAppearance.BorderColor = Color.LightBlue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
@@ -583,6 +646,27 @@ Public Class frmEditAnime
         lblMALScoreHeading.ForeColor = Color.White
         lblMALRatingHeading.ForeColor = Color.White
         lblPremieredHeading.ForeColor = Color.White
+
+        pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlSelectAnime.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlStatus.Style = MetroFramework.MetroColorStyle.Orange
+        mtddlRewatchValue.Style = MetroFramework.MetroColorStyle.Orange
+        mdtStartDate.Style = MetroFramework.MetroColorStyle.Orange
+        mdtFinishDate.Style = MetroFramework.MetroColorStyle.Orange
+
+        With btnBackward
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
+            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .ForeColor = Color.White
+        End With
+
+        With btnForward
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
+            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .ForeColor = Color.White
+        End With
 
         With btnSave
             .FlatAppearance.BorderColor = Color.OrangeRed

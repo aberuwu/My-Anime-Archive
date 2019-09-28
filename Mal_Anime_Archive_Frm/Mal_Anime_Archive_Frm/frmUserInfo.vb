@@ -96,42 +96,8 @@ Public Class frmUserInfo
                 End If
             Next
 
-            Dim cArea As ChartArea = chrtAnimeStatus.ChartAreas(0)
+            generateUserGraph(watchingCount, completedCount, onholdCount, droppedCount, plantowatchCount)
 
-            With cArea
-                '.AxisY.Maximum = 50
-                .BackColor = Color.WhiteSmoke
-            End With
-
-            chrtAnimeStatus.Series(0)("PieLabelStyle") = "Disabled"
-            chrtAnimeStatus.ChartAreas(0).AxisX.IsLabelAutoFit = False
-
-            Dim dpnt As DataPoint = New DataPoint()
-            dpnt.SetValueY(watchingCount)
-            chrtAnimeStatus.Series("Watching").Points.Add(dpnt)
-            dpnt.ToolTip = "Watching"
-
-            Dim dpnt2 As DataPoint = New DataPoint()
-            dpnt2.SetValueY(completedCount)
-            chrtAnimeStatus.Series("Completed").Points.Add(dpnt2)
-            dpnt2.ToolTip = "Completed"
-
-            Dim dpnt3 As DataPoint = New DataPoint()
-            dpnt3.SetValueY(onholdCount)
-            chrtAnimeStatus.Series("On-Hold").Points.Add(dpnt3)
-            dpnt3.ToolTip = "On-Hold"
-
-            Dim dpnt4 As DataPoint = New DataPoint()
-            dpnt4.SetValueY(droppedCount)
-            chrtAnimeStatus.Series("Dropped").Points.Add(dpnt4)
-            dpnt4.ToolTip = "Dropped"
-
-            Dim dpnt5 As DataPoint = New DataPoint()
-            dpnt5.SetValueY(plantowatchCount)
-            chrtAnimeStatus.Series("Plan to Watch").Points.Add(dpnt5)
-            dpnt5.ToolTip = "Plan to Watch"
-            dpnt5.Color = Color.FromArgb(209, 122, 200)
-            chrtAnimeStatus.Series("Plan to Watch").Color = Color.FromArgb(209, 122, 200)
         End If
 
 
@@ -179,9 +145,111 @@ Public Class frmUserInfo
         End If
 
         ddlFonts.SelectedIndex = 0
+    End Sub
+
+    Private Sub ddlGraphSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlGraphSelection.SelectedIndexChanged
+        If ddlGraphSelection.SelectedIndex = 1 Then
+            chrtAnimeRatings.Visible = True
+            generateGraphRatings()
+        Else
+            chrtAnimeRatings.Visible = False
+        End If
+    End Sub
+
+    Private Sub generateGraphRatings()
+
+        'Chart1.Series(0).Points.Add(10)
+        Dim rating0 = 0, rating1 = 0, rating2 = 0, rating3 = 0, rating4 = 0, rating5 = 0 _
+            , rating6 = 0, rating7 = 0, rating8 = 0, rating9 = 0, rating10 = 0, nr As Integer
+
+        nr = 0
+        For i As Integer = 0 To frmMain.animeList.Count - 1
+            If frmMain.animeList(i).Score = 0 Then
+                rating0 += 1
+            ElseIf frmMain.animeList(i).Score = 1 Then
+                rating1 += 1
+            ElseIf frmMain.animeList(i).Score = 2 Then
+                rating2 += 1
+            ElseIf frmMain.animeList(i).Score = 3 Then
+                rating3 += 1
+            ElseIf frmMain.animeList(i).Score = 4 Then
+                rating4 += 1
+            ElseIf frmMain.animeList(i).Score = 5 Then
+                rating5 += 1
+            ElseIf frmMain.animeList(i).Score = 6 Then
+                rating6 += 1
+            ElseIf frmMain.animeList(i).Score = 7 Then
+                rating7 += 1
+            ElseIf frmMain.animeList(i).Score = 8 Then
+                rating8 += 1
+            ElseIf frmMain.animeList(i).Score = 9 Then
+                rating9 += 1
+            ElseIf frmMain.animeList(i).Score = 10 Then
+                rating10 += 1
+            Else
+                nr += 1
+            End If
+        Next
+
+        'Chart1.Series(0).Points.Add(5)
+        chrtAnimeRatings.ChartAreas(0).AxisX.IsMarginVisible = False
+        chrtAnimeRatings.Series(0).Points.Clear()
+        'chrtAnimeRatings.Series(0).Points.Add(rating0)
+        chrtAnimeRatings.Series(0).Points.Add(rating1)
+        chrtAnimeRatings.Series(0).Points.Add(rating2)
+        chrtAnimeRatings.Series(0).Points.Add(rating3)
+        chrtAnimeRatings.Series(0).Points.Add(rating4)
+        chrtAnimeRatings.Series(0).Points.Add(rating5)
+        chrtAnimeRatings.Series(0).Points.Add(rating6)
+        chrtAnimeRatings.Series(0).Points.Add(rating7)
+        chrtAnimeRatings.Series(0).Points.Add(rating8)
+        chrtAnimeRatings.Series(0).Points.Add(rating9)
+        chrtAnimeRatings.Series(0).Points.Add(rating10)
 
 
     End Sub
+
+
+    Private Sub generateUserGraph(ByRef watchingCount As Integer, ByRef completedCount As Integer, ByRef onholdCount As Integer,
+                                  ByRef droppedCount As Integer, ByRef plantowatchCount As Integer)
+
+        Dim cArea As ChartArea = chrtAnimeStatus.ChartAreas(0)
+
+        With cArea
+            .BackColor = Color.WhiteSmoke
+        End With
+
+        chrtAnimeStatus.Series(0)("PieLabelStyle") = "Disabled"
+        chrtAnimeStatus.ChartAreas(0).AxisX.IsLabelAutoFit = False
+
+        Dim dpnt As DataPoint = New DataPoint()
+        dpnt.SetValueY(watchingCount)
+        chrtAnimeStatus.Series("Watching").Points.Add(dpnt)
+        dpnt.ToolTip = "Watching"
+
+        Dim dpnt2 As DataPoint = New DataPoint()
+        dpnt2.SetValueY(completedCount)
+        chrtAnimeStatus.Series("Completed").Points.Add(dpnt2)
+        dpnt2.ToolTip = "Completed"
+
+        Dim dpnt3 As DataPoint = New DataPoint()
+        dpnt3.SetValueY(onholdCount)
+        chrtAnimeStatus.Series("On-Hold").Points.Add(dpnt3)
+        dpnt3.ToolTip = "On-Hold"
+
+        Dim dpnt4 As DataPoint = New DataPoint()
+        dpnt4.SetValueY(droppedCount)
+        chrtAnimeStatus.Series("Dropped").Points.Add(dpnt4)
+        dpnt4.ToolTip = "Dropped"
+
+        Dim dpnt5 As DataPoint = New DataPoint()
+        dpnt5.SetValueY(plantowatchCount)
+        chrtAnimeStatus.Series("Plan to Watch").Points.Add(dpnt5)
+        dpnt5.ToolTip = "Plan to Watch"
+        dpnt5.Color = Color.FromArgb(209, 122, 200)
+        chrtAnimeStatus.Series("Plan to Watch").Color = Color.FromArgb(209, 122, 200)
+    End Sub
+
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
@@ -420,6 +488,19 @@ Public Class frmUserInfo
         chrtAnimeStatus.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.FromArgb(209, 122, 200)
 
 
+        'RATING GRAPH STUFF
+        chrtAnimeRatings.BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).AxisX.LineColor = Color.FromArgb(209, 122, 200)
+        chrtAnimeRatings.ChartAreas(0).AxisY.LineColor = Color.FromArgb(209, 122, 200)
+        chrtAnimeRatings.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
+        chrtAnimeRatings.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
+        chrtAnimeRatings.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.Legends(0).ForeColor = Color.White
+        chrtAnimeRatings.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.FromArgb(209, 122, 200)
+        'END RATING GRAPH STUFF
+
+
         lblId.ForeColor = Color.White
         lblTotalAnime.ForeColor = Color.White
         lblWatching.ForeColor = Color.White
@@ -552,5 +633,6 @@ Public Class frmUserInfo
         radEnabled.ForeColor = Color.White
         radDisabled.ForeColor = Color.White
     End Sub
+
 
 End Class

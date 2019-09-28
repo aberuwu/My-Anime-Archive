@@ -1,9 +1,9 @@
-﻿'**************************************************************************************************************
+﻿'------------------------------------------------------------------------------------------------------------------
 '* NOTE: THIS COMMIT IS STILL A WORK IN PROGRESS, I'M TESTING OUT THE SITE
 '* My Anime Archive! - .NET Framework
 '* Build: Alpha 1.0
 '* Programmed by: Cesar Mendoza @aberuwu
-'* Last Updated: 24/8/2019 - 00:53
+'* Last Updated: 27/09/2019 - 17:10
 '* Features:
 '*          -MAL XML File Visualization
 '*          -Export as XML, SQL, CSV   
@@ -29,7 +29,7 @@
 '* -Anime.vb:
 '* -User.vb:
 '*
-'*************************************************************************************************************
+'------------------------------------------------------------------------------------------------------------------
 
 Imports System.Windows.Forms.DataVisualization.Charting
 Imports System.Xml
@@ -42,8 +42,6 @@ Imports System.Drawing.Drawing2D
 Imports JikanDotNet
 
 Public Class frmMain
-
-    'Inherits MetroFramework.Forms.MetroForm
     Public Property animeList As List(Of Anime) = New List(Of Anime)
     Public Property sortedList As List(Of Anime) = New List(Of Anime)
     Public Property userList As List(Of User) = New List(Of User)
@@ -104,141 +102,6 @@ Public Class frmMain
         vscrSearchList.Minimum = 0
         vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
     End Sub
-
-
-
-    Private Sub generateGraph()
-
-        ddlGraphSelection.SelectedIndex = 0
-
-        If animeCount <= 0 Then
-
-        Else
-            Dim watchingCount As Integer = 0
-            Dim completedCount As Integer = 0
-            Dim droppedCount As Integer = 0
-            Dim onholdCount As Integer = 0
-            Dim plantowatchCount As Integer = 0
-
-            For i As Integer = 0 To animeList.Count() - 1
-                If animeList(i).Status = "Watching" Then
-                    watchingCount += 1
-                ElseIf animeList(i).Status = "Completed" Then
-                    completedCount += 1
-                ElseIf animeList(i).Status = "Dropped" Then
-                    droppedCount += 1
-                ElseIf animeList(i).Status = "On-Hold" Then
-                    onholdCount += 1
-                Else
-                    plantowatchCount += 1
-                End If
-            Next
-
-            Dim cArea As ChartArea = chrtAnimeStatus.ChartAreas(0)
-
-            With cArea
-                '.AxisY.Maximum = 50
-                .BackColor = Color.WhiteSmoke
-            End With
-
-            chrtAnimeStatus.Series(0)("PieLabelStyle") = "Disabled"
-            chrtAnimeStatus.ChartAreas(0).AxisX.IsLabelAutoFit = False
-
-            Dim dpnt As DataPoint = New DataPoint()
-            dpnt.SetValueY(watchingCount)
-            chrtAnimeStatus.Series("Watching").Points.Add(dpnt)
-            dpnt.ToolTip = "Watching"
-
-            Dim dpnt2 As DataPoint = New DataPoint()
-            dpnt2.SetValueY(completedCount)
-            chrtAnimeStatus.Series("Completed").Points.Add(dpnt2)
-            dpnt2.ToolTip = "Completed"
-
-            Dim dpnt3 As DataPoint = New DataPoint()
-            dpnt3.SetValueY(onholdCount)
-            chrtAnimeStatus.Series("On-Hold").Points.Add(dpnt3)
-            dpnt3.ToolTip = "On-Hold"
-
-            Dim dpnt4 As DataPoint = New DataPoint()
-            dpnt4.SetValueY(droppedCount)
-            chrtAnimeStatus.Series("Dropped").Points.Add(dpnt4)
-            dpnt4.ToolTip = "Dropped"
-
-            Dim dpnt5 As DataPoint = New DataPoint()
-            dpnt5.SetValueY(plantowatchCount)
-            chrtAnimeStatus.Series("Plan to Watch").Points.Add(dpnt5)
-            dpnt5.ToolTip = "Plan to Watch"
-            dpnt5.Color = Color.FromArgb(209, 122, 200)
-            chrtAnimeStatus.Series("Plan to Watch").Color = Color.FromArgb(209, 122, 200)
-        End If
-
-
-        If loadedXml = True Then
-            loadUserInfo()
-        Else
-            lblUserName.Text = "No User Loaded"
-        End If
-
-    End Sub
-
-    Private Sub loadUserInfo()
-        Dim episodeCount As Integer = 0
-        Dim watchingCount As Integer = 0
-        Dim completedCount As Integer = 0
-        Dim droppedCount As Integer = 0
-        Dim onholdCount As Integer = 0
-        Dim plantowatchCount As Integer = 0
-        Dim meanScoreCount As Decimal = 0
-        Dim meanScore As Decimal = 0
-        Dim animeWScore As Decimal = 0
-
-        For i As Integer = 0 To animeList.Count() - 1
-            episodeCount += Convert.ToInt32(animeList(i).WatchedEps)
-
-            If animeList(i).Status = "Watching" Then
-                watchingCount += 1
-            ElseIf animeList(i).Status = "Completed" Then
-                completedCount += 1
-            ElseIf animeList(i).Status = "Dropped" Then
-                droppedCount += 1
-            ElseIf animeList(i).Status = "On-Hold" Then
-                onholdCount += 1
-            Else
-                plantowatchCount += 1
-            End If
-
-            If Convert.ToInt32(animeList(i).Score) = 0 Then
-            Else
-                meanScoreCount += Convert.ToDecimal(animeList(i).Score)
-                animeWScore += 1
-            End If
-        Next
-
-        lblUserId.Text = userList(userCount).UserId
-        lblUserName.Text = userList(userCount).Username
-        lblTotalAnime.Text = animeList.Count()
-        lblWatching.Text = watchingCount
-        lblCompleted.Text = completedCount
-        lblOnHold.Text = onholdCount
-        lblDropped.Text = droppedCount
-        lblPlanToWatch.Text = plantowatchCount
-
-        If animeWScore = 0 Then
-            meanScore = 0
-        Else
-            meanScore = meanScoreCount / animeWScore
-        End If
-
-        lblWatchedEps.Text = episodeCount
-        lblMeanScore.Text = meanScore.ToString("N2")
-
-        USER_IMG_URL = "https://cdn.myanimelist.net/images/userimages/" & userList(userCount).UserId & ".jpg"
-
-        If frmMain.CheckConnection(USER_IMG_URL) = True Then
-            pcbUserImage.Load(USER_IMG_URL)
-        End If
-    End Sub
-
 
     Async Sub loadApiInfo(id As String)
         Dim jikan As IJikan = New Jikan(True)
@@ -369,12 +232,9 @@ Public Class frmMain
             Dim animeTitle As String = lstwAnimeSearch.SelectedItems(0).SubItems(0).Text
             For i As Integer = 0 To animeList.Count() - 1
                 If lstwAnimeMain.Items(i).SubItems(0).Text = anId OrElse lstwAnimeMain.Items(i).SubItems(1).Text = animeTitle Then
-                    'loadApiInfo(anId)
                     lstwAnimeMain.SelectedItems.Clear()
                     lstwAnimeMain.Items(i).Selected = True
-                    'lstwAnimeMain.Items(i).Focused = True
                     lstwAnimeMain.Items(i).EnsureVisible()
-                    'Me.ActiveControl = lstwAnimeSearch
 
                     lblTitle.Text = sortedList(i).Title
                     lblId.Text = sortedList(i).AnimeId
@@ -391,7 +251,6 @@ Public Class frmMain
     End Sub
 
     Private Sub lstwAnimeMain_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeMain.ItemSelectionChanged
-
         Dim anId As String = ""
         Try
             anId = lstwAnimeMain.FocusedItem.SubItems(0).Text
@@ -399,7 +258,6 @@ Public Class frmMain
             'loadApiInfo(anId)
             For i As Integer = 0 To animeList.Count() - 1
                 If sortedList(i).AnimeId = anId Then
-                    'loadApiInfo(anId)
                     lblTitle.Text = sortedList(i).Title
                     lblId.Text = sortedList(i).AnimeId
                     lblType.Text = sortedList(i).Type
@@ -419,8 +277,6 @@ Public Class frmMain
 
         userInfo = New frmUserInfo
         userInfo.ShowDialog()
-
-        'userInfo.Show()
     End Sub
 
     Private Sub tsbtnSort_Click(sender As Object, e As EventArgs) Handles tsbtnSort.Click
@@ -527,7 +383,6 @@ Public Class frmMain
         pcbLoading.Value = Math.Min(e.ProgressPercentage, pcbLoading.Maximum)
         If e.ProgressPercentage = pcbLoading.Maximum Then
             pcbLoading.Visible = False
-            'lblLoading.Visible = False
         End If
     End Sub
 
@@ -606,7 +461,6 @@ Public Class frmMain
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnSearch_Click(Nothing, Nothing)
-            'lstAnimes.SelectedIndex = 0
         End If
     End Sub
 
@@ -616,7 +470,6 @@ Public Class frmMain
     ' Owner drawn events
     '
     '----------------------------------------------------------------
-
     Private brushPurple As Brush = Brushes.MediumPurple
     Private brushBlue As Brush = Brushes.CornflowerBlue
     Private brushOrange As Brush = Brushes.Orange
@@ -674,7 +527,6 @@ Public Class frmMain
         If e.Item.Selected = True Then
 
             If themePurple = True Then
-                'e.Graphics.FillRectangle(Brushes.MediumPurple, e.Bounds)
                 e.Graphics.FillRectangle(brushPurple, e.Bounds)
             ElseIf themeBlue = True Then
                 e.Graphics.FillRectangle(brushBlue, e.Bounds)
@@ -682,7 +534,6 @@ Public Class frmMain
                 e.Graphics.FillRectangle(brushOrange, e.Bounds)
             End If
 
-            'e.Graphics.FillRectangle(Brushes.MediumPurple, e.Bounds)
             sf.Alignment = StringAlignment.Center
             e.Graphics.DrawString(e.SubItem.Text, Me.lstwAnimeMain.Font, Brushes.White, e.Bounds, sf)
         Else
@@ -695,7 +546,6 @@ Public Class frmMain
 
     Private Sub lstwTest_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwAnimeMain.DrawColumnHeader
         Dim sf As New StringFormat()
-        'e.DrawText()
         If themePurple = True Then
             e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
             e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeMain.Font, Brushes.White, e.Bounds, sf)
@@ -709,17 +559,18 @@ Public Class frmMain
     End Sub
 
     Private Sub lstwAnimeSearch_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwAnimeSearch.DrawColumnHeader
-        Dim sf As New StringFormat()
-        If themePurple = True Then
-            e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
-            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        ElseIf themeBlue = True Then
-            e.Graphics.FillRectangle(Brushes.RoyalBlue, e.Bounds)
-            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        Else
-            e.Graphics.FillRectangle(Brushes.Tomato, e.Bounds)
-            e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        End If
+        'Dim sf As New StringFormat()
+        'If themePurple = True Then
+        '    e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
+        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
+        'ElseIf themeBlue = True Then
+        '    e.Graphics.FillRectangle(Brushes.RoyalBlue, e.Bounds)
+        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
+        'Else
+        '    e.Graphics.FillRectangle(Brushes.Tomato, e.Bounds)
+        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
+        'End If
+
         'If darkModeOn = False Then
         '    e.DrawText()
         'Else
@@ -731,6 +582,8 @@ Public Class frmMain
         Dim sf As New StringFormat()
         If e.Item.Selected = True Then
 
+            sf.Alignment = StringAlignment.Near
+
             If themePurple = True Then
                 e.Graphics.FillRectangle(brushPurple, e.Bounds)
             ElseIf themeBlue = True Then
@@ -739,8 +592,21 @@ Public Class frmMain
                 e.Graphics.FillRectangle(brushOrange, e.Bounds)
             End If
 
-            sf.Alignment = StringAlignment.Near
-            'e.Graphics.DrawImage(imgLst.Images(0), e.Bounds.X, e.Bounds.Y, e.Bounds.Height, e.Bounds.Height)
+            Dim title As String = lstwAnimeSearch.SelectedItems(0).SubItems(1).Text
+
+            For i As Integer = 0 To lstwAnimeMain.Items.Count() - 1
+                If animeList(i).Title = title Then
+                    If animeList(i).Status = "Watching" Then
+                        e.Graphics.DrawImage(imgLst.Images(1), e.Bounds.X, e.Bounds.Y, e.Bounds.Height, e.Bounds.Width)
+                    ElseIf animeList(i).Status = "Completed" Then
+                        e.Graphics.DrawImage(imgLst.Images(2), e.Bounds.X, e.Bounds.Y, e.Bounds.Height, e.Bounds.Width)
+                    ElseIf animeList(i).Status = "On-Hold" Then
+                        e.Graphics.DrawImage(imgLst.Images(3), e.Bounds.X, e.Bounds.Y, e.Bounds.Height, e.Bounds.Width)
+                    Else
+                        e.Graphics.DrawImage(imgLst.Images(4), e.Bounds.X, e.Bounds.Y, e.Bounds.Height, e.Bounds.Width)
+                    End If
+                End If
+            Next
 
             e.Graphics.DrawString(e.SubItem.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
         Else
@@ -753,7 +619,6 @@ Public Class frmMain
 
 
     Private Sub tsmiEdit_Click(sender As Object, e As EventArgs) Handles tsmiEdit.Click
-        'singleListClick = False
         Dim editAnime As frmEditAnime
         editAnime = New frmEditAnime
         editAnime.ShowDialog()
@@ -829,11 +694,6 @@ Public Class frmMain
 
     Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
         welcomeOpen()
-    End Sub
-
-    Private Sub tsbtnUserInfo_Click(sender As Object, e As EventArgs) Handles tsbtnUserInfo.Click
-        generateGraph()
-        mtpnMain.Visible = True
     End Sub
 End Class
 Public Class ListViewDoubleBuffered

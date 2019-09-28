@@ -27,10 +27,14 @@ Public Class Themes
         frmMain.lblCopyright.ForeColor = Color.Black
 
 
+        frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
         frmMain.lstAnimes.BackColor = Color.WhiteSmoke
+        frmMain.lstwStatus.BackColor = Color.WhiteSmoke
+        frmMain.lstwAnimeSearch.BackColor = Color.WhiteSmoke
+        frmMain.lstwAnimeSearch.ForeColor = Color.Black
         frmMain.lstAnimes.ForeColor = Color.Black
         frmMain.pcbLogo.Image = My.Resources.maa_logo_orange
 
@@ -39,6 +43,8 @@ Public Class Themes
         frmMain.tsFileLable.ForeColor = Color.Black
 
         frmMain.ssMain.BackColor = Color.WhiteSmoke
+
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
 
         'BUTTONS
         With frmMain.btnRefresh
@@ -90,6 +96,8 @@ Public Class Themes
 
         frmMain.ssMain.BackColor = Color.WhiteSmoke
 
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+
         'BUTTONS
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.MediumPurple
@@ -123,10 +131,14 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
+        frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
         frmMain.lblCopyright.BackColor = Color.WhiteSmoke
         frmMain.lstAnimes.BackColor = Color.WhiteSmoke
+        frmMain.lstwStatus.BackColor = Color.WhiteSmoke
+        frmMain.lstwAnimeSearch.BackColor = Color.WhiteSmoke
+        frmMain.lstwAnimeSearch.ForeColor = Color.Black
         frmMain.lstAnimes.ForeColor = Color.Black
         frmMain.pcbLogo.Image = My.Resources.maa_logo_blue
 
@@ -135,6 +147,8 @@ Public Class Themes
         frmMain.tsFileLable.ForeColor = Color.Black
 
         frmMain.ssMain.BackColor = Color.WhiteSmoke
+
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
         With frmMain.btnRefresh
@@ -179,6 +193,15 @@ Public Class Themes
         frmMain.tsFileLable.ForeColor = Color.White
 
         frmMain.ssMain.BackColor = Color.FromArgb(38, 35, 35)
+
+
+        frmMain.spltMain.Panel2.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeSearch.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeSearch.ForeColor = Color.White
+
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
 
         'BUTTONS
         With frmMain.btnRefresh
@@ -228,6 +251,8 @@ Public Class Themes
 
         frmMain.ssMain.BackColor = Color.FromArgb(38, 35, 35)
 
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+
         'BUTTONS
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.MediumPurple
@@ -245,6 +270,7 @@ Public Class Themes
 
     Public Sub blueThemeDarkModeMain()
         frmMain.BackColor = Color.FromArgb(44, 44, 44)
+
         frmMain.lblTitle.ForeColor = Color.White
         frmMain.lblId.ForeColor = Color.White
         frmMain.lblType.ForeColor = Color.White
@@ -261,7 +287,7 @@ Public Class Themes
         frmMain.lblScoreHeading.ForeColor = Color.LightBlue
         frmMain.lblStatusHeading.ForeColor = Color.LightBlue
         frmMain.lblCopyright.ForeColor = Color.White
-        frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
+
 
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
@@ -272,6 +298,15 @@ Public Class Themes
         frmMain.tsFileLable.ForeColor = Color.White
 
         frmMain.ssMain.BackColor = Color.FromArgb(38, 35, 35)
+
+
+        frmMain.spltMain.Panel2.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeSearch.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lstwAnimeSearch.ForeColor = Color.White
+
+        frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
         With frmMain.btnRefresh
@@ -290,7 +325,6 @@ Public Class Themes
     '------------------------
     'Themes for Edit Form
     '------------------------
-
 
     Public Sub blueThemeLightModeEdit()
         frmEditAnime.BackgroundImage = My.Resources.blue_back
@@ -561,7 +595,4 @@ Public Class Themes
             .ForeColor = Color.White
         End With
     End Sub
-
-
-
 End Class

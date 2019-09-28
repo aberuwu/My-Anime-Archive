@@ -23,6 +23,13 @@ Partial Class frmUserInfo
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
@@ -48,6 +55,7 @@ Partial Class frmUserInfo
         Me.lblPlanToWatchHeading = New System.Windows.Forms.Label()
         Me.pcbUserImage = New System.Windows.Forms.PictureBox()
         Me.tbSettings = New System.Windows.Forms.TabPage()
+        Me.lblThemePreview = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSaveSettings = New System.Windows.Forms.Button()
         Me.lblProgramSettings = New System.Windows.Forms.Label()
@@ -72,12 +80,13 @@ Partial Class frmUserInfo
         Me.tbUserInfo = New System.Windows.Forms.TabControl()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.toolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lblThemePreview = New System.Windows.Forms.Label()
+        Me.chrtAnimeRatings = New System.Windows.Forms.DataVisualization.Charting.Chart()
         CType(Me.pcbUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbSettings.SuspendLayout()
         Me.tbUser.SuspendLayout()
         CType(Me.chrtAnimeStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbUserInfo.SuspendLayout()
+        CType(Me.chrtAnimeRatings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblCompleted
@@ -303,6 +312,17 @@ Partial Class frmUserInfo
         Me.tbSettings.TabIndex = 1
         Me.tbSettings.Text = "Settings"
         '
+        'lblThemePreview
+        '
+        Me.lblThemePreview.AutoSize = True
+        Me.lblThemePreview.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThemePreview.ForeColor = System.Drawing.Color.BlueViolet
+        Me.lblThemePreview.Location = New System.Drawing.Point(213, 148)
+        Me.lblThemePreview.Name = "lblThemePreview"
+        Me.lblThemePreview.Size = New System.Drawing.Size(20, 17)
+        Me.lblThemePreview.TabIndex = 38
+        Me.lblThemePreview.Text = "█"
+        '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -451,7 +471,6 @@ Partial Class frmUserInfo
         '
         Me.tbUser.BackColor = System.Drawing.Color.WhiteSmoke
         Me.tbUser.Controls.Add(Me.ddlGraphSelection)
-        Me.tbUser.Controls.Add(Me.chrtAnimeStatus)
         Me.tbUser.Controls.Add(Me.lblOtherStats)
         Me.tbUser.Controls.Add(Me.lblMeanScore)
         Me.tbUser.Controls.Add(Me.lblEpisodes)
@@ -473,22 +492,24 @@ Partial Class frmUserInfo
         Me.tbUser.Controls.Add(Me.lblTotalWatchingHeading)
         Me.tbUser.Controls.Add(Me.lblDroppedHeading)
         Me.tbUser.Controls.Add(Me.lblDropped)
+        Me.tbUser.Controls.Add(Me.chrtAnimeRatings)
+        Me.tbUser.Controls.Add(Me.chrtAnimeStatus)
         Me.tbUser.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbUser.Location = New System.Drawing.Point(4, 24)
         Me.tbUser.Name = "tbUser"
         Me.tbUser.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbUser.Size = New System.Drawing.Size(738, 445)
+        Me.tbUser.Size = New System.Drawing.Size(738, 469)
         Me.tbUser.TabIndex = 0
         Me.tbUser.Text = "User Info"
         '
         'ddlGraphSelection
         '
-        Me.ddlGraphSelection.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ddlGraphSelection.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ddlGraphSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ddlGraphSelection.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ddlGraphSelection.FormattingEnabled = True
         Me.ddlGraphSelection.Items.AddRange(New Object() {"Anime Status", "Anime Ratings", "Anime Other"})
-        Me.ddlGraphSelection.Location = New System.Drawing.Point(566, 410)
+        Me.ddlGraphSelection.Location = New System.Drawing.Point(585, 8)
         Me.ddlGraphSelection.Name = "ddlGraphSelection"
         Me.ddlGraphSelection.Size = New System.Drawing.Size(140, 25)
         Me.ddlGraphSelection.TabIndex = 42
@@ -503,61 +524,61 @@ Partial Class frmUserInfo
         Me.chrtAnimeStatus.BackSecondaryColor = System.Drawing.Color.WhiteSmoke
         Me.chrtAnimeStatus.BorderlineColor = System.Drawing.Color.WhiteSmoke
         Me.chrtAnimeStatus.BorderSkin.PageColor = System.Drawing.Color.WhiteSmoke
-        ChartArea1.AxisX.LabelStyle.Enabled = False
-        ChartArea1.AxisX2.LabelStyle.Enabled = False
-        ChartArea1.AxisY2.LabelStyle.Enabled = False
-        ChartArea1.BackImageTransparentColor = System.Drawing.Color.WhiteSmoke
-        ChartArea1.BackSecondaryColor = System.Drawing.Color.WhiteSmoke
-        ChartArea1.Name = "ChartArea1"
-        Me.chrtAnimeStatus.ChartAreas.Add(ChartArea1)
-        Legend1.BackColor = System.Drawing.Color.WhiteSmoke
-        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
-        Legend1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Legend1.IsTextAutoFit = False
-        Legend1.Name = "Legend1"
-        Legend1.TitleFont = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chrtAnimeStatus.Legends.Add(Legend1)
+        ChartArea2.AxisX.LabelStyle.Enabled = False
+        ChartArea2.AxisX2.LabelStyle.Enabled = False
+        ChartArea2.AxisY2.LabelStyle.Enabled = False
+        ChartArea2.BackImageTransparentColor = System.Drawing.Color.WhiteSmoke
+        ChartArea2.BackSecondaryColor = System.Drawing.Color.WhiteSmoke
+        ChartArea2.Name = "ChartArea1"
+        Me.chrtAnimeStatus.ChartAreas.Add(ChartArea2)
+        Legend2.BackColor = System.Drawing.Color.WhiteSmoke
+        Legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend2.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend2.IsTextAutoFit = False
+        Legend2.Name = "Legend1"
+        Legend2.TitleFont = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chrtAnimeStatus.Legends.Add(Legend2)
         Me.chrtAnimeStatus.Location = New System.Drawing.Point(-4, 222)
         Me.chrtAnimeStatus.Name = "chrtAnimeStatus"
         Me.chrtAnimeStatus.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.chrtAnimeStatus.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.BlueViolet, System.Drawing.Color.Plum, System.Drawing.Color.Purple, System.Drawing.Color.DarkOrchid, System.Drawing.Color.Silver}
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
-        Series1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.LabelBackColor = System.Drawing.Color.Transparent
-        Series1.LabelBorderColor = System.Drawing.Color.Transparent
-        Series1.Legend = "Legend1"
-        Series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square
-        Series1.Name = "Watching"
-        Series1.YValuesPerPoint = 2
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
-        Series2.LabelBackColor = System.Drawing.Color.Transparent
-        Series2.Legend = "Legend1"
-        Series2.Name = "Completed"
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
-        Series3.LabelBackColor = System.Drawing.Color.Transparent
-        Series3.Legend = "Legend1"
-        Series3.Name = "On-Hold"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
-        Series4.LabelBackColor = System.Drawing.Color.Transparent
-        Series4.LabelBorderColor = System.Drawing.Color.Transparent
-        Series4.Legend = "Legend1"
-        Series4.Name = "Dropped"
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
-        Series5.LabelBackColor = System.Drawing.Color.Transparent
-        Series5.LabelBorderColor = System.Drawing.Color.Transparent
-        Series5.Legend = "Legend1"
-        Series5.Name = "Plan to Watch"
-        Me.chrtAnimeStatus.Series.Add(Series1)
-        Me.chrtAnimeStatus.Series.Add(Series2)
-        Me.chrtAnimeStatus.Series.Add(Series3)
-        Me.chrtAnimeStatus.Series.Add(Series4)
-        Me.chrtAnimeStatus.Series.Add(Series5)
-        Me.chrtAnimeStatus.Size = New System.Drawing.Size(746, 225)
+        Series6.ChartArea = "ChartArea1"
+        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series6.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series6.LabelBackColor = System.Drawing.Color.Transparent
+        Series6.LabelBorderColor = System.Drawing.Color.Transparent
+        Series6.Legend = "Legend1"
+        Series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square
+        Series6.Name = "Watching"
+        Series6.YValuesPerPoint = 2
+        Series7.ChartArea = "ChartArea1"
+        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series7.LabelBackColor = System.Drawing.Color.Transparent
+        Series7.Legend = "Legend1"
+        Series7.Name = "Completed"
+        Series8.ChartArea = "ChartArea1"
+        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series8.LabelBackColor = System.Drawing.Color.Transparent
+        Series8.Legend = "Legend1"
+        Series8.Name = "On-Hold"
+        Series9.ChartArea = "ChartArea1"
+        Series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series9.LabelBackColor = System.Drawing.Color.Transparent
+        Series9.LabelBorderColor = System.Drawing.Color.Transparent
+        Series9.Legend = "Legend1"
+        Series9.Name = "Dropped"
+        Series10.ChartArea = "ChartArea1"
+        Series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series10.LabelBackColor = System.Drawing.Color.Transparent
+        Series10.LabelBorderColor = System.Drawing.Color.Transparent
+        Series10.Legend = "Legend1"
+        Series10.Name = "Plan to Watch"
+        Me.chrtAnimeStatus.Series.Add(Series6)
+        Me.chrtAnimeStatus.Series.Add(Series7)
+        Me.chrtAnimeStatus.Series.Add(Series8)
+        Me.chrtAnimeStatus.Series.Add(Series9)
+        Me.chrtAnimeStatus.Series.Add(Series10)
+        Me.chrtAnimeStatus.Size = New System.Drawing.Size(746, 249)
         Me.chrtAnimeStatus.TabIndex = 41
         Me.chrtAnimeStatus.Text = "Anime"
         '
@@ -634,7 +655,7 @@ Partial Class frmUserInfo
         Me.tbUserInfo.Location = New System.Drawing.Point(-4, 33)
         Me.tbUserInfo.Name = "tbUserInfo"
         Me.tbUserInfo.SelectedIndex = 0
-        Me.tbUserInfo.Size = New System.Drawing.Size(746, 473)
+        Me.tbUserInfo.Size = New System.Drawing.Size(746, 497)
         Me.tbUserInfo.TabIndex = 37
         '
         'btnClose
@@ -648,16 +669,82 @@ Partial Class frmUserInfo
         Me.btnClose.UseVisualStyleBackColor = True
         Me.btnClose.Visible = False
         '
-        'lblThemePreview
+        'chrtAnimeRatings
         '
-        Me.lblThemePreview.AutoSize = True
-        Me.lblThemePreview.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblThemePreview.ForeColor = System.Drawing.Color.BlueViolet
-        Me.lblThemePreview.Location = New System.Drawing.Point(213, 148)
-        Me.lblThemePreview.Name = "lblThemePreview"
-        Me.lblThemePreview.Size = New System.Drawing.Size(20, 17)
-        Me.lblThemePreview.TabIndex = 38
-        Me.lblThemePreview.Text = "█"
+        Me.chrtAnimeRatings.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chrtAnimeRatings.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.chrtAnimeRatings.BackImageTransparentColor = System.Drawing.Color.WhiteSmoke
+        Me.chrtAnimeRatings.BackSecondaryColor = System.Drawing.Color.WhiteSmoke
+        Me.chrtAnimeRatings.BorderlineColor = System.Drawing.Color.WhiteSmoke
+        Me.chrtAnimeRatings.BorderSkin.PageColor = System.Drawing.Color.WhiteSmoke
+        ChartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.[True]
+        ChartArea1.AxisX.Interval = 1.0R
+        ChartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number
+        ChartArea1.AxisX.IsLabelAutoFit = False
+        ChartArea1.AxisX.LabelStyle.Interval = 1.0R
+        ChartArea1.AxisX2.LabelStyle.Enabled = False
+        ChartArea1.AxisY2.LabelStyle.Enabled = False
+        ChartArea1.BackImageTransparentColor = System.Drawing.Color.WhiteSmoke
+        ChartArea1.BackSecondaryColor = System.Drawing.Color.WhiteSmoke
+        ChartArea1.Name = "ChartArea1"
+        Me.chrtAnimeRatings.ChartAreas.Add(ChartArea1)
+        Legend1.BackColor = System.Drawing.Color.WhiteSmoke
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend1.IsTextAutoFit = False
+        Legend1.Name = "Legend1"
+        Legend1.TitleFont = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chrtAnimeRatings.Legends.Add(Legend1)
+        Me.chrtAnimeRatings.Location = New System.Drawing.Point(-30, 222)
+        Me.chrtAnimeRatings.Name = "chrtAnimeRatings"
+        Me.chrtAnimeRatings.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Me.chrtAnimeRatings.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.BlueViolet, System.Drawing.Color.Plum, System.Drawing.Color.Purple, System.Drawing.Color.DarkOrchid, System.Drawing.Color.Silver}
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.LabelBackColor = System.Drawing.Color.Transparent
+        Series1.LabelBorderColor = System.Drawing.Color.Transparent
+        Series1.LabelForeColor = System.Drawing.Color.White
+        Series1.Legend = "Legend1"
+        Series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square
+        Series1.Name = "Watching"
+        Series1.SmartLabelStyle.CalloutLineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet
+        Series1.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.None
+        Series1.YValuesPerPoint = 2
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series2.LabelBackColor = System.Drawing.Color.Transparent
+        Series2.Legend = "Legend1"
+        Series2.Name = "Completed"
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series3.LabelBackColor = System.Drawing.Color.Transparent
+        Series3.Legend = "Legend1"
+        Series3.Name = "On-Hold"
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series4.LabelBackColor = System.Drawing.Color.Transparent
+        Series4.LabelBorderColor = System.Drawing.Color.Transparent
+        Series4.Legend = "Legend1"
+        Series4.Name = "Dropped"
+        Series5.ChartArea = "ChartArea1"
+        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar
+        Series5.LabelBackColor = System.Drawing.Color.Transparent
+        Series5.LabelBorderColor = System.Drawing.Color.Transparent
+        Series5.Legend = "Legend1"
+        Series5.Name = "Plan to Watch"
+        Me.chrtAnimeRatings.Series.Add(Series1)
+        Me.chrtAnimeRatings.Series.Add(Series2)
+        Me.chrtAnimeRatings.Series.Add(Series3)
+        Me.chrtAnimeRatings.Series.Add(Series4)
+        Me.chrtAnimeRatings.Series.Add(Series5)
+        Me.chrtAnimeRatings.Size = New System.Drawing.Size(789, 298)
+        Me.chrtAnimeRatings.TabIndex = 43
+        Me.chrtAnimeRatings.Text = "Anime"
+        Me.chrtAnimeRatings.Visible = False
         '
         'frmUserInfo
         '
@@ -666,7 +753,7 @@ Partial Class frmUserInfo
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(737, 501)
+        Me.ClientSize = New System.Drawing.Size(737, 525)
         Me.Controls.Add(Me.tbUserInfo)
         Me.Controls.Add(Me.btnClose)
         Me.DoubleBuffered = True
@@ -683,6 +770,7 @@ Partial Class frmUserInfo
         Me.tbUser.PerformLayout()
         CType(Me.chrtAnimeStatus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbUserInfo.ResumeLayout(False)
+        CType(Me.chrtAnimeRatings, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -729,4 +817,5 @@ Partial Class frmUserInfo
     Friend WithEvents btnSaveSettings As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblThemePreview As Label
+    Friend WithEvents chrtAnimeRatings As DataVisualization.Charting.Chart
 End Class
