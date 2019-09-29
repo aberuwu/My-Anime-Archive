@@ -34,7 +34,7 @@ Upon startup you will be greeted by MAA!  You will be able to either open an exp
 *(.json) - For usage with MyAnimeArchive<br/>
 *(.csv) - For usage with Microsoft Excel<br/>
 -Sort By: Allows you to sort and filter your list by different criteria<br/>
--New Anime: Allows you to add a new anime to your list manually or search (if online) the MyAnimeList database and add it<br/>
+-New Anime: Allows you to add a new anime to your list manually or search (if online) the MyAnimeList database<br/>
 -Edit Anime:  Allows you to edit score, status, watched episodes, etc. (if online anime art will be visualized)<br/>
 -Delete Anime: Allows you to delete selected anime from your list<br/>
 -User/Settings: Allows you to view your offline profile with your list's statistics, also a place to edit program settings<br/>
