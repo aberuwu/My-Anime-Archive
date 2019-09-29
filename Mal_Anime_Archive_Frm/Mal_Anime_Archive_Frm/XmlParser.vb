@@ -9,35 +9,15 @@ Imports System.Xml
 Public Class XmlParser
 
     Public Sub loadXmlFile()
-        'Counts for Anime Fields
-        Dim serIdCount As Integer = 0
-        Dim episodesCount As Integer = 0
-        Dim typeCount As Integer = 0
-        Dim watchedCount As Integer = 0
-        Dim startCount As Integer = 0
-        Dim finishCount As Integer = 0
-        Dim scoreCount As Integer = 0
-        Dim statusCount As Integer = 0
-        Dim myIdCount As Integer = 0
-        Dim myRatedCount As Integer = 0
-        Dim myDvdCount As Integer = 0
-        Dim myStorageCount As Integer = 0
-        Dim myCommentsCount As Integer = 0
-        Dim myTimesCount As Integer = 0
-        Dim myRewatchCount As Integer = 0
-        Dim myTagsCount As Integer = 0
-        Dim myRewatchingCount As Integer = 0
-        Dim myRewatchingEpCount As Integer = 0
-        Dim updateCount As Integer = 0
-        'Counts for User Fields
-        Dim userNameCount As Integer = 0
-        Dim totAnimeCount As Integer = 0
-        Dim totWatchCount As Integer = 0
-        Dim totCompletedCount As Integer = 0
-        Dim totOnHold As Integer = 0
-        Dim totDropped As Integer = 0
-        Dim planCount As Integer = 0
-        Dim exportCount As Integer = 0
+
+        'Counts for Anime and User fields
+        Dim serIdCount = 0, episodesCount = 0, typeCount = 0, watchedCount = 0, startCount = 0, finishCount = 0, scoreCount = 0,
+            statusCount = 0, myIdCount = 0, myRatedCount = 0, myDvdCount = 0, myStorageCount = 0, myCommentsCount = 0,
+            myTimesCount = 0, myRewatchCount = 0, myTagsCount = 0, myRewatchingCount = 0, myRewatchingEpCount = 0, updateCount = 0,
+            userNameCount = 0, totAnimeCount = 0, totWatchCount = 0, totCompletedCount = 0, totOnHold = 0, totDropped = 0, planCount = 0,
+            exportCount As Integer
+
+        exportCount = 0
 
         Try
             frmMain.animeList.Clear()
@@ -57,143 +37,121 @@ Public Class XmlParser
 
             While reader.ReadState <> ReadState.EndOfFile
 
+                '---------------------------
+                ' Parse User Info
+                '---------------------------
                 If reader.Name = "user_id" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList.Add(New User)
                     frmMain.userList(frmMain.userCount).UserId = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_export_type" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(exportCount).UserExportType = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_name" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(userNameCount).Username = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_anime" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(totAnimeCount).TotalAnime = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_watching" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(totWatchCount).TotalWatching = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_completed" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(totCompletedCount).TotalCompleted = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_onhold" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(totOnHold).TotalOnHold = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_dropped" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(totDropped).TotalDropped = reader.ReadElementContentAsString
                 End If
-
                 If reader.Name = "user_total_plantowatch" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.userList(planCount).PlaToWatch = reader.ReadElementContentAsString
                 End If
 
+                '---------------------------
+                ' Parse Anime Info
+                '---------------------------
                 If reader.Name = "anime" AndAlso reader.NodeType = XmlNodeType.Element Then
                     ' dgvAnime.Rows.Add()
                 End If
-
                 If reader.Name = "series_animedb_id" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList.Add(New Anime)
                     frmMain.animeList(serIdCount).AnimeId = reader.ReadElementContentAsString
                     serIdCount += 1
                 End If
-
                 If reader.Name = "series_title" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(frmMain.animeCount).Title = reader.ReadElementContentAsString
                     frmMain.animeCount += 1
                 End If
-
                 If reader.Name = "series_type" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(typeCount).Type = reader.ReadElementContentAsString
                     typeCount += 1
                 End If
-
                 If reader.Name = "series_episodes" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(episodesCount).Episodes = reader.ReadElementContentAsString
                     episodesCount += 1
                 End If
-
                 If reader.Name = "my_id" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myIdCount).MyId = reader.ReadElementContentAsString
                     myIdCount += 1
                 End If
-
                 If reader.Name = "my_watched_episodes" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(watchedCount).WatchedEps = reader.ReadElementContentAsString
                     watchedCount += 1
                 End If
-
                 If reader.Name = "my_start_date" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(startCount).StartDate = reader.ReadElementContentAsString
                     startCount += 1
                 End If
-
                 If reader.Name = "my_finish_date" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(finishCount).FinishDate = reader.ReadElementContentAsString
                     finishCount += 1
                 End If
-
                 If reader.Name = "my_rated" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myRatedCount).Myrated = reader.ReadElementContentAsString
                     myRatedCount += 1
                 End If
-
                 If reader.Name = "my_score" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(scoreCount).Score = reader.ReadElementContentAsString
                     scoreCount += 1
                 End If
-
                 If reader.Name = "my_dvd" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myDvdCount).Mydvd = reader.ReadElementContentAsString
                     myDvdCount += 1
                 End If
-
                 If reader.Name = "my_storage" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myStorageCount).Mystorage = reader.ReadElementContentAsString
                     myStorageCount += 1
                 End If
-
                 If reader.Name = "my_status" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(statusCount).Status = reader.ReadElementContentAsString
                     statusCount += 1
                 End If
-
                 If reader.Name = "my_comments" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myCommentsCount).Mycomments = reader.ReadElementContentAsString
                     myCommentsCount += 1
                 End If
-
                 If reader.Name = "my_times_watched" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myTimesCount).Mytimeswatched = reader.ReadElementContentAsString
                     myTimesCount += 1
                 End If
-
                 If reader.Name = "my_rewatch_value" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myRewatchCount).Myrewatch = reader.ReadElementContentAsString
                     myRewatchCount += 1
                 End If
-
                 If reader.Name = "my_tags" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myTagsCount).Mytags = reader.ReadElementContentAsString
                     myTagsCount += 1
                 End If
-
                 If reader.Name = "my_rewatching" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myRewatchingCount).Myrewatching = reader.ReadElementContentAsString
                     myRewatchingCount += 1
                 End If
-
                 If reader.Name = "my_rewatching_ep" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(myRewatchingEpCount).Myrewatchingep = reader.ReadElementContentAsString
                     myRewatchingEpCount += 1
                 End If
-
                 If reader.Name = "update_on_import" AndAlso reader.NodeType = XmlNodeType.Element Then
                     frmMain.animeList(updateCount).Updateonimport = reader.ReadElementContentAsString
                     updateCount += 1
@@ -218,7 +176,6 @@ Public Class XmlParser
             For i As Integer = 0 To frmMain.animeCount - 1
 
                 sug.Add(frmMain.animeList(i).Title)
-
                 Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
                 Dim str(2) As String
                 Dim itemResults As ListViewItem
@@ -239,7 +196,6 @@ Public Class XmlParser
                 str(1) = frmMain.animeList(i).AnimeId
                 itemResults = New ListViewItem(str)
                 frmMain.lstwAnimeSearch.Items.Add(itemResults)
-
             Next
 
             frmMain.txtSearch.AutoCompleteCustomSource = sug

@@ -296,6 +296,7 @@ Public Class frmUserInfo
             frmMain.themeBlue = False
             frmMain.themeOrange = False
             frmMain.tsMain.BackgroundImage = My.Resources.purple_back
+            frmMain.pnlHeader.BackgroundImage = My.Resources.purple_back
             Me.BackgroundImage = My.Resources.purple_back
 
             If frmMain.darkModeOn = True Then
@@ -311,6 +312,7 @@ Public Class frmUserInfo
             frmMain.themeOrange = False
             frmMain.themePurple = False
             frmMain.tsMain.BackgroundImage = My.Resources.blue_back
+            frmMain.pnlHeader.BackgroundImage = My.Resources.blue_back
             Me.BackgroundImage = My.Resources.blue_back
 
             If frmMain.darkModeOn = True Then
@@ -326,6 +328,7 @@ Public Class frmUserInfo
             frmMain.themeBlue = False
             frmMain.themePurple = False
             frmMain.tsMain.BackgroundImage = My.Resources.orange_back
+            frmMain.pnlHeader.BackgroundImage = My.Resources.orange_back
             Me.BackgroundImage = My.Resources.orange_back
 
             If frmMain.darkModeOn = True Then
@@ -351,13 +354,11 @@ Public Class frmUserInfo
 
 
     Private Sub blueGraphThemeLightMode()
-
         chrtAnimeStatus.Series(0).Points(0).Color = Color.LightBlue
         chrtAnimeStatus.Series(1).Points(0).Color = Color.Blue
         chrtAnimeStatus.Series(2).Points(0).Color = Color.CadetBlue
         chrtAnimeStatus.Series(3).Points(0).Color = Color.SteelBlue
         chrtAnimeStatus.Series(4).Points(0).Color = Color.DodgerBlue
-
 
         chrtAnimeStatus.Series("Watching").Color = Color.LightBlue
         chrtAnimeStatus.Series("Completed").Color = Color.Blue
@@ -481,8 +482,8 @@ Public Class frmUserInfo
         chrtAnimeStatus.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.ChartAreas(0).AxisX.LineColor = Color.FromArgb(209, 122, 200)
         chrtAnimeStatus.ChartAreas(0).AxisY.LineColor = Color.FromArgb(209, 122, 200)
-        chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
-        chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
+        'chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
+        'chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
         chrtAnimeStatus.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.Legends(0).ForeColor = Color.White
         chrtAnimeStatus.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.FromArgb(209, 122, 200)
@@ -493,11 +494,10 @@ Public Class frmUserInfo
         chrtAnimeRatings.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeRatings.ChartAreas(0).AxisX.LineColor = Color.FromArgb(209, 122, 200)
         chrtAnimeRatings.ChartAreas(0).AxisY.LineColor = Color.FromArgb(209, 122, 200)
-        chrtAnimeRatings.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
-        chrtAnimeRatings.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.FromArgb(209, 122, 200)
         chrtAnimeRatings.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeRatings.Legends(0).ForeColor = Color.White
         chrtAnimeRatings.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.FromArgb(209, 122, 200)
+        chrtAnimeRatings.ChartAreas(0).AxisX.LabelStyle.ForeColor = Color.FromArgb(209, 122, 200)
         'END RATING GRAPH STUFF
 
 
@@ -555,11 +555,23 @@ Public Class frmUserInfo
         chrtAnimeStatus.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.ChartAreas(0).AxisX.LineColor = Color.LightBlue
         chrtAnimeStatus.ChartAreas(0).AxisY.LineColor = Color.LightBlue
-        chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.LightBlue
-        chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.LightBlue
+        'chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.LightBlue
+        'chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.LightBlue
         chrtAnimeStatus.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.Legends(0).ForeColor = Color.White
         chrtAnimeStatus.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.LightBlue
+
+        'RATING GRAPH STUFF
+        chrtAnimeRatings.BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).AxisX.LineColor = Color.LightBlue
+        chrtAnimeRatings.ChartAreas(0).AxisY.LineColor = Color.LightBlue
+        chrtAnimeRatings.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.Legends(0).ForeColor = Color.White
+        chrtAnimeRatings.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.LightBlue
+        chrtAnimeRatings.ChartAreas(0).AxisX.LabelStyle.ForeColor = Color.LightBlue
+        'END RATING GRAPH STUFF
+
 
 
         lblId.ForeColor = Color.White
@@ -606,11 +618,22 @@ Public Class frmUserInfo
         chrtAnimeStatus.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.ChartAreas(0).AxisX.LineColor = Color.OrangeRed
         chrtAnimeStatus.ChartAreas(0).AxisY.LineColor = Color.OrangeRed
-        chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.OrangeRed
-        chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.OrangeRed
+        'chrtAnimeStatus.ChartAreas(0).AxisX.MajorGrid.LineColor = Color.OrangeRed
+        'chrtAnimeStatus.ChartAreas(0).AxisY.MajorGrid.LineColor = Color.OrangeRed
         chrtAnimeStatus.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
         chrtAnimeStatus.Legends(0).ForeColor = Color.White
         chrtAnimeStatus.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.OrangeRed
+
+        'RATING GRAPH STUFF
+        chrtAnimeRatings.BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.ChartAreas(0).AxisX.LineColor = Color.OrangeRed
+        chrtAnimeRatings.ChartAreas(0).AxisY.LineColor = Color.OrangeRed
+        chrtAnimeRatings.Legends(0).BackColor = Color.FromArgb(44, 44, 44)
+        chrtAnimeRatings.Legends(0).ForeColor = Color.White
+        chrtAnimeRatings.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.OrangeRed
+        chrtAnimeRatings.ChartAreas(0).AxisX.LabelStyle.ForeColor = Color.OrangeRed
+        'END RATING GRAPH STUFF
 
 
         lblId.ForeColor = Color.White
@@ -633,6 +656,4 @@ Public Class frmUserInfo
         radEnabled.ForeColor = Color.White
         radDisabled.ForeColor = Color.White
     End Sub
-
-
 End Class

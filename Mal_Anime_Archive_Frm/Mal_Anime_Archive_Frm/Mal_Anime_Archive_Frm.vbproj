@@ -365,6 +365,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MAA.ico" />
+    <None Include="Resources\xml_ico_blk.png" />
+    <None Include="Resources\user_ico_blk.png" />
+    <None Include="Resources\sort_ico_blk.png" />
+    <None Include="Resources\open_ico_blk.png" />
+    <None Include="Resources\new_ico_blk.png" />
+    <None Include="Resources\export_ico_blk.png" />
+    <None Include="Resources\edit_ico_blk.png" />
+    <None Include="Resources\delete_ico_blk.png" />
     <None Include="Resources\json icon.png" />
     <None Include="Resources\haruhi_loading.gif" />
     <None Include="Resources\maa_logo_white2.png" />

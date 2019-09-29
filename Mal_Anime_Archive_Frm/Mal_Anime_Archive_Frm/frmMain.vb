@@ -695,6 +695,41 @@ Public Class frmMain
     Private Sub pcbLogo_Click(sender As Object, e As EventArgs) Handles pcbLogo.Click
         welcomeOpen()
     End Sub
+
+
+    Private Sub btnOpenHeader_Click(sender As Object, e As EventArgs) Handles btnOpenHeader.Click
+        btnOpen_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnExportHeader_Click(sender As Object, e As EventArgs) Handles btnExportHeader.Click
+        btnSave_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnViewXmlHeader_Click(sender As Object, e As EventArgs) Handles btnViewXmlHeader.Click
+        btnXml_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnSortHeader_Click(sender As Object, e As EventArgs) Handles btnSortHeader.Click
+        tsbtnSort_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnNewAnimeHeader_Click(sender As Object, e As EventArgs) Handles btnNewAnimeHeader.Click
+        tsbtnNewAnime_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnEditHeader_Click(sender As Object, e As EventArgs) Handles btnEditHeader.Click
+        tsbtnEdit_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub btnDeleteHeader_Click(sender As Object, e As EventArgs) Handles btnDeleteHeader.Click
+
+    End Sub
+
+    Private Sub btnInfoSettingsHeader_Click(sender As Object, e As EventArgs) Handles btnInfoSettingsHeader.Click
+        btnUserInfo_Click(Nothing, Nothing)
+    End Sub
+
+
 End Class
 Public Class ListViewDoubleBuffered
     Inherits ListView

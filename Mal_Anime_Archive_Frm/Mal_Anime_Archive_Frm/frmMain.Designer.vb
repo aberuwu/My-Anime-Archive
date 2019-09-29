@@ -45,36 +45,19 @@ Partial Class frmMain
         Me.lblDarkMode = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnRefresh = New System.Windows.Forms.Button()
-        Me.btnFullScreen = New System.Windows.Forms.Button()
         Me.spltMain = New System.Windows.Forms.SplitContainer()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.vscrSearchList = New System.Windows.Forms.VScrollBar()
         Me.lstwStatus = New System.Windows.Forms.ListView()
         Me.colStatus = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ctmAnimeList = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.tsmiEdit = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListOptions = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiDelete = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiVisitPage = New System.Windows.Forms.ToolStripMenuItem()
         Me.imgLst = New System.Windows.Forms.ImageList(Me.components)
         Me.lblNoResultFound = New System.Windows.Forms.Label()
         Me.lstwAnimeSearch = New System.Windows.Forms.ListView()
         Me.srlstName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.srlstID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblNoListLoaded = New System.Windows.Forms.Label()
-        Me.tsMain = New System.Windows.Forms.ToolStrip()
-        Me.btnOpen = New System.Windows.Forms.ToolStripButton()
-        Me.btnSave = New System.Windows.Forms.ToolStripButton()
-        Me.btnXml = New System.Windows.Forms.ToolStripButton()
-        Me.btnAbout = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnSort = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnNewAnime = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnEdit = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnDelete = New System.Windows.Forms.ToolStripButton()
-        Me.btnUserInfo = New System.Windows.Forms.ToolStripButton()
-        Me.pcbtnDarkMode = New System.Windows.Forms.PictureBox()
-        Me.pcbUserPicture = New System.Windows.Forms.PictureBox()
-        Me.pcbLogo = New System.Windows.Forms.PictureBox()
         Me.lstwAnimeMain = New System.Windows.Forms.ListView()
         Me.animeId4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.animeTitle4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -93,12 +76,40 @@ Partial Class frmMain
         Me.timerMain = New System.Windows.Forms.Timer(Me.components)
         Me.lblCopyright = New System.Windows.Forms.Label()
         Me.backWork = New System.ComponentModel.BackgroundWorker()
+        Me.tsmiEdit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiDelete = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiVisitPage = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.btnAboutHeader = New System.Windows.Forms.Button()
+        Me.btnInfoSettingsHeader = New System.Windows.Forms.Button()
+        Me.btnDeleteHeader = New System.Windows.Forms.Button()
+        Me.btnEditHeader = New System.Windows.Forms.Button()
+        Me.btnNewAnimeHeader = New System.Windows.Forms.Button()
+        Me.btnSortHeader = New System.Windows.Forms.Button()
+        Me.btnViewXmlHeader = New System.Windows.Forms.Button()
+        Me.btnExportHeader = New System.Windows.Forms.Button()
+        Me.btnOpenHeader = New System.Windows.Forms.Button()
+        Me.btnFullScreen = New System.Windows.Forms.Button()
+        Me.tsMain = New System.Windows.Forms.ToolStrip()
+        Me.btnOpen = New System.Windows.Forms.ToolStripButton()
+        Me.btnSave = New System.Windows.Forms.ToolStripButton()
+        Me.btnXml = New System.Windows.Forms.ToolStripButton()
+        Me.btnAbout = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnSort = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnNewAnime = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnEdit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbtnDelete = New System.Windows.Forms.ToolStripButton()
+        Me.btnUserInfo = New System.Windows.Forms.ToolStripButton()
+        Me.pcbtnDarkMode = New System.Windows.Forms.PictureBox()
+        Me.pcbUserPicture = New System.Windows.Forms.PictureBox()
+        Me.pcbLogo = New System.Windows.Forms.PictureBox()
         Me.ssMain.SuspendLayout()
         CType(Me.spltMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spltMain.Panel1.SuspendLayout()
         Me.spltMain.Panel2.SuspendLayout()
         Me.spltMain.SuspendLayout()
         Me.ctmAnimeList.SuspendLayout()
+        Me.pnlHeader.SuspendLayout()
         Me.tsMain.SuspendLayout()
         CType(Me.pcbtnDarkMode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcbUserPicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,7 +140,7 @@ Partial Class frmMain
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(14, 35)
+        Me.lblTitle.Location = New System.Drawing.Point(14, 38)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(110, 25)
         Me.lblTitle.TabIndex = 3
@@ -351,24 +362,6 @@ Partial Class frmMain
         Me.ttMain.SetToolTip(Me.btnRefresh, "Refresh List")
         Me.btnRefresh.UseVisualStyleBackColor = False
         '
-        'btnFullScreen
-        '
-        Me.btnFullScreen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnFullScreen.BackColor = System.Drawing.Color.Transparent
-        Me.btnFullScreen.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.full_Screen_icon
-        Me.btnFullScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnFullScreen.FlatAppearance.BorderSize = 0
-        Me.btnFullScreen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue
-        Me.btnFullScreen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
-        Me.btnFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFullScreen.ForeColor = System.Drawing.Color.Transparent
-        Me.btnFullScreen.Location = New System.Drawing.Point(962, 102)
-        Me.btnFullScreen.Name = "btnFullScreen"
-        Me.btnFullScreen.Size = New System.Drawing.Size(24, 23)
-        Me.btnFullScreen.TabIndex = 35
-        Me.ttMain.SetToolTip(Me.btnFullScreen, "Full Screen")
-        Me.btnFullScreen.UseVisualStyleBackColor = False
-        '
         'spltMain
         '
         Me.spltMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -391,6 +384,7 @@ Partial Class frmMain
         'spltMain.Panel2
         '
         Me.spltMain.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.spltMain.Panel2.Controls.Add(Me.pnlHeader)
         Me.spltMain.Panel2.Controls.Add(Me.lblNoListLoaded)
         Me.spltMain.Panel2.Controls.Add(Me.btnFullScreen)
         Me.spltMain.Panel2.Controls.Add(Me.tsMain)
@@ -440,10 +434,10 @@ Partial Class frmMain
         Me.vscrSearchList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.vscrSearchList.LargeChange = 1
-        Me.vscrSearchList.Location = New System.Drawing.Point(326, 27)
+        Me.vscrSearchList.Location = New System.Drawing.Point(322, 9)
         Me.vscrSearchList.Maximum = 0
         Me.vscrSearchList.Name = "vscrSearchList"
-        Me.vscrSearchList.Size = New System.Drawing.Size(16, 705)
+        Me.vscrSearchList.Size = New System.Drawing.Size(16, 740)
         Me.vscrSearchList.TabIndex = 47
         '
         'lstwStatus
@@ -478,33 +472,11 @@ Partial Class frmMain
         Me.ctmAnimeList.Name = "ctmAnimeList"
         Me.ctmAnimeList.Size = New System.Drawing.Size(153, 92)
         '
-        'tsmiEdit
-        '
-        Me.tsmiEdit.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_icon
-        Me.tsmiEdit.Name = "tsmiEdit"
-        Me.tsmiEdit.Size = New System.Drawing.Size(152, 22)
-        Me.tsmiEdit.Text = "&Edit"
-        '
         'tsmiListOptions
         '
         Me.tsmiListOptions.Name = "tsmiListOptions"
         Me.tsmiListOptions.Size = New System.Drawing.Size(152, 22)
         Me.tsmiListOptions.Text = "L&ist Options"
-        '
-        'tsmiDelete
-        '
-        Me.tsmiDelete.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_icon
-        Me.tsmiDelete.Name = "tsmiDelete"
-        Me.tsmiDelete.Size = New System.Drawing.Size(152, 22)
-        Me.tsmiDelete.Text = "D&elete"
-        '
-        'tsmiVisitPage
-        '
-        Me.tsmiVisitPage.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tsmiVisitPage.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.MAL
-        Me.tsmiVisitPage.Name = "tsmiVisitPage"
-        Me.tsmiVisitPage.Size = New System.Drawing.Size(152, 22)
-        Me.tsmiVisitPage.Text = "V&isit MAL Page"
         '
         'imgLst
         '
@@ -575,6 +547,362 @@ Partial Class frmMain
         Me.lblNoListLoaded.Text = "No List Loaded"
         Me.lblNoListLoaded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblNoListLoaded.Visible = False
+        '
+        'lstwAnimeMain
+        '
+        Me.lstwAnimeMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstwAnimeMain.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lstwAnimeMain.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lstwAnimeMain.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.animeId4, Me.animeTitle4, Me.animeType4, Me.animeStatus4, Me.animeEpisodes4, Me.animeWatched4, Me.animeScore4, Me.animeStart4, Me.animeFinish4, Me.animeTags4, Me.myId4, Me.animeComments4, Me.animeRewatch4})
+        Me.lstwAnimeMain.ContextMenuStrip = Me.ctmAnimeList
+        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstwAnimeMain.FullRowSelect = True
+        Me.lstwAnimeMain.HideSelection = False
+        Me.lstwAnimeMain.Location = New System.Drawing.Point(18, 146)
+        Me.lstwAnimeMain.Name = "lstwAnimeMain"
+        Me.lstwAnimeMain.OwnerDraw = True
+        Me.lstwAnimeMain.Size = New System.Drawing.Size(968, 580)
+        Me.lstwAnimeMain.TabIndex = 36
+        Me.lstwAnimeMain.UseCompatibleStateImageBehavior = False
+        Me.lstwAnimeMain.View = System.Windows.Forms.View.Details
+        '
+        'animeId4
+        '
+        Me.animeId4.Text = ""
+        Me.animeId4.Width = 0
+        '
+        'animeTitle4
+        '
+        Me.animeTitle4.Text = "Title"
+        Me.animeTitle4.Width = 290
+        '
+        'animeType4
+        '
+        Me.animeType4.Text = "Type"
+        Me.animeType4.Width = 140
+        '
+        'animeStatus4
+        '
+        Me.animeStatus4.Text = "Status"
+        Me.animeStatus4.Width = 140
+        '
+        'animeEpisodes4
+        '
+        Me.animeEpisodes4.Text = "Episodes"
+        Me.animeEpisodes4.Width = 130
+        '
+        'animeWatched4
+        '
+        Me.animeWatched4.Text = "Watched"
+        Me.animeWatched4.Width = 130
+        '
+        'animeScore4
+        '
+        Me.animeScore4.Text = "Score"
+        Me.animeScore4.Width = 115
+        '
+        'animeStart4
+        '
+        Me.animeStart4.Text = "Start Date"
+        Me.animeStart4.Width = 150
+        '
+        'animeFinish4
+        '
+        Me.animeFinish4.Text = "Finish Date"
+        Me.animeFinish4.Width = 150
+        '
+        'animeTags4
+        '
+        Me.animeTags4.Text = "Tags"
+        Me.animeTags4.Width = 180
+        '
+        'myId4
+        '
+        Me.myId4.Text = "My ID"
+        Me.myId4.Width = 100
+        '
+        'animeComments4
+        '
+        Me.animeComments4.Text = "Comments"
+        Me.animeComments4.Width = 300
+        '
+        'animeRewatch4
+        '
+        Me.animeRewatch4.Text = "Rewatch"
+        Me.animeRewatch4.Width = 80
+        '
+        'pcbLoading
+        '
+        Me.pcbLoading.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pcbLoading.Location = New System.Drawing.Point(18, 141)
+        Me.pcbLoading.Maximum = 7
+        Me.pcbLoading.Name = "pcbLoading"
+        Me.pcbLoading.Size = New System.Drawing.Size(968, 8)
+        Me.pcbLoading.Step = 1
+        Me.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pcbLoading.TabIndex = 104
+        Me.pcbLoading.Value = 7
+        Me.pcbLoading.Visible = False
+        '
+        'timerMain
+        '
+        Me.timerMain.Interval = 1000
+        '
+        'lblCopyright
+        '
+        Me.lblCopyright.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblCopyright.AutoSize = True
+        Me.lblCopyright.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lblCopyright.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCopyright.ForeColor = System.Drawing.Color.Black
+        Me.lblCopyright.Location = New System.Drawing.Point(573, 734)
+        Me.lblCopyright.Name = "lblCopyright"
+        Me.lblCopyright.Size = New System.Drawing.Size(229, 15)
+        Me.lblCopyright.TabIndex = 35
+        Me.lblCopyright.Text = "Programmed by Cesar Mendoza @aberuwu"
+        Me.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCopyright.Visible = False
+        '
+        'backWork
+        '
+        Me.backWork.WorkerReportsProgress = True
+        Me.backWork.WorkerSupportsCancellation = True
+        '
+        'tsmiEdit
+        '
+        Me.tsmiEdit.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_icon
+        Me.tsmiEdit.Name = "tsmiEdit"
+        Me.tsmiEdit.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiEdit.Text = "&Edit"
+        '
+        'tsmiDelete
+        '
+        Me.tsmiDelete.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_icon
+        Me.tsmiDelete.Name = "tsmiDelete"
+        Me.tsmiDelete.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiDelete.Text = "D&elete"
+        '
+        'tsmiVisitPage
+        '
+        Me.tsmiVisitPage.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsmiVisitPage.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.MAL
+        Me.tsmiVisitPage.Name = "tsmiVisitPage"
+        Me.tsmiVisitPage.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiVisitPage.Text = "V&isit MAL Page"
+        '
+        'pnlHeader
+        '
+        Me.pnlHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlHeader.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
+        Me.pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlHeader.Controls.Add(Me.btnAboutHeader)
+        Me.pnlHeader.Controls.Add(Me.btnInfoSettingsHeader)
+        Me.pnlHeader.Controls.Add(Me.btnDeleteHeader)
+        Me.pnlHeader.Controls.Add(Me.btnEditHeader)
+        Me.pnlHeader.Controls.Add(Me.btnNewAnimeHeader)
+        Me.pnlHeader.Controls.Add(Me.btnSortHeader)
+        Me.pnlHeader.Controls.Add(Me.btnViewXmlHeader)
+        Me.pnlHeader.Controls.Add(Me.btnExportHeader)
+        Me.pnlHeader.Controls.Add(Me.btnOpenHeader)
+        Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
+        Me.pnlHeader.Name = "pnlHeader"
+        Me.pnlHeader.Size = New System.Drawing.Size(1006, 32)
+        Me.pnlHeader.TabIndex = 105
+        '
+        'btnAboutHeader
+        '
+        Me.btnAboutHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAboutHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnAboutHeader.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
+        Me.btnAboutHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnAboutHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnAboutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAboutHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAboutHeader.ForeColor = System.Drawing.Color.White
+        Me.btnAboutHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.OpenFile_16x
+        Me.btnAboutHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAboutHeader.Location = New System.Drawing.Point(931, 0)
+        Me.btnAboutHeader.Name = "btnAboutHeader"
+        Me.btnAboutHeader.Size = New System.Drawing.Size(75, 26)
+        Me.btnAboutHeader.TabIndex = 49
+        Me.btnAboutHeader.Text = "    &Open"
+        Me.btnAboutHeader.UseVisualStyleBackColor = False
+        Me.btnAboutHeader.Visible = False
+        '
+        'btnInfoSettingsHeader
+        '
+        Me.btnInfoSettingsHeader.AutoSize = True
+        Me.btnInfoSettingsHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnInfoSettingsHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnInfoSettingsHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnInfoSettingsHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnInfoSettingsHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInfoSettingsHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInfoSettingsHeader.ForeColor = System.Drawing.Color.White
+        Me.btnInfoSettingsHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.user_ico_blk
+        Me.btnInfoSettingsHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnInfoSettingsHeader.Location = New System.Drawing.Point(636, 1)
+        Me.btnInfoSettingsHeader.Name = "btnInfoSettingsHeader"
+        Me.btnInfoSettingsHeader.Size = New System.Drawing.Size(92, 29)
+        Me.btnInfoSettingsHeader.TabIndex = 48
+        Me.btnInfoSettingsHeader.Text = "    &Settings"
+        Me.btnInfoSettingsHeader.UseVisualStyleBackColor = False
+        '
+        'btnDeleteHeader
+        '
+        Me.btnDeleteHeader.AutoSize = True
+        Me.btnDeleteHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnDeleteHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnDeleteHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnDeleteHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteHeader.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_ico_blk
+        Me.btnDeleteHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDeleteHeader.Location = New System.Drawing.Point(559, 1)
+        Me.btnDeleteHeader.Name = "btnDeleteHeader"
+        Me.btnDeleteHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnDeleteHeader.TabIndex = 47
+        Me.btnDeleteHeader.Text = "    &Delete"
+        Me.btnDeleteHeader.UseVisualStyleBackColor = False
+        '
+        'btnEditHeader
+        '
+        Me.btnEditHeader.AutoSize = True
+        Me.btnEditHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnEditHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnEditHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnEditHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnEditHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditHeader.ForeColor = System.Drawing.Color.White
+        Me.btnEditHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_ico_blk
+        Me.btnEditHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditHeader.Location = New System.Drawing.Point(456, 1)
+        Me.btnEditHeader.Name = "btnEditHeader"
+        Me.btnEditHeader.Size = New System.Drawing.Size(101, 29)
+        Me.btnEditHeader.TabIndex = 46
+        Me.btnEditHeader.Text = "    &Edit Anime"
+        Me.btnEditHeader.UseVisualStyleBackColor = False
+        '
+        'btnNewAnimeHeader
+        '
+        Me.btnNewAnimeHeader.AutoSize = True
+        Me.btnNewAnimeHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnNewAnimeHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnNewAnimeHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnNewAnimeHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnNewAnimeHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNewAnimeHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNewAnimeHeader.ForeColor = System.Drawing.Color.White
+        Me.btnNewAnimeHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.new_ico_blk
+        Me.btnNewAnimeHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNewAnimeHeader.Location = New System.Drawing.Point(348, 1)
+        Me.btnNewAnimeHeader.Name = "btnNewAnimeHeader"
+        Me.btnNewAnimeHeader.Size = New System.Drawing.Size(106, 29)
+        Me.btnNewAnimeHeader.TabIndex = 45
+        Me.btnNewAnimeHeader.Text = "    &New Anime"
+        Me.btnNewAnimeHeader.UseVisualStyleBackColor = False
+        '
+        'btnSortHeader
+        '
+        Me.btnSortHeader.AutoSize = True
+        Me.btnSortHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnSortHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnSortHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnSortHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnSortHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSortHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSortHeader.ForeColor = System.Drawing.Color.White
+        Me.btnSortHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.sort_ico_blk
+        Me.btnSortHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSortHeader.Location = New System.Drawing.Point(271, 1)
+        Me.btnSortHeader.Name = "btnSortHeader"
+        Me.btnSortHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnSortHeader.TabIndex = 44
+        Me.btnSortHeader.Text = "    &Sotr by"
+        Me.btnSortHeader.UseVisualStyleBackColor = False
+        '
+        'btnViewXmlHeader
+        '
+        Me.btnViewXmlHeader.AutoSize = True
+        Me.btnViewXmlHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnViewXmlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnViewXmlHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnViewXmlHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnViewXmlHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnViewXmlHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewXmlHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewXmlHeader.ForeColor = System.Drawing.Color.White
+        Me.btnViewXmlHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.xml_ico_blk
+        Me.btnViewXmlHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewXmlHeader.Location = New System.Drawing.Point(181, 1)
+        Me.btnViewXmlHeader.Name = "btnViewXmlHeader"
+        Me.btnViewXmlHeader.Size = New System.Drawing.Size(88, 29)
+        Me.btnViewXmlHeader.TabIndex = 43
+        Me.btnViewXmlHeader.Text = "    &View Xml"
+        Me.btnViewXmlHeader.UseVisualStyleBackColor = False
+        '
+        'btnExportHeader
+        '
+        Me.btnExportHeader.AutoSize = True
+        Me.btnExportHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnExportHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnExportHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnExportHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnExportHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportHeader.ForeColor = System.Drawing.Color.White
+        Me.btnExportHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.export_ico_blk
+        Me.btnExportHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExportHeader.Location = New System.Drawing.Point(83, 1)
+        Me.btnExportHeader.Name = "btnExportHeader"
+        Me.btnExportHeader.Size = New System.Drawing.Size(96, 29)
+        Me.btnExportHeader.TabIndex = 42
+        Me.btnExportHeader.Text = "    &Export List"
+        Me.btnExportHeader.UseVisualStyleBackColor = False
+        '
+        'btnOpenHeader
+        '
+        Me.btnOpenHeader.AutoSize = True
+        Me.btnOpenHeader.BackColor = System.Drawing.Color.Transparent
+        Me.btnOpenHeader.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid
+        Me.btnOpenHeader.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnOpenHeader.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnOpenHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpenHeader.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOpenHeader.ForeColor = System.Drawing.Color.White
+        Me.btnOpenHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.open_ico_blk
+        Me.btnOpenHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnOpenHeader.Location = New System.Drawing.Point(6, 1)
+        Me.btnOpenHeader.Name = "btnOpenHeader"
+        Me.btnOpenHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnOpenHeader.TabIndex = 41
+        Me.btnOpenHeader.Text = "    &Open"
+        Me.btnOpenHeader.UseVisualStyleBackColor = False
+        '
+        'btnFullScreen
+        '
+        Me.btnFullScreen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFullScreen.BackColor = System.Drawing.Color.Transparent
+        Me.btnFullScreen.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.full_Screen_icon
+        Me.btnFullScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnFullScreen.FlatAppearance.BorderSize = 0
+        Me.btnFullScreen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btnFullScreen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFullScreen.ForeColor = System.Drawing.Color.Transparent
+        Me.btnFullScreen.Location = New System.Drawing.Point(962, 102)
+        Me.btnFullScreen.Name = "btnFullScreen"
+        Me.btnFullScreen.Size = New System.Drawing.Size(24, 23)
+        Me.btnFullScreen.TabIndex = 35
+        Me.ttMain.SetToolTip(Me.btnFullScreen, "Full Screen")
+        Me.btnFullScreen.UseVisualStyleBackColor = False
         '
         'tsMain
         '
@@ -716,129 +1044,6 @@ Partial Class frmMain
         Me.pcbLogo.TabIndex = 21
         Me.pcbLogo.TabStop = False
         '
-        'lstwAnimeMain
-        '
-        Me.lstwAnimeMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstwAnimeMain.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lstwAnimeMain.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lstwAnimeMain.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.animeId4, Me.animeTitle4, Me.animeType4, Me.animeStatus4, Me.animeEpisodes4, Me.animeWatched4, Me.animeScore4, Me.animeStart4, Me.animeFinish4, Me.animeTags4, Me.myId4, Me.animeComments4, Me.animeRewatch4})
-        Me.lstwAnimeMain.ContextMenuStrip = Me.ctmAnimeList
-        Me.lstwAnimeMain.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstwAnimeMain.FullRowSelect = True
-        Me.lstwAnimeMain.HideSelection = False
-        Me.lstwAnimeMain.Location = New System.Drawing.Point(18, 146)
-        Me.lstwAnimeMain.Name = "lstwAnimeMain"
-        Me.lstwAnimeMain.OwnerDraw = True
-        Me.lstwAnimeMain.Size = New System.Drawing.Size(968, 580)
-        Me.lstwAnimeMain.TabIndex = 36
-        Me.lstwAnimeMain.UseCompatibleStateImageBehavior = False
-        Me.lstwAnimeMain.View = System.Windows.Forms.View.Details
-        '
-        'animeId4
-        '
-        Me.animeId4.Text = ""
-        Me.animeId4.Width = 0
-        '
-        'animeTitle4
-        '
-        Me.animeTitle4.Text = "Title"
-        Me.animeTitle4.Width = 290
-        '
-        'animeType4
-        '
-        Me.animeType4.Text = "Type"
-        Me.animeType4.Width = 140
-        '
-        'animeStatus4
-        '
-        Me.animeStatus4.Text = "Status"
-        Me.animeStatus4.Width = 140
-        '
-        'animeEpisodes4
-        '
-        Me.animeEpisodes4.Text = "Episodes"
-        Me.animeEpisodes4.Width = 130
-        '
-        'animeWatched4
-        '
-        Me.animeWatched4.Text = "Watched"
-        Me.animeWatched4.Width = 130
-        '
-        'animeScore4
-        '
-        Me.animeScore4.Text = "Score"
-        Me.animeScore4.Width = 115
-        '
-        'animeStart4
-        '
-        Me.animeStart4.Text = "Start Date"
-        Me.animeStart4.Width = 150
-        '
-        'animeFinish4
-        '
-        Me.animeFinish4.Text = "Finish Date"
-        Me.animeFinish4.Width = 150
-        '
-        'animeTags4
-        '
-        Me.animeTags4.Text = "Tags"
-        Me.animeTags4.Width = 180
-        '
-        'myId4
-        '
-        Me.myId4.Text = "My ID"
-        Me.myId4.Width = 100
-        '
-        'animeComments4
-        '
-        Me.animeComments4.Text = "Comments"
-        Me.animeComments4.Width = 300
-        '
-        'animeRewatch4
-        '
-        Me.animeRewatch4.Text = "Rewatch"
-        Me.animeRewatch4.Width = 80
-        '
-        'pcbLoading
-        '
-        Me.pcbLoading.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pcbLoading.Location = New System.Drawing.Point(18, 141)
-        Me.pcbLoading.Maximum = 7
-        Me.pcbLoading.Name = "pcbLoading"
-        Me.pcbLoading.Size = New System.Drawing.Size(968, 8)
-        Me.pcbLoading.Step = 1
-        Me.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
-        Me.pcbLoading.TabIndex = 104
-        Me.pcbLoading.Value = 7
-        Me.pcbLoading.Visible = False
-        '
-        'timerMain
-        '
-        Me.timerMain.Interval = 1000
-        '
-        'lblCopyright
-        '
-        Me.lblCopyright.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.lblCopyright.AutoSize = True
-        Me.lblCopyright.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lblCopyright.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCopyright.ForeColor = System.Drawing.Color.Black
-        Me.lblCopyright.Location = New System.Drawing.Point(573, 734)
-        Me.lblCopyright.Name = "lblCopyright"
-        Me.lblCopyright.Size = New System.Drawing.Size(229, 15)
-        Me.lblCopyright.TabIndex = 35
-        Me.lblCopyright.Text = "Programmed by Cesar Mendoza @aberuwu"
-        Me.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblCopyright.Visible = False
-        '
-        'backWork
-        '
-        Me.backWork.WorkerReportsProgress = True
-        Me.backWork.WorkerSupportsCancellation = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -863,6 +1068,8 @@ Partial Class frmMain
         CType(Me.spltMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spltMain.ResumeLayout(False)
         Me.ctmAnimeList.ResumeLayout(False)
+        Me.pnlHeader.ResumeLayout(False)
+        Me.pnlHeader.PerformLayout()
         Me.tsMain.ResumeLayout(False)
         Me.tsMain.PerformLayout()
         CType(Me.pcbtnDarkMode, System.ComponentModel.ISupportInitialize).EndInit()
@@ -942,4 +1149,14 @@ Partial Class frmMain
     Friend WithEvents srlstID As ColumnHeader
     Friend WithEvents tsmiListOptions As ToolStripMenuItem
     Friend WithEvents pcbLoading As MetroFramework.Controls.MetroProgressBar
+    Friend WithEvents pnlHeader As Panel
+    Friend WithEvents btnOpenHeader As Button
+    Friend WithEvents btnAboutHeader As Button
+    Friend WithEvents btnInfoSettingsHeader As Button
+    Friend WithEvents btnDeleteHeader As Button
+    Friend WithEvents btnEditHeader As Button
+    Friend WithEvents btnNewAnimeHeader As Button
+    Friend WithEvents btnSortHeader As Button
+    Friend WithEvents btnViewXmlHeader As Button
+    Friend WithEvents btnExportHeader As Button
 End Class

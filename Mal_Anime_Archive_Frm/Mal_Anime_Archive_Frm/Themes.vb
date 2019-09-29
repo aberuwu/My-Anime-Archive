@@ -1,6 +1,6 @@
 ﻿'---------------------------------------------
 ' File: Themes.vb
-' Purpose: Stores all color scheme methods
+' Usage: Stores all color scheme methods
 ' for the forms
 '---------------------------------------------
 
@@ -26,7 +26,6 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
-
         frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
@@ -47,16 +46,65 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
         End With
 
         With frmMain.btnSearch
             .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
         End With
     End Sub
 
@@ -99,6 +147,55 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.MediumPurple
             .FlatAppearance.MouseOverBackColor = Color.MediumPurple
@@ -151,16 +248,65 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.LightBlue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
         End With
 
         With frmMain.btnSearch
             .FlatAppearance.BorderColor = Color.LightBlue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
         End With
     End Sub
 
@@ -204,16 +350,65 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
         End With
 
         With frmMain.btnSearch
             .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.OrangeRed
-            .FlatAppearance.MouseDownBackColor = Color.Orange
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
         End With
     End Sub
 
@@ -254,6 +449,55 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.MediumPurple
             .FlatAppearance.MouseOverBackColor = Color.MediumPurple
@@ -309,16 +553,65 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
+
+        With frmMain.btnOpenHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnExportHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnViewXmlHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnSortHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnNewAnimeHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnEditHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnDeleteHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
+        With frmMain.btnInfoSettingsHeader
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
+
         With frmMain.btnRefresh
             .FlatAppearance.BorderColor = Color.LightBlue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
         End With
 
         With frmMain.btnSearch
             .FlatAppearance.BorderColor = Color.LightBlue
             .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.Blue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
         End With
     End Sub
 
