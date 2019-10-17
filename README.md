@@ -42,4 +42,5 @@ Upon startup you will be greeted by MAA!  You will be able to either open an exp
 
 # Future
 
--Future Support Notes
+-Future Support Notes<br/>
+-MAL Manga Support<br/>
