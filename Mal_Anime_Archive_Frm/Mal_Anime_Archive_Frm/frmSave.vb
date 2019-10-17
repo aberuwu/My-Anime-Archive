@@ -1,10 +1,10 @@
-﻿'**********************************************
+﻿'---------------------------------------------------
 '* File: frmSave.vb
 '* Purpose: Code in this form saves list array
 '*          data into user selected format
-'*          either XML, VSV, or SQL scripts
-'* Last Updated: 07/08/2019
-'***********************************************
+'*          either XML, CSV or JSON script
+'* Last Updated: 10/17/2019
+'--------------------------------------------------
 
 Imports System.Xml
 Imports Newtonsoft.Json
@@ -106,8 +106,10 @@ Public Class frmSave
 
         xmlOut.WriteStartDocument()
         xmlOut.WriteComment("XML File recreated by My Anime Archive Program.")
+        xmlOut.WriteComment("File generated on: " & DateTime.Today.ToString)
         xmlOut.WriteComment("Programmed by aberuwu")
-        xmlOut.WriteComment("Last updated: 5/24/2019")
+        xmlOut.WriteComment("Last updated: 10/17/2019")
+
         xmlOut.WriteStartElement("myanimelist")
 
         For i As Integer = 0 To 0

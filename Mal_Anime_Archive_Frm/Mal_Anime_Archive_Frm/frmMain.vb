@@ -1,34 +1,21 @@
 ﻿'------------------------------------------------------------------------------------------------------------------
-'* NOTE: THIS COMMIT IS STILL A WORK IN PROGRESS, I'M TESTING OUT THE SITE
 '* My Anime Archive! - .NET Framework
 '* Build: Alpha 1.0
 '* Programmed by: Cesar Mendoza @aberuwu
-'* Last Updated: 27/09/2019 - 17:10
+'* Last Updated: 10/17/2019
 '* Features:
 '*          -MAL XML File Visualization
-'*          -Export as XML, SQL, CSV   
+'*          -Export as XML, JSON, CSV  
 '*          -Anime list and user offline statistical analysis    
 '*          -List organization and visualisation
 '*          -List modification
+'*          -Online Anime info visualization (Jikan REST API)
 '*
 '*
 '* Visual Basic code files and forms:
 '*  
 '* -frmMain.vb:         Contains general code for main form visualization including listboxes,
 '*                      listviews, labels, imageboxes. Visualizes loaded XML data.
-'*
-'* -frmXml.vb:          Contains general code for the loading of data from user selected XML file.
-'*
-'* -frmSave.vb:         Contains general code for the exporting of program data to user specified format.
-'*
-'* -frmSortWindow.vb:   Contains general code for the sorting of program listboxes and listviews. 
-'* -frmUserInfo.vb:
-'* -frmWelcome.vb:
-'* -frmWorking.vb:
-'* -WelcomeOpen.vb:
-'* -Anime.vb:
-'* -User.vb:
-'*
 '------------------------------------------------------------------------------------------------------------------
 
 Imports System.Windows.Forms.DataVisualization.Charting
@@ -212,8 +199,116 @@ Public Class frmMain
         End Try
     End Function
 
-    Private Sub lstwAnimeSearch_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeSearch.ItemSelectionChanged
+    '------------------------
+    ' JIKAN REST API Call
+    '-------------------------
+    Async Sub loadDetails(id As String)
+        Try
+            mtsLoading.Visible = True
+            lblNoConnection.Visible = False
+            Dim jikan As IJikan = New Jikan(True)
+            Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(id)
+            Dim producers As List(Of String) = New List(Of String)
 
+            If IsNothing(anime.Synopsis) Then
+                rctSynopsis.Text = "No Synopsis Available"
+            Else
+                rctSynopsis.Text = anime.Synopsis
+            End If
+
+            If IsNothing(anime.Rating) Then
+                lblMALRating.Text = "--"
+            Else
+                lblMALRating.Text = anime.Rating
+            End If
+
+            If IsNothing(anime.Premiered) Then
+                lblPremiered.Text = "--"
+            Else
+                lblPremiered.Text = anime.Premiered
+            End If
+
+            If IsNothing(anime.Score) Then
+                lblMALScore.Text = "--"
+            Else
+                lblMALScore.Text = anime.Score
+            End If
+
+            If IsNothing(anime.Status) Then
+                lblMALStatus.Text = "--"
+            Else
+                lblMALStatus.Text = anime.Status
+            End If
+
+            If IsNothing(anime.Duration) Then
+                lblDuration.Text = "--"
+            Else
+                lblDuration.Text = anime.Duration
+            End If
+
+            If IsNothing(anime.Popularity) Then
+                lblPopularity.Text = "--"
+            Else
+                lblPopularity.Text = anime.Popularity
+            End If
+
+            If IsNothing(anime.Rank) Then
+                lblRank.Text = "--"
+            Else
+                lblRank.Text = anime.Rank
+            End If
+
+            If IsNothing(anime.Members) Then
+                lblMembers.Text = "--"
+            Else
+                lblMembers.Text = anime.Members
+            End If
+
+            If IsNothing(anime.Favorites) Then
+                lblFavorites.Text = "--"
+            Else
+                lblFavorites.Text = anime.Favorites
+            End If
+
+            If IsNothing(anime.Broadcast) Then
+                lblBrodcast.Text = "--"
+            Else
+                lblBrodcast.Text = anime.Broadcast
+            End If
+
+            If IsNothing(anime.ImageURL) Then
+
+            Else
+                pcbAnimeCover.Load(anime.ImageURL)
+            End If
+
+            mtsLoading.Visible = False
+        Catch ex As Exception
+            mtsLoading.Visible = True
+            pcbAnimeCover.Image = My.Resources.sorry
+            rctSynopsis.Clear()
+            lblNoConnection.Visible = True
+        End Try
+    End Sub
+
+    Private Sub chkViewDetails_CheckedChanged(sender As Object, e As EventArgs) Handles chkViewDetails.CheckedChanged
+        Dim anId As String = ""
+        If chkViewDetails.Checked = True Then
+            For Each Itm As ListViewItem In lstwAnimeSearch.Items
+                If Itm.SubItems.Count < 2 OrElse Itm.SubItems(1).Text = "" Then
+                    anId = ""
+                Else
+                    anId = lstwAnimeSearch.SelectedItems(0).SubItems(1).Text
+                End If
+            Next
+            gbxDetailView.Visible = True
+            loadDetails(anId)
+        Else
+            gbxDetailView.Visible = False
+        End If
+    End Sub
+
+    Private Sub lstwAnimeSearch_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeSearch.ItemSelectionChanged
         Dim anId As String = ""
         If lstwAnimeSearch.SelectedItems.Count = -1 Then
             Return
@@ -228,6 +323,10 @@ Public Class frmMain
                     anId = lstwAnimeSearch.SelectedItems(0).SubItems(1).Text
                 End If
             Next
+
+            If chkViewDetails.Checked = True Then
+                loadDetails(anId)
+            End If
 
             Dim animeTitle As String = lstwAnimeSearch.SelectedItems(0).SubItems(0).Text
             For i As Integer = 0 To animeList.Count() - 1
@@ -255,7 +354,6 @@ Public Class frmMain
         Try
             anId = lstwAnimeMain.FocusedItem.SubItems(0).Text
 
-            'loadApiInfo(anId)
             For i As Integer = 0 To animeList.Count() - 1
                 If sortedList(i).AnimeId = anId Then
                     lblTitle.Text = sortedList(i).Title
@@ -558,26 +656,6 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub lstwAnimeSearch_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles lstwAnimeSearch.DrawColumnHeader
-        'Dim sf As New StringFormat()
-        'If themePurple = True Then
-        '    e.Graphics.FillRectangle(Brushes.MediumOrchid, e.Bounds)
-        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        'ElseIf themeBlue = True Then
-        '    e.Graphics.FillRectangle(Brushes.RoyalBlue, e.Bounds)
-        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        'Else
-        '    e.Graphics.FillRectangle(Brushes.Tomato, e.Bounds)
-        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        'End If
-
-        'If darkModeOn = False Then
-        '    e.DrawText()
-        'Else
-        '    e.Graphics.DrawString(e.Header.Text, Me.lstwAnimeSearch.Font, Brushes.White, e.Bounds, sf)
-        'End If
-    End Sub
-
     Private Sub lstwAnimeSearch_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles lstwAnimeSearch.DrawSubItem
         Dim sf As New StringFormat()
         If e.Item.Selected = True Then
@@ -728,7 +806,6 @@ Public Class frmMain
     Private Sub btnInfoSettingsHeader_Click(sender As Object, e As EventArgs) Handles btnInfoSettingsHeader.Click
         btnUserInfo_Click(Nothing, Nothing)
     End Sub
-
 
 End Class
 Public Class ListViewDoubleBuffered

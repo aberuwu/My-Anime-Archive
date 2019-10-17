@@ -186,38 +186,42 @@ Public Class frmEditAnime
     ' JIKAN REST API Call
     '-------------------------
     Async Sub loadApiInfo(id As String)
-        Dim jikan As IJikan = New Jikan(True)
-        Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
+        Try
+            Dim jikan As IJikan = New Jikan(True)
+            Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
 
-        If IsNothing(anime.Synopsis) Then
-            rctSynopsis.Text = "No Synopsis Available"
-        Else
-            rctSynopsis.Text = anime.Synopsis
-        End If
+            If IsNothing(anime.Synopsis) Then
+                rctSynopsis.Text = "No Synopsis Available"
+            Else
+                rctSynopsis.Text = anime.Synopsis
+            End If
 
-        If IsNothing(anime.Rating) Then
-            lblMALRating.Text = "--"
-        Else
-            lblMALRating.Text = anime.Rating
-        End If
+            If IsNothing(anime.Rating) Then
+                lblMALRating.Text = "--"
+            Else
+                lblMALRating.Text = anime.Rating
+            End If
 
-        If IsNothing(anime.Premiered) Then
-            lblPremiered.Text = "--"
-        Else
-            lblPremiered.Text = anime.Premiered
-        End If
+            If IsNothing(anime.Premiered) Then
+                lblPremiered.Text = "--"
+            Else
+                lblPremiered.Text = anime.Premiered
+            End If
 
-        If IsNothing(anime.Score) Then
-            lblMALScore.Text = "--"
-        Else
-            lblMALScore.Text = anime.Score
-        End If
+            If IsNothing(anime.Score) Then
+                lblMALScore.Text = "--"
+            Else
+                lblMALScore.Text = anime.Score
+            End If
 
-        If IsNothing(anime.ImageURL) Then
+            If IsNothing(anime.ImageURL) Then
 
-        Else
-            pcbAnimeCover.Load(anime.ImageURL)
-        End If
+            Else
+                pcbAnimeCover.Load(anime.ImageURL)
+            End If
+        Catch ex As Exception
+            'pcbAnimeCover.Image = My.Resources.
+        End Try
     End Sub
 
     Private Sub chkViewComments_CheckedChanged(sender As Object, e As EventArgs) Handles chkViewComments.CheckedChanged
@@ -448,8 +452,6 @@ Public Class frmEditAnime
             .FlatAppearance.MouseDownBackColor = Color.DarkRed
         End With
     End Sub
-
-
 
     Private Sub purpleThemeDarkMode()
         Me.BackgroundImage = My.Resources.purple_back

@@ -127,6 +127,37 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
+        frmMain.lblMALScoreHeading.ForeColor = Color.Black
+        frmMain.lblMALRatingHeading.ForeColor = Color.Black
+        frmMain.lblPremieredHeading.ForeColor = Color.Black
+        frmMain.lblStatusHeading.ForeColor = Color.Black
+        frmMain.lblMALStatusHeading.ForeColor = Color.Black
+        frmMain.lblBrodcastHeading.ForeColor = Color.Black
+        frmMain.lblDurationHeading.ForeColor = Color.Black
+        frmMain.lblPopularityHeading.ForeColor = Color.Black
+        frmMain.lblRankHeading.ForeColor = Color.Black
+        frmMain.lblMembersHeading.ForeColor = Color.Black
+        frmMain.lblFavoritesHeading.ForeColor = Color.Black
+        frmMain.lblCommunityHeading.ForeColor = Color.FromArgb(192, 0, 192)
+
+        frmMain.lblMALScore.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMALRating.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblPremiered.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblStatus.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMALStatus.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblBrodcast.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblDuration.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblPopularity.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblRank.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMembers.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblFavorites.ForeColor = Color.FromArgb(192, 0, 192)
+
+        frmMain.rctSynopsis.ForeColor = Color.Black
+        frmMain.rctSynopsis.BackColor = Color.WhiteSmoke
+        frmMain.lblNoConnection.ForeColor = Color.Black
+        frmMain.mtsLoading.BackColor = Color.WhiteSmoke
+
+
         frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
@@ -424,6 +455,36 @@ Public Class Themes
         frmMain.lblStatus.ForeColor = Color.White
         frmMain.lstwAnimeMain.ForeColor = Color.White
         frmMain.lstwAnimeSearch.ForeColor = Color.White
+
+        frmMain.lblMALScoreHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMALRatingHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblPremieredHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMALStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblBrodcastHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblDurationHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblPopularityHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblRankHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMembersHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblFavoritesHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblCommunityHeading.ForeColor = Color.FromArgb(209, 122, 200)
+
+        frmMain.lblMALScore.ForeColor = Color.White
+        frmMain.lblMALRating.ForeColor = Color.White
+        frmMain.lblPremiered.ForeColor = Color.White
+        frmMain.lblStatus.ForeColor = Color.White
+        frmMain.lblMALStatus.ForeColor = Color.White
+        frmMain.lblBrodcast.ForeColor = Color.White
+        frmMain.lblDuration.ForeColor = Color.White
+        frmMain.lblPopularity.ForeColor = Color.White
+        frmMain.lblRank.ForeColor = Color.White
+        frmMain.lblMembers.ForeColor = Color.White
+        frmMain.lblFavorites.ForeColor = Color.White
+
+        frmMain.rctSynopsis.ForeColor = Color.White
+        frmMain.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.lblNoConnection.ForeColor = Color.White
+        frmMain.mtsLoading.BackColor = Color.FromArgb(44, 44, 44)
 
         frmMain.lblAnimeIdHeading.ForeColor = Color.FromArgb(209, 122, 200)
         frmMain.lblTypeHeading.ForeColor = Color.FromArgb(209, 122, 200)

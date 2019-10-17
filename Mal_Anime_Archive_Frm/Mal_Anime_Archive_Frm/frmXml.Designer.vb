@@ -47,9 +47,9 @@ Partial Class frmXml
         Me.rtbXml.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.rtbXml.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.rtbXml.BackColor = System.Drawing.SystemColors.Control
         Me.rtbXml.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rtbXml.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtbXml.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtbXml.Location = New System.Drawing.Point(-1, 63)
         Me.rtbXml.Name = "rtbXml"
         Me.rtbXml.ReadOnly = True
