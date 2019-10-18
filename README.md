@@ -1,5 +1,7 @@
 ![alt text](https://i.imgur.com/XG83qib.png)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 # My Anime Archive! v1.0
 MAA allows you to have an offline archive of your anime list from MyAnimeList.net!<br/>
 Keep your list safe and backed up with an intuitive and customizable interface.<br/>
