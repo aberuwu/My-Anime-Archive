@@ -38,6 +38,7 @@ Upon startup you will be greeted by MAA!  You will be able to either open an exp
 -Edit Anime:  Allows you to edit score, status, watched episodes, etc. (if online anime art will be visualized)<br/>
 -Delete Anime: Allows you to delete selected anime from your list<br/>
 -User/Settings: Allows you to view your offline profile with your list's statistics, also a place to edit program settings<br/>
+-View Online Details: Allows you to view detailed anime information from MyAnimeList.net, feature only available when online<br/>
 
 
 # Future
