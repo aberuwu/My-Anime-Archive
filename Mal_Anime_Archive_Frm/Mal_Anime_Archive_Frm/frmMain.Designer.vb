@@ -63,8 +63,7 @@ Partial Class frmMain
         Me.srlstName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.srlstID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.gbxDetailView = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblQuickQueryHeading = New System.Windows.Forms.Label()
+        Me.btnMALQuery = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mtsLoading = New MetroFramework.Controls.MetroProgressSpinner()
         Me.lblNoConnection = New System.Windows.Forms.Label()
@@ -175,7 +174,7 @@ Partial Class frmMain
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(14, 38)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(110, 25)
+        Me.lblTitle.Size = New System.Drawing.Size(139, 32)
         Me.lblTitle.TabIndex = 3
         Me.lblTitle.Text = "Anime Title"
         '
@@ -187,7 +186,7 @@ Partial Class frmMain
         Me.lblId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblId.Location = New System.Drawing.Point(92, 75)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(50, 21)
+        Me.lblId.Size = New System.Drawing.Size(60, 28)
         Me.lblId.TabIndex = 5
         Me.lblId.Text = "####"
         '
@@ -199,7 +198,7 @@ Partial Class frmMain
         Me.lblAnimeIdHeading.ForeColor = System.Drawing.Color.Black
         Me.lblAnimeIdHeading.Location = New System.Drawing.Point(14, 72)
         Me.lblAnimeIdHeading.Name = "lblAnimeIdHeading"
-        Me.lblAnimeIdHeading.Size = New System.Drawing.Size(37, 25)
+        Me.lblAnimeIdHeading.Size = New System.Drawing.Size(45, 32)
         Me.lblAnimeIdHeading.TabIndex = 4
         Me.lblAnimeIdHeading.Text = "ID:"
         '
@@ -211,7 +210,7 @@ Partial Class frmMain
         Me.lblType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblType.Location = New System.Drawing.Point(313, 75)
         Me.lblType.Name = "lblType"
-        Me.lblType.Size = New System.Drawing.Size(50, 21)
+        Me.lblType.Size = New System.Drawing.Size(60, 28)
         Me.lblType.TabIndex = 7
         Me.lblType.Text = "####"
         '
@@ -223,7 +222,7 @@ Partial Class frmMain
         Me.lblTypeHeading.ForeColor = System.Drawing.Color.Black
         Me.lblTypeHeading.Location = New System.Drawing.Point(204, 72)
         Me.lblTypeHeading.Name = "lblTypeHeading"
-        Me.lblTypeHeading.Size = New System.Drawing.Size(57, 25)
+        Me.lblTypeHeading.Size = New System.Drawing.Size(72, 32)
         Me.lblTypeHeading.TabIndex = 6
         Me.lblTypeHeading.Text = "Type:"
         '
@@ -235,7 +234,7 @@ Partial Class frmMain
         Me.lblEpisodes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblEpisodes.Location = New System.Drawing.Point(313, 106)
         Me.lblEpisodes.Name = "lblEpisodes"
-        Me.lblEpisodes.Size = New System.Drawing.Size(50, 21)
+        Me.lblEpisodes.Size = New System.Drawing.Size(60, 28)
         Me.lblEpisodes.TabIndex = 9
         Me.lblEpisodes.Text = "####"
         '
@@ -247,7 +246,7 @@ Partial Class frmMain
         Me.lblEpisodesHeading.ForeColor = System.Drawing.Color.Black
         Me.lblEpisodesHeading.Location = New System.Drawing.Point(204, 103)
         Me.lblEpisodesHeading.Name = "lblEpisodesHeading"
-        Me.lblEpisodesHeading.Size = New System.Drawing.Size(91, 25)
+        Me.lblEpisodesHeading.Size = New System.Drawing.Size(114, 32)
         Me.lblEpisodesHeading.TabIndex = 8
         Me.lblEpisodesHeading.Text = "Episodes:"
         '
@@ -259,7 +258,7 @@ Partial Class frmMain
         Me.lblWatched.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblWatched.Location = New System.Drawing.Point(489, 105)
         Me.lblWatched.Name = "lblWatched"
-        Me.lblWatched.Size = New System.Drawing.Size(50, 21)
+        Me.lblWatched.Size = New System.Drawing.Size(60, 28)
         Me.lblWatched.TabIndex = 11
         Me.lblWatched.Text = "####"
         '
@@ -271,7 +270,7 @@ Partial Class frmMain
         Me.lblWatchedHeading.ForeColor = System.Drawing.Color.Black
         Me.lblWatchedHeading.Location = New System.Drawing.Point(376, 102)
         Me.lblWatchedHeading.Name = "lblWatchedHeading"
-        Me.lblWatchedHeading.Size = New System.Drawing.Size(92, 25)
+        Me.lblWatchedHeading.Size = New System.Drawing.Size(117, 32)
         Me.lblWatchedHeading.TabIndex = 10
         Me.lblWatchedHeading.Text = "Watched:"
         '
@@ -283,7 +282,7 @@ Partial Class frmMain
         Me.lblScore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblScore.Location = New System.Drawing.Point(489, 75)
         Me.lblScore.Name = "lblScore"
-        Me.lblScore.Size = New System.Drawing.Size(50, 21)
+        Me.lblScore.Size = New System.Drawing.Size(60, 28)
         Me.lblScore.TabIndex = 17
         Me.lblScore.Text = "####"
         '
@@ -295,7 +294,7 @@ Partial Class frmMain
         Me.lblScoreHeading.ForeColor = System.Drawing.Color.Black
         Me.lblScoreHeading.Location = New System.Drawing.Point(376, 72)
         Me.lblScoreHeading.Name = "lblScoreHeading"
-        Me.lblScoreHeading.Size = New System.Drawing.Size(64, 25)
+        Me.lblScoreHeading.Size = New System.Drawing.Size(81, 32)
         Me.lblScoreHeading.TabIndex = 16
         Me.lblScoreHeading.Text = "Score:"
         '
@@ -307,7 +306,7 @@ Partial Class frmMain
         Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblStatus.Location = New System.Drawing.Point(93, 106)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(50, 21)
+        Me.lblStatus.Size = New System.Drawing.Size(60, 28)
         Me.lblStatus.TabIndex = 19
         Me.lblStatus.Text = "####"
         '
@@ -319,7 +318,7 @@ Partial Class frmMain
         Me.lblStatusHeading.ForeColor = System.Drawing.Color.Black
         Me.lblStatusHeading.Location = New System.Drawing.Point(14, 103)
         Me.lblStatusHeading.Name = "lblStatusHeading"
-        Me.lblStatusHeading.Size = New System.Drawing.Size(69, 25)
+        Me.lblStatusHeading.Size = New System.Drawing.Size(88, 32)
         Me.lblStatusHeading.TabIndex = 18
         Me.lblStatusHeading.Text = "Status:"
         '
@@ -336,16 +335,17 @@ Partial Class frmMain
         Me.txtSearch.ForeColor = System.Drawing.Color.Black
         Me.txtSearch.Location = New System.Drawing.Point(1, 1)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(230, 26)
+        Me.txtSearch.Size = New System.Drawing.Size(229, 32)
         Me.txtSearch.TabIndex = 23
         Me.ttMain.SetToolTip(Me.txtSearch, "Search Anime Name")
         '
         'ssMain
         '
+        Me.ssMain.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ssMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFileLable, Me.tspb1})
-        Me.ssMain.Location = New System.Drawing.Point(0, 732)
+        Me.ssMain.Location = New System.Drawing.Point(0, 728)
         Me.ssMain.Name = "ssMain"
-        Me.ssMain.Size = New System.Drawing.Size(1348, 22)
+        Me.ssMain.Size = New System.Drawing.Size(1348, 26)
         Me.ssMain.TabIndex = 25
         Me.ssMain.Text = "StatusStrip1"
         '
@@ -354,14 +354,14 @@ Partial Class frmMain
         Me.tsFileLable.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tsFileLable.ForeColor = System.Drawing.Color.Black
         Me.tsFileLable.Name = "tsFileLable"
-        Me.tsFileLable.Size = New System.Drawing.Size(45, 17)
+        Me.tsFileLable.Size = New System.Drawing.Size(56, 20)
         Me.tsFileLable.Text = "FilePath"
         '
         'tspb1
         '
         Me.tspb1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.tspb1.Name = "tspb1"
-        Me.tspb1.Size = New System.Drawing.Size(100, 16)
+        Me.tspb1.Size = New System.Drawing.Size(100, 18)
         Me.tspb1.Visible = False
         '
         'lblDarkMode
@@ -373,7 +373,7 @@ Partial Class frmMain
         Me.lblDarkMode.ForeColor = System.Drawing.Color.Black
         Me.lblDarkMode.Location = New System.Drawing.Point(801, 100)
         Me.lblDarkMode.Name = "lblDarkMode"
-        Me.lblDarkMode.Size = New System.Drawing.Size(70, 17)
+        Me.lblDarkMode.Size = New System.Drawing.Size(94, 23)
         Me.lblDarkMode.TabIndex = 28
         Me.lblDarkMode.Text = "Dark Mode"
         '
@@ -387,9 +387,9 @@ Partial Class frmMain
         Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRefresh.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRefresh.ForeColor = System.Drawing.Color.Black
-        Me.btnRefresh.Location = New System.Drawing.Point(233, 1)
+        Me.btnRefresh.Location = New System.Drawing.Point(230, 0)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(33, 26)
+        Me.btnRefresh.Size = New System.Drawing.Size(33, 27)
         Me.btnRefresh.TabIndex = 41
         Me.btnRefresh.Text = "⟲"
         Me.ttMain.SetToolTip(Me.btnRefresh, "Refresh List")
@@ -415,18 +415,17 @@ Partial Class frmMain
         '
         'TextBox1
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.TextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TextBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(540, 21)
+        Me.TextBox1.ForeColor = System.Drawing.Color.Gray
+        Me.TextBox1.Location = New System.Drawing.Point(18, 21)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(321, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(321, 32)
         Me.TextBox1.TabIndex = 82
-        Me.ttMain.SetToolTip(Me.TextBox1, "Search Anime Name")
+        Me.TextBox1.Text = "🔎 Query MAL Database"
         '
         'spltMain
         '
@@ -490,9 +489,9 @@ Partial Class frmMain
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearch.ForeColor = System.Drawing.Color.Black
-        Me.btnSearch.Location = New System.Drawing.Point(267, 1)
+        Me.btnSearch.Location = New System.Drawing.Point(264, 0)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(75, 26)
+        Me.btnSearch.Size = New System.Drawing.Size(78, 27)
         Me.btnSearch.TabIndex = 40
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = False
@@ -502,7 +501,7 @@ Partial Class frmMain
         Me.vscrSearchList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.vscrSearchList.LargeChange = 1
-        Me.vscrSearchList.Location = New System.Drawing.Point(326, 9)
+        Me.vscrSearchList.Location = New System.Drawing.Point(331, 9)
         Me.vscrSearchList.Maximum = 0
         Me.vscrSearchList.Name = "vscrSearchList"
         Me.vscrSearchList.Size = New System.Drawing.Size(16, 740)
@@ -536,28 +535,29 @@ Partial Class frmMain
         '
         'ctmAnimeList
         '
+        Me.ctmAnimeList.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ctmAnimeList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiEdit, Me.tsmiListOptions, Me.tsmiDelete, Me.tsmiVisitPage})
         Me.ctmAnimeList.Name = "ctmAnimeList"
-        Me.ctmAnimeList.Size = New System.Drawing.Size(153, 92)
+        Me.ctmAnimeList.Size = New System.Drawing.Size(180, 108)
         '
         'tsmiEdit
         '
         Me.tsmiEdit.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_icon
         Me.tsmiEdit.Name = "tsmiEdit"
-        Me.tsmiEdit.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiEdit.Size = New System.Drawing.Size(179, 26)
         Me.tsmiEdit.Text = "&Edit"
         '
         'tsmiListOptions
         '
         Me.tsmiListOptions.Name = "tsmiListOptions"
-        Me.tsmiListOptions.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiListOptions.Size = New System.Drawing.Size(179, 26)
         Me.tsmiListOptions.Text = "L&ist Options"
         '
         'tsmiDelete
         '
         Me.tsmiDelete.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_icon
         Me.tsmiDelete.Name = "tsmiDelete"
-        Me.tsmiDelete.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiDelete.Size = New System.Drawing.Size(179, 26)
         Me.tsmiDelete.Text = "D&elete"
         '
         'tsmiVisitPage
@@ -565,7 +565,7 @@ Partial Class frmMain
         Me.tsmiVisitPage.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tsmiVisitPage.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.MAL
         Me.tsmiVisitPage.Name = "tsmiVisitPage"
-        Me.tsmiVisitPage.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiVisitPage.Size = New System.Drawing.Size(179, 26)
         Me.tsmiVisitPage.Text = "V&isit MAL Page"
         '
         'imgLst
@@ -586,7 +586,7 @@ Partial Class frmMain
         Me.lblNoResultFound.ForeColor = System.Drawing.Color.Gray
         Me.lblNoResultFound.Location = New System.Drawing.Point(89, 326)
         Me.lblNoResultFound.Name = "lblNoResultFound"
-        Me.lblNoResultFound.Size = New System.Drawing.Size(165, 30)
+        Me.lblNoResultFound.Size = New System.Drawing.Size(210, 37)
         Me.lblNoResultFound.TabIndex = 41
         Me.lblNoResultFound.Text = "No Result Found"
         Me.lblNoResultFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -629,9 +629,8 @@ Partial Class frmMain
         Me.gbxDetailView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gbxDetailView.Controls.Add(Me.Button1)
+        Me.gbxDetailView.Controls.Add(Me.btnMALQuery)
         Me.gbxDetailView.Controls.Add(Me.TextBox1)
-        Me.gbxDetailView.Controls.Add(Me.lblQuickQueryHeading)
         Me.gbxDetailView.Controls.Add(Me.Label1)
         Me.gbxDetailView.Controls.Add(Me.mtsLoading)
         Me.gbxDetailView.Controls.Add(Me.lblNoConnection)
@@ -665,35 +664,21 @@ Partial Class frmMain
         Me.gbxDetailView.TabStop = False
         Me.gbxDetailView.Visible = False
         '
-        'Button1
+        'btnMALQuery
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(862, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 26)
-        Me.Button1.TabIndex = 83
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'lblQuickQueryHeading
-        '
-        Me.lblQuickQueryHeading.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblQuickQueryHeading.AutoSize = True
-        Me.lblQuickQueryHeading.BackColor = System.Drawing.Color.Transparent
-        Me.lblQuickQueryHeading.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblQuickQueryHeading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblQuickQueryHeading.Location = New System.Drawing.Point(448, 22)
-        Me.lblQuickQueryHeading.Name = "lblQuickQueryHeading"
-        Me.lblQuickQueryHeading.Size = New System.Drawing.Size(88, 21)
-        Me.lblQuickQueryHeading.TabIndex = 81
-        Me.lblQuickQueryHeading.Text = "MAL query:"
+        Me.btnMALQuery.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnMALQuery.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple
+        Me.btnMALQuery.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnMALQuery.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnMALQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMALQuery.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMALQuery.ForeColor = System.Drawing.Color.Black
+        Me.btnMALQuery.Location = New System.Drawing.Point(340, 21)
+        Me.btnMALQuery.Name = "btnMALQuery"
+        Me.btnMALQuery.Size = New System.Drawing.Size(75, 27)
+        Me.btnMALQuery.TabIndex = 83
+        Me.btnMALQuery.Text = "Search"
+        Me.btnMALQuery.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -704,9 +689,9 @@ Partial Class frmMain
         Me.Label1.ForeColor = System.Drawing.Color.Gray
         Me.Label1.Location = New System.Drawing.Point(6, 556)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(292, 21)
+        Me.Label1.Size = New System.Drawing.Size(431, 28)
         Me.Label1.TabIndex = 80
-        Me.Label1.Text = "Anime information from MyAnimeList.net"
+        Me.Label1.Text = "Anime information scraped from MyAnimeList.net"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'mtsLoading
@@ -737,7 +722,7 @@ Partial Class frmMain
         Me.lblNoConnection.ForeColor = System.Drawing.Color.Gray
         Me.lblNoConnection.Location = New System.Drawing.Point(230, 370)
         Me.lblNoConnection.Name = "lblNoConnection"
-        Me.lblNoConnection.Size = New System.Drawing.Size(531, 60)
+        Me.lblNoConnection.Size = New System.Drawing.Size(663, 74)
         Me.lblNoConnection.TabIndex = 78
         Me.lblNoConnection.Text = "No connection!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Please connect to the internet to access online features!"
         Me.lblNoConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -751,7 +736,7 @@ Partial Class frmMain
         Me.lblCommunityHeading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblCommunityHeading.Location = New System.Drawing.Point(583, 75)
         Me.lblCommunityHeading.Name = "lblCommunityHeading"
-        Me.lblCommunityHeading.Size = New System.Drawing.Size(152, 21)
+        Me.lblCommunityHeading.Size = New System.Drawing.Size(185, 28)
         Me.lblCommunityHeading.TabIndex = 77
         Me.lblCommunityHeading.Text = "Community Statistics"
         '
@@ -762,7 +747,7 @@ Partial Class frmMain
         Me.lblFavorites.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblFavorites.Location = New System.Drawing.Point(688, 226)
         Me.lblFavorites.Name = "lblFavorites"
-        Me.lblFavorites.Size = New System.Drawing.Size(46, 21)
+        Me.lblFavorites.Size = New System.Drawing.Size(60, 28)
         Me.lblFavorites.TabIndex = 76
         Me.lblFavorites.Text = "####"
         '
@@ -773,7 +758,7 @@ Partial Class frmMain
         Me.lblFavoritesHeading.ForeColor = System.Drawing.Color.Black
         Me.lblFavoritesHeading.Location = New System.Drawing.Point(583, 226)
         Me.lblFavoritesHeading.Name = "lblFavoritesHeading"
-        Me.lblFavoritesHeading.Size = New System.Drawing.Size(75, 21)
+        Me.lblFavoritesHeading.Size = New System.Drawing.Size(92, 28)
         Me.lblFavoritesHeading.TabIndex = 75
         Me.lblFavoritesHeading.Text = "Favorites"
         '
@@ -784,7 +769,7 @@ Partial Class frmMain
         Me.lblMembers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblMembers.Location = New System.Drawing.Point(688, 189)
         Me.lblMembers.Name = "lblMembers"
-        Me.lblMembers.Size = New System.Drawing.Size(46, 21)
+        Me.lblMembers.Size = New System.Drawing.Size(60, 28)
         Me.lblMembers.TabIndex = 74
         Me.lblMembers.Text = "####"
         '
@@ -795,7 +780,7 @@ Partial Class frmMain
         Me.lblMembersHeading.ForeColor = System.Drawing.Color.Black
         Me.lblMembersHeading.Location = New System.Drawing.Point(583, 189)
         Me.lblMembersHeading.Name = "lblMembersHeading"
-        Me.lblMembersHeading.Size = New System.Drawing.Size(80, 21)
+        Me.lblMembersHeading.Size = New System.Drawing.Size(98, 28)
         Me.lblMembersHeading.TabIndex = 73
         Me.lblMembersHeading.Text = "Members"
         '
@@ -806,7 +791,7 @@ Partial Class frmMain
         Me.lblRank.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblRank.Location = New System.Drawing.Point(688, 152)
         Me.lblRank.Name = "lblRank"
-        Me.lblRank.Size = New System.Drawing.Size(46, 21)
+        Me.lblRank.Size = New System.Drawing.Size(60, 28)
         Me.lblRank.TabIndex = 72
         Me.lblRank.Text = "####"
         '
@@ -817,7 +802,7 @@ Partial Class frmMain
         Me.lblRankHeading.ForeColor = System.Drawing.Color.Black
         Me.lblRankHeading.Location = New System.Drawing.Point(583, 152)
         Me.lblRankHeading.Name = "lblRankHeading"
-        Me.lblRankHeading.Size = New System.Drawing.Size(64, 21)
+        Me.lblRankHeading.Size = New System.Drawing.Size(80, 28)
         Me.lblRankHeading.TabIndex = 71
         Me.lblRankHeading.Text = "Ranked"
         '
@@ -828,7 +813,7 @@ Partial Class frmMain
         Me.lblPopularity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblPopularity.Location = New System.Drawing.Point(688, 115)
         Me.lblPopularity.Name = "lblPopularity"
-        Me.lblPopularity.Size = New System.Drawing.Size(46, 21)
+        Me.lblPopularity.Size = New System.Drawing.Size(60, 28)
         Me.lblPopularity.TabIndex = 70
         Me.lblPopularity.Text = "####"
         '
@@ -839,7 +824,7 @@ Partial Class frmMain
         Me.lblPopularityHeading.ForeColor = System.Drawing.Color.Black
         Me.lblPopularityHeading.Location = New System.Drawing.Point(583, 115)
         Me.lblPopularityHeading.Name = "lblPopularityHeading"
-        Me.lblPopularityHeading.Size = New System.Drawing.Size(83, 21)
+        Me.lblPopularityHeading.Size = New System.Drawing.Size(103, 28)
         Me.lblPopularityHeading.TabIndex = 69
         Me.lblPopularityHeading.Text = "Popularity"
         '
@@ -850,7 +835,7 @@ Partial Class frmMain
         Me.lblBrodcast.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblBrodcast.Location = New System.Drawing.Point(342, 244)
         Me.lblBrodcast.Name = "lblBrodcast"
-        Me.lblBrodcast.Size = New System.Drawing.Size(46, 21)
+        Me.lblBrodcast.Size = New System.Drawing.Size(60, 28)
         Me.lblBrodcast.TabIndex = 68
         Me.lblBrodcast.Text = "####"
         '
@@ -861,7 +846,7 @@ Partial Class frmMain
         Me.lblBrodcastHeading.ForeColor = System.Drawing.Color.Black
         Me.lblBrodcastHeading.Location = New System.Drawing.Point(242, 242)
         Me.lblBrodcastHeading.Name = "lblBrodcastHeading"
-        Me.lblBrodcastHeading.Size = New System.Drawing.Size(75, 21)
+        Me.lblBrodcastHeading.Size = New System.Drawing.Size(90, 28)
         Me.lblBrodcastHeading.TabIndex = 67
         Me.lblBrodcastHeading.Text = "Brodcast"
         '
@@ -872,7 +857,7 @@ Partial Class frmMain
         Me.lblDuration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblDuration.Location = New System.Drawing.Point(343, 283)
         Me.lblDuration.Name = "lblDuration"
-        Me.lblDuration.Size = New System.Drawing.Size(46, 21)
+        Me.lblDuration.Size = New System.Drawing.Size(60, 28)
         Me.lblDuration.TabIndex = 66
         Me.lblDuration.Text = "####"
         '
@@ -883,7 +868,7 @@ Partial Class frmMain
         Me.lblDurationHeading.ForeColor = System.Drawing.Color.Black
         Me.lblDurationHeading.Location = New System.Drawing.Point(242, 283)
         Me.lblDurationHeading.Name = "lblDurationHeading"
-        Me.lblDurationHeading.Size = New System.Drawing.Size(73, 21)
+        Me.lblDurationHeading.Size = New System.Drawing.Size(91, 28)
         Me.lblDurationHeading.TabIndex = 65
         Me.lblDurationHeading.Text = "Duration"
         '
@@ -894,7 +879,7 @@ Partial Class frmMain
         Me.lblMALStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblMALStatus.Location = New System.Drawing.Point(343, 199)
         Me.lblMALStatus.Name = "lblMALStatus"
-        Me.lblMALStatus.Size = New System.Drawing.Size(46, 21)
+        Me.lblMALStatus.Size = New System.Drawing.Size(60, 28)
         Me.lblMALStatus.TabIndex = 64
         Me.lblMALStatus.Text = "####"
         '
@@ -905,7 +890,7 @@ Partial Class frmMain
         Me.lblMALStatusHeading.ForeColor = System.Drawing.Color.Black
         Me.lblMALStatusHeading.Location = New System.Drawing.Point(242, 199)
         Me.lblMALStatusHeading.Name = "lblMALStatusHeading"
-        Me.lblMALStatusHeading.Size = New System.Drawing.Size(93, 21)
+        Me.lblMALStatusHeading.Size = New System.Drawing.Size(114, 28)
         Me.lblMALStatusHeading.TabIndex = 61
         Me.lblMALStatusHeading.Text = "MAL Status"
         '
@@ -916,7 +901,7 @@ Partial Class frmMain
         Me.lblMALRating.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblMALRating.Location = New System.Drawing.Point(343, 115)
         Me.lblMALRating.Name = "lblMALRating"
-        Me.lblMALRating.Size = New System.Drawing.Size(46, 21)
+        Me.lblMALRating.Size = New System.Drawing.Size(60, 28)
         Me.lblMALRating.TabIndex = 60
         Me.lblMALRating.Text = "####"
         '
@@ -927,7 +912,7 @@ Partial Class frmMain
         Me.lblPremiered.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblPremiered.Location = New System.Drawing.Point(343, 157)
         Me.lblPremiered.Name = "lblPremiered"
-        Me.lblPremiered.Size = New System.Drawing.Size(46, 21)
+        Me.lblPremiered.Size = New System.Drawing.Size(60, 28)
         Me.lblPremiered.TabIndex = 59
         Me.lblPremiered.Text = "####"
         '
@@ -938,7 +923,7 @@ Partial Class frmMain
         Me.lblMALScore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblMALScore.Location = New System.Drawing.Point(343, 73)
         Me.lblMALScore.Name = "lblMALScore"
-        Me.lblMALScore.Size = New System.Drawing.Size(46, 21)
+        Me.lblMALScore.Size = New System.Drawing.Size(60, 28)
         Me.lblMALScore.TabIndex = 58
         Me.lblMALScore.Text = "####"
         '
@@ -949,7 +934,7 @@ Partial Class frmMain
         Me.lblPremieredHeading.ForeColor = System.Drawing.Color.Black
         Me.lblPremieredHeading.Location = New System.Drawing.Point(242, 157)
         Me.lblPremieredHeading.Name = "lblPremieredHeading"
-        Me.lblPremieredHeading.Size = New System.Drawing.Size(86, 21)
+        Me.lblPremieredHeading.Size = New System.Drawing.Size(106, 28)
         Me.lblPremieredHeading.TabIndex = 57
         Me.lblPremieredHeading.Text = "Premiered"
         '
@@ -960,7 +945,7 @@ Partial Class frmMain
         Me.lblMALRatingHeading.ForeColor = System.Drawing.Color.Black
         Me.lblMALRatingHeading.Location = New System.Drawing.Point(242, 115)
         Me.lblMALRatingHeading.Name = "lblMALRatingHeading"
-        Me.lblMALRatingHeading.Size = New System.Drawing.Size(95, 21)
+        Me.lblMALRatingHeading.Size = New System.Drawing.Size(117, 28)
         Me.lblMALRatingHeading.TabIndex = 56
         Me.lblMALRatingHeading.Text = "MAL Rating"
         '
@@ -971,7 +956,7 @@ Partial Class frmMain
         Me.lblMALScoreHeading.ForeColor = System.Drawing.Color.Black
         Me.lblMALScoreHeading.Location = New System.Drawing.Point(242, 73)
         Me.lblMALScoreHeading.Name = "lblMALScoreHeading"
-        Me.lblMALScoreHeading.Size = New System.Drawing.Size(90, 21)
+        Me.lblMALScoreHeading.Size = New System.Drawing.Size(109, 28)
         Me.lblMALScoreHeading.TabIndex = 55
         Me.lblMALScoreHeading.Text = "MAL Score"
         '
@@ -1052,9 +1037,9 @@ Partial Class frmMain
         Me.btnInfoSettingsHeader.ForeColor = System.Drawing.Color.White
         Me.btnInfoSettingsHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.user_ico_blk
         Me.btnInfoSettingsHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInfoSettingsHeader.Location = New System.Drawing.Point(636, 1)
+        Me.btnInfoSettingsHeader.Location = New System.Drawing.Point(752, -2)
         Me.btnInfoSettingsHeader.Name = "btnInfoSettingsHeader"
-        Me.btnInfoSettingsHeader.Size = New System.Drawing.Size(92, 29)
+        Me.btnInfoSettingsHeader.Size = New System.Drawing.Size(100, 35)
         Me.btnInfoSettingsHeader.TabIndex = 48
         Me.btnInfoSettingsHeader.Text = "    &Settings"
         Me.btnInfoSettingsHeader.UseVisualStyleBackColor = False
@@ -1071,9 +1056,9 @@ Partial Class frmMain
         Me.btnDeleteHeader.ForeColor = System.Drawing.Color.White
         Me.btnDeleteHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_ico_blk
         Me.btnDeleteHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDeleteHeader.Location = New System.Drawing.Point(559, 1)
+        Me.btnDeleteHeader.Location = New System.Drawing.Point(661, -2)
         Me.btnDeleteHeader.Name = "btnDeleteHeader"
-        Me.btnDeleteHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnDeleteHeader.Size = New System.Drawing.Size(90, 35)
         Me.btnDeleteHeader.TabIndex = 47
         Me.btnDeleteHeader.Text = "    &Delete"
         Me.btnDeleteHeader.UseVisualStyleBackColor = False
@@ -1090,9 +1075,9 @@ Partial Class frmMain
         Me.btnEditHeader.ForeColor = System.Drawing.Color.White
         Me.btnEditHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_ico_blk
         Me.btnEditHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditHeader.Location = New System.Drawing.Point(456, 1)
+        Me.btnEditHeader.Location = New System.Drawing.Point(543, -2)
         Me.btnEditHeader.Name = "btnEditHeader"
-        Me.btnEditHeader.Size = New System.Drawing.Size(101, 29)
+        Me.btnEditHeader.Size = New System.Drawing.Size(122, 35)
         Me.btnEditHeader.TabIndex = 46
         Me.btnEditHeader.Text = "    &Edit Anime"
         Me.btnEditHeader.UseVisualStyleBackColor = False
@@ -1109,9 +1094,9 @@ Partial Class frmMain
         Me.btnNewAnimeHeader.ForeColor = System.Drawing.Color.White
         Me.btnNewAnimeHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.new_ico_blk
         Me.btnNewAnimeHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNewAnimeHeader.Location = New System.Drawing.Point(348, 1)
+        Me.btnNewAnimeHeader.Location = New System.Drawing.Point(415, -2)
         Me.btnNewAnimeHeader.Name = "btnNewAnimeHeader"
-        Me.btnNewAnimeHeader.Size = New System.Drawing.Size(106, 29)
+        Me.btnNewAnimeHeader.Size = New System.Drawing.Size(127, 35)
         Me.btnNewAnimeHeader.TabIndex = 45
         Me.btnNewAnimeHeader.Text = "    &New Anime"
         Me.btnNewAnimeHeader.UseVisualStyleBackColor = False
@@ -1128,9 +1113,9 @@ Partial Class frmMain
         Me.btnSortHeader.ForeColor = System.Drawing.Color.White
         Me.btnSortHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.sort_ico_blk
         Me.btnSortHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSortHeader.Location = New System.Drawing.Point(271, 1)
+        Me.btnSortHeader.Location = New System.Drawing.Point(318, -2)
         Me.btnSortHeader.Name = "btnSortHeader"
-        Me.btnSortHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnSortHeader.Size = New System.Drawing.Size(95, 35)
         Me.btnSortHeader.TabIndex = 44
         Me.btnSortHeader.Text = "    &Sotr by"
         Me.btnSortHeader.UseVisualStyleBackColor = False
@@ -1148,9 +1133,9 @@ Partial Class frmMain
         Me.btnViewXmlHeader.ForeColor = System.Drawing.Color.White
         Me.btnViewXmlHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.xml_ico_blk
         Me.btnViewXmlHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewXmlHeader.Location = New System.Drawing.Point(181, 1)
+        Me.btnViewXmlHeader.Location = New System.Drawing.Point(206, -2)
         Me.btnViewXmlHeader.Name = "btnViewXmlHeader"
-        Me.btnViewXmlHeader.Size = New System.Drawing.Size(88, 29)
+        Me.btnViewXmlHeader.Size = New System.Drawing.Size(110, 35)
         Me.btnViewXmlHeader.TabIndex = 43
         Me.btnViewXmlHeader.Text = "    &View Xml"
         Me.btnViewXmlHeader.UseVisualStyleBackColor = False
@@ -1167,9 +1152,9 @@ Partial Class frmMain
         Me.btnExportHeader.ForeColor = System.Drawing.Color.White
         Me.btnExportHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.export_ico_blk
         Me.btnExportHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExportHeader.Location = New System.Drawing.Point(83, 1)
+        Me.btnExportHeader.Location = New System.Drawing.Point(87, -2)
         Me.btnExportHeader.Name = "btnExportHeader"
-        Me.btnExportHeader.Size = New System.Drawing.Size(96, 29)
+        Me.btnExportHeader.Size = New System.Drawing.Size(118, 35)
         Me.btnExportHeader.TabIndex = 42
         Me.btnExportHeader.Text = "    &Export List"
         Me.btnExportHeader.UseVisualStyleBackColor = False
@@ -1186,9 +1171,9 @@ Partial Class frmMain
         Me.btnOpenHeader.ForeColor = System.Drawing.Color.White
         Me.btnOpenHeader.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.open_ico_blk
         Me.btnOpenHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOpenHeader.Location = New System.Drawing.Point(6, 1)
+        Me.btnOpenHeader.Location = New System.Drawing.Point(3, -2)
         Me.btnOpenHeader.Name = "btnOpenHeader"
-        Me.btnOpenHeader.Size = New System.Drawing.Size(75, 29)
+        Me.btnOpenHeader.Size = New System.Drawing.Size(83, 35)
         Me.btnOpenHeader.TabIndex = 41
         Me.btnOpenHeader.Text = "    &Open"
         Me.btnOpenHeader.UseVisualStyleBackColor = False
@@ -1201,7 +1186,7 @@ Partial Class frmMain
         Me.lblNoListLoaded.ForeColor = System.Drawing.Color.Gray
         Me.lblNoListLoaded.Location = New System.Drawing.Point(418, 264)
         Me.lblNoListLoaded.Name = "lblNoListLoaded"
-        Me.lblNoListLoaded.Size = New System.Drawing.Size(171, 32)
+        Me.lblNoListLoaded.Size = New System.Drawing.Size(211, 41)
         Me.lblNoListLoaded.TabIndex = 42
         Me.lblNoListLoaded.Text = "No List Loaded"
         Me.lblNoListLoaded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1214,6 +1199,7 @@ Partial Class frmMain
         Me.tsMain.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.tsMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.tsMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.tsMain.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.tsMain.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.tsMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnOpen, Me.btnSave, Me.btnXml, Me.btnAbout, Me.tsbtnSort, Me.tsbtnNewAnime, Me.tsbtnEdit, Me.tsbtnDelete, Me.btnUserInfo})
         Me.tsMain.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
@@ -1230,7 +1216,7 @@ Partial Class frmMain
         Me.btnOpen.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.OpenFile_16x
         Me.btnOpen.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Size = New System.Drawing.Size(56, 24)
+        Me.btnOpen.Size = New System.Drawing.Size(70, 24)
         Me.btnOpen.Text = "&Open"
         '
         'btnSave
@@ -1240,7 +1226,7 @@ Partial Class frmMain
         Me.btnSave.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.SaveAs_16x
         Me.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(82, 24)
+        Me.btnSave.Size = New System.Drawing.Size(104, 24)
         Me.btnSave.Text = "&Export List"
         '
         'btnXml
@@ -1249,7 +1235,7 @@ Partial Class frmMain
         Me.btnXml.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.xml_ico
         Me.btnXml.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnXml.Name = "btnXml"
-        Me.btnXml.Size = New System.Drawing.Size(77, 24)
+        Me.btnXml.Size = New System.Drawing.Size(96, 24)
         Me.btnXml.Text = "&View Xml"
         '
         'btnAbout
@@ -1260,7 +1246,7 @@ Partial Class frmMain
         Me.btnAbout.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Love
         Me.btnAbout.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAbout.Name = "btnAbout"
-        Me.btnAbout.Size = New System.Drawing.Size(60, 24)
+        Me.btnAbout.Size = New System.Drawing.Size(75, 24)
         Me.btnAbout.Text = "&About"
         '
         'tsbtnSort
@@ -1269,7 +1255,7 @@ Partial Class frmMain
         Me.tsbtnSort.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.filter2
         Me.tsbtnSort.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnSort.Name = "tsbtnSort"
-        Me.tsbtnSort.Size = New System.Drawing.Size(65, 24)
+        Me.tsbtnSort.Size = New System.Drawing.Size(82, 24)
         Me.tsbtnSort.Text = "Sort by"
         '
         'tsbtnNewAnime
@@ -1277,7 +1263,7 @@ Partial Class frmMain
         Me.tsbtnNewAnime.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.new_icon
         Me.tsbtnNewAnime.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnNewAnime.Name = "tsbtnNewAnime"
-        Me.tsbtnNewAnime.Size = New System.Drawing.Size(89, 24)
+        Me.tsbtnNewAnime.Size = New System.Drawing.Size(110, 24)
         Me.tsbtnNewAnime.Text = "&New Anime"
         '
         'tsbtnEdit
@@ -1285,7 +1271,7 @@ Partial Class frmMain
         Me.tsbtnEdit.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.edit_icon
         Me.tsbtnEdit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnEdit.Name = "tsbtnEdit"
-        Me.tsbtnEdit.Size = New System.Drawing.Size(85, 24)
+        Me.tsbtnEdit.Size = New System.Drawing.Size(106, 24)
         Me.tsbtnEdit.Text = "&Edit Anime"
         '
         'tsbtnDelete
@@ -1293,7 +1279,7 @@ Partial Class frmMain
         Me.tsbtnDelete.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.delete_icon
         Me.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnDelete.Name = "tsbtnDelete"
-        Me.tsbtnDelete.Size = New System.Drawing.Size(60, 24)
+        Me.tsbtnDelete.Size = New System.Drawing.Size(77, 24)
         Me.tsbtnDelete.Text = "&Delete"
         '
         'btnUserInfo
@@ -1303,7 +1289,7 @@ Partial Class frmMain
         Me.btnUserInfo.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.user_icon
         Me.btnUserInfo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnUserInfo.Name = "btnUserInfo"
-        Me.btnUserInfo.Size = New System.Drawing.Size(70, 24)
+        Me.btnUserInfo.Size = New System.Drawing.Size(87, 24)
         Me.btnUserInfo.Text = "&Settings"
         '
         'pcbtnDarkMode
@@ -1452,9 +1438,9 @@ Partial Class frmMain
         Me.chkViewDetails.AutoSize = True
         Me.chkViewDetails.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkViewDetails.ForeColor = System.Drawing.Color.Black
-        Me.chkViewDetails.Location = New System.Drawing.Point(805, 124)
+        Me.chkViewDetails.Location = New System.Drawing.Point(778, 124)
         Me.chkViewDetails.Name = "chkViewDetails"
-        Me.chkViewDetails.Size = New System.Drawing.Size(126, 19)
+        Me.chkViewDetails.Size = New System.Drawing.Size(153, 24)
         Me.chkViewDetails.TabIndex = 107
         Me.chkViewDetails.Text = "View Online Details"
         Me.chkViewDetails.UseVisualStyleBackColor = True
@@ -1472,7 +1458,7 @@ Partial Class frmMain
         Me.lblCopyright.ForeColor = System.Drawing.Color.Black
         Me.lblCopyright.Location = New System.Drawing.Point(573, 734)
         Me.lblCopyright.Name = "lblCopyright"
-        Me.lblCopyright.Size = New System.Drawing.Size(229, 15)
+        Me.lblCopyright.Size = New System.Drawing.Size(282, 20)
         Me.lblCopyright.TabIndex = 35
         Me.lblCopyright.Text = "Programmed by Cesar Mendoza @aberuwu"
         Me.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1485,7 +1471,7 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1348, 754)
@@ -1497,7 +1483,7 @@ Partial Class frmMain
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1092, 575)
         Me.Name = "frmMain"
-        Me.Text = "My Anime Archive - Personal Anime Archive v1.0"
+        Me.Text = "My Anime Archive - Personal Anime Archive [ALPHA BUILD v1.1]"
         Me.ssMain.ResumeLayout(False)
         Me.ssMain.PerformLayout()
         Me.spltMain.Panel1.ResumeLayout(False)
@@ -1628,8 +1614,7 @@ Partial Class frmMain
     Friend WithEvents lblCommunityHeading As Label
     Friend WithEvents lblNoConnection As Label
     Friend WithEvents mtsLoading As MetroFramework.Controls.MetroProgressSpinner
-    Friend WithEvents lblQuickQueryHeading As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnMALQuery As Button
     Friend WithEvents TextBox1 As TextBox
 End Class

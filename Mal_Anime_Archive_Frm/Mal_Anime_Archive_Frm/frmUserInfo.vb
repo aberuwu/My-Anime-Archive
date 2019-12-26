@@ -10,7 +10,6 @@ Public Class frmUserInfo
     Public Property webServices As Boolean
     Public Property USER_IMG_URL As String
 
-
     Private Sub loadUserInfo()
         Dim episodeCount As Integer = 0
         Dim watchingCount As Integer = 0
@@ -71,7 +70,7 @@ Public Class frmUserInfo
 
     Private Sub frmUserInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ddlGraphSelection.SelectedIndex = 0
+        mtddlGraphSelection.SelectedIndex = 0
 
         If frmMain.animeCount <= 0 Then
 
@@ -134,21 +133,21 @@ Public Class frmUserInfo
         'USER SETTINGS
 
         If frmMain.themePurple = True Then
-            ddlThemes.SelectedIndex = 0
+            mtddlThemes.SelectedIndex = 0
             Me.BackgroundImage = My.Resources.purple_back
         ElseIf frmMain.themeBlue = True Then
-            ddlThemes.SelectedIndex = 1
+            mtddlThemes.SelectedIndex = 1
             Me.BackgroundImage = My.Resources.blue_back
         ElseIf frmMain.themeOrange = True Then
-            ddlThemes.SelectedIndex = 2
+            mtddlThemes.SelectedIndex = 2
             Me.BackgroundImage = My.Resources.orange_back
         End If
 
         ddlFonts.SelectedIndex = 0
     End Sub
 
-    Private Sub ddlGraphSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlGraphSelection.SelectedIndexChanged
-        If ddlGraphSelection.SelectedIndex = 1 Then
+    Private Sub mtddlGraphSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles mtddlGraphSelection.SelectedIndexChanged
+        If mtddlGraphSelection.SelectedIndex = 1 Then
             chrtAnimeRatings.Visible = True
             generateGraphRatings()
         Else
@@ -191,10 +190,8 @@ Public Class frmUserInfo
             End If
         Next
 
-        'Chart1.Series(0).Points.Add(5)
         chrtAnimeRatings.ChartAreas(0).AxisX.IsMarginVisible = False
         chrtAnimeRatings.Series(0).Points.Clear()
-        'chrtAnimeRatings.Series(0).Points.Add(rating0)
         chrtAnimeRatings.Series(0).Points.Add(rating1)
         chrtAnimeRatings.Series(0).Points.Add(rating2)
         chrtAnimeRatings.Series(0).Points.Add(rating3)
@@ -206,9 +203,7 @@ Public Class frmUserInfo
         chrtAnimeRatings.Series(0).Points.Add(rating9)
         chrtAnimeRatings.Series(0).Points.Add(rating10)
 
-
     End Sub
-
 
     Private Sub generateUserGraph(ByRef watchingCount As Integer, ByRef completedCount As Integer, ByRef onholdCount As Integer,
                                   ByRef droppedCount As Integer, ByRef plantowatchCount As Integer)
@@ -250,7 +245,6 @@ Public Class frmUserInfo
         chrtAnimeStatus.Series("Plan to Watch").Color = Color.FromArgb(209, 122, 200)
     End Sub
 
-
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
@@ -272,15 +266,15 @@ Public Class frmUserInfo
         drag = False
     End Sub
 
-    Private Sub ddlThemes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlThemes.SelectedIndexChanged
+    Private Sub mtddlThemes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles mtddlThemes.SelectedIndexChanged
 
-        If ddlThemes.SelectedIndex = -1 Then
+        If mtddlThemes.SelectedIndex = -1 Then
             Return
-        ElseIf ddlThemes.SelectedIndex = 0 Then
+        ElseIf mtddlThemes.SelectedIndex = 0 Then
             lblThemePreview.ForeColor = Color.BlueViolet
-        ElseIf ddlThemes.SelectedIndex = 1 Then
+        ElseIf mtddlThemes.SelectedIndex = 1 Then
             lblThemePreview.ForeColor = Color.Blue
-        ElseIf ddlThemes.SelectedIndex = 2 Then
+        ElseIf mtddlThemes.SelectedIndex = 2 Then
             lblThemePreview.ForeColor = Color.OrangeRed
         Else
             Return
@@ -289,9 +283,9 @@ Public Class frmUserInfo
     End Sub
 
     Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
-        If ddlThemes.SelectedIndex = -1 Then
+        If mtddlThemes.SelectedIndex = -1 Then
             Return
-        ElseIf ddlThemes.SelectedIndex = 0 Then
+        ElseIf mtddlThemes.SelectedIndex = 0 Then
             frmMain.themePurple = True
             frmMain.themeBlue = False
             frmMain.themeOrange = False
@@ -307,7 +301,7 @@ Public Class frmUserInfo
                 purpleGraphThemeLightMode()
             End If
 
-        ElseIf ddlThemes.SelectedIndex = 1 Then
+        ElseIf mtddlThemes.SelectedIndex = 1 Then
             frmMain.themeBlue = True
             frmMain.themeOrange = False
             frmMain.themePurple = False
@@ -323,7 +317,7 @@ Public Class frmUserInfo
                 blueGraphThemeLightMode()
             End If
 
-        ElseIf ddlThemes.SelectedIndex = 2 Then
+        ElseIf mtddlThemes.SelectedIndex = 2 Then
             frmMain.themeOrange = True
             frmMain.themeBlue = False
             frmMain.themePurple = False
@@ -410,7 +404,6 @@ Public Class frmUserInfo
         radEnabled.ForeColor = Color.Black
         radDisabled.ForeColor = Color.Black
     End Sub
-
 
     Private Sub orangeGraphThemeLightMode()
 

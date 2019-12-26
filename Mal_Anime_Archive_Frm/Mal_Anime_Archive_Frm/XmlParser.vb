@@ -8,16 +8,14 @@ Imports System.Xml
 
 Public Class XmlParser
 
-    Public Sub loadXmlFile()
+    Public Sub loadXmlFile(ByRef xmlFile As String)
 
         'Counts for Anime and User fields
         Dim serIdCount = 0, episodesCount = 0, typeCount = 0, watchedCount = 0, startCount = 0, finishCount = 0, scoreCount = 0,
             statusCount = 0, myIdCount = 0, myRatedCount = 0, myDvdCount = 0, myStorageCount = 0, myCommentsCount = 0,
             myTimesCount = 0, myRewatchCount = 0, myTagsCount = 0, myRewatchingCount = 0, myRewatchingEpCount = 0, updateCount = 0,
             userNameCount = 0, totAnimeCount = 0, totWatchCount = 0, totCompletedCount = 0, totOnHold = 0, totDropped = 0, planCount = 0,
-            exportCount As Integer
-
-        exportCount = 0
+            exportCount = 0, dumm As Integer
 
         Try
             frmMain.animeList.Clear()
@@ -33,10 +31,9 @@ Public Class XmlParser
             settings.IgnoreWhitespace = True
             settings.IgnoreComments = True
 
-            Dim reader As XmlReader = XmlReader.Create(frmMain.ANIME_SOURCE_XML, settings)
+            Dim reader As XmlReader = XmlReader.Create(xmlFile, settings)
 
             While reader.ReadState <> ReadState.EndOfFile
-
                 '---------------------------
                 ' Parse User Info
                 '---------------------------

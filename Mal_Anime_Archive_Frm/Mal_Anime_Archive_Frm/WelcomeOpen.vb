@@ -29,7 +29,7 @@
 
             frmMain.tsFileLable.Text = frmMain.ANIME_SOURCE_XML
 
-            xmlParser.loadXmlFile()
+            xmlParser.loadXmlFile(frmMain.ANIME_SOURCE_XML)
         ElseIf ofpXml.ShowDialog = DialogResult.Cancel Then
             Return
 

@@ -15,27 +15,27 @@ Public Class frmSortWindow
         End If
 
         If frmMain.sortByTitle = True Then
-            ddlPrimCrit.SelectedIndex = 2
+            mtddlPrimCrit.SelectedIndex = 2
         ElseIf frmMain.sortByStatus = True Then
-            ddlPrimCrit.SelectedIndex = 0
+            mtddlPrimCrit.SelectedIndex = 0
         ElseIf frmMain.sortByRating = True Then
-            ddlPrimCrit.SelectedIndex = 1
+            mtddlPrimCrit.SelectedIndex = 1
         ElseIf frmMain.sortyByWatched = True Then
-            ddlPrimCrit.SelectedIndex = 3
+            mtddlPrimCrit.SelectedIndex = 3
         End If
 
         If frmMain.filterByCompleted = True Then
-            ddlSecCrit.SelectedIndex = 2
+            mtddlSecCrit.SelectedIndex = 2
         ElseIf frmMain.filterByDropped = True Then
-            ddlSecCrit.SelectedIndex = 4
+            mtddlSecCrit.SelectedIndex = 4
         ElseIf frmMain.filterByNothing = True Then
-            ddlSecCrit.SelectedIndex = 0
+            mtddlSecCrit.SelectedIndex = 0
         ElseIf frmMain.filterByOnHold = True Then
-            ddlSecCrit.SelectedIndex = 3
+            mtddlSecCrit.SelectedIndex = 3
         ElseIf frmMain.filterByPlanToWatch = True Then
-            ddlSecCrit.SelectedIndex = 5
+            mtddlSecCrit.SelectedIndex = 5
         ElseIf frmMain.filterByWatching = True Then
-            ddlSecCrit.SelectedIndex = 1
+            mtddlSecCrit.SelectedIndex = 1
         End If
     End Sub
 
@@ -100,7 +100,7 @@ Public Class frmSortWindow
     'Sort Criteria
     '------------------------------------
     Private Sub primarySort()
-        If ddlPrimCrit.SelectedIndex = 0 Then
+        If mtddlPrimCrit.SelectedIndex = 0 Then
             'Status
             If radPrimAsc.Checked = True Then
                 frmMain.lstwAnimeSearch.Items.Clear()
@@ -119,7 +119,7 @@ Public Class frmSortWindow
                 frmMain.asscSort = False
             End If
             frmMain.sortByStatus = True
-        ElseIf ddlPrimCrit.SelectedIndex = 1 Then
+        ElseIf mtddlPrimCrit.SelectedIndex = 1 Then
             'score
             resetConditions()
             If radPrimAsc.Checked = True Then
@@ -139,7 +139,7 @@ Public Class frmSortWindow
                 frmMain.asscSort = False
             End If
             frmMain.sortByRating = True
-        ElseIf ddlPrimCrit.SelectedIndex = 2 Then
+        ElseIf mtddlPrimCrit.SelectedIndex = 2 Then
             'Title
             resetConditions()
             If radPrimAsc.Checked = True Then
@@ -159,7 +159,7 @@ Public Class frmSortWindow
                 frmMain.asscSort = False
             End If
             frmMain.sortByTitle = True
-        ElseIf ddlPrimCrit.SelectedIndex = 3 Then
+        ElseIf mtddlPrimCrit.SelectedIndex = 3 Then
             'Watched
             resetConditions()
             If radPrimAsc.Checked = True Then
@@ -186,35 +186,35 @@ Public Class frmSortWindow
     'Filter Criteria
     '------------------------------------
     Private Sub primaryFilter()
-        If ddlSecCrit.SelectedIndex = 0 Then
+        If mtddlSecCrit.SelectedIndex = 0 Then
             'No Filter
             primarySort()
             frmMain.filterByNothing = True
-        ElseIf ddlSecCrit.SelectedIndex = 1 Then
+        ElseIf mtddlSecCrit.SelectedIndex = 1 Then
             'Watching
             frmMain.lstwAnimeSearch.Items.Clear()
             frmMain.lstwStatus.Items.Clear()
             populateWithFilter(frmMain.animeList, "watching")
             frmMain.filterByWatching = True
-        ElseIf ddlSecCrit.SelectedIndex = 2 Then
+        ElseIf mtddlSecCrit.SelectedIndex = 2 Then
             'Completed
             frmMain.lstwAnimeSearch.Items.Clear()
             frmMain.lstwStatus.Items.Clear()
             populateWithFilter(frmMain.animeList, "completed")
             frmMain.filterByCompleted = True
-        ElseIf ddlSecCrit.SelectedIndex = 3 Then
+        ElseIf mtddlSecCrit.SelectedIndex = 3 Then
             'On-Hold
             frmMain.lstwAnimeSearch.Items.Clear()
             frmMain.lstwStatus.Items.Clear()
             populateWithFilter(frmMain.animeList, "on-hold")
             frmMain.filterByOnHold = True
-        ElseIf ddlSecCrit.SelectedIndex = 4 Then
+        ElseIf mtddlSecCrit.SelectedIndex = 4 Then
             'Dropped
             frmMain.lstwAnimeSearch.Items.Clear()
             frmMain.lstwStatus.Items.Clear()
             populateWithFilter(frmMain.animeList, "dropped")
             frmMain.filterByDropped = True
-        ElseIf ddlSecCrit.SelectedIndex = 5 Then
+        ElseIf mtddlSecCrit.SelectedIndex = 5 Then
             'Plan To Watch
             frmMain.lstwAnimeSearch.Items.Clear()
             frmMain.lstwStatus.Items.Clear()

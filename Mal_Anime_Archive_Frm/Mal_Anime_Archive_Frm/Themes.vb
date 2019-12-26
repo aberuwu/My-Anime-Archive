@@ -26,6 +26,33 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.Black
         frmMain.lblCopyright.ForeColor = Color.Black
 
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.Black
+        frmMain.lblMALScoreHeading.ForeColor = Color.Black
+        frmMain.lblMALStatusHeading.ForeColor = Color.Black
+        frmMain.lblPremieredHeading.ForeColor = Color.Black
+        frmMain.lblBrodcastHeading.ForeColor = Color.Black
+        frmMain.lblDurationHeading.ForeColor = Color.Black
+        frmMain.lblPopularityHeading.ForeColor = Color.Black
+        frmMain.lblRankHeading.ForeColor = Color.Black
+        frmMain.lblMembersHeading.ForeColor = Color.Black
+        frmMain.lblFavoritesHeading.ForeColor = Color.Black
+        frmMain.lblCommunityHeading.ForeColor = Color.OrangeRed
+
+        frmMain.lblMALRating.ForeColor = Color.OrangeRed
+        frmMain.lblMALScore.ForeColor = Color.OrangeRed
+        frmMain.lblMALStatus.ForeColor = Color.OrangeRed
+        frmMain.lblPremiered.ForeColor = Color.OrangeRed
+        frmMain.lblBrodcast.ForeColor = Color.OrangeRed
+        frmMain.lblDuration.ForeColor = Color.OrangeRed
+        frmMain.lblPopularity.ForeColor = Color.OrangeRed
+        frmMain.lblRank.ForeColor = Color.OrangeRed
+        frmMain.lblMembers.ForeColor = Color.OrangeRed
+        frmMain.lblFavorites.ForeColor = Color.OrangeRed
+
+        frmMain.rctSynopsis.BackColor = Color.WhiteSmoke
+        frmMain.rctSynopsis.ForeColor = Color.Black
+
         frmMain.spltMain.Panel2.BackColor = Color.WhiteSmoke
         frmMain.txtSearch.BackColor = Color.WhiteSmoke
         frmMain.lstwAnimeMain.BackColor = Color.WhiteSmoke
@@ -46,6 +73,12 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Orange
 
         'BUTTONS
+
+        With frmMain.btnMALQuery
+            .FlatAppearance.BorderColor = Color.OrangeRed
+            .FlatAppearance.MouseOverBackColor = Color.Orange
+            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
+        End With
 
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.OrangeRed
@@ -152,6 +185,33 @@ Public Class Themes
         frmMain.lblMembers.ForeColor = Color.FromArgb(192, 0, 192)
         frmMain.lblFavorites.ForeColor = Color.FromArgb(192, 0, 192)
 
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.Black
+        frmMain.lblMALScoreHeading.ForeColor = Color.Black
+        frmMain.lblMALStatusHeading.ForeColor = Color.Black
+        frmMain.lblPremieredHeading.ForeColor = Color.Black
+        frmMain.lblBrodcastHeading.ForeColor = Color.Black
+        frmMain.lblDurationHeading.ForeColor = Color.Black
+        frmMain.lblPopularityHeading.ForeColor = Color.Black
+        frmMain.lblRankHeading.ForeColor = Color.Black
+        frmMain.lblMembersHeading.ForeColor = Color.Black
+        frmMain.lblFavoritesHeading.ForeColor = Color.Black
+        frmMain.lblCommunityHeading.ForeColor = Color.FromArgb(192, 0, 192)
+
+        frmMain.lblMALRating.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMALScore.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMALStatus.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblPremiered.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblBrodcast.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblDuration.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblPopularity.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblRank.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblMembers.ForeColor = Color.FromArgb(192, 0, 192)
+        frmMain.lblFavorites.ForeColor = Color.FromArgb(192, 0, 192)
+
+        frmMain.rctSynopsis.BackColor = Color.WhiteSmoke
+        frmMain.rctSynopsis.ForeColor = Color.Black
+
         frmMain.rctSynopsis.ForeColor = Color.Black
         frmMain.rctSynopsis.BackColor = Color.WhiteSmoke
         frmMain.lblNoConnection.ForeColor = Color.Black
@@ -178,6 +238,11 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
 
         'BUTTONS
+        With frmMain.btnMALQuery
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+        End With
 
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.MediumPurple
@@ -270,6 +335,33 @@ Public Class Themes
         frmMain.lstAnimes.ForeColor = Color.Black
         frmMain.pcbLogo.Image = My.Resources.maa_logo_blue
 
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.Black
+        frmMain.lblMALScoreHeading.ForeColor = Color.Black
+        frmMain.lblMALStatusHeading.ForeColor = Color.Black
+        frmMain.lblPremieredHeading.ForeColor = Color.Black
+        frmMain.lblBrodcastHeading.ForeColor = Color.Black
+        frmMain.lblDurationHeading.ForeColor = Color.Black
+        frmMain.lblPopularityHeading.ForeColor = Color.Black
+        frmMain.lblRankHeading.ForeColor = Color.Black
+        frmMain.lblMembersHeading.ForeColor = Color.Black
+        frmMain.lblFavoritesHeading.ForeColor = Color.Black
+        frmMain.lblCommunityHeading.ForeColor = Color.Blue
+
+        frmMain.lblMALRating.ForeColor = Color.Blue
+        frmMain.lblMALScore.ForeColor = Color.Blue
+        frmMain.lblMALStatus.ForeColor = Color.Blue
+        frmMain.lblPremiered.ForeColor = Color.Blue
+        frmMain.lblBrodcast.ForeColor = Color.Blue
+        frmMain.lblDuration.ForeColor = Color.Blue
+        frmMain.lblPopularity.ForeColor = Color.Blue
+        frmMain.lblRank.ForeColor = Color.Blue
+        frmMain.lblMembers.ForeColor = Color.Blue
+        frmMain.lblFavorites.ForeColor = Color.Blue
+
+        frmMain.rctSynopsis.BackColor = Color.WhiteSmoke
+        frmMain.rctSynopsis.ForeColor = Color.Black
+
         frmMain.lblDarkMode.ForeColor = Color.Black
 
         frmMain.tsFileLable.ForeColor = Color.Black
@@ -279,6 +371,12 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
+
+        With frmMain.btnMALQuery
+            .FlatAppearance.BorderColor = Color.LightBlue
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
+        End With
 
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.LightBlue
@@ -360,6 +458,33 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.OrangeRed
         frmMain.lblCopyright.ForeColor = Color.White
         frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
+
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.OrangeRed
+        frmMain.lblMALScoreHeading.ForeColor = Color.OrangeRed
+        frmMain.lblMALStatusHeading.ForeColor = Color.OrangeRed
+        frmMain.lblPremieredHeading.ForeColor = Color.OrangeRed
+        frmMain.lblBrodcastHeading.ForeColor = Color.OrangeRed
+        frmMain.lblDurationHeading.ForeColor = Color.OrangeRed
+        frmMain.lblPopularityHeading.ForeColor = Color.OrangeRed
+        frmMain.lblRankHeading.ForeColor = Color.OrangeRed
+        frmMain.lblMembersHeading.ForeColor = Color.OrangeRed
+        frmMain.lblFavoritesHeading.ForeColor = Color.OrangeRed
+        frmMain.lblCommunityHeading.ForeColor = Color.OrangeRed
+
+        frmMain.lblMALRating.ForeColor = Color.White
+        frmMain.lblMALScore.ForeColor = Color.White
+        frmMain.lblMALStatus.ForeColor = Color.White
+        frmMain.lblPremiered.ForeColor = Color.White
+        frmMain.lblBrodcast.ForeColor = Color.White
+        frmMain.lblDuration.ForeColor = Color.White
+        frmMain.lblPopularity.ForeColor = Color.White
+        frmMain.lblRank.ForeColor = Color.White
+        frmMain.lblMembers.ForeColor = Color.White
+        frmMain.lblFavorites.ForeColor = Color.White
+
+        frmMain.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.rctSynopsis.ForeColor = Color.White
 
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
@@ -497,6 +622,33 @@ Public Class Themes
         frmMain.lstwAnimeSearch.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
 
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMALScoreHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMALStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblPremieredHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblBrodcastHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblDurationHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblPopularityHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblRankHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblMembersHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblFavoritesHeading.ForeColor = Color.FromArgb(209, 122, 200)
+        frmMain.lblCommunityHeading.ForeColor = Color.FromArgb(209, 122, 200)
+
+        frmMain.lblMALRating.ForeColor = Color.White
+        frmMain.lblMALScore.ForeColor = Color.White
+        frmMain.lblMALStatus.ForeColor = Color.White
+        frmMain.lblPremiered.ForeColor = Color.White
+        frmMain.lblBrodcast.ForeColor = Color.White
+        frmMain.lblDuration.ForeColor = Color.White
+        frmMain.lblPopularity.ForeColor = Color.White
+        frmMain.lblRank.ForeColor = Color.White
+        frmMain.lblMembers.ForeColor = Color.White
+        frmMain.lblFavorites.ForeColor = Color.White
+
+        frmMain.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.rctSynopsis.ForeColor = Color.White
+
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lstAnimes.ForeColor = Color.WhiteSmoke
@@ -593,7 +745,6 @@ Public Class Themes
         frmMain.lblStatusHeading.ForeColor = Color.LightBlue
         frmMain.lblCopyright.ForeColor = Color.White
 
-
         frmMain.lblCopyright.BackColor = Color.FromArgb(38, 35, 35)
         frmMain.lstAnimes.BackColor = Color.FromArgb(44, 44, 44)
         frmMain.lstAnimes.ForeColor = Color.WhiteSmoke
@@ -603,6 +754,33 @@ Public Class Themes
         frmMain.tsFileLable.ForeColor = Color.White
 
         frmMain.ssMain.BackColor = Color.FromArgb(38, 35, 35)
+
+        'Fore color MAL Labels
+        frmMain.lblMALRatingHeading.ForeColor = Color.LightBlue
+        frmMain.lblMALScoreHeading.ForeColor = Color.LightBlue
+        frmMain.lblMALStatusHeading.ForeColor = Color.LightBlue
+        frmMain.lblPremieredHeading.ForeColor = Color.LightBlue
+        frmMain.lblBrodcastHeading.ForeColor = Color.LightBlue
+        frmMain.lblDurationHeading.ForeColor = Color.LightBlue
+        frmMain.lblPopularityHeading.ForeColor = Color.LightBlue
+        frmMain.lblRankHeading.ForeColor = Color.LightBlue
+        frmMain.lblMembersHeading.ForeColor = Color.LightBlue
+        frmMain.lblFavoritesHeading.ForeColor = Color.LightBlue
+        frmMain.lblCommunityHeading.ForeColor = Color.LightBlue
+
+        frmMain.lblMALRating.ForeColor = Color.White
+        frmMain.lblMALScore.ForeColor = Color.White
+        frmMain.lblMALStatus.ForeColor = Color.White
+        frmMain.lblPremiered.ForeColor = Color.White
+        frmMain.lblBrodcast.ForeColor = Color.White
+        frmMain.lblDuration.ForeColor = Color.White
+        frmMain.lblPopularity.ForeColor = Color.White
+        frmMain.lblRank.ForeColor = Color.White
+        frmMain.lblMembers.ForeColor = Color.White
+        frmMain.lblFavorites.ForeColor = Color.White
+
+        frmMain.rctSynopsis.BackColor = Color.FromArgb(44, 44, 44)
+        frmMain.rctSynopsis.ForeColor = Color.White
 
 
         frmMain.spltMain.Panel2.BackColor = Color.FromArgb(44, 44, 44)
@@ -679,7 +857,6 @@ Public Class Themes
     '------------------------
     'Themes for Edit Form
     '------------------------
-
     Public Sub blueThemeLightModeEdit()
         frmEditAnime.BackgroundImage = My.Resources.blue_back
 

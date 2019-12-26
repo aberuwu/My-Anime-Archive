@@ -1,8 +1,8 @@
 ﻿'------------------------------------------------------------------------------------------------------------------
 '* My Anime Archive! - .NET Framework
 '* Build: Alpha 1.0
-'* Programmed by: Cesar Mendoza @aberuwu
-'* Last Updated: 10/17/2019
+'* Programmed by: Cesar I. Mendoza @aberuwu
+'* Last Updated: 12/26/2019
 '* Features:
 '*          -MAL XML File Visualization
 '*          -Export as XML, JSON, CSV  
@@ -37,6 +37,7 @@ Public Class frmMain
 
     Private themes As New Themes()
     Private XmlParser As New XmlParser()
+    Private JsonParser As New JsonParser()
 
     Public USER_IMG_URL As String
     Public Property newList As Boolean = False
@@ -66,7 +67,7 @@ Public Class frmMain
     Public Property ANIME_SOURCE_XML As String
     Private MAL_SOURCE_URL As String = "https://myanimelist.net/anime/"
 
-    Async Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtSearch.ForeColor = SystemColors.GrayText
         txtSearch.Text = "🔎 Anime Search"
 
@@ -116,7 +117,22 @@ Public Class frmMain
                 ANIME_SOURCE_XML = ofpXml.FileName
                 tsFileLable.Text = ANIME_SOURCE_XML
 
-                XmlParser.loadXmlFile()
+                XmlParser.loadXmlFile(ANIME_SOURCE_XML)
+
+                Me.ActiveControl = lstAnimes
+                vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
+                lstwAnimeSearch.Items(0).Selected = True
+                lstwAnimeSearch.Items(0).Focused = True
+                lstwAnimeSearch.Items(0).EnsureVisible()
+                Me.ActiveControl = lstwAnimeSearch
+            ElseIf ofpXml.FileName.Contains(".json") Then
+                txtSearch.Clear()
+                txtSearch.ForeColor = SystemColors.GrayText
+                txtSearch.Text = "🔎 Anime Search"
+                ANIME_SOURCE_XML = ofpXml.FileName
+                tsFileLable.Text = ANIME_SOURCE_XML
+
+                JsonParser.loadJson(ANIME_SOURCE_XML)
 
                 Me.ActiveControl = lstAnimes
                 vscrSearchList.Maximum = lstwAnimeSearch.Items.Count

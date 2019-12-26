@@ -47,6 +47,8 @@ Partial Class frmSortWindow
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.tabSettings = New System.Windows.Forms.TabControl()
+        Me.mtddlPrimCrit = New MetroFramework.Controls.MetroComboBox()
+        Me.mtddlSecCrit = New MetroFramework.Controls.MetroComboBox()
         Me.SortSettings.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbxPrimary.SuspendLayout()
@@ -56,6 +58,8 @@ Partial Class frmSortWindow
         'SortSettings
         '
         Me.SortSettings.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SortSettings.Controls.Add(Me.mtddlSecCrit)
+        Me.SortSettings.Controls.Add(Me.mtddlPrimCrit)
         Me.SortSettings.Controls.Add(Me.Label11)
         Me.SortSettings.Controls.Add(Me.Label10)
         Me.SortSettings.Controls.Add(Me.Label9)
@@ -74,10 +78,11 @@ Partial Class frmSortWindow
         Me.SortSettings.Controls.Add(Me.ddlPrimCrit)
         Me.SortSettings.Controls.Add(Me.Label1)
         Me.SortSettings.Controls.Add(Me.lblStatus)
-        Me.SortSettings.Location = New System.Drawing.Point(4, 26)
+        Me.SortSettings.Location = New System.Drawing.Point(4, 30)
+        Me.SortSettings.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SortSettings.Name = "SortSettings"
-        Me.SortSettings.Padding = New System.Windows.Forms.Padding(3)
-        Me.SortSettings.Size = New System.Drawing.Size(537, 272)
+        Me.SortSettings.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SortSettings.Size = New System.Drawing.Size(719, 338)
         Me.SortSettings.TabIndex = 0
         Me.SortSettings.Text = "Anime list sort and filter criteria"
         '
@@ -85,9 +90,10 @@ Partial Class frmSortWindow
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(269, 171)
+        Me.Label11.Location = New System.Drawing.Point(359, 210)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(93, 20)
+        Me.Label11.Size = New System.Drawing.Size(121, 25)
         Me.Label11.TabIndex = 21
         Me.Label11.Text = "Plan to Watch"
         '
@@ -95,9 +101,10 @@ Partial Class frmSortWindow
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(162, 209)
+        Me.Label10.Location = New System.Drawing.Point(216, 257)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 20)
+        Me.Label10.Size = New System.Drawing.Size(85, 25)
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "Dropped"
         '
@@ -105,9 +112,10 @@ Partial Class frmSortWindow
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(162, 171)
+        Me.Label9.Location = New System.Drawing.Point(216, 210)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.Size = New System.Drawing.Size(83, 25)
         Me.Label9.TabIndex = 19
         Me.Label9.Text = "On-Hold"
         '
@@ -115,9 +123,10 @@ Partial Class frmSortWindow
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(42, 209)
+        Me.Label8.Location = New System.Drawing.Point(56, 257)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 20)
+        Me.Label8.Size = New System.Drawing.Size(103, 25)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Completed"
         '
@@ -125,9 +134,10 @@ Partial Class frmSortWindow
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(41, 171)
+        Me.Label7.Location = New System.Drawing.Point(55, 210)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 20)
+        Me.Label7.Size = New System.Drawing.Size(86, 25)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Watching"
         '
@@ -136,9 +146,10 @@ Partial Class frmSortWindow
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label6.Location = New System.Drawing.Point(241, 171)
+        Me.Label6.Location = New System.Drawing.Point(321, 210)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(23, 20)
+        Me.Label6.Size = New System.Drawing.Size(30, 25)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "█"
         '
@@ -147,9 +158,10 @@ Partial Class frmSortWindow
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(135, 209)
+        Me.Label5.Location = New System.Drawing.Point(180, 257)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(23, 20)
+        Me.Label5.Size = New System.Drawing.Size(30, 25)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "█"
         '
@@ -158,9 +170,10 @@ Partial Class frmSortWindow
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(135, 171)
+        Me.Label4.Location = New System.Drawing.Point(180, 210)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(23, 20)
+        Me.Label4.Size = New System.Drawing.Size(30, 25)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "█"
         '
@@ -169,9 +182,10 @@ Partial Class frmSortWindow
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(14, 209)
+        Me.Label3.Location = New System.Drawing.Point(19, 257)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(23, 20)
+        Me.Label3.Size = New System.Drawing.Size(30, 25)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "█"
         '
@@ -180,9 +194,10 @@ Partial Class frmSortWindow
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(57, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(14, 171)
+        Me.Label2.Location = New System.Drawing.Point(19, 210)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(23, 20)
+        Me.Label2.Size = New System.Drawing.Size(30, 25)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "█"
         '
@@ -190,9 +205,10 @@ Partial Class frmSortWindow
         '
         Me.lblLegendHeader.AutoSize = True
         Me.lblLegendHeader.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLegendHeader.Location = New System.Drawing.Point(14, 134)
+        Me.lblLegendHeader.Location = New System.Drawing.Point(19, 165)
+        Me.lblLegendHeader.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLegendHeader.Name = "lblLegendHeader"
-        Me.lblLegendHeader.Size = New System.Drawing.Size(114, 21)
+        Me.lblLegendHeader.Size = New System.Drawing.Size(141, 28)
         Me.lblLegendHeader.TabIndex = 11
         Me.lblLegendHeader.Text = "Status Legend"
         '
@@ -201,9 +217,11 @@ Partial Class frmSortWindow
         Me.GroupBox1.Controls.Add(Me.radSecDesc)
         Me.GroupBox1.Controls.Add(Me.radSecAsc)
         Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(311, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(415, 78)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(208, 45)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(277, 55)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Visible = False
@@ -211,9 +229,10 @@ Partial Class frmSortWindow
         'radSecDesc
         '
         Me.radSecDesc.AutoSize = True
-        Me.radSecDesc.Location = New System.Drawing.Point(100, 19)
+        Me.radSecDesc.Location = New System.Drawing.Point(133, 23)
+        Me.radSecDesc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radSecDesc.Name = "radSecDesc"
-        Me.radSecDesc.Size = New System.Drawing.Size(91, 21)
+        Me.radSecDesc.Size = New System.Drawing.Size(116, 27)
         Me.radSecDesc.TabIndex = 8
         Me.radSecDesc.TabStop = True
         Me.radSecDesc.Text = "Descending"
@@ -222,9 +241,10 @@ Partial Class frmSortWindow
         'radSecAsc
         '
         Me.radSecAsc.AutoSize = True
-        Me.radSecAsc.Location = New System.Drawing.Point(13, 17)
+        Me.radSecAsc.Location = New System.Drawing.Point(17, 21)
+        Me.radSecAsc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radSecAsc.Name = "radSecAsc"
-        Me.radSecAsc.Size = New System.Drawing.Size(83, 21)
+        Me.radSecAsc.Size = New System.Drawing.Size(107, 27)
         Me.radSecAsc.TabIndex = 6
         Me.radSecAsc.TabStop = True
         Me.radSecAsc.Text = "Ascending"
@@ -234,18 +254,21 @@ Partial Class frmSortWindow
         '
         Me.gbxPrimary.Controls.Add(Me.radPrimDesc)
         Me.gbxPrimary.Controls.Add(Me.radPrimAsc)
-        Me.gbxPrimary.Location = New System.Drawing.Point(312, 11)
+        Me.gbxPrimary.Location = New System.Drawing.Point(416, 14)
+        Me.gbxPrimary.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gbxPrimary.Name = "gbxPrimary"
-        Me.gbxPrimary.Size = New System.Drawing.Size(207, 45)
+        Me.gbxPrimary.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbxPrimary.Size = New System.Drawing.Size(276, 55)
         Me.gbxPrimary.TabIndex = 9
         Me.gbxPrimary.TabStop = False
         '
         'radPrimDesc
         '
         Me.radPrimDesc.AutoSize = True
-        Me.radPrimDesc.Location = New System.Drawing.Point(104, 17)
+        Me.radPrimDesc.Location = New System.Drawing.Point(139, 21)
+        Me.radPrimDesc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radPrimDesc.Name = "radPrimDesc"
-        Me.radPrimDesc.Size = New System.Drawing.Size(91, 21)
+        Me.radPrimDesc.Size = New System.Drawing.Size(116, 27)
         Me.radPrimDesc.TabIndex = 7
         Me.radPrimDesc.Text = "Descending"
         Me.radPrimDesc.UseVisualStyleBackColor = True
@@ -254,9 +277,10 @@ Partial Class frmSortWindow
         '
         Me.radPrimAsc.AutoSize = True
         Me.radPrimAsc.Checked = True
-        Me.radPrimAsc.Location = New System.Drawing.Point(13, 17)
+        Me.radPrimAsc.Location = New System.Drawing.Point(17, 21)
+        Me.radPrimAsc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radPrimAsc.Name = "radPrimAsc"
-        Me.radPrimAsc.Size = New System.Drawing.Size(83, 21)
+        Me.radPrimAsc.Size = New System.Drawing.Size(107, 27)
         Me.radPrimAsc.TabIndex = 5
         Me.radPrimAsc.TabStop = True
         Me.radPrimAsc.Text = "Ascending"
@@ -269,9 +293,10 @@ Partial Class frmSortWindow
         Me.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
         Me.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnApply.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnApply.Location = New System.Drawing.Point(424, 200)
+        Me.btnApply.Location = New System.Drawing.Point(565, 246)
+        Me.btnApply.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnApply.Name = "btnApply"
-        Me.btnApply.Size = New System.Drawing.Size(95, 35)
+        Me.btnApply.Size = New System.Drawing.Size(127, 43)
         Me.btnApply.TabIndex = 4
         Me.btnApply.Text = "&Apply"
         Me.btnApply.UseVisualStyleBackColor = True
@@ -282,9 +307,10 @@ Partial Class frmSortWindow
         Me.ddlSecCrit.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ddlSecCrit.FormattingEnabled = True
         Me.ddlSecCrit.Items.AddRange(New Object() {"-No Filter-", "Watching", "Completed", "On-Hold", "Dropped", "Plan to Watch"})
-        Me.ddlSecCrit.Location = New System.Drawing.Point(166, 80)
+        Me.ddlSecCrit.Location = New System.Drawing.Point(221, 98)
+        Me.ddlSecCrit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ddlSecCrit.Name = "ddlSecCrit"
-        Me.ddlSecCrit.Size = New System.Drawing.Size(121, 25)
+        Me.ddlSecCrit.Size = New System.Drawing.Size(160, 29)
         Me.ddlSecCrit.TabIndex = 3
         '
         'ddlPrimCrit
@@ -293,18 +319,20 @@ Partial Class frmSortWindow
         Me.ddlPrimCrit.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ddlPrimCrit.FormattingEnabled = True
         Me.ddlPrimCrit.Items.AddRange(New Object() {"Status", "Rating", "Anime Title", "Watched Episodes"})
-        Me.ddlPrimCrit.Location = New System.Drawing.Point(166, 23)
+        Me.ddlPrimCrit.Location = New System.Drawing.Point(221, 28)
+        Me.ddlPrimCrit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ddlPrimCrit.Name = "ddlPrimCrit"
-        Me.ddlPrimCrit.Size = New System.Drawing.Size(121, 25)
+        Me.ddlPrimCrit.Size = New System.Drawing.Size(160, 29)
         Me.ddlPrimCrit.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 80)
+        Me.Label1.Location = New System.Drawing.Point(17, 98)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 25)
+        Me.Label1.Size = New System.Drawing.Size(147, 32)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Filter Criteria:"
         '
@@ -312,9 +340,10 @@ Partial Class frmSortWindow
         '
         Me.lblStatus.AutoSize = True
         Me.lblStatus.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(13, 23)
+        Me.lblStatus.Location = New System.Drawing.Point(17, 28)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(111, 25)
+        Me.lblStatus.Size = New System.Drawing.Size(140, 32)
         Me.lblStatus.TabIndex = 0
         Me.lblStatus.Text = "Sort Criteria:"
         '
@@ -322,24 +351,59 @@ Partial Class frmSortWindow
         '
         Me.tabSettings.Controls.Add(Me.SortSettings)
         Me.tabSettings.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tabSettings.Location = New System.Drawing.Point(-5, 27)
+        Me.tabSettings.Location = New System.Drawing.Point(-7, 33)
+        Me.tabSettings.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tabSettings.Name = "tabSettings"
         Me.tabSettings.SelectedIndex = 0
-        Me.tabSettings.Size = New System.Drawing.Size(545, 302)
+        Me.tabSettings.Size = New System.Drawing.Size(727, 372)
         Me.tabSettings.TabIndex = 0
+        '
+        'mtddlPrimCrit
+        '
+        Me.mtddlPrimCrit.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtddlPrimCrit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.mtddlPrimCrit.FormattingEnabled = True
+        Me.mtddlPrimCrit.ItemHeight = 24
+        Me.mtddlPrimCrit.Items.AddRange(New Object() {"Status", "Rating", "Anime Title", "Watched Episodes"})
+        Me.mtddlPrimCrit.Location = New System.Drawing.Point(221, 27)
+        Me.mtddlPrimCrit.Margin = New System.Windows.Forms.Padding(4)
+        Me.mtddlPrimCrit.Name = "mtddlPrimCrit"
+        Me.mtddlPrimCrit.Size = New System.Drawing.Size(160, 30)
+        Me.mtddlPrimCrit.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtddlPrimCrit.TabIndex = 107
+        Me.mtddlPrimCrit.UseCustomBackColor = True
+        Me.mtddlPrimCrit.UseSelectable = True
+        '
+        'mtddlSecCrit
+        '
+        Me.mtddlSecCrit.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtddlSecCrit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.mtddlSecCrit.FormattingEnabled = True
+        Me.mtddlSecCrit.ItemHeight = 24
+        Me.mtddlSecCrit.Items.AddRange(New Object() {"-No Filter-", "Watching", "Completed", "On-Hold", "Dropped", "Plan to Watch"})
+        Me.mtddlSecCrit.Location = New System.Drawing.Point(221, 97)
+        Me.mtddlSecCrit.Margin = New System.Windows.Forms.Padding(4)
+        Me.mtddlSecCrit.Name = "mtddlSecCrit"
+        Me.mtddlSecCrit.Size = New System.Drawing.Size(160, 30)
+        Me.mtddlSecCrit.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtddlSecCrit.TabIndex = 108
+        Me.mtddlSecCrit.UseCustomBackColor = True
+        Me.mtddlSecCrit.UseSelectable = True
         '
         'frmSortWindow
         '
         Me.AcceptButton = Me.btnApply
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(536, 296)
+        Me.ClientSize = New System.Drawing.Size(712, 354)
         Me.Controls.Add(Me.tabSettings)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(552, 335)
-        Me.MinimumSize = New System.Drawing.Size(552, 335)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximumSize = New System.Drawing.Size(730, 401)
+        Me.MinimumSize = New System.Drawing.Size(730, 401)
         Me.Name = "frmSortWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Sort & Filter"
@@ -378,4 +442,6 @@ Partial Class frmSortWindow
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents mtddlSecCrit As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents mtddlPrimCrit As MetroFramework.Controls.MetroComboBox
 End Class
