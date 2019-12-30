@@ -6,10 +6,15 @@
 '* Last Updated: 17/08/2019 - 17:15
 '***************************************
 Public Class frmSortWindow
+
+    Private themes As New Themes()
     '------------------------------------
     'Primary form load event
     '------------------------------------
     Private Sub frmSortWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        applyTheme()
+
         If frmMain.asscSort = False Then
             radPrimDesc.Checked = True
         End If
@@ -313,5 +318,50 @@ Public Class frmSortWindow
         frmMain.filterByOnHold = False
         frmMain.filterByPlanToWatch = False
         frmMain.filterByWatching = False
+    End Sub
+
+    Private Sub applyTheme()
+        If frmMain.darkModeOn = True Then
+            If frmMain.themePurple = True Then
+                purpleDarkThemeSort()
+            ElseIf frmMain.themeBlue = True Then
+                themes.blueDarkThemeSort()
+            ElseIf frmMain.themeOrange = True Then
+                themes.orangeDarkThemeSort()
+            End If
+        Else
+            If frmMain.themePurple = True Then
+                themes.purpleLightThemeSort()
+            ElseIf frmMain.themeBlue = True Then
+                themes.blueLightThemeSort()
+            ElseIf frmMain.themeOrange = True Then
+                themes.orangeLightThemeSort()
+            End If
+        End If
+    End Sub
+    Public Sub purpleDarkThemeSort()
+        btnApply.BackColor = Color.FromArgb(44, 44, 44)
+
+        SortSettings.BackColor = Color.FromArgb(44, 44, 44)
+        lblSortCriteria.ForeColor = Color.White
+        lblFilterCriteria.ForeColor = Color.White
+        lblLegendHeader.ForeColor = Color.White
+        lblWatching.ForeColor = Color.White
+        lblOnHold.ForeColor = Color.White
+        lblPlanToWatch.ForeColor = Color.White
+        lblCompleted.ForeColor = Color.White
+        lblDropped.ForeColor = Color.White
+
+        radPrimAsc.ForeColor = Color.White
+        radSecAsc.ForeColor = Color.White
+        radPrimDesc.ForeColor = Color.White
+        radSecDesc.ForeColor = Color.White
+
+        With btnApply
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+            .ForeColor = Color.White
+        End With
     End Sub
 End Class

@@ -514,6 +514,31 @@ Public Class frmMain
         End If
     End Sub
 
+    'Binary Search Implementation for Anime Query
+    Private Function AnimeSearch(ByRef term As String, ByRef anList As List(Of Anime)) As Integer
+        Dim left As Integer = 0
+        Dim right As Integer = animeList.Count() - 1
+
+        While left <= right
+            Dim midVal As Integer
+            Dim midDiv As Integer
+            midVal = left + (right - 1)
+            midDiv = midVal / 2
+
+            Dim res As Integer = term.CompareTo(anList(midDiv).Title.Trim.ToUpper)
+
+            If anList(midDiv).Title.Trim.ToUpper.Contains(term) Then
+                Return midDiv
+            End If
+            If res > 0 Then
+                left = midDiv + 1
+            Else
+                right = midDiv - 1
+            End If
+        End While
+        Return -1
+    End Function
+
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         If txtSearch.Text = "🔎 Anime Search" Or txtSearch.Text = "" Then
             Return

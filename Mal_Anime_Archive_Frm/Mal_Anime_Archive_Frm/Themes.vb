@@ -935,8 +935,6 @@ Public Class Themes
         End With
     End Sub
 
-
-
     Public Sub purpleThemeDarkModeEdit()
         frmEditAnime.BackgroundImage = My.Resources.purple_back
 
@@ -1126,4 +1124,80 @@ Public Class Themes
             .ForeColor = Color.White
         End With
     End Sub
+
+
+    '------------------------
+    'Themes for Sort Form
+    '------------------------
+    Public Sub purpleLightThemeSort()
+
+        frmSortWindow.btnApply.BackColor = Color.Black
+
+        frmSortWindow.SortSettings.BackColor = Color.WhiteSmoke
+        frmSortWindow.lblSortCriteria.BackColor = Color.Black
+        frmSortWindow.lblFilterCriteria.BackColor = Color.Black
+        frmSortWindow.lblLegendHeader.BackColor = Color.Black
+        frmSortWindow.lblWatching.BackColor = Color.Black
+        frmSortWindow.lblOnHold.BackColor = Color.Black
+        frmSortWindow.lblPlanToWatch.BackColor = Color.Black
+        frmSortWindow.lblCompleted.BackColor = Color.Black
+        frmSortWindow.lblDropped.BackColor = Color.Black
+
+        frmSortWindow.radPrimAsc.BackColor = Color.Black
+        frmSortWindow.radSecAsc.BackColor = Color.Black
+        frmSortWindow.radPrimDesc.BackColor = Color.Black
+        frmSortWindow.radSecDesc.BackColor = Color.Black
+
+
+        With frmSortWindow.btnApply
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+            .ForeColor = Color.White
+        End With
+    End Sub
+
+    Public Sub blueLightThemeSort()
+
+    End Sub
+
+    Public Sub orangeLightThemeSort()
+
+    End Sub
+
+    Public Sub purpleDarkThemeSort()
+        frmSortWindow.btnApply.BackColor = Color.FromArgb(44, 44, 44)
+
+        frmSortWindow.SortSettings.BackColor = Color.FromArgb(44, 44, 44)
+        frmSortWindow.lblSortCriteria.BackColor = Color.White
+        frmSortWindow.lblFilterCriteria.BackColor = Color.White
+        frmSortWindow.lblLegendHeader.BackColor = Color.White
+        frmSortWindow.lblWatching.BackColor = Color.White
+        frmSortWindow.lblOnHold.BackColor = Color.White
+        frmSortWindow.lblPlanToWatch.BackColor = Color.White
+        frmSortWindow.lblCompleted.BackColor = Color.White
+        frmSortWindow.lblDropped.BackColor = Color.White
+
+        frmSortWindow.radPrimAsc.BackColor = Color.White
+        frmSortWindow.radSecAsc.BackColor = Color.White
+        frmSortWindow.radPrimDesc.BackColor = Color.White
+        frmSortWindow.radSecDesc.BackColor = Color.White
+
+
+        With frmSortWindow.btnApply
+            .FlatAppearance.BorderColor = Color.MediumPurple
+            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
+            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
+            .ForeColor = Color.White
+        End With
+    End Sub
+
+    Public Sub blueDarkThemeSort()
+
+    End Sub
+
+    Public Sub orangeDarkThemeSort()
+
+    End Sub
+
 End Class
