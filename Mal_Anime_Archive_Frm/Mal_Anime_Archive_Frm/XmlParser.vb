@@ -227,6 +227,8 @@ Public Class XmlParser
 
         For i As Integer = 0 To animeCount - 1
             frmMain.pcbLoading.Maximum = animeCount - 1
+            WelcomeOpen.pcbLoading.Maximum = animeCount - 1
+            WelcomeOpen.pcbLoading.Visible = True
             frmMain.pcbLoading.Visible = True
             frmMain.lstwAnimeMain.Items.Insert(i, frmMain.sortedList(i).AnimeId)
             frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Title)
@@ -242,6 +244,7 @@ Public Class XmlParser
             frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Mycomments)
             frmMain.lstwAnimeMain.Items(i).SubItems.Add(frmMain.sortedList(i).Myrewatch)
             frmMain.backWork.ReportProgress(i)
+            WelcomeOpen.backWork.ReportProgress(i)
         Next
 
         currentAnime = frmMain.lblId.Text

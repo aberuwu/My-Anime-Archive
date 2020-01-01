@@ -33,6 +33,10 @@ Partial Class WelcomeOpen
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnNewList = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.mtlstvOpenRecent = New System.Windows.Forms.ListView()
+        Me.fileName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.pcbLoading = New MetroFramework.Controls.MetroProgressBar()
+        Me.backWork = New System.ComponentModel.BackgroundWorker()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -136,11 +140,43 @@ Partial Class WelcomeOpen
         Me.btnExit.Name = "btnExit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'mtlstvOpenRecent
+        '
+        resources.ApplyResources(Me.mtlstvOpenRecent, "mtlstvOpenRecent")
+        Me.mtlstvOpenRecent.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtlstvOpenRecent.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.mtlstvOpenRecent.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.fileName})
+        Me.mtlstvOpenRecent.FullRowSelect = True
+        Me.mtlstvOpenRecent.HideSelection = False
+        Me.mtlstvOpenRecent.Name = "mtlstvOpenRecent"
+        Me.mtlstvOpenRecent.OwnerDraw = True
+        Me.mtlstvOpenRecent.UseCompatibleStateImageBehavior = False
+        Me.mtlstvOpenRecent.View = System.Windows.Forms.View.Details
+        '
+        'fileName
+        '
+        resources.ApplyResources(Me.fileName, "fileName")
+        '
+        'pcbLoading
+        '
+        resources.ApplyResources(Me.pcbLoading, "pcbLoading")
+        Me.pcbLoading.Maximum = 7
+        Me.pcbLoading.Name = "pcbLoading"
+        Me.pcbLoading.Step = 1
+        Me.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pcbLoading.Value = 7
+        '
+        'backWork
+        '
+        Me.backWork.WorkerReportsProgress = True
+        '
         'WelcomeOpen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
+        Me.Controls.Add(Me.pcbLoading)
+        Me.Controls.Add(Me.mtlstvOpenRecent)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnNewList)
         Me.Controls.Add(Me.llbGitHub)
@@ -171,4 +207,8 @@ Partial Class WelcomeOpen
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnNewList As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents fileName As ColumnHeader
+    Friend WithEvents pcbLoading As MetroFramework.Controls.MetroProgressBar
+    Friend WithEvents backWork As System.ComponentModel.BackgroundWorker
+    Friend WithEvents mtlstvOpenRecent As ListView
 End Class

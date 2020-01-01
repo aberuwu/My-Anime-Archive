@@ -27,6 +27,9 @@ Public Class Themes
         frmMain.lblCopyright.ForeColor = Color.Black
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Orange
+        frmMain.mtsLoading.BackColor = Color.WhiteSmoke
+
         frmMain.lblMALRatingHeading.ForeColor = Color.Black
         frmMain.lblMALScoreHeading.ForeColor = Color.Black
         frmMain.lblMALStatusHeading.ForeColor = Color.Black
@@ -186,6 +189,9 @@ Public Class Themes
         frmMain.lblFavorites.ForeColor = Color.FromArgb(192, 0, 192)
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Purple
+        frmMain.mtsLoading.BackColor = Color.WhiteSmoke
+
         frmMain.lblMALRatingHeading.ForeColor = Color.Black
         frmMain.lblMALScoreHeading.ForeColor = Color.Black
         frmMain.lblMALStatusHeading.ForeColor = Color.Black
@@ -336,6 +342,9 @@ Public Class Themes
         frmMain.pcbLogo.Image = My.Resources.maa_logo_blue
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Blue
+        frmMain.mtsLoading.BackColor = Color.WhiteSmoke
+
         frmMain.lblMALRatingHeading.ForeColor = Color.Black
         frmMain.lblMALScoreHeading.ForeColor = Color.Black
         frmMain.lblMALStatusHeading.ForeColor = Color.Black
@@ -460,6 +469,9 @@ Public Class Themes
         frmMain.lstwAnimeMain.BackColor = Color.FromArgb(44, 44, 44)
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Orange
+        frmMain.mtsLoading.BackColor = Color.FromArgb(44, 44, 44)
+
         frmMain.lblMALRatingHeading.ForeColor = Color.OrangeRed
         frmMain.lblMALScoreHeading.ForeColor = Color.OrangeRed
         frmMain.lblMALStatusHeading.ForeColor = Color.OrangeRed
@@ -623,6 +635,9 @@ Public Class Themes
         frmMain.lstwStatus.BackColor = Color.FromArgb(44, 44, 44)
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Purple
+        frmMain.mtsLoading.BackColor = Color.FromArgb(44, 44, 44)
+
         frmMain.lblMALRatingHeading.ForeColor = Color.FromArgb(209, 122, 200)
         frmMain.lblMALScoreHeading.ForeColor = Color.FromArgb(209, 122, 200)
         frmMain.lblMALStatusHeading.ForeColor = Color.FromArgb(209, 122, 200)
@@ -756,6 +771,9 @@ Public Class Themes
         frmMain.ssMain.BackColor = Color.FromArgb(38, 35, 35)
 
         'Fore color MAL Labels
+        frmMain.mtsLoading.Style = MetroFramework.MetroColorStyle.Teal
+        frmMain.mtsLoading.BackColor = Color.FromArgb(44, 44, 44)
+
         frmMain.lblMALRatingHeading.ForeColor = Color.LightBlue
         frmMain.lblMALScoreHeading.ForeColor = Color.LightBlue
         frmMain.lblMALStatusHeading.ForeColor = Color.LightBlue

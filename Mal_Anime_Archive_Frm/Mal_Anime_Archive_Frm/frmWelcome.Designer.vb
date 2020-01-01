@@ -26,7 +26,7 @@ Partial Class frmWelcome
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lnkChangeLog = New System.Windows.Forms.LinkLabel()
-        Me.btnOk = New System.Windows.Forms.Button()
+        Me.btnContinue = New System.Windows.Forms.Button()
         Me.pcbUserImage = New System.Windows.Forms.PictureBox()
         CType(Me.pcbUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,22 +69,22 @@ Partial Class frmWelcome
         Me.lnkChangeLog.TabStop = True
         Me.lnkChangeLog.Text = "Vew Change Log"
         '
-        'btnOk
+        'btnContinue
         '
-        Me.btnOk.BackColor = System.Drawing.Color.Transparent
-        Me.btnOk.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke
-        Me.btnOk.FlatAppearance.BorderSize = 2
-        Me.btnOk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
-        Me.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
-        Me.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOk.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnOk.Location = New System.Drawing.Point(348, 26)
-        Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(90, 46)
-        Me.btnOk.TabIndex = 38
-        Me.btnOk.Text = "&Continue"
-        Me.btnOk.UseVisualStyleBackColor = False
+        Me.btnContinue.BackColor = System.Drawing.Color.Transparent
+        Me.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.btnContinue.FlatAppearance.BorderSize = 2
+        Me.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        Me.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnContinue.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnContinue.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnContinue.Location = New System.Drawing.Point(348, 26)
+        Me.btnContinue.Name = "btnContinue"
+        Me.btnContinue.Size = New System.Drawing.Size(90, 46)
+        Me.btnContinue.TabIndex = 38
+        Me.btnContinue.Text = "&Continue"
+        Me.btnContinue.UseVisualStyleBackColor = False
         '
         'pcbUserImage
         '
@@ -103,7 +103,7 @@ Partial Class frmWelcome
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(453, 153)
-        Me.Controls.Add(Me.btnOk)
+        Me.Controls.Add(Me.btnContinue)
         Me.Controls.Add(Me.lnkChangeLog)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblWelcome)
@@ -125,5 +125,5 @@ Partial Class frmWelcome
     Friend WithEvents lblWelcome As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lnkChangeLog As LinkLabel
-    Friend WithEvents btnOk As Button
+    Friend WithEvents btnContinue As Button
 End Class

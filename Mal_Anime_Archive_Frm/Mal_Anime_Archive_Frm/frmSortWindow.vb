@@ -325,20 +325,30 @@ Public Class frmSortWindow
             If frmMain.themePurple = True Then
                 purpleDarkThemeSort()
             ElseIf frmMain.themeBlue = True Then
-                themes.blueDarkThemeSort()
+                blueDarkThemeSort()
             ElseIf frmMain.themeOrange = True Then
-                themes.orangeDarkThemeSort()
+                orangeDarkThemeSort()
             End If
         Else
             If frmMain.themePurple = True Then
-                themes.purpleLightThemeSort()
+
             ElseIf frmMain.themeBlue = True Then
-                themes.blueLightThemeSort()
+                blueLightThemeSort()
             ElseIf frmMain.themeOrange = True Then
-                themes.orangeLightThemeSort()
+                orangeLightThemeSort()
             End If
         End If
     End Sub
+
+
+    Public Sub blueLightThemeSort()
+
+    End Sub
+
+    Public Sub orangeLightThemeSort()
+
+    End Sub
+
     Public Sub purpleDarkThemeSort()
         btnApply.BackColor = Color.FromArgb(44, 44, 44)
 
@@ -363,5 +373,14 @@ Public Class frmSortWindow
             .FlatAppearance.MouseDownBackColor = Color.DarkViolet
             .ForeColor = Color.White
         End With
+    End Sub
+
+
+    Public Sub blueDarkThemeSort()
+
+    End Sub
+
+    Public Sub orangeDarkThemeSort()
+
     End Sub
 End Class

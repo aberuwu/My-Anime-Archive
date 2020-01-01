@@ -126,7 +126,7 @@
     <value>Segoe UI Semilight, 11.25pt</value>
   </data>
   <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 159</value>
+    <value>532, 119</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>301, 120</value>
@@ -152,7 +152,7 @@ this tutorial:</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblWelcome.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnChooseFile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -162,7 +162,7 @@ this tutorial:</value>
     <value>Segoe UI Semilight, 9.75pt</value>
   </data>
   <data name="btnChooseFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>579, 58</value>
+    <value>531, 260</value>
   </data>
   <data name="btnChooseFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -183,13 +183,13 @@ this tutorial:</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnChooseFile.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="lblTutorialLink.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblTutorialLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 264</value>
+    <value>615, 224</value>
   </data>
   <data name="lblTutorialLink.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
@@ -210,7 +210,7 @@ this tutorial:</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTutorialLink.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>429, 37</value>
@@ -234,7 +234,7 @@ this tutorial:</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="btnContinue.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -246,7 +246,7 @@ this tutorial:</value>
     <value>Segoe UI Semilight, 9.75pt</value>
   </data>
   <data name="btnContinue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>579, 214</value>
+    <value>531, 320</value>
   </data>
   <data name="btnContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -267,7 +267,7 @@ this tutorial:</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnContinue.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -279,7 +279,7 @@ this tutorial:</value>
     <value>NoControl</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 346</value>
+    <value>321, 404</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 34</value>
@@ -304,7 +304,7 @@ Programmed by Cesar Mendoza</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="llbGitHub.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +316,7 @@ Programmed by Cesar Mendoza</value>
     <value>NoControl</value>
   </data>
   <data name="llbGitHub.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 363</value>
+    <value>505, 421</value>
   </data>
   <data name="llbGitHub.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -337,7 +337,7 @@ Programmed by Cesar Mendoza</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;llbGitHub.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>-33, -72</value>
@@ -361,7 +361,7 @@ Programmed by Cesar Mendoza</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="btnNewList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -373,7 +373,7 @@ Programmed by Cesar Mendoza</value>
     <value>NoControl</value>
   </data>
   <data name="btnNewList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>579, 136</value>
+    <value>685, 260</value>
   </data>
   <data name="btnNewList.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -394,7 +394,7 @@ Programmed by Cesar Mendoza</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnNewList.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -406,7 +406,7 @@ Programmed by Cesar Mendoza</value>
     <value>NoControl</value>
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>579, 292</value>
+    <value>685, 320</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 42</value>
@@ -427,8 +427,71 @@ Programmed by Cesar Mendoza</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mtlstvOpenRecent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="fileName.Text" xml:space="preserve">
+    <value>Open Recent File</value>
+  </data>
+  <data name="fileName.Width" type="System.Int32, mscorlib">
+    <value>483</value>
+  </data>
+  <data name="mtlstvOpenRecent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semilight, 12pt</value>
+  </data>
+  <data name="mtlstvOpenRecent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 111</value>
+  </data>
+  <data name="mtlstvOpenRecent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 266</value>
+  </data>
+  <data name="mtlstvOpenRecent.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;mtlstvOpenRecent.Name" xml:space="preserve">
+    <value>mtlstvOpenRecent</value>
+  </data>
+  <data name="&gt;&gt;mtlstvOpenRecent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mtlstvOpenRecent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mtlstvOpenRecent.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pcbLoading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="pcbLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-6, -2</value>
+  </data>
+  <data name="pcbLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>876, 8</value>
+  </data>
+  <data name="pcbLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="pcbLoading.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pcbLoading.Name" xml:space="preserve">
+    <value>pcbLoading</value>
+  </data>
+  <data name="&gt;&gt;pcbLoading.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroProgressBar, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;pcbLoading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pcbLoading.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="backWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -439,7 +502,7 @@ Programmed by Cesar Mendoza</value>
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>764, 392</value>
+    <value>865, 450</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3252,6 +3315,18 @@ Programmed by Cesar Mendoza</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>My Anime Archive - Select File</value>
+  </data>
+  <data name="&gt;&gt;fileName.Name" xml:space="preserve">
+    <value>fileName</value>
+  </data>
+  <data name="&gt;&gt;fileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backWork.Name" xml:space="preserve">
+    <value>backWork</value>
+  </data>
+  <data name="&gt;&gt;backWork.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>WelcomeOpen</value>

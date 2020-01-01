@@ -32,6 +32,10 @@ Public Class frmMain
     Public Property animeList As List(Of Anime) = New List(Of Anime)
     Public Property sortedList As List(Of Anime) = New List(Of Anime)
     Public Property userList As List(Of User) = New List(Of User)
+    Public recentList As List(Of String) = New List(Of String)
+
+    'Public recent(5) As String
+    Public recentCounter As Integer = 0
     Public Property animeCount As Integer = 0
     Public Property userCount As Integer = 0
 
@@ -63,11 +67,61 @@ Public Class frmMain
     Public Property themePurple As Boolean = True
     Public Property themeBlue As Boolean = False
     Public Property themeOrange As Boolean = False
+    Public Property globalThemeVal As Integer = 0
 
     Public Property ANIME_SOURCE_XML As String
     Private MAL_SOURCE_URL As String = "https://myanimelist.net/anime/"
 
+    Private Sub loadSettings()
+        Dim path As String = AppDomain.CurrentDomain.BaseDirectory + "\" + "MAAConfig.dat"
+        Try
+            Dim theme As String = System.IO.File.ReadAllText(path)
+            If theme = 0 Then
+                globalThemeVal = 0
+                frmUserInfo.setTheme()
+            ElseIf theme = 1 Then
+                globalThemeVal = 1
+                frmUserInfo.setTheme()
+            Else
+                globalThemeVal = 2
+                frmUserInfo.setTheme()
+            End If
+        Catch ex As Exception
+            System.IO.File.WriteAllText(path, 0)
+        End Try
+    End Sub
+
+    Public Sub saveRecent()
+        Dim path As String = AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat"
+        Dim location As String = ANIME_SOURCE_XML
+        Dim localCount As Integer = 0
+
+        For Each line As String In File.ReadLines(AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat")
+            localCount += 1
+        Next
+
+        If localCount < 10 Then
+            File.AppendAllText(path, location + Environment.NewLine())
+        Else
+            Dim lines As List(Of String) = File.ReadAllLines(path).ToList()
+            File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray())
+            File.AppendAllText(path, location + Environment.NewLine())
+        End If
+    End Sub
+
+    Public Sub loadRecent()
+        For Each line As String In File.ReadLines(AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat")
+            If recentCounter < 10 Then
+                recentList.Add(line)
+                recentCounter += 1
+            End If
+        Next
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        loadSettings()
+
         txtSearch.ForeColor = SystemColors.GrayText
         txtSearch.Text = "🔎 Anime Search"
 
@@ -125,6 +179,8 @@ Public Class frmMain
                 lstwAnimeSearch.Items(0).Focused = True
                 lstwAnimeSearch.Items(0).EnsureVisible()
                 Me.ActiveControl = lstwAnimeSearch
+
+                saveRecent()
             ElseIf ofpXml.FileName.Contains(".json") Then
                 txtSearch.Clear()
                 txtSearch.ForeColor = SystemColors.GrayText
@@ -140,6 +196,11 @@ Public Class frmMain
                 lstwAnimeSearch.Items(0).Focused = True
                 lstwAnimeSearch.Items(0).EnsureVisible()
                 Me.ActiveControl = lstwAnimeSearch
+
+                If ANIME_SOURCE_XML = recentList(0) Then
+                Else
+                    saveRecent()
+                End If
             Else
                 Dim errorPage As frmError
                 errorPage = New frmError
@@ -800,7 +861,6 @@ Public Class frmMain
             If vscrSearchList.Maximum > 0 Then
                 vscrSearchList.Value = lstwAnimeSearch.TopItem.Index
                 lstwStatus.TopItem = lstwStatus.Items(lstwAnimeSearch.TopItem.Index)
-                'lstwStatus.TopItem = lstwStatus.Items(lstAnimes.TopIndex)
             End If
         Catch ex As Exception
             Return

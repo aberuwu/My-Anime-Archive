@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.DataVisualization.Charting
+﻿Imports System.IO
+Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class frmUserInfo
 
@@ -282,8 +283,74 @@ Public Class frmUserInfo
 
     End Sub
 
-    Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
+    Public Sub setTheme()
+        Dim path As String = AppDomain.CurrentDomain.BaseDirectory + "\" + "MAAConfig.dat"
         If mtddlThemes.SelectedIndex = -1 Then
+            If frmMain.globalThemeVal = 0 Then
+                frmMain.themePurple = True
+                frmMain.themeBlue = False
+                frmMain.themeOrange = False
+                frmMain.tsMain.BackgroundImage = My.Resources.purple_back
+                frmMain.pnlHeader.BackgroundImage = My.Resources.purple_back
+                Me.BackgroundImage = My.Resources.purple_back
+
+                If frmMain.darkModeOn = True Then
+                    themes.purpleThemeDarkModeMain()
+                    purpleGraphThemeDarkMode()
+                Else
+                    themes.purpleThemeLightModeMain()
+                    'purpleGraphThemeLightMode()
+                End If
+                System.IO.File.WriteAllText(path, 0)
+            ElseIf frmMain.globalThemeVal = 1 Then
+                frmMain.themeBlue = True
+                frmMain.themeOrange = False
+                frmMain.themePurple = False
+                frmMain.tsMain.BackgroundImage = My.Resources.blue_back
+                frmMain.pnlHeader.BackgroundImage = My.Resources.blue_back
+                Me.BackgroundImage = My.Resources.blue_back
+
+                If frmMain.darkModeOn = True Then
+                    themes.blueThemeDarkModeMain()
+                    blueGraphThemeDarkMode()
+                Else
+                    themes.blueThemeLightModeMain()
+                    'blueGraphThemeLightMode()
+                End If
+                System.IO.File.WriteAllText(path, 1)
+            ElseIf frmMain.globalThemeVal = 2 Then
+                frmMain.themeOrange = True
+                frmMain.themeBlue = False
+                frmMain.themePurple = False
+                frmMain.tsMain.BackgroundImage = My.Resources.orange_back
+                frmMain.pnlHeader.BackgroundImage = My.Resources.orange_back
+                Me.BackgroundImage = My.Resources.orange_back
+
+                If frmMain.darkModeOn = True Then
+                    themes.orangeThemeDarkModeMain()
+                    orangeGraphThemeDarkMode()
+                Else
+                    themes.orangeThemeLightModeMain()
+                    'orangeGraphThemeLightMode()
+                End If
+                System.IO.File.WriteAllText(path, 2)
+            Else
+                frmMain.themePurple = True
+                frmMain.themeBlue = False
+                frmMain.themeOrange = False
+                frmMain.tsMain.BackgroundImage = My.Resources.purple_back
+                frmMain.pnlHeader.BackgroundImage = My.Resources.purple_back
+                Me.BackgroundImage = My.Resources.purple_back
+
+                If frmMain.darkModeOn = True Then
+                    themes.purpleThemeDarkModeMain()
+                    purpleGraphThemeDarkMode()
+                Else
+                    themes.purpleThemeLightModeMain()
+                    purpleGraphThemeLightMode()
+                End If
+                System.IO.File.WriteAllText(path, 0)
+            End If
             Return
         ElseIf mtddlThemes.SelectedIndex = 0 Then
             frmMain.themePurple = True
@@ -300,7 +367,7 @@ Public Class frmUserInfo
                 themes.purpleThemeLightModeMain()
                 purpleGraphThemeLightMode()
             End If
-
+            System.IO.File.WriteAllText(path, 0)
         ElseIf mtddlThemes.SelectedIndex = 1 Then
             frmMain.themeBlue = True
             frmMain.themeOrange = False
@@ -316,7 +383,7 @@ Public Class frmUserInfo
                 themes.blueThemeLightModeMain()
                 blueGraphThemeLightMode()
             End If
-
+            System.IO.File.WriteAllText(path, 1)
         ElseIf mtddlThemes.SelectedIndex = 2 Then
             frmMain.themeOrange = True
             frmMain.themeBlue = False
@@ -332,13 +399,18 @@ Public Class frmUserInfo
                 themes.orangeThemeLightModeMain()
                 orangeGraphThemeLightMode()
             End If
-
+            System.IO.File.WriteAllText(path, 2)
         Else
             Return
         End If
 
         frmMain.lstwAnimeMain.Refresh()
         frmMain.lstwAnimeSearch.Refresh()
+    End Sub
+
+
+    Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
+        setTheme()
     End Sub
 
 
