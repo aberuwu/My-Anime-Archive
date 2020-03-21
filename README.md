@@ -15,6 +15,7 @@ My Anime Archive can be used while offline! Keep your anime list backup safe, up
 -View anime record<br/>
 -Edit anime record<br/>
 -Create New List<br/>
+-Download anime list directly from MyAnimeList.net<br/>
 -Online features such as anime search and user search powered by Jikan REST API For .NET<br/>
 -Offline list statistical analysis <br/>
 -Export .xml that can be re-uploaded to MyAnimeList.net<br/>
