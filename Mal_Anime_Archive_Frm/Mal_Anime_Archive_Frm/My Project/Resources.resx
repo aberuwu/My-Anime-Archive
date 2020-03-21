@@ -118,196 +118,205 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Switch_OnP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Switch_OnP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="json icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\json icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Switch_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Switch_On.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Switch_OffP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Switch_OffP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Love" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Love.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purple_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Excel_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Excel_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="purple_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\purple_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Switch_Off2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Switch_Off2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maa_logo_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maa_logo_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relife_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relife_background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blue_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blue_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maa_logo_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maa_logo_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sql_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sql_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purple_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReLife_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReLife_Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimize_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sql_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sql_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="haruhi_loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\haruhi_loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purple2." type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple2..jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maa_logo_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maa_logo_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hishiro_backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hishiro_backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OpenFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OpenFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="testImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\testImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Save_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Excel_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Excel_png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xml_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xml_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blue_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blue_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue_theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue_theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maa_logo_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maa_logo_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="full_Screen_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_Screen_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Orange_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Orange_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SaveAs_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveAs_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xml_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xml_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uwu 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uwu 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purple3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chibi3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chibi3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MALLogoWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MALLogoWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="export_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Purple3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Love" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Love.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="filter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="orange_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orange_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Excel_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excel_png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sorry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sorry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Switch_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_On.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Switch_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Switch_Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="json icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\json icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MAA_logo_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MAA_logo_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Orange_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Orange_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="darkpp_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darkpp_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maa_logo_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maa_logo_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Onodera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Onodera.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="export_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\export_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Purple_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="haruhi_loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\haruhi_loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="open_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xml_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xml_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darkpp_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darkpp_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sort_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sort_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="full_Screen_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full_Screen_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpenFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xml_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xml_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sql_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sql_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Purple2." type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple2..jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="testImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purple_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\purple_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maa_logo_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maa_logo_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uwu 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uwu 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_OnP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_OnP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chibi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chibi1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xml_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xml_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Excel_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excel_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relife_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\relife_background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveAs_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAs_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReLife_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReLife_Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sorry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sorry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sql_purple_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sql_purple_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maa_logo_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maa_logo_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orange_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orange_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hishiro_backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hishiro_backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_ico_blk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_ico_blk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Purple_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_Off2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_Off2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maa_logo_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maa_logo_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orange_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orange_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAA_logo_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAA_logo_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_OffP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_OffP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chibi4-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chibi4-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

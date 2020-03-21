@@ -501,7 +501,7 @@ Public Class frmMain
         Dim aboutForm As frmAbout
 
         aboutForm = New frmAbout
-        aboutForm.ShowDialog()
+        aboutForm.Show()
     End Sub
 
     Private Sub pcbUserPicture_Click(sender As Object, e As EventArgs) Handles pcbUserPicture.Click
@@ -797,7 +797,6 @@ Public Class frmMain
         End If
     End Sub
 
-
     Private Sub tsmiEdit_Click(sender As Object, e As EventArgs) Handles tsmiEdit.Click
         Dim editAnime As frmEditAnime
         editAnime = New frmEditAnime
@@ -806,7 +805,6 @@ Public Class frmMain
         XmlParser.populateList()
         refreshSearchList()
     End Sub
-
     Private Sub tsbtnNewAnime_Click(sender As Object, e As EventArgs) Handles tsbtnNewAnime.Click
         Dim newAnime As frmNewAnime
         newAnime = New frmNewAnime
@@ -875,7 +873,6 @@ Public Class frmMain
         welcomeOpen()
     End Sub
 
-
     Private Sub btnOpenHeader_Click(sender As Object, e As EventArgs) Handles btnOpenHeader.Click
         btnOpen_Click(Nothing, Nothing)
     End Sub
@@ -908,6 +905,9 @@ Public Class frmMain
         btnUserInfo_Click(Nothing, Nothing)
     End Sub
 
+    Private Sub btnAboutHeader_Click(sender As Object, e As EventArgs) Handles btnAboutHeader.Click
+        btnAbout_Click(Nothing, Nothing)
+    End Sub
 End Class
 Public Class ListViewDoubleBuffered
     Inherits ListView

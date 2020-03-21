@@ -34,12 +34,13 @@ Partial Class WelcomeOpen
         Me.btnNewList = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.mtlstvOpenRecent = New System.Windows.Forms.ListView()
-        Me.fileName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.fileName = CType(New System.Windows.Forms.ColumnHeader(),System.Windows.Forms.ColumnHeader)
         Me.pcbLoading = New MetroFramework.Controls.MetroProgressBar()
         Me.backWork = New System.ComponentModel.BackgroundWorker()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.btnDownload = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'lblWelcome
         '
@@ -58,7 +59,7 @@ Partial Class WelcomeOpen
         resources.ApplyResources(Me.btnChooseFile, "btnChooseFile")
         Me.btnChooseFile.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnChooseFile.Name = "btnChooseFile"
-        Me.btnChooseFile.UseVisualStyleBackColor = False
+        Me.btnChooseFile.UseVisualStyleBackColor = false
         '
         'lblTutorialLink
         '
@@ -68,16 +69,16 @@ Partial Class WelcomeOpen
         Me.lblTutorialLink.ForeColor = System.Drawing.SystemColors.Control
         Me.lblTutorialLink.LinkColor = System.Drawing.Color.WhiteSmoke
         Me.lblTutorialLink.Name = "lblTutorialLink"
-        Me.lblTutorialLink.TabStop = True
+        Me.lblTutorialLink.TabStop = true
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Love
+        Me.PictureBox1.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Chibi3
         Me.PictureBox1.InitialImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Love
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = false
         '
         'btnContinue
         '
@@ -89,7 +90,7 @@ Partial Class WelcomeOpen
         Me.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
         Me.btnContinue.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnContinue.Name = "btnContinue"
-        Me.btnContinue.UseVisualStyleBackColor = False
+        Me.btnContinue.UseVisualStyleBackColor = false
         '
         'Label1
         '
@@ -106,7 +107,7 @@ Partial Class WelcomeOpen
         Me.llbGitHub.ForeColor = System.Drawing.SystemColors.Control
         Me.llbGitHub.LinkColor = System.Drawing.Color.WhiteSmoke
         Me.llbGitHub.Name = "llbGitHub"
-        Me.llbGitHub.TabStop = True
+        Me.llbGitHub.TabStop = true
         '
         'PictureBox2
         '
@@ -114,7 +115,7 @@ Partial Class WelcomeOpen
         Me.PictureBox2.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.MAA_logo_White
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.TabStop = false
         '
         'btnNewList
         '
@@ -126,7 +127,7 @@ Partial Class WelcomeOpen
         resources.ApplyResources(Me.btnNewList, "btnNewList")
         Me.btnNewList.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnNewList.Name = "btnNewList"
-        Me.btnNewList.UseVisualStyleBackColor = False
+        Me.btnNewList.UseVisualStyleBackColor = false
         '
         'btnExit
         '
@@ -138,7 +139,7 @@ Partial Class WelcomeOpen
         resources.ApplyResources(Me.btnExit, "btnExit")
         Me.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.UseVisualStyleBackColor = False
+        Me.btnExit.UseVisualStyleBackColor = false
         '
         'mtlstvOpenRecent
         '
@@ -146,11 +147,11 @@ Partial Class WelcomeOpen
         Me.mtlstvOpenRecent.BackColor = System.Drawing.Color.WhiteSmoke
         Me.mtlstvOpenRecent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.mtlstvOpenRecent.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.fileName})
-        Me.mtlstvOpenRecent.FullRowSelect = True
-        Me.mtlstvOpenRecent.HideSelection = False
+        Me.mtlstvOpenRecent.FullRowSelect = true
+        Me.mtlstvOpenRecent.HideSelection = false
         Me.mtlstvOpenRecent.Name = "mtlstvOpenRecent"
-        Me.mtlstvOpenRecent.OwnerDraw = True
-        Me.mtlstvOpenRecent.UseCompatibleStateImageBehavior = False
+        Me.mtlstvOpenRecent.OwnerDraw = true
+        Me.mtlstvOpenRecent.UseCompatibleStateImageBehavior = false
         Me.mtlstvOpenRecent.View = System.Windows.Forms.View.Details
         '
         'fileName
@@ -168,13 +169,26 @@ Partial Class WelcomeOpen
         '
         'backWork
         '
-        Me.backWork.WorkerReportsProgress = True
+        Me.backWork.WorkerReportsProgress = true
+        '
+        'btnDownload
+        '
+        Me.btnDownload.BackColor = System.Drawing.Color.Transparent
+        Me.btnDownload.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.btnDownload.FlatAppearance.BorderSize = 2
+        Me.btnDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet
+        Me.btnDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
+        resources.ApplyResources(Me.btnDownload, "btnDownload")
+        Me.btnDownload.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnDownload.Name = "btnDownload"
+        Me.btnDownload.UseVisualStyleBackColor = false
         '
         'WelcomeOpen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
+        Me.Controls.Add(Me.btnDownload)
         Me.Controls.Add(Me.pcbLoading)
         Me.Controls.Add(Me.mtlstvOpenRecent)
         Me.Controls.Add(Me.btnExit)
@@ -187,15 +201,15 @@ Partial Class WelcomeOpen
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
-        Me.DoubleBuffered = True
+        Me.DoubleBuffered = true
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "WelcomeOpen"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
 
     Friend WithEvents lblWelcome As Label
     Friend WithEvents btnChooseFile As Button
@@ -211,4 +225,5 @@ Partial Class WelcomeOpen
     Friend WithEvents pcbLoading As MetroFramework.Controls.MetroProgressBar
     Friend WithEvents backWork As System.ComponentModel.BackgroundWorker
     Friend WithEvents mtlstvOpenRecent As ListView
+    Friend WithEvents btnDownload As Button
 End Class

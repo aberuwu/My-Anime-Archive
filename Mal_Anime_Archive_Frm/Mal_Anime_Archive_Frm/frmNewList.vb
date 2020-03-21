@@ -5,8 +5,9 @@ Imports JikanDotNet
 
 Public Class frmNewList
     Public Property loadedNewUser As Boolean = False
+
     Private USER_IMG_URL As String
-    Private USER_NAME As String
+    Public USER_NAME As String
     Private USER_ID As String
     Private Sub frmNewList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

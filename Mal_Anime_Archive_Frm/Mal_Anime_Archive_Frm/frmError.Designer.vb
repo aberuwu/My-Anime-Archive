@@ -40,9 +40,11 @@ Partial Class frmError
         Me.gbxError.Controls.Add(Me.btnTryAgain)
         Me.gbxError.Controls.Add(Me.pcbErrorSorry)
         Me.gbxError.Controls.Add(Me.lblMessage)
-        Me.gbxError.Location = New System.Drawing.Point(-1, 55)
+        Me.gbxError.Location = New System.Drawing.Point(-1, 68)
+        Me.gbxError.Margin = New System.Windows.Forms.Padding(4)
         Me.gbxError.Name = "gbxError"
-        Me.gbxError.Size = New System.Drawing.Size(611, 291)
+        Me.gbxError.Padding = New System.Windows.Forms.Padding(4)
+        Me.gbxError.Size = New System.Drawing.Size(815, 358)
         Me.gbxError.TabIndex = 0
         Me.gbxError.TabStop = False
         '
@@ -54,9 +56,10 @@ Partial Class frmError
         Me.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
         Me.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnContinue.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnContinue.Location = New System.Drawing.Point(318, 204)
+        Me.btnContinue.Location = New System.Drawing.Point(424, 251)
+        Me.btnContinue.Margin = New System.Windows.Forms.Padding(4)
         Me.btnContinue.Name = "btnContinue"
-        Me.btnContinue.Size = New System.Drawing.Size(95, 35)
+        Me.btnContinue.Size = New System.Drawing.Size(127, 43)
         Me.btnContinue.TabIndex = 25
         Me.btnContinue.Text = "&Home"
         Me.btnContinue.UseVisualStyleBackColor = True
@@ -69,19 +72,21 @@ Partial Class frmError
         Me.btnTryAgain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple
         Me.btnTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTryAgain.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTryAgain.Location = New System.Drawing.Point(197, 204)
+        Me.btnTryAgain.Location = New System.Drawing.Point(263, 251)
+        Me.btnTryAgain.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTryAgain.Name = "btnTryAgain"
-        Me.btnTryAgain.Size = New System.Drawing.Size(95, 35)
+        Me.btnTryAgain.Size = New System.Drawing.Size(127, 43)
         Me.btnTryAgain.TabIndex = 24
         Me.btnTryAgain.Text = "&Try Again"
         Me.btnTryAgain.UseVisualStyleBackColor = True
         '
         'pcbErrorSorry
         '
-        Me.pcbErrorSorry.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.sorry
-        Me.pcbErrorSorry.Location = New System.Drawing.Point(6, 40)
+        Me.pcbErrorSorry.Image = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.Chibi4_1
+        Me.pcbErrorSorry.Location = New System.Drawing.Point(8, 49)
+        Me.pcbErrorSorry.Margin = New System.Windows.Forms.Padding(4)
         Me.pcbErrorSorry.Name = "pcbErrorSorry"
-        Me.pcbErrorSorry.Size = New System.Drawing.Size(152, 140)
+        Me.pcbErrorSorry.Size = New System.Drawing.Size(203, 172)
         Me.pcbErrorSorry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pcbErrorSorry.TabIndex = 1
         Me.pcbErrorSorry.TabStop = False
@@ -90,9 +95,10 @@ Partial Class frmError
         '
         Me.lblMessage.AutoSize = True
         Me.lblMessage.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMessage.Location = New System.Drawing.Point(169, 44)
+        Me.lblMessage.Location = New System.Drawing.Point(225, 54)
+        Me.lblMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(424, 126)
+        Me.lblMessage.Size = New System.Drawing.Size(519, 168)
         Me.lblMessage.TabIndex = 0
         Me.lblMessage.Text = resources.GetString("lblMessage.Text")
         '
@@ -102,24 +108,26 @@ Partial Class frmError
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(5, 9)
+        Me.Label2.Location = New System.Drawing.Point(7, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(262, 32)
+        Me.Label2.Size = New System.Drawing.Size(323, 41)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Hold on to your horses!"
         '
         'frmError
         '
         Me.AcceptButton = Me.btnTryAgain
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Mal_Anime_Archive_Frm.My.Resources.Resources.purple_back
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(604, 313)
+        Me.ClientSize = New System.Drawing.Size(805, 385)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.gbxError)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmError"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "My Anime Archive - Error 101"

@@ -165,9 +165,9 @@
         newList = New frmNewList
         newList.ShowDialog()
         Me.Close()
-        Dim newAnime As frmNewAnime
-        newAnime = New frmNewAnime
-        newAnime.ShowDialog()
+        Dim download As Download
+        download = New Download()
+        download.ShowDialog()
         xmlParser.populateList()
         frmMain.refreshSearchList()
     End Sub
@@ -222,5 +222,15 @@
         If e.ProgressPercentage = pcbLoading.Maximum Then
             pcbLoading.Visible = False
         End If
+    End Sub
+
+    Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
+        Dim download As Download
+        download = New Download()
+        download.ShowDialog()
+        'Me.Close()
+        'Dim newAnime As frmNewAnime
+        'newAnime = New frmNewAnime
+        'newAnime.ShowDialog()
     End Sub
 End Class

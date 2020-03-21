@@ -167,35 +167,6 @@ Public Class XmlParser
             errorPage.ShowDialog()
             Return
         Finally
-            frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
-            Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
-
-            For i As Integer = 0 To frmMain.animeCount - 1
-
-                sug.Add(frmMain.animeList(i).Title)
-                Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
-                Dim str(2) As String
-                Dim itemResults As ListViewItem
-
-                If frmMain.animeList(i).Status = "Watching" Then
-                    itemStatus.ImageIndex = 0
-                ElseIf frmMain.animeList(i).Status = "Completed" Then
-                    itemStatus.ImageIndex = 1
-                ElseIf frmMain.animeList(i).Status = "Dropped" Then
-                    itemStatus.ImageIndex = 2
-                ElseIf frmMain.animeList(i).Status = "On-Hold" Then
-                    itemStatus.ImageIndex = 3
-                Else
-                    itemStatus.ImageIndex = 4
-                End If
-
-                str(0) = frmMain.animeList(i).Title
-                str(1) = frmMain.animeList(i).AnimeId
-                itemResults = New ListViewItem(str)
-                frmMain.lstwAnimeSearch.Items.Add(itemResults)
-            Next
-
-            frmMain.txtSearch.AutoCompleteCustomSource = sug
 
             populateList()
             frmMain.refreshSearchList()
@@ -220,10 +191,41 @@ Public Class XmlParser
     Public Sub populateList()
         frmMain.lstwAnimeMain.Visible = True
         frmMain.lstwAnimeMain.Items.Clear()
+        frmMain.lstwAnimeSearch.Items.Clear()
+        frmMain.lstwStatus.Items.Clear()
         frmMain.fullListChecked = True
 
         Dim currentAnime As String
         Dim animeCount As Integer = frmMain.animeList.Count()
+
+        frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
+        Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
+
+        For i As Integer = 0 To frmMain.animeCount - 1
+            sug.Add(frmMain.animeList(i).Title)
+            Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
+            Dim str(2) As String
+            Dim itemResults As ListViewItem
+
+            If frmMain.animeList(i).Status = "Watching" Then
+                itemStatus.ImageIndex = 0
+            ElseIf frmMain.animeList(i).Status = "Completed" Then
+                itemStatus.ImageIndex = 1
+            ElseIf frmMain.animeList(i).Status = "Dropped" Then
+                itemStatus.ImageIndex = 2
+            ElseIf frmMain.animeList(i).Status = "On-Hold" Then
+                itemStatus.ImageIndex = 3
+            Else
+                itemStatus.ImageIndex = 4
+            End If
+
+            str(0) = frmMain.animeList(i).Title
+            str(1) = frmMain.animeList(i).AnimeId
+            itemResults = New ListViewItem(str)
+            frmMain.lstwAnimeSearch.Items.Add(itemResults)
+        Next
+
+        frmMain.txtSearch.AutoCompleteCustomSource = sug
 
         For i As Integer = 0 To animeCount - 1
             frmMain.pcbLoading.Maximum = animeCount - 1
@@ -260,7 +262,5 @@ Public Class XmlParser
             frmMain.lblNoListLoaded.Visible = False
         End If
 
-        frmMain.lstwAnimeSearch.Items.Clear()
-        frmMain.lstwStatus.Items.Clear()
     End Sub
 End Class

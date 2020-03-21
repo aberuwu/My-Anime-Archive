@@ -50,7 +50,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>MAA.ico</ApplicationIcon>
+    <ApplicationIcon>Chibi3.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -121,6 +121,12 @@
     <Compile Include="Anime.vb" />
     <Compile Include="CustomPgb.vb">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Download.Designer.vb">
+      <DependentUpon>Download.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Download.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAbout.Designer.vb">
       <DependentUpon>frmAbout.vb</DependentUpon>
@@ -236,6 +242,9 @@
     <Compile Include="XmlParser.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Download.resx">
+      <DependentUpon>Download.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
@@ -356,7 +365,14 @@
     <None Include="Resources\Purple3.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="chibi3.1.ico" />
+    <Content Include="chibi3.2.ico" />
+    <Content Include="chibi3.3.ico" />
+    <Content Include="Chibi3.ico" />
     <Content Include="MAA.ico" />
+    <None Include="Resources\Chibi4-1.png" />
+    <None Include="Resources\Chibi1.png" />
+    <None Include="Resources\Chibi3.png" />
     <None Include="Resources\xml_ico_blk.png" />
     <None Include="Resources\user_ico_blk.png" />
     <None Include="Resources\sort_ico_blk.png" />

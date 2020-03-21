@@ -42,6 +42,21 @@ Mal_Anime_Archive_Frm
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Chibi1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Chibi3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.Chibi4_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Mal_Anime_Archive_Frm.My.Resources.Resources.darkpp_back">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
