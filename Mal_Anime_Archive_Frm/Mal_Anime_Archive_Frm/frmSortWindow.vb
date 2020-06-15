@@ -3,8 +3,9 @@
 '* Purpose: Code in this form sorts and
 '* filters user list based on specified
 '* friteria
-'* Last Updated: 17/08/2019 - 17:15
+'* Last Updated: 15/6/2020 - 17:20
 '***************************************
+
 Public Class frmSortWindow
 
     Private themes As New Themes()
@@ -191,41 +192,43 @@ Public Class frmSortWindow
     'Filter Criteria
     '------------------------------------
     Private Sub primaryFilter()
-        If mtddlSecCrit.SelectedIndex = 0 Then
-            'No Filter
-            primarySort()
-            frmMain.filterByNothing = True
-        ElseIf mtddlSecCrit.SelectedIndex = 1 Then
-            'Watching
-            frmMain.lstwAnimeSearch.Items.Clear()
-            frmMain.lstwStatus.Items.Clear()
-            populateWithFilter(frmMain.animeList, "watching")
-            frmMain.filterByWatching = True
-        ElseIf mtddlSecCrit.SelectedIndex = 2 Then
-            'Completed
-            frmMain.lstwAnimeSearch.Items.Clear()
-            frmMain.lstwStatus.Items.Clear()
-            populateWithFilter(frmMain.animeList, "completed")
-            frmMain.filterByCompleted = True
-        ElseIf mtddlSecCrit.SelectedIndex = 3 Then
-            'On-Hold
-            frmMain.lstwAnimeSearch.Items.Clear()
-            frmMain.lstwStatus.Items.Clear()
-            populateWithFilter(frmMain.animeList, "on-hold")
-            frmMain.filterByOnHold = True
-        ElseIf mtddlSecCrit.SelectedIndex = 4 Then
-            'Dropped
-            frmMain.lstwAnimeSearch.Items.Clear()
-            frmMain.lstwStatus.Items.Clear()
-            populateWithFilter(frmMain.animeList, "dropped")
-            frmMain.filterByDropped = True
-        ElseIf mtddlSecCrit.SelectedIndex = 5 Then
-            'Plan To Watch
-            frmMain.lstwAnimeSearch.Items.Clear()
-            frmMain.lstwStatus.Items.Clear()
-            populateWithFilter(frmMain.animeList, "plantowatch")
-            frmMain.filterByPlanToWatch = True
-        End If
+        Dim primFilter = mtddlSecCrit.SelectedIndex
+
+        Select Case primFilter
+            Case 0
+                'No Filter
+                primarySort()
+                frmMain.filterByNothing = True
+            Case 1
+                'Watching
+                frmMain.lstwAnimeSearch.Items.Clear()
+                frmMain.lstwStatus.Items.Clear()
+                populateWithFilter(frmMain.animeList, "watching")
+                frmMain.filterByWatching = True
+            Case 2
+                'Completed
+                frmMain.lstwAnimeSearch.Items.Clear()
+                frmMain.lstwStatus.Items.Clear()
+                populateWithFilter(frmMain.animeList, "completed")
+            Case 3
+                'On-Hold
+                frmMain.lstwAnimeSearch.Items.Clear()
+                frmMain.lstwStatus.Items.Clear()
+                populateWithFilter(frmMain.animeList, "on-hold")
+                frmMain.filterByOnHold = True
+            Case 4
+                'Dropped
+                frmMain.lstwAnimeSearch.Items.Clear()
+                frmMain.lstwStatus.Items.Clear()
+                populateWithFilter(frmMain.animeList, "dropped")
+                frmMain.filterByDropped = True
+            Case 5
+                'Plan To Watch
+                frmMain.lstwAnimeSearch.Items.Clear()
+                frmMain.lstwStatus.Items.Clear()
+                populateWithFilter(frmMain.animeList, "plantowatch")
+                frmMain.filterByPlanToWatch = True
+        End Select
     End Sub
 
     '-----------------------------------------
