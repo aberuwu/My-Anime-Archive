@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anime.vb" />
+    <Compile Include="APICalls.vb" />
     <Compile Include="CustomPgb.vb">
       <SubType>Component</SubType>
     </Compile>

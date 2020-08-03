@@ -76,16 +76,19 @@ Public Class frmMain
         Dim path As String = AppDomain.CurrentDomain.BaseDirectory + "\" + "MAAConfig.dat"
         Try
             Dim theme As String = System.IO.File.ReadAllText(path)
-            If theme = 0 Then
-                globalThemeVal = 0
-                frmUserInfo.setTheme()
-            ElseIf theme = 1 Then
-                globalThemeVal = 1
-                frmUserInfo.setTheme()
-            Else
-                globalThemeVal = 2
-                frmUserInfo.setTheme()
-            End If
+
+            Select Case theme
+                Case 0
+                    globalThemeVal = 0
+                    frmUserInfo.setTheme()
+                Case 1
+                    globalThemeVal = 1
+                    frmUserInfo.setTheme()
+                Case Else
+                    globalThemeVal = 2
+                    frmUserInfo.setTheme()
+            End Select
+
         Catch ex As Exception
             System.IO.File.WriteAllText(path, 0)
         End Try
@@ -101,11 +104,17 @@ Public Class frmMain
         Next
 
         If localCount < 10 Then
-            File.AppendAllText(path, location + Environment.NewLine())
+            If path = "" Then
+            Else
+                File.AppendAllText(path, location + Environment.NewLine())
+            End If
         Else
-            Dim lines As List(Of String) = File.ReadAllLines(path).ToList()
-            File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray())
-            File.AppendAllText(path, location + Environment.NewLine())
+            If path = "" Then
+            Else
+                Dim lines As List(Of String) = File.ReadAllLines(path).ToList()
+                File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray())
+                File.AppendAllText(path, location + Environment.NewLine())
+            End If
         End If
     End Sub
 
@@ -276,100 +285,9 @@ Public Class frmMain
         End Try
     End Function
 
-    '------------------------
-    ' JIKAN REST API Call
-    '-------------------------
-    Async Sub loadDetails(id As String)
-        Try
-            mtsLoading.Visible = True
-            lblNoConnection.Visible = False
-            Dim jikan As IJikan = New Jikan(True)
-            Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(id)
-            Dim producers As List(Of String) = New List(Of String)
-
-            If IsNothing(anime.Synopsis) Then
-                rctSynopsis.Text = "No Synopsis Available"
-            Else
-                rctSynopsis.Text = anime.Synopsis
-            End If
-
-            If IsNothing(anime.Rating) Then
-                lblMALRating.Text = "--"
-            Else
-                lblMALRating.Text = anime.Rating
-            End If
-
-            If IsNothing(anime.Premiered) Then
-                lblPremiered.Text = "--"
-            Else
-                lblPremiered.Text = anime.Premiered
-            End If
-
-            If IsNothing(anime.Score) Then
-                lblMALScore.Text = "--"
-            Else
-                lblMALScore.Text = anime.Score
-            End If
-
-            If IsNothing(anime.Status) Then
-                lblMALStatus.Text = "--"
-            Else
-                lblMALStatus.Text = anime.Status
-            End If
-
-            If IsNothing(anime.Duration) Then
-                lblDuration.Text = "--"
-            Else
-                lblDuration.Text = anime.Duration
-            End If
-
-            If IsNothing(anime.Popularity) Then
-                lblPopularity.Text = "--"
-            Else
-                lblPopularity.Text = anime.Popularity
-            End If
-
-            If IsNothing(anime.Rank) Then
-                lblRank.Text = "--"
-            Else
-                lblRank.Text = anime.Rank
-            End If
-
-            If IsNothing(anime.Members) Then
-                lblMembers.Text = "--"
-            Else
-                lblMembers.Text = anime.Members
-            End If
-
-            If IsNothing(anime.Favorites) Then
-                lblFavorites.Text = "--"
-            Else
-                lblFavorites.Text = anime.Favorites
-            End If
-
-            If IsNothing(anime.Broadcast) Then
-                lblBrodcast.Text = "--"
-            Else
-                lblBrodcast.Text = anime.Broadcast
-            End If
-
-            If IsNothing(anime.ImageURL) Then
-
-            Else
-                pcbAnimeCover.Load(anime.ImageURL)
-            End If
-
-            mtsLoading.Visible = False
-        Catch ex As Exception
-            mtsLoading.Visible = True
-            pcbAnimeCover.Image = My.Resources.sorry
-            rctSynopsis.Clear()
-            lblNoConnection.Visible = True
-        End Try
-    End Sub
-
     Private Sub chkViewDetails_CheckedChanged(sender As Object, e As EventArgs) Handles chkViewDetails.CheckedChanged
         Dim anId As String = ""
+        Dim callJikan As New APICalls
         If chkViewDetails.Checked = True Then
             For Each Itm As ListViewItem In lstwAnimeSearch.Items
                 If Itm.SubItems.Count < 2 OrElse Itm.SubItems(1).Text = "" Then
@@ -379,7 +297,7 @@ Public Class frmMain
                 End If
             Next
             gbxDetailView.Visible = True
-            loadDetails(anId)
+            callJikan.loadDetails(anId)
         Else
             gbxDetailView.Visible = False
         End If
@@ -387,6 +305,8 @@ Public Class frmMain
 
     Private Sub lstwAnimeSearch_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles lstwAnimeSearch.ItemSelectionChanged
         Dim anId As String = ""
+        Dim callJikan As New APICalls
+
         If lstwAnimeSearch.SelectedItems.Count = -1 Then
             Return
         ElseIf lstwAnimeSearch.SelectedItems.Count = 0 Then
@@ -402,7 +322,7 @@ Public Class frmMain
             Next
 
             If chkViewDetails.Checked = True Then
-                loadDetails(anId)
+                callJikan.loadDetails(anId)
             End If
 
             Dim animeTitle As String = lstwAnimeSearch.SelectedItems(0).SubItems(0).Text
