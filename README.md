@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/XG83qib.png)
+![alt text](https://imgur.com/DmNHuW3)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
