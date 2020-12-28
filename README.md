@@ -6,7 +6,7 @@
 MAA allows you to have an offline archive of your anime list from MyAnimeList.net!<br/>
 Keep your list safe and backed up with an intuitive and customizable interface.<br/>
 # Contributers
-Special thanks to @paper_stephie for the lovely art!
+Special thanks to **@paper_stephie** for the lovely art!
 Instagram: https://www.instagram.com/paper_stephie/?hl=en
 
 # Features
