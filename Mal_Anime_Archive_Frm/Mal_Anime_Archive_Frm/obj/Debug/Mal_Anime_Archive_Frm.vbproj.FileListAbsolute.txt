@@ -1834,3 +1834,42 @@ C:\Users\mucha\Documents\PPC\My Anime Archive - AS OF 8-2-2020\My-Anime-Archive-
 C:\Users\mucha\Documents\PPC\My Anime Archive - AS OF 8-2-2020\My-Anime-Archive-master\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.exe
 C:\Users\mucha\Documents\PPC\My Anime Archive - AS OF 8-2-2020\My-Anime-Archive-master\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.xml
 C:\Users\mucha\Documents\PPC\My Anime Archive - AS OF 8-2-2020\My-Anime-Archive-master\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Mal_Anime_Archive_Frm.exe.config
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Mal_Anime_Archive_Frm.pdb
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\JikanDotNet.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\MetroFramework.Design.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\MetroFramework.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\JikanDotNet.xml
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.vbproj.AssemblyReference.cache
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.Download.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmAbout.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmChangeLog.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmEditAnime.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmError.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmListOptions.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmMain.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmNewAnime.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmNewList.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmSave.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmSortWindow.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmUserInfo.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmWelcome.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.Saving.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.frmXml.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.Resources.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.WelcomeOpen.dje-NE.resources
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.vbproj.GenerateResource.cache
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.vbproj.CoreCompileInputs.cache
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\dje-NE\Mal_Anime_Archive_Frm.resources.dll
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.vbproj.CopyComplete
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.exe
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.xml
+C:\Users\Floppa\Documents\GitHub\My-Anime-Archive\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\obj\Debug\Mal_Anime_Archive_Frm.pdb
