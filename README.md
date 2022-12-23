@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# MyAnimeArchive! Alpha - v1.1
+# MyAnimeArchive! Alpha - v2.0
 MAA allows you to have an offline archive of your anime list from MyAnimeList.net!<br/>
 Keep your list safe and backed up with an intuitive and customizable interface.<br/>
 # Contributers
