@@ -3,6 +3,7 @@ Imports System.Net
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 Imports JikanDotNet
+Imports System.Linq
 
 Public Class frmNewAnime
 
@@ -32,72 +33,67 @@ Public Class frmNewAnime
         lblSearchResults.Visible = False
         loadApiInfo(txtTitleSearch.Text)
         gbxResults.Visible = True
-        displayApiInfo()
+        ''displayApiInfo()
     End Sub
 
-    Private Sub loadApiInfo(title As String)
+    Private Async Sub loadApiInfo(title As String)
         resultTitle.Clear()
         resultImgUrl.Clear()
         resultId.Clear()
         resultTitle.Clear()
         resultType.Clear()
 
-        'Dim jikan As IJikan = New Jikan(True)
+        Try
+            Dim jikan As IJikan = New Jikan()
+            Dim anime As PaginatedJikanResponse(Of ICollection(Of JikanDotNet.Anime)) = Await jikan.SearchAnimeAsync(title)
+            Dim progress As Integer = 0
+            Dim loopCount As Integer = 0
+            mtsLoading.Visible = True
 
-        'Dim animeSearch As AnimeSearchResult = Await jikan.SearchAnime(title)
+            For Each item As JikanDotNet.Anime In anime.Data
+                ''If loopCount > 7 Then
+                ''Exit For
+                ''End If
 
-        'txtTest.Text = animeSearch.Results.First().Title
-
-        'Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
-
-
-        Dim apiConnect As HttpWebRequest
-        Dim apiUrl As String = "https://api.jikan.moe/v3/search/anime?q=" & title & "&limit=8"
-        Dim response As HttpWebResponse = Nothing
-        Dim reader As StreamReader
-        Dim progress As Integer = 0
-
-        If frmMain.CheckConnection(apiUrl) = True Then
-            apiConnect = DirectCast(WebRequest.Create(apiUrl), HttpWebRequest)
-            response = DirectCast(apiConnect.GetResponse(), HttpWebResponse)
-
-            reader = New StreamReader(response.GetResponseStream)
-            Dim rawresp As String
-
-            rawresp = reader.ReadToEnd()
-            Dim o As JObject = JObject.Parse(rawresp)
-            Dim results As List(Of JToken) = o.Children().ToList
-            For Each item As JProperty In results
-                item.CreateReader()
-                If item.Value.Type = JTokenType.Array Then
-                    For Each subitem As JObject In item.Values
-                        resultImgUrl.Add(subitem("image_url"))
-                        resultTitle.Add(subitem("title"))
-                        resultType.Add(subitem("type"))
-                        resultId.Add(subitem("mal_id"))
-                        resultEpisodes.Add(subitem("episodes"))
-                        progress += 1
-                        bckwNewAnime.ReportProgress(progress)
-                    Next
+                If Not IsNothing(item.Images.JPG.ImageUrl) Then
+                    resultImgUrl.Add(item.Images.JPG.ImageUrl)
                 End If
+                If Not IsNothing(item.Titles.First.Title) Then
+                    resultTitle.Add(item.Titles.First.Title)
+                End If
+                If Not IsNothing(item.Type) Then
+                    resultType.Add(item.Type)
+                End If
+                If Not IsNothing(item.MalId) Then
+                    resultId.Add(item.MalId)
+                End If
+                If Not IsNothing(item.Episodes) Then
+                    resultEpisodes.Add(item.Episodes)
+                End If
+
+                progress += 1
+                bckwNewAnime.ReportProgress(progress)
+                loopCount += 1
             Next
 
-        End If
+            displayApiInfo()
+            mtsLoading.Visible = False
+        Catch ex As Exception
 
+        End Try
     End Sub
 
 
     Private Sub displayApiInfo()
         Dim truncResult As String
-
-
-        Dim image As Image
-        For i As Integer = 0 To resultImgUrl.Count - 1
+        ''Dim image As Image
+        mtsLoading.Visible = True
+        For i As Integer = 0 To 7
 
             If i = 0 Then
                 pcbResult1.Load(resultImgUrl(i))
-                image = pcbResult1.Image
-                btnResult1.BackgroundImage = image
+                ''image = pcbResult1.Image
+                btnResult1.BackgroundImage = pcbResult1.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle1.Text = truncResult & "..."
@@ -106,8 +102,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 1 Then
                 pcbResult2.Load(resultImgUrl(i))
-                image = pcbResult2.Image
-                btnResult2.BackgroundImage = image
+                ''image = pcbResult2.Image
+                btnResult2.BackgroundImage = pcbResult2.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle2.Text = truncResult & "..."
@@ -116,8 +112,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 2 Then
                 pcbResult3.Load(resultImgUrl(i))
-                image = pcbResult3.Image
-                btnResult3.BackgroundImage = image
+                '' image = pcbResult3.Image
+                btnResult3.BackgroundImage = pcbResult3.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle3.Text = truncResult & "..."
@@ -126,8 +122,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 3 Then
                 pcbResult4.Load(resultImgUrl(i))
-                image = pcbResult4.Image
-                btnResult4.BackgroundImage = image
+                ''image = pcbResult4.Image
+                btnResult4.BackgroundImage = pcbResult4.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle4.Text = truncResult & "..."
@@ -136,8 +132,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 4 Then
                 pcbResult5.Load(resultImgUrl(i))
-                image = pcbResult5.Image
-                btnResult5.BackgroundImage = image
+                ''image = pcbResult5.Image
+                btnResult5.BackgroundImage = pcbResult5.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle5.Text = truncResult & "..."
@@ -146,8 +142,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 5 Then
                 pcbResult6.Load(resultImgUrl(i))
-                image = pcbResult6.Image
-                btnResult6.BackgroundImage = image
+                ''image = pcbResult6.Image
+                btnResult6.BackgroundImage = pcbResult6.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle6.Text = truncResult & "..."
@@ -156,8 +152,8 @@ Public Class frmNewAnime
                 End If
             ElseIf i = 6 Then
                 pcbResult7.Load(resultImgUrl(i))
-                image = pcbResult7.Image
-                btnResult7.BackgroundImage = image
+                ''image = pcbResult7.Image
+                btnResult7.BackgroundImage = pcbResult7.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle7.Text = truncResult & "..."
@@ -166,8 +162,8 @@ Public Class frmNewAnime
                 End If
             Else
                 pcbResult8.Load(resultImgUrl(i))
-                image = pcbResult8.Image
-                btnResult8.BackgroundImage = image
+                ''image = pcbResult8.Image
+                btnResult8.BackgroundImage = pcbResult8.Image
                 If resultTitle(i).Length > 20 Then
                     truncResult = Truncate(resultTitle(i), 20)
                     txtTitle8.Text = truncResult & "..."
@@ -175,7 +171,8 @@ Public Class frmNewAnime
                     txtTitle8.Text = resultTitle(i)
                 End If
             End If
-            'bckwNewAnime.ReportProgress(i)
+            bckwNewAnime.ReportProgress(i)
+            mtsLoading.Visible = False
         Next
     End Sub
 

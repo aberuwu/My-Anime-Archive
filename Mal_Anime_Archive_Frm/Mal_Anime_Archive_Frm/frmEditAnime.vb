@@ -187,37 +187,37 @@ Public Class frmEditAnime
     '-------------------------
     Async Sub loadApiInfo(id As String)
         Try
-            Dim jikan As IJikan = New Jikan(True)
-            Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(anId)
+            Dim jikan As IJikan = New Jikan()
+            Dim anime = Await jikan.GetAnimeAsync(anId)
 
-            If IsNothing(anime.Synopsis) Then
+            If IsNothing(anime.Data.Synopsis) Then
                 rctSynopsis.Text = "No Synopsis Available"
             Else
-                rctSynopsis.Text = anime.Synopsis
+                rctSynopsis.Text = anime.Data.Synopsis
             End If
 
-            If IsNothing(anime.Rating) Then
+            If IsNothing(anime.Data.Rating) Then
                 lblMALRating.Text = "--"
             Else
-                lblMALRating.Text = anime.Rating
+                lblMALRating.Text = anime.Data.Rating
             End If
 
-            If IsNothing(anime.Premiered) Then
+            If IsNothing(anime.Data.Year) Then
                 lblPremiered.Text = "--"
             Else
-                lblPremiered.Text = anime.Premiered
+                lblPremiered.Text = anime.Data.Year.ToString()
             End If
 
-            If IsNothing(anime.Score) Then
+            If IsNothing(anime.Data.Score) Then
                 lblMALScore.Text = "--"
             Else
-                lblMALScore.Text = anime.Score
+                lblMALScore.Text = anime.Data.Score
             End If
 
-            If IsNothing(anime.ImageURL) Then
+            If IsNothing(anime.Data.Images) Then
 
             Else
-                pcbAnimeCover.Load(anime.ImageURL)
+                pcbAnimeCover.Load(anime.Data.Images.JPG.ImageUrl)
             End If
         Catch ex As Exception
             'pcbAnimeCover.Image = My.Resources.

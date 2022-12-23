@@ -5,80 +5,88 @@ Public Class APICalls
         Try
             frmMain.mtsLoading.Visible = True
             frmMain.lblNoConnection.Visible = False
-            Dim jikan As IJikan = New Jikan(True)
-            Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(id)
-            Dim producers As List(Of String) = New List(Of String)
+            Dim jikan As IJikan = New Jikan()
+            Dim anime = Await jikan.GetAnimeAsync(Convert.ToInt64(id))
+            ''Dim producers As List(Of String) = New List(Of String)
 
-            If IsNothing(anime.Synopsis) Then
+            If IsNothing(anime.Data.Synopsis) Then
                 frmMain.rctSynopsis.Text = "No Synopsis Available"
             Else
-                frmMain.rctSynopsis.Text = anime.Synopsis
+                frmMain.rctSynopsis.Text = anime.Data.Synopsis
             End If
 
-            If IsNothing(anime.Rating) Then
+            If IsNothing(anime.Data.Rating) Then
                 frmMain.lblMALRating.Text = "--"
             Else
-                frmMain.lblMALRating.Text = anime.Rating
+                frmMain.lblMALRating.Text = anime.Data.Rating
             End If
 
-            If IsNothing(anime.Premiered) Then
+            If IsNothing(anime.Data.Season) Then
                 frmMain.lblPremiered.Text = "--"
             Else
-                frmMain.lblPremiered.Text = anime.Premiered
+                If IsNothing(anime.Data.Year) Then
+                    frmMain.lblPremiered.Text = anime.Data.Season.ToString()
+                Else
+                    frmMain.lblPremiered.Text = anime.Data.Season.ToString() + " " + anime.Data.Year.ToString()
+                End If
             End If
 
-            If IsNothing(anime.Score) Then
+            If IsNothing(anime.Data.Score) Then
                 frmMain.lblMALScore.Text = "--"
             Else
-                frmMain.lblMALScore.Text = anime.Score
+                frmMain.lblMALScore.Text = anime.Data.Score
             End If
 
-            If IsNothing(anime.Status) Then
+            If IsNothing(anime.Data.Status) Then
                 frmMain.lblMALStatus.Text = "--"
             Else
-                frmMain.lblMALStatus.Text = anime.Status
+                frmMain.lblMALStatus.Text = anime.Data.Status
             End If
 
-            If IsNothing(anime.Duration) Then
+            If IsNothing(anime.Data.Duration) Then
                 frmMain.lblDuration.Text = "--"
             Else
-                frmMain.lblDuration.Text = anime.Duration
+                frmMain.lblDuration.Text = anime.Data.Duration
             End If
 
-            If IsNothing(anime.Popularity) Then
+            If IsNothing(anime.Data.Popularity) Then
                 frmMain.lblPopularity.Text = "--"
             Else
-                frmMain.lblPopularity.Text = anime.Popularity
+                frmMain.lblPopularity.Text = anime.Data.Popularity
             End If
 
-            If IsNothing(anime.Rank) Then
+            If IsNothing(anime.Data.Rank) Then
                 frmMain.lblRank.Text = "--"
             Else
-                frmMain.lblRank.Text = anime.Rank
+                frmMain.lblRank.Text = anime.Data.Rank
             End If
 
-            If IsNothing(anime.Members) Then
+            If IsNothing(anime.Data.Members) Then
                 frmMain.lblMembers.Text = "--"
             Else
-                frmMain.lblMembers.Text = anime.Members
+                frmMain.lblMembers.Text = anime.Data.Members
             End If
 
-            If IsNothing(anime.Favorites) Then
+            If IsNothing(anime.Data.Favorites) Then
                 frmMain.lblFavorites.Text = "--"
             Else
-                frmMain.lblFavorites.Text = anime.Favorites
+                frmMain.lblFavorites.Text = anime.Data.Favorites
             End If
 
-            If IsNothing(anime.Broadcast) Then
+            If IsNothing(anime.Data.Broadcast.Day) Then
                 frmMain.lblBrodcast.Text = "--"
             Else
-                frmMain.lblBrodcast.Text = anime.Broadcast
+                If IsNothing(anime.Data.Broadcast.Time) Then
+                    frmMain.lblBrodcast.Text = anime.Data.Broadcast.Day.ToString()
+                Else
+                    frmMain.lblBrodcast.Text = anime.Data.Broadcast.Day.ToString() + " " + anime.Data.Broadcast.Time.ToString()
+                End If
             End If
 
-            If IsNothing(anime.ImageURL) Then
+            If IsNothing(anime.Data.Images) Then
 
             Else
-                frmMain.pcbAnimeCover.Load(anime.ImageURL)
+                frmMain.pcbAnimeCover.Load(anime.Data.Images.JPG.LargeImageUrl)
             End If
 
             frmMain.mtsLoading.Visible = False

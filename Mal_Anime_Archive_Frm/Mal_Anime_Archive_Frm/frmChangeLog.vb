@@ -5,7 +5,7 @@
     Private mousey As Integer
 
     Private Sub frmChangeLog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtChangeLog.Text = System.IO.File.ReadAllText("C:\Users\Scooby2\Documents\Personal Programming Challenges\BACKUP 5-25-2019\Mal_Anime_Archive_Frm\Mal_Anime_Archive_Frm\changelog.txt")
+        txtChangeLog.Text = System.IO.File.ReadAllText("")
         txtChangeLog.Select(0, 0)
     End Sub
 

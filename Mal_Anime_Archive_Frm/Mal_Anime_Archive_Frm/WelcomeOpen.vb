@@ -11,14 +11,15 @@
     Private Sub WelcomeOpen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'mtlstvOpenRecent.BackColor = Color.FromArgb(44, 44, 44)
-
         mtlstvOpenRecent.Items.Clear()
         frmMain.loadRecent()
         Dim temp As List(Of String) = frmMain.recentList
         temp.Reverse()
 
         For i As Integer = 0 To frmMain.recentList.Count - 1
-            mtlstvOpenRecent.Items.Insert(i, temp(i))
+            If mtlstvOpenRecent.Items.ContainsKey(temp(i)) <> True Then
+                mtlstvOpenRecent.Items.Insert(i, temp(i))
+            End If
         Next
 
         If frmMain.themePurple = True Then

@@ -77,12 +77,6 @@ Public Class Themes
 
         'BUTTONS
 
-        With frmMain.btnMALQuery
-            .FlatAppearance.BorderColor = Color.OrangeRed
-            .FlatAppearance.MouseOverBackColor = Color.Orange
-            .FlatAppearance.MouseDownBackColor = Color.OrangeRed
-        End With
-
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.OrangeRed
             .FlatAppearance.MouseOverBackColor = Color.Orange
@@ -244,12 +238,6 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Purple
 
         'BUTTONS
-        With frmMain.btnMALQuery
-            .FlatAppearance.BorderColor = Color.MediumPurple
-            .FlatAppearance.MouseOverBackColor = Color.MediumPurple
-            .FlatAppearance.MouseDownBackColor = Color.DarkViolet
-        End With
-
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.MediumPurple
             .FlatAppearance.MouseOverBackColor = Color.MediumPurple
@@ -380,12 +368,6 @@ Public Class Themes
         frmMain.pcbLoading.Style = MetroFramework.MetroColorStyle.Blue
 
         'BUTTONS
-
-        With frmMain.btnMALQuery
-            .FlatAppearance.BorderColor = Color.LightBlue
-            .FlatAppearance.MouseOverBackColor = Color.LightBlue
-            .FlatAppearance.MouseDownBackColor = Color.CornflowerBlue
-        End With
 
         With frmMain.btnOpenHeader
             .FlatAppearance.BorderColor = Color.LightBlue

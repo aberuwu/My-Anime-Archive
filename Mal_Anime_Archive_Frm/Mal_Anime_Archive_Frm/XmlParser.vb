@@ -198,11 +198,11 @@ Public Class XmlParser
         Dim currentAnime As String
         Dim animeCount As Integer = frmMain.animeList.Count()
 
-        frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
-        Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
+        ''frmMain.txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
+        ''Dim sug As AutoCompleteStringCollection = New AutoCompleteStringCollection
 
         For i As Integer = 0 To frmMain.animeCount - 1
-            sug.Add(frmMain.animeList(i).Title)
+            ''sug.Add(frmMain.animeList(i).Title)
             Dim itemStatus As ListViewItem = frmMain.lstwStatus.Items.Add("")
             Dim str(2) As String
             Dim itemResults As ListViewItem
@@ -225,7 +225,7 @@ Public Class XmlParser
             frmMain.lstwAnimeSearch.Items.Add(itemResults)
         Next
 
-        frmMain.txtSearch.AutoCompleteCustomSource = sug
+        ''frmMain.txtSearch.AutoCompleteCustomSource = sug
 
         For i As Integer = 0 To animeCount - 1
             frmMain.pcbLoading.Maximum = animeCount - 1

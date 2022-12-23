@@ -84,6 +84,7 @@ Partial Class frmNewAnime
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.bckwNewAnime = New System.ComponentModel.BackgroundWorker()
+        Me.mtsLoading = New MetroFramework.Controls.MetroProgressSpinner()
         Me.gbxEdit.SuspendLayout()
         CType(Me.numUpDownRewatch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numUpDownWatched, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,7 +121,6 @@ Partial Class frmNewAnime
         Me.gbxEdit.Controls.Add(Me.lblStartDateHeading)
         Me.gbxEdit.Controls.Add(Me.numUpDownWatched)
         Me.gbxEdit.Controls.Add(Me.lblWatchedHeading)
-        Me.gbxEdit.Controls.Add(Me.lblSearchResults)
         Me.gbxEdit.Controls.Add(Me.ddlType)
         Me.gbxEdit.Controls.Add(Me.lblType)
         Me.gbxEdit.Controls.Add(Me.lblID)
@@ -152,7 +152,7 @@ Partial Class frmNewAnime
         Me.Label1.ForeColor = System.Drawing.Color.Gray
         Me.Label1.Location = New System.Drawing.Point(799, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 32)
+        Me.Label1.Size = New System.Drawing.Size(155, 32)
         Me.Label1.TabIndex = 102
         Me.Label1.Text = "Anime Details"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -301,9 +301,9 @@ Partial Class frmNewAnime
         Me.lblSearchResults.AutoSize = True
         Me.lblSearchResults.Font = New System.Drawing.Font("Segoe UI Semilight", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSearchResults.ForeColor = System.Drawing.Color.Gray
-        Me.lblSearchResults.Location = New System.Drawing.Point(25, 236)
+        Me.lblSearchResults.Location = New System.Drawing.Point(12, 85)
         Me.lblSearchResults.Name = "lblSearchResults"
-        Me.lblSearchResults.Size = New System.Drawing.Size(525, 64)
+        Me.lblSearchResults.Size = New System.Drawing.Size(524, 64)
         Me.lblSearchResults.TabIndex = 87
         Me.lblSearchResults.Text = "Search MyAnimeList.net database for your anime!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Or add one manually if offline!"
         Me.lblSearchResults.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -430,6 +430,7 @@ Partial Class frmNewAnime
         '
         Me.gbxResults.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.gbxResults.Controls.Add(Me.mtsLoading)
         Me.gbxResults.Controls.Add(Me.btnResult8)
         Me.gbxResults.Controls.Add(Me.btnResult7)
         Me.gbxResults.Controls.Add(Me.btnResult6)
@@ -444,6 +445,7 @@ Partial Class frmNewAnime
         Me.gbxResults.Controls.Add(Me.txtTitle5)
         Me.gbxResults.Controls.Add(Me.txtTitle4)
         Me.gbxResults.Controls.Add(Me.txtTitle3)
+        Me.gbxResults.Controls.Add(Me.lblSearchResults)
         Me.gbxResults.Controls.Add(Me.txtTitle2)
         Me.gbxResults.Controls.Add(Me.txtTitle1)
         Me.gbxResults.Controls.Add(Me.pcbResult3)
@@ -592,7 +594,7 @@ Partial Class frmNewAnime
         Me.txtTitle8.ReadOnly = True
         Me.txtTitle8.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle8.TabIndex = 65
-        Me.txtTitle8.Text = "Takagi san"
+        Me.txtTitle8.Text = "--"
         Me.txtTitle8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle7
@@ -605,7 +607,7 @@ Partial Class frmNewAnime
         Me.txtTitle7.ReadOnly = True
         Me.txtTitle7.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle7.TabIndex = 64
-        Me.txtTitle7.Text = "Takagi san"
+        Me.txtTitle7.Text = "--"
         Me.txtTitle7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle6
@@ -618,7 +620,7 @@ Partial Class frmNewAnime
         Me.txtTitle6.ReadOnly = True
         Me.txtTitle6.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle6.TabIndex = 63
-        Me.txtTitle6.Text = "Takagi san"
+        Me.txtTitle6.Text = "--"
         Me.txtTitle6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle5
@@ -631,7 +633,7 @@ Partial Class frmNewAnime
         Me.txtTitle5.ReadOnly = True
         Me.txtTitle5.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle5.TabIndex = 62
-        Me.txtTitle5.Text = "Takagi san"
+        Me.txtTitle5.Text = "--"
         Me.txtTitle5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle4
@@ -644,7 +646,7 @@ Partial Class frmNewAnime
         Me.txtTitle4.ReadOnly = True
         Me.txtTitle4.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle4.TabIndex = 61
-        Me.txtTitle4.Text = "Takagi san"
+        Me.txtTitle4.Text = "--"
         Me.txtTitle4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle3
@@ -657,7 +659,7 @@ Partial Class frmNewAnime
         Me.txtTitle3.ReadOnly = True
         Me.txtTitle3.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle3.TabIndex = 60
-        Me.txtTitle3.Text = "Takagi san"
+        Me.txtTitle3.Text = "--"
         Me.txtTitle3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle2
@@ -670,7 +672,7 @@ Partial Class frmNewAnime
         Me.txtTitle2.ReadOnly = True
         Me.txtTitle2.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle2.TabIndex = 59
-        Me.txtTitle2.Text = "Takagi san"
+        Me.txtTitle2.Text = "--"
         Me.txtTitle2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTitle1
@@ -683,7 +685,7 @@ Partial Class frmNewAnime
         Me.txtTitle1.ReadOnly = True
         Me.txtTitle1.Size = New System.Drawing.Size(124, 18)
         Me.txtTitle1.TabIndex = 58
-        Me.txtTitle1.Text = "Takagi san"
+        Me.txtTitle1.Text = "--"
         Me.txtTitle1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'pcbResult3
@@ -830,7 +832,7 @@ Partial Class frmNewAnime
         Me.lblHeader.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lblHeader.Location = New System.Drawing.Point(12, 14)
         Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(133, 32)
+        Me.lblHeader.Size = New System.Drawing.Size(132, 32)
         Me.lblHeader.TabIndex = 3
         Me.lblHeader.Text = "New Anime"
         '
@@ -851,6 +853,25 @@ Partial Class frmNewAnime
         'bckwNewAnime
         '
         Me.bckwNewAnime.WorkerReportsProgress = True
+        '
+        'mtsLoading
+        '
+        Me.mtsLoading.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.mtsLoading.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.mtsLoading.CustomBackground = True
+        Me.mtsLoading.Location = New System.Drawing.Point(258, 188)
+        Me.mtsLoading.Maximum = 100
+        Me.mtsLoading.Name = "mtsLoading"
+        Me.mtsLoading.Size = New System.Drawing.Size(47, 50)
+        Me.mtsLoading.Speed = 2.0!
+        Me.mtsLoading.Style = MetroFramework.MetroColorStyle.Purple
+        Me.mtsLoading.TabIndex = 88
+        Me.mtsLoading.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.mtsLoading.UseCustomBackColor = True
+        Me.mtsLoading.UseSelectable = True
+        Me.mtsLoading.UseStyleColors = True
+        Me.mtsLoading.Value = 25
+        Me.mtsLoading.Visible = False
         '
         'frmNewAnime
         '
@@ -954,4 +975,5 @@ Partial Class frmNewAnime
     Friend WithEvents btnExpandCollapse As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents mtpgbLoading As MetroFramework.Controls.MetroProgressBar
+    Friend WithEvents mtsLoading As MetroFramework.Controls.MetroProgressSpinner
 End Class

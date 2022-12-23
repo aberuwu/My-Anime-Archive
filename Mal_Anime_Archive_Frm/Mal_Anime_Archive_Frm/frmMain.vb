@@ -98,24 +98,31 @@ Public Class frmMain
         Dim path As String = AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat"
         Dim location As String = ANIME_SOURCE_XML
         Dim localCount As Integer = 0
+        Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(path)
+        Dim stringReader As String = fileReader.ReadToEnd()
 
-        For Each line As String In File.ReadLines(AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat")
-            localCount += 1
-        Next
+        If location IsNot Nothing Then
+            If stringReader.Contains(location) <> True Then
+                For Each line As String In File.ReadLines(AppDomain.CurrentDomain.BaseDirectory + "\" + "MAARecent.dat")
+                    localCount += 1
+                Next
 
-        If localCount < 10 Then
-            If path = "" Then
-            Else
-                File.AppendAllText(path, location + Environment.NewLine())
-            End If
-        Else
-            If path = "" Then
-            Else
-                Dim lines As List(Of String) = File.ReadAllLines(path).ToList()
-                File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray())
-                File.AppendAllText(path, location + Environment.NewLine())
+                If localCount < 10 Then
+                    If path = "" Then
+                    Else
+                        File.AppendAllText(path, location + Environment.NewLine())
+                    End If
+                Else
+                    If path = "" Then
+                    Else
+                        Dim lines As List(Of String) = File.ReadAllLines(path).ToList()
+                        File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray())
+                        File.AppendAllText(path, location + Environment.NewLine())
+                    End If
+                End If
             End If
         End If
+
     End Sub
 
     Public Sub loadRecent()
@@ -155,14 +162,13 @@ Public Class frmMain
     End Sub
 
     Async Sub loadApiInfo(id As String)
-        Dim jikan As IJikan = New Jikan(True)
-        Dim anime As JikanDotNet.Anime = Await jikan.GetAnime(id)
+        Dim jikan As IJikan = New Jikan()
+        Dim anime = Await jikan.GetAnimeAsync(id)
         'pcbAnimeCover.Load(anime.ImageURL)
     End Sub
 
     Private Sub welcomeOpen()
         Dim welcomeOpen As WelcomeOpen
-
         welcomeOpen = New WelcomeOpen
         welcomeOpen.ShowDialog()
     End Sub
@@ -338,6 +344,7 @@ Public Class frmMain
                     lblEpisodes.Text = sortedList(i).Episodes
                     lblWatched.Text = sortedList(i).WatchedEps
                     lblScore.Text = sortedList(i).Score
+                    lblScoreBig.Text = sortedList(i).Score
                     lblStatus.Text = sortedList(i).Status
                 End If
             Next
@@ -359,6 +366,7 @@ Public Class frmMain
                     lblEpisodes.Text = sortedList(i).Episodes
                     lblWatched.Text = sortedList(i).WatchedEps
                     lblScore.Text = sortedList(i).Score
+                    lblScoreBig.Text = sortedList(i).Score
                     lblStatus.Text = sortedList(i).Status
                 End If
             Next
@@ -521,61 +529,7 @@ Public Class frmMain
     End Function
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        If txtSearch.Text = "🔎 Anime Search" Or txtSearch.Text = "" Then
-            Return
-        End If
 
-        vscrSearchList.Maximum = 0
-        vscrSearchList.Minimum = 0
-        lstAnimes.Items.Clear()
-        lstwAnimeSearch.Items.Clear()
-        lstwStatus.Items.Clear()
-
-        Dim search As String = txtSearch.Text.Trim().ToUpper()
-        Dim nameResults As String = ""
-
-        lblNoResultFound.Visible = False
-
-        Try
-            For i = 0 To animeList.Count() - 1
-                nameResults = animeList(i).Title.Trim().ToUpper()
-                If nameResults.Contains(search) Then
-                    Dim itemStatus As ListViewItem = lstwStatus.Items.Add("")
-                    Dim str(2) As String
-                    Dim itemResults As ListViewItem
-
-                    If animeList(i).Status = "Watching" Then
-                        itemStatus.ImageIndex = 0
-                    ElseIf animeList(i).Status = "Completed" Then
-                        itemStatus.ImageIndex = 1
-                    ElseIf animeList(i).Status = "Dropped" Then
-                        itemStatus.ImageIndex = 2
-                    ElseIf animeList(i).Status = "On-Hold" Then
-                        itemStatus.ImageIndex = 3
-                    Else
-                        itemStatus.ImageIndex = 4
-                    End If
-
-                    str(0) = animeList(i).Title
-                    str(1) = animeList(i).AnimeId
-                    itemResults = New ListViewItem(str)
-                    lstwAnimeSearch.Items.Add(itemResults)
-                Else
-                    'lblNoResultFound.Visible = True
-                End If
-
-                vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
-            Next
-
-            If lstwAnimeSearch.Items.Count = 0 Then
-                lblNoResultFound.Visible = True
-            Else
-                lblNoResultFound.Visible = False
-                lstAnimes.SelectedIndex = 0
-            End If
-        Catch ex As Exception
-            Return
-        End Try
     End Sub
 
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
@@ -827,6 +781,70 @@ Public Class frmMain
 
     Private Sub btnAboutHeader_Click(sender As Object, e As EventArgs) Handles btnAboutHeader.Click
         btnAbout_Click(Nothing, Nothing)
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If txtSearch.Text = "🔎 Anime Search" Or txtSearch.Text = "" Then
+            Return
+        End If
+
+        vscrSearchList.Maximum = 0
+        vscrSearchList.Minimum = 0
+        lstAnimes.Items.Clear()
+        lstwAnimeSearch.Items.Clear()
+        lstwStatus.Items.Clear()
+
+        Dim search As String = txtSearch.Text.Trim().ToUpper()
+        Dim nameResults As String = ""
+
+        lblNoResultFound.Visible = False
+
+        Try
+            For i = 0 To animeList.Count() - 1
+                nameResults = animeList(i).Title.Trim().ToUpper()
+                If nameResults.Contains(search) Then
+                    Dim itemStatus As ListViewItem = lstwStatus.Items.Add("")
+                    Dim str(2) As String
+                    Dim itemResults As ListViewItem
+
+                    If animeList(i).Status = "Watching" Then
+                        itemStatus.ImageIndex = 0
+                    ElseIf animeList(i).Status = "Completed" Then
+                        itemStatus.ImageIndex = 1
+                    ElseIf animeList(i).Status = "Dropped" Then
+                        itemStatus.ImageIndex = 2
+                    ElseIf animeList(i).Status = "On-Hold" Then
+                        itemStatus.ImageIndex = 3
+                    Else
+                        itemStatus.ImageIndex = 4
+                    End If
+
+                    str(0) = animeList(i).Title
+                    str(1) = animeList(i).AnimeId
+                    itemResults = New ListViewItem(str)
+                    lstwAnimeSearch.Items.Add(itemResults)
+                Else
+                    'lblNoResultFound.Visible = True
+                End If
+
+                vscrSearchList.Maximum = lstwAnimeSearch.Items.Count
+            Next
+
+            If lstwAnimeSearch.Items.Count = 0 Then
+                lblNoResultFound.Visible = True
+            Else
+                lblNoResultFound.Visible = False
+                lstAnimes.SelectedIndex = 0
+            End If
+        Catch ex As Exception
+            Return
+        End Try
+    End Sub
+
+    Private Sub pcbAnimeCover_Click(sender As Object, e As EventArgs) Handles pcbAnimeCover.Click
+        If lblId.Text.Trim() <> "" Or lblId.Text IsNot Nothing Then
+            Process.Start("https://myanimelist.net/anime/" & lblId.Text.ToString())
+        End If
     End Sub
 End Class
 Public Class ListViewDoubleBuffered
